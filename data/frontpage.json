@@ -1,0 +1,299 @@
+[
+    {
+    "id": 3476303823,
+    "columns": [
+      {
+        "items": [
+          {
+            "id": "34762528",
+            "headline": "<span class=\"redletter\">SISTE:</span> Lå død i flere måneder. <span class=\"small-size-50 medium-size-50 large-size-50\">Bare en bilkjøper som savnet ham</span>",
+            "url": "http://www.dagbladet.no/2014/08/13/nyheter/joshua_french/utenriks/kongo-saken/34762528/",
+            "keywords": false,
+            "datetime": "2014-08-13T13:47:07",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": "small-12 medium-12 large-12 breaking",
+            "hasVideo": 0,
+            "image": false,
+            "headlineSize": "small-size-51 medium-size-55 large-size-58",
+            "kicker": false,
+            "canNest": false,
+            "related": false
+            }
+        ],
+        "double": false,
+        "classes": ""
+        }
+    ]
+    },
+
+  {
+    "id": 34763364,
+    "columns": [
+      {
+        "items": [
+          {
+            "id": "34762528",
+            "headline": "Joshua French pågrepet på åpen gate i Kongo",
+            "description": "Anklages for rømningsforsøk.",
+            "url": "http://www.dagbladet.no/2014/08/13/nyheter/joshua_french/utenriks/kongo-saken/34762528/",
+            "keywords": false,
+            "datetime": "2014-08-13T13:47:07",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": "small-12 medium-7 large-7",
+            "hasVideo": 0,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347625/34762556/jpg/active/978x409.jpg",
+              "alt": "SISTE: Joshua French pågrepet på åpen gate i Kongo",
+              "title": "SISTE: Joshua French pågrepet på åpen gate i Kongo"
+            },
+            "headlineSize": "small-size-51 medium-size-55 large-size-58",
+            "kicker": false,
+            "canNest": false,
+            "related": false
+          }
+        ],
+        "double": false,
+        "classes": ""
+      },
+      {
+        "items": [
+          {
+            "id": "34760664",
+            "headline": "Droner kan lett påføre deg erstatningskrav i millionklassen",
+            "description": "",
+            "url": "http://www.dagbladet.no/2014/08/13/nyheter/okonomi/teknologi/drone/kameradrone/34760664/",
+            "keywords": false,
+            "datetime": "2014-08-13T14:02:47",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": 1,
+            "classes": "small-12 medium-5 large-5",
+            "hasVideo": 0,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347620/34762019/jpg/active/646x_13197743.jpg",
+              "alt": "Droner kan lett påføre deg erstatningskrav i millionklassen",
+              "title": "Droner kan lett påføre deg erstatningskrav i millionklassen"
+            },
+            "headlineSize": "small-size-52 medium-size-30 large-size-33",
+            "kicker": false,
+            "canNest": false,
+            "related": false
+          }
+        ],
+        "double": false,
+        "classes": ""
+      }
+    ]
+  },
+  {
+    "id": 34759163,
+    "columns": [
+      {
+        "items": [
+          {
+            "id": "livebeta.dagbladet.no",
+            "headline": "- Reitan, hvorfor tar du blodpris på avokado?",
+            "description": "Matminister Listhaug rett i strupen på kjøpmannsstanden. Vi fulgte debatten direkte.",
+            "url": "http://livebeta.dagbladet.no/arendalsuka_2014",
+            "keywords": false,
+            "datetime": "2014-08-13T12:14:23",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": " small-12 medium-8 large-8",
+            "hasVideo": 0,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347621/34762191/jpg/active/646x_13197743.jpg",
+              "alt": "- Reitan, hvorfor tar du blodpris på avokado?",
+              "title": "- Reitan, hvorfor tar du blodpris på avokado?"
+            },
+            "headlineSize": "small-size-45 medium-size-48 large-size-50",
+            "kicker": false,
+            "canNest": false,
+            "related": false
+          }
+        ],
+        "double": false,
+        "classes": ""
+      },
+      {
+        "items": [
+          {
+            "id": "34762759",
+            "headline": "Legger ned Se og Hør i Sverige",
+            "description": "",
+            "url": "http://www.dagbladet.no/2014/08/13/kultur/seoghor/aller/sverige/34762759/",
+            "keywords": false,
+            "datetime": "2014-08-13T13:51:09",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": "small-6 medium-12 large-12",
+            "hasVideo": 0,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347628/34762893/jpg/active/314x_13197743.jpg",
+              "alt": "Legger ned Se og Hør i Sverige",
+              "title": "Legger ned Se og Hør i Sverige",
+              "classes": "border"
+            },
+            "headlineSize": "small-size-45 medium-size-29 large-size-30",
+            "kicker": false,
+            "canNest": true,
+            "related": false
+          },
+          {
+            "id": "www.dbtv.no",
+            "headline": "«Ville du fortsatt vært fan om jeg så sånn ut?»",
+            "description": "Belgisk fotballstjerne.",
+            "url": "http://www.dbtv.no/3727989070001",
+            "keywords": false,
+            "datetime": "2014-08-13T12:34:04",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": "small-6 medium-12 large-12",
+            "hasVideo": true,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347609/34760910/jpg/active/314x_13197743.jpg",
+              "alt": "«Ville du fortsatt vært fan om jeg så sånn ut?»",
+              "title": "«Ville du fortsatt vært fan om jeg så sånn ut?»"
+            },
+            "headlineSize": "small-size-45 medium-size-17 large-size-18",
+            "kicker": false,
+            "canNest": true,
+            "related": false
+          }
+        ],
+        "double": true,
+        "classes": "small-12 medium-4 large-4"
+      }
+    ]
+  },
+  {
+    "id": 34760808,
+    "columns": [
+      {
+        "items": [
+          {
+            "id": "dbtv.no",
+            "headline": "Politibetjenten stoppet kvinnen for å ha kjørt på rødt lys. Nå blir han hyllet",
+            "description": "",
+            "url": "http://dbtv.no/3727384967001",
+            "keywords": false,
+            "datetime": "2014-08-13T11:16:47",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": "small-12 medium-6 large-6",
+            "hasVideo": true,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347580/34758040/jpg/active/480x_13197743.jpg",
+              "alt": "Politibetjenten stoppet kvinnen for å ha kjørt på rødt lys. Nå blir han hyllet",
+              "title": "Politibetjenten stoppet kvinnen for å ha kjørt på rødt lys. Nå blir han hyllet"
+            },
+            "headlineSize": "small-size-45 medium-size-27 large-size-27",
+            "kicker": false,
+            "canNest": false,
+            "related": false
+          }
+        ],
+        "double": false,
+        "classes": ""
+      },
+      {
+        "items": [
+          {
+            "id": "34758630",
+            "headline": "Amerikansk turist funnet død i koffert på Bali",
+            "description": "",
+            "url": "http://www.dagbladet.no/2014/08/13/nyheter/utenriks/bali/34758630/",
+            "keywords": false,
+            "datetime": "2014-08-13T11:24:29",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": " small-12 medium-3 large-3",
+            "hasVideo": 0,
+            "image": {
+              "srcset": true,
+              "src": "http://gfx.dagbladet.no/labrador/347/347586/34758671/jpg/active/231x_13197743.jpg",
+              "small": "http://gfx.dagbladet.no/labrador/347/347586/34758671/jpg/active/314x_13197743.jpg",
+              "alt": "Amerikansk turist funnet død i koffert på Bali",
+              "title": "Amerikansk turist funnet død i koffert på Bali"
+            },
+            "headlineSize": "small-size-35 medium-size-27 large-size-27",
+            "kicker": false,
+            "canNest": true,
+            "related": false
+          }
+        ],
+        "double": false,
+        "classes": ""
+      },
+      {
+        "items": [
+          {
+            "id": "34723190",
+            "headline": "Sett opp tabellen, vinn England-reise til 10 000",
+            "description": "Jan Egil (37) var best av 14 000 sist.",
+            "url": "http://www.dagbladet.no/2014/08/13/sport/fotball/premier_league/tabellkonkurranse/norsk_tipping/34723190/",
+            "keywords": false,
+            "datetime": "2014-08-13T14:02:48",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 0,
+            "hasComments": false,
+            "classes": "small-6 medium-12 large-12",
+            "hasVideo": 0,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347460/34746040/jpg/active/231x97.jpg",
+              "alt": "Sett opp tabellen, vinn England-reise til 10 000",
+              "title": "Sett opp tabellen, vinn England-reise til 10 000"
+            },
+            "headlineSize": "small-size-30 medium-size-9 large-size-9",
+            "kicker": false,
+            "canNest": true,
+            "related": false
+          },
+          {
+            "id": "34747027",
+            "headline": "Norsk kreft­forskning:  <span class=\"size5\">Slik kan mange liv reddes</span>",
+            "description": "",
+            "url": "http://www.dagbladet.no/2014/08/13/tema/pluss/helse/sykdom/forskning/34747027/",
+            "keywords": false,
+            "datetime": "2014-08-13T03:06:28",
+            "datePublished": "Wednesday 13. August 2014",
+            "hasTipbox": false,
+            "isPluss": 1,
+            "hasComments": false,
+            "classes": " small-6 medium-12 large-12",
+            "hasVideo": 0,
+            "image": {
+              "src": "http://gfx.dagbladet.no/labrador/347/347473/34747392/jpg/active/231x_13197743.jpg",
+              "alt": "Norsk kreft­forskning:  Slik kan mange liv reddes",
+              "title": "Norsk kreft­forskning:  Slik kan mange liv reddes"
+            },
+            "headlineSize": "small-size-28 medium-size-9 large-size-9",
+            "kicker": false,
+            "canNest": true,
+            "related": false
+          }
+        ],
+        "double": true,
+        "classes": " small-12 medium-3 large-3"
+      }
+    ]
+  }
+]

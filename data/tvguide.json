@@ -1,0 +1,1023 @@
+{
+    "categories": [
+        {
+            "id": 6,
+            "name": "Nyheter"
+        },
+        {
+            "id": 4,
+            "name": "Sport"
+        },
+        {
+            "id": 11,
+            "name": "Serier"
+        },
+        {
+            "id": 12,
+            "name": "Filmer"
+        }
+    ],
+    "channels": [
+        {
+            "id": "1",
+            "name": "NRK1",
+            "image": "/assets/tv/logo/nrk1.png",
+            "schedule": [
+                {
+                    "date": "2015-04-30 06:15",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Da. livstilsserie. Bondekn\u00f8len er klar med nye epsioder fra livet p\u00e5 Kastanieg\u00e5rden. Frank og familien f\u00f8rs\u00f8ker \u00e5 drive g\u00e5rden p\u00e5 den gode, gamle m\u00e5ten.",
+                    "rest": "(1)",
+                    "start": "06.15",
+                    "terning": 0,
+                    "tittel": "Det gode bondeliv"
+                },
+                {
+                    "date": "2015-04-30 06:45",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "(Mat s\u00e5 in i Norden) Finsk matserie. Kokken Michael og programleder Sonja er s\u00f8r\u00f8st i Finland og smaker p\u00e5 lokale retter og r\u00e5varer. I \u00d6sternyland er det s\u00f8tsaker som er tingen, og i Pern\u00e5 baker man br\u00f8d av speltmel og brygger \u00f8l.",
+                    "rest": "(6)",
+                    "start": "06.45",
+                    "terning": 0,
+                    "tittel": "Mat i Norden"
+                },
+                {
+                    "date": "2015-04-30 07:15",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "(Superhukommelse) Da. serie. Kjem du p\u00e5 namnet til han du helsa p\u00e5 i g\u00e5r? Illusjonisten Jan Helles\u00f8e viser oss korleis han kan lure hjernen, og gir oss r\u00e5d om korleis ein kan bruke b\u00e5de hjernen og sansane p\u00e5 ein skarpare m\u00e5te.",
+                    "rest": "(3)",
+                    "start": "07.15",
+                    "terning": 0,
+                    "tittel": "Kr\u00f8ll p\u00e5 hjernen"
+                },
+                {
+                    "date": "2015-04-30 07:45",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon med debatter, intervjuer, magasin, sport og v\u00e6r.",
+                    "rest": "",
+                    "start": "07.45",
+                    "terning": 0,
+                    "tittel": "NRK nyheter"
+                },
+                {
+                    "date": "2015-04-30 08:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon.",
+                    "rest": "",
+                    "start": "08.00",
+                    "terning": 0,
+                    "tittel": "NRK nyheter"
+                },
+                {
+                    "date": "2015-04-30 08:10",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Finsk serie. Seks enslige menn og kvinner mellom 65 og 90 \u00e5r har v\u00e6rt p\u00e5 jakt etter noen \u00e5 dele livet med. Har de funnet kj\u00e6rlighet eller vennskap? Gunvor, Elis og Tove-Maj oppsummerer sine opplevelser.",
+                    "rest": "(13)",
+                    "start": "08.10",
+                    "terning": 0,
+                    "tittel": "Hjertevenner"
+                },
+                {
+                    "date": "2015-04-30 08:40",
+                    "end": null,
+                    "kategoriid": "18",
+                    "omtale": "Dansk dokumentarserie. Eva Harlou snakker med kjente danske arkitekter om hvilke fysiske rammer de skaper for sine egne liv. Kim Herforth bor i et rekkehus p\u00e5 Holmen i K\u00f8benhavn. F\u00f8r var det et verksted, men n\u00e5 er det b\u00e5de et byhus og et feriehus, med b\u00e5ten fort\u00f8yd p\u00e5 den ene siden og byens sentrum p\u00e5 den andre.",
+                    "rest": "(3)",
+                    "start": "08.40",
+                    "terning": 0,
+                    "tittel": "Arkitektens hjem"
+                },
+                {
+                    "date": "2015-04-30 09:09",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Uke 38",
+                    "rest": "",
+                    "start": "09.09",
+                    "terning": 0,
+                    "tittel": "Filmavisen 1961"
+                },
+                {
+                    "date": "2015-04-30 09:20",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Finsk livsstilsserie. I den gamle villaen p\u00e5 \u00f8ya nord for Vasa lager de lekre retter og alskens fine ting. Dessuten er det en kunst \u00e5 holde et gammelt trehus og en stor hage i god stand.",
+                    "rest": "(10)",
+                    "start": "09.20",
+                    "terning": 0,
+                    "tittel": "Hygge i Str\u00f6ms\u00f6"
+                },
+                {
+                    "date": "2015-04-30 10:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "(Heartbeat) Britisk dramaserie. En eldre mann d\u00f8r br\u00e5tt. Mens politiet unders\u00f8ker om han hadde p\u00e5r\u00f8rende, kommer de p\u00e5 sporet av detaljerte ransplaner. Craddock sliter med ekteskapsproblemer. Medvirkende:William Simons, Tricia Penrose, Jason Durr, Philip Franks.",
+                    "rest": "(12)",
+                    "start": "10.00",
+                    "terning": 0,
+                    "tittel": "Med hjartet p\u00e5 rette staden"
+                },
+                {
+                    "date": "2015-04-30 10:50",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Dokumentarserie. Dagdr\u00f8mmer Er det sunt \u00e5 dagdr\u00f8mme? Eller er det like meningsl\u00f8st som vi frykter? D\u00f8r dagdr\u00f8mmene n\u00e5r multitaskingen tar overh\u00e5nd? Hans Olav Brenner tar med seg sin Volvo Amazon fra 1966 p\u00e5 en reise inn i hjernene v\u00e5re med hjerneforskere og kjente og ukjente nordmenn som forteller om dagdr\u00f8mmenes rolle i deres liv. Er Susanne Sundf\u00f8r en dagdr\u00f8mmer? Hvorfor sluttet Sissel Benneche-Osvold \u00e5 dagdr\u00f8mme?",
+                    "rest": "(3)",
+                    "start": "10.50",
+                    "terning": 0,
+                    "tittel": "Brenner - historier fra v\u00e5rt land"
+                },
+                {
+                    "date": "2015-04-30 11:30",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Var det mer stas \u00e5 reise med Bergensbanen f\u00f8r? Da toget gikk lynende fort, og man kunne g\u00e5 i restaurantvogn med hvite duker og stivede servietter? Dette har dagens pendlende studenter aldri opplevd, mens bildene vekker nostalgiske minner hos togveteraner. Da det var stas med tog",
+                    "rest": "",
+                    "start": "11.30",
+                    "terning": 0,
+                    "tittel": "Alt var bedre f\u00f8r"
+                },
+                {
+                    "date": "2015-04-30 12:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon med verdensv\u00e6ret.",
+                    "rest": "",
+                    "start": "12.00",
+                    "terning": 0,
+                    "tittel": "NRK nyheter"
+                },
+                {
+                    "date": "2015-04-30 12:15",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Norsk underholdningsserie. Are Kalv\u00f8 har bestemt seg for \u00e5 gi Norge en ny og bedre grunnlov. Dagens tema er monarki. Are tester hvor ille en kongelig kan oppf\u00f8re seg f\u00f8r folk sier fra og hyrer en headhunter for \u00e5 finne Norges neste dronning eller konge.",
+                    "rest": "(3)",
+                    "start": "12.15",
+                    "terning": 0,
+                    "tittel": "Riksforsamlinga"
+                },
+                {
+                    "date": "2015-04-30 12:45",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "(Murder, She Wrote) Amerikansk krimserie. Jessica Fletcher har en egen evne til \u00e5 l\u00f8se g\u00e5ter - b\u00e5de som krimforfatter og som etterforsker. Medvirkende:Angela Lansbury.",
+                    "rest": "(3)",
+                    "start": "12.45",
+                    "terning": 0,
+                    "tittel": "Jessica Fletcher"
+                },
+                {
+                    "date": "2015-04-30 13:30",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Britisk naturserie. For litt over 400 millioner \u00e5r siden forlot \u00f8rsm\u00e5 skapninger havet for \u00e5 g\u00e5 p\u00e5 land. Siden den gang har disse virvell\u00f8se dyrene blitt verdens mest vellykkede dyregruppe, utbredt over hele kloden. I dag fins det 200 millioner av dem for hvert menneske p\u00e5 jorden. David Attenborough tar seerne med p\u00e5 en fantastisk reise i denne makroverdenen. Ut av daggryets t\u00e5ke dukker en liten sp\u00f8kelsesaktig skapning opp. Dens eteriske vinger beveger seg i det minste vindpust. Det er en d\u00f8gnflue, og den viser oss hvordan de aller f\u00f8rste vingene ble brukt.",
+                    "rest": "(2)",
+                    "start": "13.30",
+                    "terning": 0,
+                    "tittel": "Naturens underverden"
+                },
+                {
+                    "date": "2015-04-30 14:20",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Finsk livsstilsserie. I den gamle villaen p\u00e5 \u00f8ya nord for Vasa lager de lekre retter og alskens fine ting. Dessuten er det en kunst \u00e5 holde et gammelt trehus og en stor hage i god stand.",
+                    "rest": "(11)",
+                    "start": "14.20",
+                    "terning": 0,
+                    "tittel": "Hygge i Str\u00f6ms\u00f6"
+                },
+                {
+                    "date": "2015-04-30 15:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon.",
+                    "rest": "",
+                    "start": "15.00",
+                    "terning": 0,
+                    "tittel": "NRK nyheter"
+                },
+                {
+                    "date": "2015-04-30 15:15",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Dansk matserie. De matglade br\u00f8drene Price er denne gangen i Firenze. Det skal lages mat fra det florentinske kj\u00f8kken. Innmat og fritert hjerne st\u00e5r p\u00e5 menyen. Er du litt mer glad i det s\u00f8te, f\u00e5r du gode tips p\u00e5 baking av biscotti og den ultimate dessert: isbomben. De matglade br\u00f8drene Price er denne gangen i Firenze. Det skal lages mat fra det florentinske kj\u00f8kken. Innmat og fritert hjerne st\u00e5r p\u00e5 menyen. Er du litt mer glad i det s\u00f8te, f\u00e5r du gode tips p\u00e5 baking av biscotti og den ultimate dessert: isbomben.",
+                    "rest": "(2)",
+                    "start": "15.15",
+                    "terning": 0,
+                    "tittel": "Munter mat - p\u00e5 tur"
+                },
+                {
+                    "date": "2015-04-30 16:00",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Norsk underholdningsserie. Kjente personer s\u00f8ker etter sine r\u00f8tter. Hvor kom hun egentlig fra? Det skal vise seg at farmoren til Petter stammer fra betydelige personer i norsk samfunns- og kulturliv. Programleder:Petter Wilhelm Blichfelt Schjerven Slektsforsker For \u00c5 Finne Ut Mer Om Sin Farmo.",
+                    "rest": "(7)",
+                    "start": "16.00",
+                    "terning": 0,
+                    "tittel": "Hvem tror du at du er?"
+                },
+                {
+                    "date": "2015-04-30 17:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon.",
+                    "rest": "",
+                    "start": "17.00",
+                    "terning": 0,
+                    "tittel": "NRK nyheter"
+                },
+                {
+                    "date": "2015-04-30 17:15",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Fylkesmann \u00d8ystein Djupedal i Aust-Agder gj\u00f8r seg kjent i sitt nye rike med \u00e5 dra p\u00e5 tur til M\u00e6rd\u00f8 utenfor Arendal.",
+                    "rest": "",
+                    "start": "17.15",
+                    "terning": 0,
+                    "tittel": "Ut i n\u00e6rturen"
+                },
+                {
+                    "date": "2015-04-30 17:30",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "17.30",
+                    "terning": 0,
+                    "tittel": "Oddasat - nyheter p\u00e5 samisk"
+                },
+                {
+                    "date": "2015-04-30 17:45",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Nyheter p\u00e5 tegnspr\u00e5k.",
+                    "rest": "",
+                    "start": "17.45",
+                    "terning": 0,
+                    "tittel": "Tegnspr\u00e5knytt"
+                },
+                {
+                    "date": "2015-04-30 17:50",
+                    "end": null,
+                    "kategoriid": "36",
+                    "omtale": "Vi feirer 17. mai ved \u00e5 bes\u00f8ke Skjold skoles musikkorps i Bergen. Kan man bli korpsstjerne i voksen alder, uten \u00e5 kunne verken instrument eller noter? Programleder:Siv Eli Vuolab Blir Med P\u00e5 \u00d8velse, Pr\u00f8ver Seg P\u00e5 Forskjellige Instrumenter.",
+                    "rest": "",
+                    "start": "17.50",
+                    "terning": 0,
+                    "tittel": "Norge Rundt"
+                },
+                {
+                    "date": "2015-04-30 18:15",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Dansk serie. Vi f\u00f8lger skattejegerne i deres jakt p\u00e5 antikviteter, retrofunn og lopper Danmark rundt. To brukthandlere konkurrerer om mer enn \u00e6ren i en intern salgskonkurranse. En brukthandler drar p\u00e5 en stor innkj\u00f8pstur p\u00e5 den jyske vestkyst, mens Lone Riis drar p\u00e5 loppemarked i K\u00f8benhavn og finner kuriositeter til sin vintageforretning.",
+                    "rest": "(2)",
+                    "start": "18.15",
+                    "terning": 0,
+                    "tittel": "Skattejegerne"
+                },
+                {
+                    "date": "2015-04-30 18:45",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "18.45",
+                    "terning": 0,
+                    "tittel": "Distriktsnyheter"
+                },
+                {
+                    "date": "2015-04-30 19:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon med magasin, sport og v\u00e6r.",
+                    "rest": "",
+                    "start": "19.00",
+                    "terning": 0,
+                    "tittel": "Dagsrevyen"
+                },
+                {
+                    "date": "2015-04-30 19:45",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "(World's Best Diet) Britisk dokumentar. Hvilket land har det sunneste kostholdet i verden? Vi har rangert kostholdet i 50 land ved hjelp av kostholdseksperter og leger. Vi skal se hvordan livet er for de som har et godt kosthold, og hvilke konsekvenser et d\u00e5rlig kosthold har. Kommentar: Chris Vel\u00f8y.",
+                    "rest": "(2)",
+                    "start": "19.45",
+                    "terning": 0,
+                    "tittel": "Verdens sunneste matfat"
+                },
+                {
+                    "date": "2015-04-30 20:30",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Arild Hagen tar oss med p\u00e5 svermeri i sommernatta. Mange sommerfugler er kun aktive i ly av nattem\u00f8rket og lever et hemmelighetsfullt liv for de fleste av oss. Med spesielle teknikker er det mulig \u00e5 lokke fram ogs\u00e5 eksklusive sjeldenheter.",
+                    "rest": "",
+                    "start": "20.30",
+                    "terning": 0,
+                    "tittel": "Svermere i sommernatten"
+                },
+                {
+                    "date": "2015-04-30 20:55",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "20.55",
+                    "terning": 0,
+                    "tittel": "Distriktsnyheter"
+                },
+                {
+                    "date": "2015-04-30 21:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon med Norge i dag, sport og v\u00e6r.",
+                    "rest": "",
+                    "start": "21.00",
+                    "terning": 0,
+                    "tittel": "Dagsrevyen 21"
+                },
+                {
+                    "date": "2015-04-30 21:30",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Direktesendt debattprogram med programleder Ingunn Solheim. Programleder:Ingunn Solheim.",
+                    "rest": "",
+                    "start": "21.30",
+                    "terning": 0,
+                    "tittel": "Debatten"
+                },
+                {
+                    "date": "2015-04-30 22:30",
+                    "end": null,
+                    "kategoriid": "18",
+                    "omtale": "Norges fremste skuespillere, i samtale med Vegard Larsen. Ane Dahl Torp (Ane Dahl Torp) Ane Dahl Torp har hatt mange store roller og vunnet uttallige priser, men fortsatt er det anmeldelsen hun fikk i lokalavisen som ten\u00e5ring hun husker ordrett. I \"I Larsens leilighet\" forteller hun b\u00e5de om oppturer og kraftige nederlag i l\u00f8pet av skuespillerkarrieren.",
+                    "rest": "(6)",
+                    "start": "22.30",
+                    "terning": 0,
+                    "tittel": "I Larsens leilighet"
+                },
+                {
+                    "date": "2015-04-30 23:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Siste nytt fra NRKs nyhetsredaksjon med sport og v\u00e6r.",
+                    "rest": "",
+                    "start": "23.00",
+                    "terning": 0,
+                    "tittel": "Kveldsnytt"
+                },
+                {
+                    "date": "2015-04-30 23:20",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "(Sea Patrol) Australsk serie. Ei gruppe tungt v\u00e6pna smuglarar legg miner i vatnet rundt HMAS Hammersley, og det bryt ut brann om bord. Medvirkende:Ian Stenlake, Lisa McCune, Saskia Burmeister.",
+                    "rest": "(10)",
+                    "start": "23.20",
+                    "terning": 0,
+                    "tittel": "Kystvakta"
+                },
+                {
+                    "date": "2015-05-01 00:05",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Norsk humorserie. Lars Berrum og Martin Beyer-Olsen tar en humoristisk vandring i seks temaer som frembringer fordommer blant det norske folk. Vi m\u00f8ter fargerike karakterer, tar tempen p\u00e5 holdninger i samfunnet og f\u00e5r f\u00f8le p\u00e5 egne fordommer. (Norske fordommer - premiere!) Dagens tema er rase. Hvem er vi, hvem er du, og hvem er de andre? Hva er lov \u00e5 si og ikke si om rase, og hva er egentlig den beste rasen?",
+                    "rest": "(1)",
+                    "start": "00.05",
+                    "terning": 0,
+                    "tittel": "Norske fordommer"
+                },
+                {
+                    "date": "2015-05-01 00:30",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Underholdning. Hvem ville du st\u00e5tt fast i heisen med? Vi har invitert to personer til et TV-opptak. Ingen av dem vet hvem de skal m\u00f8te. P\u00e5 vei opp til studio m\u00f8tes de i en heis som \"tilfeldig\" stopper mellom to etasjer. Den begynner \u00e5 g\u00e5 igjen f\u00f8rst n\u00e5r de har besvart noen av livets store sp\u00f8rsm\u00e5l. Hanne S\u00f8rvaag og Alexander St\u00f6ckl L\u00e5tskriver Hanne S\u00f8rvaag og Aleksander St\u00f6ckl, hopptreneren for det norske hopplandslaget, befinner seg i samme heis i kveld. De er ukjente for hverandre, men har en ting felles, nemlig kj\u00e6rlighet for musikk.",
+                    "rest": "(2)",
+                    "start": "00.30",
+                    "terning": 0,
+                    "tittel": "I heisen med"
+                },
+                {
+                    "date": "2015-05-01 01:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Br. krimserie. Den d\u00e5rlige kommunikasjonen mellom Rachel og Janet gj\u00f8r selv den minste ting uoverkommelig. Men s\u00e5 dukker det opp en alvorlig kidnappingssak som f\u00e5r dem til \u00e5 legge personlige hensyn til side. Sp\u00f8rsm\u00e5let er bare om de rekker fram i tide. Medvirkende:Suranne Jones, Lesley Sharp, Amelia Bullmore.",
+                    "rest": "(8)",
+                    "start": "01.00",
+                    "terning": 0,
+                    "tittel": "Scott og Bailey"
+                },
+                {
+                    "date": "2015-05-01 01:45",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "(One Way Astronaut) Fransk dokumentar. Hvem er villige til \u00e5 ofre alt, forlate jorden og legge ut p\u00e5 en enveisreise til en fremmed planet? Innen ti \u00e5r skal organisasjonen Mars One sende en gruppe mennesker for \u00e5 bosette seg p\u00e5 Mars. Vi f\u00f8lger fire av de nesten 80 000 ambisi\u00f8se og h\u00e5pefulle jordboerne som har s\u00f8kt om \u00e5 f\u00e5 v\u00e6re med p\u00e5 oppdraget. Den nederlandske entrepren\u00f8ren Bas Lansdorp st\u00e5r bak ideen, og budsjettet er p\u00e5 seks milliarder dollar.",
+                    "rest": "",
+                    "start": "01.45",
+                    "terning": 0,
+                    "tittel": "Enveisbillett til Mars"
+                },
+                {
+                    "date": "2015-05-01 02:45",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "(Sea Patrol) Australsk dramaserie. P\u00e5 HMAS Hammersley, en patruljeb\u00e5t i den australske marinen, bor og jobber 24 menn og kvinner tett p\u00e5 hverandre. Pakket sammen i denne trykkokeren av en b\u00e5t, m\u00e5 mannskapet mobilisere alt de har av kunnskap, humor og ikke minst t\u00e5lmodighet for \u00e5 l\u00f8se b\u00e5de store og sm\u00e5 oppdrag. HMAS Hammersley stopper en b\u00e5t med ulovlige immigranter. N\u00e5r immigrantene blir tatt om bord, kaster de en b\u00f8tte vann p\u00e5 mannskapet. B\u00f8tta viser seg \u00e5 inneholde mikroskopiske, d\u00f8delige maneter. Medvirkende:Lisa McCune, John Batchelor, Matthew Holmes.",
+                    "rest": "(4)",
+                    "start": "02.45",
+                    "terning": 0,
+                    "tittel": "Kystvakta"
+                },
+                {
+                    "date": "2015-05-01 03:30",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Amerikansk dramaserie. (I'll Try to Fix You) Etter en konfrontasjon p\u00e5 nytt\u00e5rsaften havner Will i tabloidenes s\u00f8kelys. Don ber Maggie koble Jim med en venninne. Will nekter \u00e5 f\u00f8lge nyhetsbildet og lager sin egen nyhetssak. Medvirkende:Jeff Daniels, Emily Mortimer, Sam Waterston.",
+                    "rest": "(4)",
+                    "start": "03.30",
+                    "terning": 0,
+                    "tittel": "The Newsroom"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "NRK2",
+            "image": "/assets/tv/logo/nrk2.png",
+            "schedule": [
+                {
+                    "date": "2015-04-30 08:55",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Britisk naturserie. For litt over 400 millioner \u00e5r siden forlot \u00f8rsm\u00e5 skapninger havet for \u00e5 g\u00e5 p\u00e5 land. Siden den gang har disse virvell\u00f8se dyrene blitt verdens mest vellykkede dyregruppe, utbredt over hele kloden. I dag fins det 200 millioner av dem for hvert menneske p\u00e5 jorden. David Attenborough tar seerne med p\u00e5 en fantastisk reise i denne makroverdenen.",
+                    "rest": "(1)",
+                    "start": "08.55",
+                    "terning": 0,
+                    "tittel": "Naturens underverden"
+                },
+                {
+                    "date": "2015-04-30 09:45",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Norsk underholdningsserie. Kjente personer s\u00f8ker etter sine r\u00f8tter. Mia Gundersen pr\u00f8ver \u00e5 finne ut hvem hennes morfar egentlig var. Det blir starten p\u00e5 en sv\u00e6rt emosjonell reise som avdekker den ene hemmeligheten etter den andre.",
+                    "rest": "(5)",
+                    "start": "09.45",
+                    "terning": 0,
+                    "tittel": "Hvem tror du at du er?"
+                },
+                {
+                    "date": "2015-04-30 10:45",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "10.45",
+                    "terning": 0,
+                    "tittel": "Oddasat - nyheter p\u00e5 samisk"
+                },
+                {
+                    "date": "2015-04-30 11:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "11.00",
+                    "terning": 0,
+                    "tittel": "Distriktsnyheter"
+                },
+                {
+                    "date": "2015-04-30 13:25",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Fra studio om politikk, kultur og samfunnsliv. Programleder:Ole Torp.",
+                    "rest": "",
+                    "start": "13.25",
+                    "terning": 0,
+                    "tittel": "Aktuelt"
+                },
+                {
+                    "date": "2015-04-30 13:55",
+                    "end": null,
+                    "kategoriid": "36",
+                    "omtale": "Aktualitetsmagasin fra NRKs utenriksredaksjon. G\u00e5r i dybden med ulike perspektiver p\u00e5 aktuelle saker fra hele verden. NRKs utenrikskorrespondenter bidrar med analyser og historier. Programledere er Hege Moe Eriksen og Gry Blekastad Alm\u00e5s. Programleder:Hege Moe Eriksen, Gry Blekastad Alm\u00e5s.",
+                    "rest": "",
+                    "start": "13.55",
+                    "terning": 0,
+                    "tittel": "Urix"
+                },
+                {
+                    "date": "2015-04-30 14:15",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "(Vis mig din tro) Dansk dokumentarserie. Fire unge inviterer hverandre hjem for \u00e5 vise hvordan de praktiserer sin tro. Alle har hatt sine fordommer og forestillinger om hverandre. S\u00f8ren fra frikirken Citykirken, muslimen Michelle, buddhisten Julie og kristne Anders har alle gitt troen en stor plass i sine liv.",
+                    "rest": "(4)",
+                    "start": "14.15",
+                    "terning": 0,
+                    "tittel": "Vis meg din tro"
+                },
+                {
+                    "date": "2015-04-30 14:40",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Svensk dokumentarserie. Bosniske Nadina lider av en alvorlig \u00f8yensykdom. Hun ble utvist fra Sveige i 2003 tross massive protester. Det skulle bli bedre for henne \u00e5 bo og f\u00e5 medisinsk hjelp hjemme. Men n\u00e5 kommer hun til Sverige annet hvert \u00e5r for \u00e5 unng\u00e5 \u00e5 bli blind. Hva har skjedd?",
+                    "rest": "(2)",
+                    "start": "14.40",
+                    "terning": 0,
+                    "tittel": "N\u00e5r hjelpen er over"
+                },
+                {
+                    "date": "2015-04-30 15:10",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Norsk underholdningsserie. Kjente personer s\u00f8ker etter sine r\u00f8tter. En luring av en tippoldefar, en sta oldemor og en avsl\u00f8rende dagbok er noen av overraskelsene Birgit Skarstein f\u00e5r n\u00e5r hun graver i den til n\u00e5 ukjente Skarstein-slekten. Men kan hun ved veis ende v\u00e6re stolt av \u00e5 kalle seg en Skarstein?",
+                    "rest": "(6)",
+                    "start": "15.10",
+                    "terning": 0,
+                    "tittel": "Hvem tror du at du er?"
+                },
+                {
+                    "date": "2015-04-30 16:10",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "(Heartbeat) Britisk dramaserie. En eldre mann d\u00f8r br\u00e5tt. Mens politiet unders\u00f8ker om han hadde p\u00e5r\u00f8rende, kommer de p\u00e5 sporet av detaljerte ransplaner. Craddock sliter med ekteskapsproblemer. Medvirkende:William Simons, Tricia Penrose, Jason Durr, Philip Franks.",
+                    "rest": "(12)",
+                    "start": "16.10",
+                    "terning": 0,
+                    "tittel": "Med hjartet p\u00e5 rette staden"
+                },
+                {
+                    "date": "2015-04-30 17:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "(Ein Unheimliches Erlebnis) Tysk krimserie. Kriminalsjefinspekt\u00f8r Stephan Derrick og Harry Klein brukar kl\u00f8kt og sunt vit til \u00e5 l\u00f8yse kompliserte mordg\u00e5ter. Medvirkende:Horst Tappert, Fritz Wepper.",
+                    "rest": "(9)",
+                    "start": "17.00",
+                    "terning": 0,
+                    "tittel": "Derrick"
+                },
+                {
+                    "date": "2015-04-30 18:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "Dagens viktigste debatter, intervjuer og kommentarer direkte fra radiostudio.",
+                    "rest": "",
+                    "start": "18.00",
+                    "terning": 0,
+                    "tittel": "Dagsnytt atten"
+                },
+                {
+                    "date": "2015-04-30 19:00",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "(Fuckr med dn hjrne) Dansk serie. Ikke alt er som det gir seg ut for \u00e5 v\u00e6re. Illusjonisten Jan Helles\u00f8e viser oss hvordan han kan lure hjernen og gir oss r\u00e5d om hvordan man kan bruke b\u00e5de den og sansene p\u00e5 en skarpere m\u00e5te.",
+                    "rest": "(3)",
+                    "start": "19.00",
+                    "terning": 0,
+                    "tittel": "Kr\u00f8ll p\u00e5 hjernen"
+                },
+                {
+                    "date": "2015-04-30 19:10",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Norsk dokumentar. Songkoret Lyderhorn i Bergen samlar hvert \u00e5r inn over 400.000 kroner til barnehjemmet Botshabelo i S\u00f8r-Afrika. De begynte som et politisk kor langt ute p\u00e5 venstresiden og har aldri gitt opp kampen for en bedre verden. N\u00e5 skal de f\u00e5 ny dirigent. Ingvill Mjeldheim Holter er nyutdannet og entusiastisk, f\u00f8rst og fremst n\u00e5r det gjelder musikken. Vil Ingvill f\u00e5 koret til \u00e5 dele den musikalske visjonen hennes? Og vil engasjementet for en bedre verden smittet fra koret til dirigenten?",
+                    "rest": "",
+                    "start": "19.10",
+                    "terning": 0,
+                    "tittel": "Kor i verda"
+                },
+                {
+                    "date": "2015-04-30 19:40",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Norsk dokumentar. M\u00f8t menneskene som lever langs Varangerfjorden i Nesseby kommune. Med sj\u00f8samisk liv, kultur og sjel trenger man ikke fjernsyn, ikke n\u00e5r fjorden utenfor er storskjerm nok.",
+                    "rest": "",
+                    "start": "19.40",
+                    "terning": 0,
+                    "tittel": "Portretter fra Varangerfjorden"
+                },
+                {
+                    "date": "2015-04-30 19:55",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Norsk dokumentarserie. 28. mai 1940: I et britisk landgangsfart\u00f8y sitter nordmannen Ivan Vanje sammen med allierte fremmedlegion\u00e6rer. Sammen skal de fors\u00f8ke \u00e5 gjenerobre Narvik fra tyske styrker som har okkupert hjembyen hans i snart to m\u00e5neder. Felttogets st\u00f8rste slag st\u00e5r foran dem.",
+                    "rest": "(3)",
+                    "start": "19.55",
+                    "terning": 0,
+                    "tittel": "Alliert og alene"
+                },
+                {
+                    "date": "2015-04-30 20:55",
+                    "end": null,
+                    "kategoriid": "18",
+                    "omtale": "Kulturprogram. Nina Stensrud Martin inviterer aktuelle gjester til \u00e5 diskutere de viktigste kultursakene akkurat n\u00e5. Programleder:Nina Stensrud Martin.",
+                    "rest": "",
+                    "start": "20.55",
+                    "terning": 0,
+                    "tittel": "Selskapet"
+                },
+                {
+                    "date": "2015-04-30 21:25",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "21.25",
+                    "terning": 0,
+                    "tittel": "Oddasat - nyheter p\u00e5 samisk"
+                },
+                {
+                    "date": "2015-04-30 21:30",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "(Cordon) Belgisk thrillerserie. Medvirkende:Wounter Hendrickx, Liesa Van Der Aa, Tom Dewispelaere.",
+                    "rest": "(3)",
+                    "start": "21.30",
+                    "terning": 0,
+                    "tittel": "Fanget i Antwerpen"
+                },
+                {
+                    "date": "2015-04-30 22:20",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "(Gl\u00f6mda brott) Svensk dokumentarserie. Mord, ran, homoseksualitet. Hva ble folk d\u00f8mt og straffet for i gamle dagers Sverige? Programleder:Niklas L\u00e5ngstr\u00f6m.",
+                    "rest": "(8)",
+                    "start": "22.20",
+                    "terning": 0,
+                    "tittel": "Glemte forbrytelser"
+                },
+                {
+                    "date": "2015-04-30 22:30",
+                    "end": null,
+                    "kategoriid": "36",
+                    "omtale": "Aktualitetsmagasin fra NRKs utenriksredaksjon. G\u00e5r i dybden med ulike perspektiver p\u00e5 aktuelle saker fra hele verden. NRKs utenrikskorrespondenter bidrar med analyser og historier. Programledere er Hege Moe Eriksen og Gry Blekastad Alm\u00e5s. Programleder:Hege Moe Eriksen, Gry Blekastad Alm\u00e5s.",
+                    "rest": "",
+                    "start": "22.30",
+                    "terning": 0,
+                    "tittel": "Urix"
+                },
+                {
+                    "date": "2015-04-30 22:50",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Norsk livsstilsserie. Arkitekter jobber daglig med \u00e5 tegne fantastiske boliger for andre, men hvordan bor de selv? Charlotte Thiis-Evensen har bes\u00f8kt seks norske arkitekter for \u00e5 snakke om hva som skaper et godt hjem. I dag: Knut Hjeltnes.",
+                    "rest": "(3)",
+                    "start": "22.50",
+                    "terning": 0,
+                    "tittel": "Arkitektens hjem"
+                },
+                {
+                    "date": "2015-04-30 23:20",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Nederlandsk dokumentarserie. Neil Shubin er ekspert p\u00e5 anatomi og forhistorisk fisk. I menneskekroppen finner han arven etter forfedrene v\u00e5re, nemlig fisk, reptiler og aper. Hendene, f\u00f8ttene, fargesynet, ryggraden og den oppreiste gangen v\u00e5r kan vi spore tilbake til apene og de forhistoriske menneskene vi stammer fra. Men den viktiste arven de ga oss er likevel menneskehjernen. I kroppen v\u00e5r finner Neil Shubin alle slags spor etter forfedrene v\u00e5re.",
+                    "rest": "(3)",
+                    "start": "23.20",
+                    "terning": 0,
+                    "tittel": "Fra fisk til menneske"
+                },
+                {
+                    "date": "2015-05-01 00:15",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Dokumentarserie. Hold hjulene i gang Den tyske okkupasjonen av Norge 1940-45 forandret hverdagslivet til hele befolkningen. Men noen yrkesgrupper m\u00e5tte samarbeide med okkupantene, og folk i blant annet politiet og bygg- og anleggsbransjen ble stilt overfor vanskelige dilemmaer. Krigen skulle komme til \u00e5 gi full sysselsetting og norgeshistoriens st\u00f8rste byggeboom.",
+                    "rest": "(2)",
+                    "start": "00.15",
+                    "terning": 0,
+                    "tittel": "Okkupert hverdag"
+                },
+                {
+                    "date": "2015-05-01 00:45",
+                    "end": null,
+                    "kategoriid": "7",
+                    "omtale": "Norsk dokumentar. Eliva Antona Henriksen reiser 70 \u00e5r tilbake i tid. Til den h\u00f8sten Finnmark og Nord-Troms ble rasert og nedbrent av tyskerne. Familien ble tvangsevakuert fra den trygge hjembygda, uten \u00e5 vite hvor de skulle. Moren var h\u00f8ygravid og faren ble alvorlig syk, og klarte nesten ikke \u00e5 bevege seg. Ni\u00e5ringen Eliva m\u00e5tte skaffe alt som trengtes til familien, passe p\u00e5 sin fire \u00e5r yngre bror og g\u00e5 p\u00e5 skole annenhver dag.",
+                    "rest": "",
+                    "start": "00.45",
+                    "terning": 0,
+                    "tittel": "Elivas reise"
+                },
+                {
+                    "date": "2015-05-01 01:35",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Norsk kortfilm fra 2013. Den 18 \u00e5r gamle norsk-kurdiske jenta Sara har et hemmelig kj\u00e6resteforhold til Erik. Foreldrene forventer at hun skal gifte seg med en kurdisk mann n\u00e5r hun er ferdig med vidareg\u00e5ende og forbyr henne \u00e5 treffe Erik mer. Sara vil leve et vanlig liv som alle andre norske jenter, og st\u00e5r n\u00e5 overfor et vanskelig valg.",
+                    "rest": "",
+                    "start": "01.35",
+                    "terning": 0,
+                    "tittel": "Inn i v\u00e5rt m\u00f8rke hus"
+                },
+                {
+                    "date": "2015-05-01 01:50",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "01.50",
+                    "terning": 0,
+                    "tittel": "Oddasat - nyheter p\u00e5 samisk"
+                },
+                {
+                    "date": "2015-05-01 02:05",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "02.05",
+                    "terning": 0,
+                    "tittel": "Distriktsnyheter"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "TV2",
+            "image": "/assets/tv/logo/tv2.png",
+            "schedule": [
+                {
+                    "date": "2015-04-30 06:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Svensk komiserie. Vi f\u00f8lger de to naboparene Alex og Anna og Fredde og Mickan i deres hverdagsforviklinger. I kveldens episode har Alex endelig bestemt seg for \u00e5 fri til Anna, men det er ikke lett \u00e5 finne riktig tidspunkt \u00e5 gj\u00f8re det p\u00e5. Medvirkende:Felix Herngren, Johan Rheborg, Josephine Bornebusch, Mia Sk\u00e4ringer.",
+                    "rest": "(1)",
+                    "start": "06.00",
+                    "terning": 0,
+                    "tittel": "Solsidan"
+                },
+                {
+                    "date": "2015-04-30 06:30",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "06.30",
+                    "terning": 0,
+                    "tittel": "Nyhetene"
+                },
+                {
+                    "date": "2015-04-30 06:55",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Morgensending. M\u00f8te med aktuelle gjester. Nyheter og v\u00e6rmelding hver hele og halve time.",
+                    "rest": "",
+                    "start": "06.55",
+                    "terning": 0,
+                    "tittel": "God morgen Norge"
+                },
+                {
+                    "date": "2015-04-30 10:00",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Morgensending. M\u00f8te med aktuelle gjester. Nyheter og v\u00e6rmelding hver hele og halve time.",
+                    "rest": "",
+                    "start": "10.00",
+                    "terning": 0,
+                    "tittel": "God morgen Norge"
+                },
+                {
+                    "date": "2015-04-30 11:40",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Britisk realityserie.",
+                    "rest": "(18)",
+                    "start": "11.40",
+                    "terning": 0,
+                    "tittel": "Celebrity Masterchef"
+                },
+                {
+                    "date": "2015-04-30 12:45",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "(Love it or List it) Kanadisk livsstilsserie. Designer Hilary Farr og eiendomsmegler David Visentin gir huseiere den ultimate utfordringen i jakten p\u00e5 dr\u00f8mmehjemmet; skal de pusse opp hjemmet de allerede har - eller selge det? David bruker sin ekspertise til \u00e5 finne boliger som matcher b\u00e5de \u00f8nskeliste og budsjett, mens Hilary viser hvordan hun kan totalforvandle huset de allerede har. Deretter er det opp til huseier \u00e5 bestemme om det er Hilary eller David som vinner.",
+                    "rest": "(4)",
+                    "start": "12.45",
+                    "terning": 0,
+                    "tittel": "Bolighjelpen"
+                },
+                {
+                    "date": "2015-04-30 13:40",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "(Sell this House) Amerikansk realityserie. Programleder Tanya Memme og designer Roger Hazard hjelper folk som har problemer med \u00e5 selge huset sitt.",
+                    "rest": "(11)",
+                    "start": "13.40",
+                    "terning": 0,
+                    "tittel": "Hus til salgs"
+                },
+                {
+                    "date": "2015-04-30 14:05",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Norsk livsstilsserie. Kjersti Bergesen, Einar Nilsson, Andreas Nyg\u00e5rd og Gunnar Fjellstad pusser opp for folk. Tid for hjem gjengen er klare for \u00e5 pusse opp en stue i en hytte. Familien har pr\u00f8vd \u00e5 fikse p\u00e5 den selv, men er ikke forn\u00f8yd og de trenger hjelp.Midt i rommet st\u00e5r det en ovn og en pipe som gj\u00f8r rommet vanskelig \u00e5 m\u00f8blere. Designer Aina Sollie Steen tar fatt p\u00e5 oppdraget og vil dra naturen inn.",
+                    "rest": "(12)",
+                    "start": "14.05",
+                    "terning": 0,
+                    "tittel": "Tid for hjem"
+                },
+                {
+                    "date": "2015-04-30 15:05",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Amerikansk dramaserie. Forbudt kj\u00e6rlighet, sjalusi og et vanvittig karrierejag er noen av utfordringene for legene ved prestisjetunge Seattle Grace Hospital. With You I'm Born Again Sykehussstaben m\u00e5 takle de fysiske og psykiske konsekvensene etter det blodige skuddramaet. Medvirkende:Ellen Pompeo, Patrick Dempsey, Sandra Oh.",
+                    "rest": "(1)",
+                    "start": "15.05",
+                    "terning": 0,
+                    "tittel": "Grey's Anatomy"
+                },
+                {
+                    "date": "2015-04-30 16:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Australsk dramaserie. F\u00f8lg hverdagslivet til innbyggerne i Summer Bay. Marilyn blir sjokkert n\u00e5r hun skj\u00f8nner at Jett ser p\u00e5 henne som en mor. Sjokket for Oscar blir minst like stort, n\u00e5r Maddy avsl\u00f8rer at han kanskje er faren til barnet hun b\u00e6rer p\u00e5. Phoebe velger \u00e5 g\u00e5 med p\u00e5 Nieves forslag for karrieren hennes - men til hvilken pris?",
+                    "rest": "(40)",
+                    "start": "16.00",
+                    "terning": 0,
+                    "tittel": "Home and Away"
+                },
+                {
+                    "date": "2015-04-30 16:30",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Australsk dramaserie. F\u00f8lg hverdagslivet til innbyggerne i Summer Bay. Marilyn er redd for \u00e5 miste vennskapet med Josh n\u00e5 som hun er moren hans. Oscar f\u00e5r panikk ved tanken p\u00e5 \u00e5 bli far, mens Maddy m\u00e5 vurdere om hun skal la Josh slutte p\u00e5 skolen for barnet som hun vet ikke er hans.",
+                    "rest": "(41)",
+                    "start": "16.30",
+                    "terning": 0,
+                    "tittel": "Home and Away"
+                },
+                {
+                    "date": "2015-04-30 17:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Amerikansk komiserie. P\u00e5 liksom-dokumentarisk vis f\u00f8lger vi det kompliserte hverdagslivet til tre moderne amerikanske familier - alle med sine s\u00e6regenheter. Phil roter det til n\u00e5r han f\u00e5r beskjed om \u00e5 holde seg hjemme n\u00e5r det kommer arbeidsfolk. Dermed lager han en s\u00e5 komplisert l\u00f8gn ovenfor Claire at han blir fysisk d\u00e5rlig av stresset. I mellomtiden blir Gloria fullstendig besatt av ansvaret hun har f\u00e5tt for \u00e5rets store familieportrett. Medvirkende:Julie Bowen, Ed O'Neill, Sofia Vergara.",
+                    "rest": "(21)",
+                    "start": "17.00",
+                    "terning": 0,
+                    "tittel": "Modern Family"
+                },
+                {
+                    "date": "2015-04-30 17:30",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Amerikansk komiserie. P\u00e5 liksom-dokumentarisk vis f\u00f8lger vi det kompliserte hverdagslivet til tre moderne amerikanske familier - alle med sine s\u00e6regenheter. Jay, Gloria og Manny utfordrer hverandres komfortsoner. Samtidig har Mitch og Cams bryllup blitt s\u00e5 sv\u00e6rt og dyrt at de m\u00e5 begynne \u00e5 selge eiendelene sine. Medvirkende:Julie Bowen, Ed O'Neill, Sofia Vergara.",
+                    "rest": "(22)",
+                    "start": "17.30",
+                    "terning": 0,
+                    "tittel": "Modern Family"
+                },
+                {
+                    "date": "2015-04-30 18:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Svensk komiserie. Vi f\u00f8lger de to naboparene Alex og Anna og Fredde og Mickan i deres hverdagsforviklinger. Freddes gamle plage\u00e5nd flytter tilbake til Saltsj\u00f8baden og viser seg \u00e5 v\u00e6re rikere enn ham. Alex og Sara krangler om hvem som gj\u00f8r mest arbeid hjemme. Medvirkende:Felix Herngren, Johan Rheborg, Josephine Bornebusch, Mia Sk\u00e4ringer.",
+                    "rest": "(2)",
+                    "start": "18.00",
+                    "terning": 0,
+                    "tittel": "Solsidan"
+                },
+                {
+                    "date": "2015-04-30 18:30",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "18.30",
+                    "terning": 0,
+                    "tittel": "Nyhetene"
+                },
+                {
+                    "date": "2015-04-30 18:45",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "18.45",
+                    "terning": 0,
+                    "tittel": "V\u00e6ret"
+                },
+                {
+                    "date": "2015-04-30 18:50",
+                    "end": null,
+                    "kategoriid": "4",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "18.50",
+                    "terning": 0,
+                    "tittel": "Sportsnyhetene"
+                },
+                {
+                    "date": "2015-04-30 19:00",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Norsk dramaserie. Jenny er skeptisk til \u00e5 introdusere Stian for Eva, men til Jennys overraskelse gj\u00f8r ikke moren henne flau overfor Stian. Tvert imot finner Stian og Eva tonen umiddelbart. Litt for godt etter Jennys smak. Pelle er ivrig etter \u00e5 delta p\u00e5 flashmoben, men har to venstref\u00f8tter og \u00f8delegger mer enn han bidrar.",
+                    "rest": "(139)",
+                    "start": "19.00",
+                    "terning": 0,
+                    "tittel": "Hotel C\u00e6sar"
+                },
+                {
+                    "date": "2015-04-30 19:30",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Norsk dramaserie. Koreografen er bekymret for at Pelles indre groove skal \u00f8delegge for de andre danserne. Men for \u00e5 ikke knekke selvtilliten hans helt, overbeviser hun ham om at han skal f\u00e5 en ekstra viktig oppgave. Da Gabriel f\u00e5r vite at Juni har avlyst flashmoben blir han rasende og konfronterer henne, og tvinger med det Juni til \u00e5 revurdere valget sitt. S\u00e5 etter et siste farvel med Winther, bryter plutselig Juni og alle de ansatte ut i dans.",
+                    "rest": "(140)",
+                    "start": "19.30",
+                    "terning": 0,
+                    "tittel": "Hotel C\u00e6sar"
+                },
+                {
+                    "date": "2015-04-30 20:00",
+                    "end": null,
+                    "kategoriid": "32",
+                    "omtale": "Norsk livsstilsserie. Vi nordmenn stoler p\u00e5 de som produserer maten v\u00e5r, men burde vi det? Vet du egentlig hva du spiser? \u00abMatkontrollen\u00bb skal unders\u00f8ke smak, hygiene og kvalitet, og sjekke om du f\u00e5r det du betaler for. Vi avsl\u00f8rer hvordan du blir lurt - og hvem som st\u00e5r bak. Grandiosa kommer i ny versjon med fire oster og uten kj\u00f8tt. Kan den m\u00e5le seg med de argeste konkurrentene, inkludert original-Grandiosaen? Nortura har solgt halal-kj\u00f8tt som vanlig kj\u00f8tt, men er det egentlig s\u00e5 farlig? Noen typer kaffe skal v\u00e6re bedre for helsa enn andre, og \"Matkontrollen\" tester hvor stor effekt ulike kaffetyper kan ha p\u00e5 kolesterolet ditt. En hel speidertropp f\u00e5r dessuten smaksteste v\u00e5rens isnyheter; Oreo, Dugg, Smeltis, Cinnamon Buns, Kroneis Karmell, Creme Sommerb\u00e6r og Royal Pistasj.",
+                    "rest": "(14)",
+                    "start": "20.00",
+                    "terning": 0,
+                    "tittel": "Matkontrollen"
+                },
+                {
+                    "date": "2015-04-30 20:30",
+                    "end": null,
+                    "kategoriid": "36",
+                    "omtale": "Forbrukermagasin. Solveig Barstad presenterer aktuelle forbrukersaker og produkttester. Et datingsnettsted hevder de har over 300.000 medlemmer - bare i Norge. \"TV 2 hjelper deg\" unders\u00f8kte siden og fikk to single til \u00e5 teste tjenesten. Funnene er oppsiktsvekkende. Sonos har i \u00e5revis v\u00e6rt best p\u00e5 multiromsh\u00f8yttalere, et system som lar deg spille musikk tr\u00e5dl\u00f8st i flere rom samtidig. N\u00e5 utfordrer flere elektronikkgiganter Sonos, og \"TV 2 hjelper deg\" tester hvilke multiromsh\u00f8yttalere som er best. To kunder av M\u00e5kestad bil i Tyssefjord har f\u00e5tt tilkjent rettskraftige erstatninger, men bilfirmaet nekter \u00e5 f\u00f8lge opp. N\u00e5 truer kundene med tvangssalg av bedriften. \"TV 2 hjelper deg\" har dessuten funnet store forskjeller p\u00e5 ulike typer dyreforsikring til kj\u00e6ledyr.",
+                    "rest": "(14)",
+                    "start": "20.30",
+                    "terning": 0,
+                    "tittel": "TV 2 hjelper deg"
+                },
+                {
+                    "date": "2015-04-30 21:00",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "21.00",
+                    "terning": 0,
+                    "tittel": "Nyhetene"
+                },
+                {
+                    "date": "2015-04-30 21:20",
+                    "end": null,
+                    "kategoriid": "6",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "21.20",
+                    "terning": 0,
+                    "tittel": "V\u00e6ret"
+                },
+                {
+                    "date": "2015-04-30 21:25",
+                    "end": null,
+                    "kategoriid": "4",
+                    "omtale": "",
+                    "rest": "",
+                    "start": "21.25",
+                    "terning": 0,
+                    "tittel": "Sportsnyhetene"
+                },
+                {
+                    "date": "2015-04-30 21:40",
+                    "end": null,
+                    "kategoriid": "9",
+                    "omtale": "Norsk underholdning. I T\u00f8rnquistklubben deler Einar T\u00f8rnquist, Sigrid Bonde Tusvik og Morten Ramm hver uke sitt h\u00f8yst subjektive og ufiltrerte syn p\u00e5 det de mener er ukas mest engasjerende hendelser.",
+                    "rest": "(8)",
+                    "start": "21.40",
+                    "terning": 0,
+                    "tittel": "T\u00f8rnquistklubben"
+                },
+                {
+                    "date": "2015-04-30 22:40",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Amerikansk dramaserie. Datageniet Walter O\u0092Brien og hans team av outsidere rekrutteres av USAs Homeland Security. Under kodenavnet \u00abScorpion\u00bb bruker de sine spesielle evner til \u00e5 l\u00f8se komplekse og globale teknologiske trusler. Serien er basert p\u00e5 en sann historie. Atomv\u00e5pen st\u00e5r i fare for \u00e5 bli utl\u00f8st fra en hemmelig base, og teamet m\u00e5 f\u00e5 avgj\u00f8rende informasjon fra en skadet Secret Service-agent. Samtidig foresl\u00e5r Drew at det beste for Ralph vil v\u00e6re \u00e5 flytte til Maine. Medvirkende:Eddie Kaye Thomas, Katharine McPhee, Elyes Gabel.",
+                    "rest": "(15)",
+                    "start": "22.40",
+                    "terning": 0,
+                    "tittel": "Scorpion"
+                },
+                {
+                    "date": "2015-04-30 23:40",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Amerikansk dramaserie. En av Manhattans beste advokater, Harvey Specter, har bestemt seg for \u00e5 rekruttere en ny, dyktig partner. Han ender opp med \u00e5 rekruttere Mike Ross, han er den eneste fyren som klarer \u00e5 imponere ham, problemet er bare at han ikke er advokat. Mike er smart til tross for at han er en \u00abCollege dropout\u00bb, og et vindunderbarn innenfor lov og rett. I tillegg er han gatesmart som en kjeltring. Daniel Hardman er tilbake og innlater seg p\u00e5 en kamp om hjertene til de Pearson Hardman-ansatte.",
+                    "rest": "(2)",
+                    "start": "23.40",
+                    "terning": 0,
+                    "tittel": "Suits"
+                },
+                {
+                    "date": "2015-05-01 05:30",
+                    "end": null,
+                    "kategoriid": "11",
+                    "omtale": "Amerikansk komiserie. I et anfall av skrivesperre legger forfatteren Jonathan Ames ut en annonse om \"privatdetektiv til leie\". Han f\u00e5r dermed levd ut fantasiene sine som en ekte noir-detektiv, sammen med redakt\u00f8ren sin George og bestevennen Ray. Serien er l\u00f8st basert p\u00e5 den virkelige forfatteren Jonathan Ames' egne memoarer. George vil redde Emily fra Bernhard, s\u00e5 han ber Jonathan ta henne med ut for \u00e5 ha det litt g\u00f8y, s\u00e5nn helt platonisk. Leah kaster Ray ut av leiligheten fordi han har servert industriprodusert kylling til d\u00f8trene, og Ray ender opp i en hjerte til hjerte-samtale med en eldre kvinne. George selv spiser middag med Bernard p\u00e5 en restaurant som viser seg og v\u00e6re eid av Richard, og med det form\u00e5l \u00e5 utkonkurrere George. Bernhard m\u00e5 tenke fort. Medvirkende:Jason Schwartzman, Ted Danson, Zach Galifianakis.",
+                    "rest": "(4)",
+                    "start": "05.30",
+                    "terning": 0,
+                    "tittel": "Bored to Death"
+                }
+            ]
+        }
+    ]
+}

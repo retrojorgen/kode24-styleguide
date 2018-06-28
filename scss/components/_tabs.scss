@@ -1,0 +1,89 @@
+// Tabs
+//
+// RequiresJS: &nbsp;
+//
+// Markup:
+// <ul class="tabs" data-tab>
+//   <li class="tab-title active"><a href="#panel2-1">Tab 1</a></li>
+//   <li class="tab-title"><a href="#panel2-2">Tab 2</a></li>
+//   <li class="tab-title"><a href="#panel2-3">Tab 3</a></li>
+//   <li class="tab-title"><a href="#panel2-4">Tab 4</a></li>
+// </ul>
+//
+// Styleguide 11.4
+
+.tabs{
+    .tab-title{
+        border-top: 3px solid $ui-color;
+        &:first-child{
+            &>a{
+                border-left: 1px solid $color-grey;
+            }
+        }
+        &>a{
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $ui-color;
+            padding: 0.7rem 2rem;
+            border-right: 1px solid $color-grey;
+        }
+        &.active{
+            border-top: 3px solid $color-grey;
+            &>a{
+	            border-right: none;
+            }
+	        &+.tab-title {
+	        	a {
+		            border-left: 1px solid $color-grey;
+	        	}
+	        }
+	        &:last-child{
+	            border-right: 1px solid $color-grey;
+	        }
+        }
+    }
+}
+
+// Expanded
+//
+// Markup:
+// <ul class="tabs expand-3" data-tab>
+//   <li class="tab-title active"><a href="#panel2-1">Tab 1</a></li>
+//   <li class="tab-title"><a href="#panel2-2">Tab 2</a></li>
+//   <li class="tab-title"><a href="#panel2-3">Tab 3</a></li>
+// </ul>
+//
+// Styleguide 11.4.1
+
+.tabs{
+    &[class*=" expand-"]{
+        .tab-title{
+            text-align:center;
+            a{
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &.expand-2{
+        .tab-title{
+            width: 50%;
+        }
+    }
+
+    &.expand-3{
+        .tab-title{
+            width: 33.33%;
+        }
+    }
+
+    &.expand-4{
+        .tab-title{
+            width: 25%;
+        }
+    }
+
+}

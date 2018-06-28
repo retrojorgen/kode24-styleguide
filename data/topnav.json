@@ -1,0 +1,171 @@
+{
+    "class": "nocontent",
+    "title": {
+        "text": "Dinside",
+        "url": "http://www.dinside.no"
+    },
+    "primary": {
+        "navigation": [
+            {
+                "id": "js-primary-navigation-sections",
+                "text": "Seksjoner",
+                "url": "#",
+                "hasDropdown": true,
+                "dropdown":[
+                    {
+                        "id":"js-seksjoner-data",
+                        "text": "Data",
+                        "url": "http://www.dinside.no/data"
+                    },
+                    {
+                        "id":"js-seksjoner-mobil",
+                        "text": "Mobil",
+                        "url": "http://www.dinside.no/mobil"
+                    },
+                    {
+                        "id":"js-seksjoner-motor",
+                        "text": "Motor",
+                        "url": "http://www.dinside.no/motor"
+                    },
+                    {
+                        "id":"js-seksjoner-okonomi",
+                        "text": "Økonomi",
+                        "url": "http://www.dinside.no/okonomi"
+                    },
+                    {
+                        "id":"js-seksjoner-bolig",
+                        "text": "Bolig",
+                        "url": "http://www.dinside.no/bolig"
+                    },
+                    {
+                        "id":"js-seksjoner-fritid",
+                        "text": "Fritid",
+                        "url": "http://www.dinside.no/fritid"
+                    },
+                    {
+                        "id":"js-seksjoner-reise",
+                        "text": "Reise",
+                        "url": "http://www.dinside.no/reise/"
+                    },
+                    {
+                        "id":"js-seksjoner-guru",
+                        "text": "Guru",
+                        "url": "http://www.dinside.no/guru"
+                    }
+                ]
+            },
+            {
+                "id": "js-primary-navigation-popular",
+                "text": "Populære temaer",
+                "url": "#",
+                "hasDropdown": true,
+                "dropdown":[
+                    {
+                        "id":"js-popular-elbil",
+                        "text": "Elbil",
+                        "url": "http://www.dinside.no/tag/elbil"
+                    },
+                    {
+                        "id":"js-popular-test",
+                        "text": "Populære",
+                        "url": "http://www.dinside.no/tag/test"
+                    },
+                    {
+                        "id":"js-popular-nissan-leaf",
+                        "text": "Lissan Leaf",
+                        "url": "http://http://www.dinside.no/tag/nissan%20leaf"
+                    },
+                    {
+                        "id":"js-popular-tilbakekalling",
+                        "text": "Tilbakekalling",
+                        "url": "http://www.dinside.no/tag/tilbakekalling"
+                    },
+                     {
+                        "id":"js-popular-bremsesvikt",
+                        "text": "Bremsesvikt",
+                        "url": "http://www.dinside.no/tag/bremsesvikt"
+                    },
+                    {
+                        "id":"js-popular-bremsefeil",
+                        "text": "Bremsefeil",
+                        "url": "http://www.dinside.no/tag/bremsefeil"
+                    },
+                   {
+                        "id":"js-popular-skatt",
+                        "text": "Skatt",
+                        "url": "http://www.dinside.no/tag/skatt"
+                    },
+                   {
+                        "id":"js-popular-skatteetaten",
+                        "text": "Skatteetaten",
+                        "url": "http://www.dinside.no/tag/skatteetaten"
+                    },
+                   {
+                        "id":"js-popular-datatrafikk",
+                        "text": "Datatrafikk",
+                        "url": "http://www.dinside.no/tag/datatrafikk"
+                    },
+                   {
+                        "id":"js-popular-telenor",
+                        "text": "Telenor",
+                        "url": "http://www.dinside.no/tag/telenor"
+                    },
+                   {
+                        "id":"js-popular-mobil",
+                        "text": "Mobil",
+                        "url": "http://www.dinside.no/tag/mobil"
+                    },
+                   {
+                        "id":"js-popular-rust",
+                        "text": "Rust",
+                        "url": "http://www.dinside.no/tag/rust"
+                    }
+                ]
+            },
+            {
+                "id": "js-primary-navigation-tools",
+                "text": "Verktøy",
+                "url": "#",
+                "hasDropdown": true,
+                "dropdown":[
+                    {
+                        "id":"js-tools-home",
+                        "text": "Hvor mye er boligen verdt?",
+                        "url": "http://www.dinside.no/104306/hva-er-boligen-verdt"
+                    },
+                    {
+                        "id":"js-tools-magasinet",
+                        "text": "Hvor mye er bilen verdt?",
+                        "url": "http://www.dinside.no/104523/hva-er-bilen-din-verdt"
+                    },
+                    {
+                        "id":"js-tools-kultur",
+                        "text": "Strømpriser",
+                        "url": "http://www.dinside.no/strompriser/"
+                    },
+                    {
+                        "id":"js-tools-wasting",
+                        "text": "Sløsekalkulator",
+                        "url": "http://www.dinside.no/787895/slosekalkulator"
+                    },
+                    {
+                        "id":"js-tools-currency",
+                        "text": "Valutakalkulator",
+                        "url": "http://www.dinside.no/104522/valutakalkulator"
+                    },
+                     {
+                        "id":"js-tools-link",
+                        "text": "Se hele verktøykassen",
+                        "url": "#dinside-tools"
+                    }
+                ]
+            }
+        ]
+    },
+    "login": false,
+    "search": {
+        "method": "get",
+        "action": "http://www.dinside.no/tekstarkiv",
+        "placeholder": "Søk"
+    }
+}

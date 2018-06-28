@@ -1,0 +1,1363 @@
+//
+// Icon Variables
+//
+
+$include-html-icon-classes: true !default;
+$icon: '[class^="icon-"], [class*=" icon-"]';
+
+// Icons
+//
+// Icons can be helpfull when communicating ideas or concepts. Use them wisely and don't rely on an icon alone to convey meaning.
+//
+// Styleguide 5
+
+// Icon font
+//
+// We have a **huge** set of icons accessible as a icon font. Listed is the classes needed to use them. We use the Private Use (Unicode) range to avoid conflicts with actual letters.
+// Don't use the UTF code in other contexts as these might change i future versions of the icon-font.
+// *NOTE: It's easy to see that the list of icons is overkill. The initial icon font was a conversion of [Helveticons Basic](http://hlvticons.ch/), then there was some additional sets released and added, then over time, also some custom icons.*
+//
+// Markup:
+// <span class="{$modifiers}"></span>
+//
+// .icon-Dagbladet - \e883
+// .icon-Dagbladet-alt - \e884
+// .icon-DBiD-db - \e885
+// .icon-DBiD-id - \e886
+// .icon-YouTube - \e6e8
+// .icon-Yahoo - \e6e9
+// .icon-XBL - \e6ea
+// .icon-Wordpress - \e6eb
+// .icon-Vimeo - \e6ec
+// .icon-Twitter - \e6ed
+// .icon-Tumblr - \e6ee
+// .icon-Technorati - \e6ef
+// .icon-StumbleUpon - \e6f0
+// .icon-Skype - \e6f1
+// .icon-MSNMessenger - \e6f3
+// .icon-Linkedin - \e6f4
+// .icon-Lastfm - \e6f5
+// .icon-Google - \e6f6
+// .icon-Flickr - \e6f8
+// .icon-Facebook - \e6f9
+// .icon-Delicious - \e6fb
+// .icon-Amazon - \e6fe
+// .icon-Zip - \e600
+// .icon-Yenbag - \e601
+// .icon-Wineglass - \e602
+// .icon-Width - \e603
+// .icon-War - \e604
+// .icon-Wallet - \e605
+// .icon-Wallplug - \e606
+// .icon-Userfemales - \e607
+// .icon-Userfemales-alt - \e608
+// .icon-Userfemale - \e609
+// .icon-Usbconnector - \e60a
+// .icon-Undo - \e60b
+// .icon-Tv - \e60c
+// .icon-Tvold - \e60d
+// .icon-Truck - \e60e
+// .icon-Trophy - \e60f
+// .icon-Tree - \e610
+// .icon-Train - \e611
+// .icon-Traffic-alt - \e612
+// .icon-Top - \e613
+// .icon-Timer - \e614
+// .icon-Ticket - \e615
+// .icon-Theif - \e616
+// .icon-Theater - \e617
+// .icon-Temperature - \e618
+// .icon-Temperatrure-alt - \e619
+// .icon-Takeaway-cup - \e61a
+// .icon-Tabkey - \e61b
+// .icon-T-shirt - \e61c
+// .icon-Sweatshirt - \e61d
+// .icon-Sunny - \e61e
+// .icon-Stream - \e61f
+// .icon-Stophand - \e620
+// .icon-Stacked-disks - \e621
+// .icon-Ssd - \e622
+// .icon-Split - \e623
+// .icon-Split-alt - \e624
+// .icon-Speedgauge - \e625
+// .icon-Spades - \e626
+// .icon-Snow - \e627
+// .icon-Smiley - \e628
+// .icon-Smiley-inverted - \e629
+// .icon-Sleep - \e62a
+// .icon-Single-note - \e62b
+// .icon-Simcard - \e62c
+// .icon-Sience - \e62d
+// .icon-Shorts - \e62e
+// .icon-Shoppingbasket-alt-2 - \e62f
+// .icon-Shoe - \e630
+// .icon-Shipping - \e631
+// .icon-Shipping-box - \e632
+// .icon-Sharing-iphone - \e633
+// .icon-Share-alt - \e634
+// .icon-Server - \e635
+// .icon-Server-alt - \e636
+// .icon-Scull - \e637
+// .icon-Save - \e638
+// .icon-Satellite-dish - \e639
+// .icon-Safedial - \e63a
+// .icon-Safe - \e63b
+// .icon-Ruler - \e63c
+// .icon-Ruler-alt - \e63d
+// .icon-Rocket - \e63e
+// .icon-Roadsign - \e63f
+// .icon-Road - \e640
+// .icon-Redo - \e641
+// .icon-Receipt-yen - \e642
+// .icon-Receipt-pound - \e643
+// .icon-Receipt-euro - \e644
+// .icon-Receipt-dollar - \e645
+// .icon-Re-post - \e646
+// .icon-Rain - \e647
+// .icon-Radioreceiver - \e648
+// .icon-Quote - \e649
+// .icon-Qrcode - \e64a
+// .icon-Pulse - \e64b
+// .icon-Price-yen - \e64c
+// .icon-Price-pound - \e64d
+// .icon-Price-euro - \e64e
+// .icon-Price-dollar - \e64f
+// .icon-Poweroutlet - \e650
+// .icon-Pound-bag - \e651
+// .icon-Post-it - \e652
+// .icon-Playlist - \e653
+// .icon-Playingcards - \e654
+// .icon-Planet - \e655
+// .icon-Plane - \e656
+// .icon-Piracy - \e657
+// .icon-Piggybank - \e658
+// .icon-People-alt-2 - \e659
+// .icon-Pc - \e65a
+// .icon-Path - \e65b
+// .icon-Pastein - \e65c
+// .icon-Partly-cloudy - \e65d
+// .icon-Parental-control - \e65e
+// .icon-Pants - \e65f
+// .icon-Paintroller - \e660
+// .icon-Old-key - \e661
+// .icon-Network-alt - \e662
+// .icon-Navigational-arrow - \e663
+// .icon-Navigation-road - \e664
+// .icon-Namebadge - \e665
+// .icon-Mountain - \e666
+// .icon-Molecular - \e667
+// .icon-Molecular-network - \e668
+// .icon-Mindmap - \e669
+// .icon-Merge - \e66a
+// .icon-Megaphone - \e66b
+// .icon-Medicine - \e66c
+// .icon-Medical-emergency - \e66d
+// .icon-Male-symbol - \e66e
+// .icon-Male-and-female - \e66f
+// .icon-Magnet - \e670
+// .icon-Linux-tux - \e671
+// .icon-Lightning - \e672
+// .icon-Lense - \e673
+// .icon-Legal - \e674
+// .icon-Layers - \e675
+// .icon-Layers-alt - \e676
+// .icon-Lab - \e677
+// .icon-Keyhole - \e678
+// .icon-iPad - \e679
+// .icon-iMac - \e67a
+// .icon-Hourglass - \e67b
+// .icon-Height - \e67c
+// .icon-Hearts - \e67d
+// .icon-Hat - \e67e
+// .icon-Harddrive - \e67f
+// .icon-Handprint - \e680
+// .icon-Grid - \e681
+// .icon-Gps - \e682
+// .icon-Globe-alt - \e683
+// .icon-Geometry - \e684
+// .icon-Frame - \e685
+// .icon-Frame-alt - \e686
+// .icon-Forking - \e687
+// .icon-Food - \e688
+// .icon-Flowerpot - \e689
+// .icon-Fingerprint - \e68a
+// .icon-Filter - \e68b
+// .icon-Female-symbol - \e68c
+// .icon-Euro-bag - \e68d
+// .icon-Escape - \e68e
+// .icon-Energy-saving-bulb - \e68f
+// .icon-Economy - \e690
+// .icon-Eco - \e691
+// .icon-Download-alt - \e692
+// .icon-Donate - \e693
+// .icon-Dollar-bag - \e694
+// .icon-Document-dashed-line - \e695
+// .icon-Dockconnector - \e696
+// .icon-Dna - \e697
+// .icon-Directions - \e698
+// .icon-Directions-alt - \e699
+// .icon-Dice - \e69a
+// .icon-Diamonds - \e69b
+// .icon-Diamond - \e69c
+// .icon-Diagnostics - \e69d
+// .icon-Desk - \e69e
+// .icon-Departure - \e69f
+// .icon-Deletekey - \e6a0
+// .icon-Crosshair - \e6a1
+// .icon-Crop - \e6a2
+// .icon-Conversation-alt - \e6a3
+// .icon-Console - \e6a4
+// .icon-Compress - \e6a5
+// .icon-Combinationlock - \e6a6
+// .icon-Combinationlock-open - \e6a7
+// .icon-Comb - \e6a8
+// .icon-Coins - \e6a9
+// .icon-Coins-yen - \e6aa
+// .icon-Coins-yen-alt - \e6ab
+// .icon-Coins-pound - \e6ac
+// .icon-Coins-pound-alt - \e6ad
+// .icon-Coins-euro - \e6ae
+// .icon-Coins-euro-alt - \e6af
+// .icon-Coins-dollar - \e6b0
+// .icon-Coins-dollar-alt - \e6b1
+// .icon-Coins-alt - \e6b2
+// .icon-Coin - \e6b3
+// .icon-Coin-yen - \e6b4
+// .icon-Coin-pound - \e6b5
+// .icon-Coin-euro - \e6b6
+// .icon-Coin-dollar - \e6b7
+// .icon-Coffee - \e6b8
+// .icon-Cocktail - \e6b9
+// .icon-Clubs - \e6ba
+// .icon-Cloudy - \e6bb
+// .icon-Clotheshanger - \e6bc
+// .icon-Circus - \e6bd
+// .icon-Cinema - \e6be
+// .icon-Chip - \e6bf
+// .icon-Chip-alt - \e6c0
+// .icon-Chess - \e6c1
+// .icon-Chart-curve - \e6c2
+// .icon-Car - \e6c3
+// .icon-Candy - \e6c4
+// .icon-Cameraroll - \e6c5
+// .icon-Calculator - \e6c6
+// .icon-Bus - \e6c7
+// .icon-Brush-alt - \e6c8
+// .icon-Brush-alt2 - \e6c9
+// .icon-Briefcase - \e6ca
+// .icon-Brick - \e6cb
+// .icon-Box-open - \e6cc
+// .icon-Box-alt - \e6cd
+// .icon-Books - \e6ce
+// .icon-Bones - \e6cf
+// .icon-Bird - \e6d0
+// .icon-Bills - \e6d1
+// .icon-Bills-yen - \e6d2
+// .icon-Bills-pound - \e6d3
+// .icon-Bills-euro - \e6d4
+// .icon-Bills-dollar - \e6d5
+// .icon-Bill - \e6d6
+// .icon-Bill-yen - \e6d7
+// .icon-Bill-pound - \e6d8
+// .icon-Bill-euro - \e6d9
+// .icon-Bill-dollar - \e6da
+// .icon-Beerglass - \e6db
+// .icon-Barcode - \e6dc
+// .icon-Band-aid - \e6dd
+// .icon-Ball - \e6de
+// .icon-Backspace - \e6df
+// .icon-Babystroller - \e6e0
+// .icon-Award - \e6e1
+// .icon-Autofill - \e6e2
+// .icon-Article - \e6e3
+// .icon-Arrivals - \e6e4
+// .icon-Alarmclock - \e6e5
+// .icon-Activity - \e6e6
+// .icon-3D-glasses - \e6e7
+// .icon-Windowsizes - \e6ff
+// .icon-Window-popin - \e700
+// .icon-Weight - \e701
+// .icon-Userglasses - \e702
+// .icon-Trash-alt-2 - \e703
+// .icon-Thoughtbubble - \e704
+// .icon-Tactics - \e705
+// .icon-Store - \e706
+// .icon-Stamp - \e707
+// .icon-Squigglyline - \e708
+// .icon-Sprout - \e709
+// .icon-Speaker - \e70a
+// .icon-Soundwaves - \e70b
+// .icon-Sitemap - \e70c
+// .icon-Share-alt-2 - \e70d
+// .icon-Settings-alt - \e70e
+// .icon-Settings-alt-2 - \e70f
+// .icon-Sensor - \e710
+// .icon-Securitycamera - \e711
+// .icon-School - \e712
+// .icon-Sandbox-toys - \e713
+// .icon-Right-double-arrow - \e714
+// .icon-Return-to-top - \e715
+// .icon-Remote - \e716
+// .icon-Reception - \e717
+// .icon-Receipt-alt - \e718
+// .icon-Projector - \e719
+// .icon-Presentation - \e71a
+// .icon-Poll - \e71b
+// .icon-Pokerchip - \e71c
+// .icon-Photoalbum - \e71d
+// .icon-Phonering - \e71e
+// .icon-People-female - \e71f
+// .icon-Parachute-drop - \e720
+// .icon-Paperplane - \e721
+// .icon-Paperplane-alt - \e722
+// .icon-Paperbag - \e723
+// .icon-Palette - \e724
+// .icon-Pageup - \e725
+// .icon-Pagedown - \e726
+// .icon-Operator - \e727
+// .icon-Old-phone - \e728
+// .icon-Notepad-alt - \e729
+// .icon-Nodes - \e72a
+// .icon-Newspaper - \e72b
+// .icon-Newspaper-alt - \e72c
+// .icon-Multiple-windows - \e72d
+// .icon-Multiple-creditcards - \e72e
+// .icon-Microscope - \e72f
+// .icon-Message-unopened - \e730
+// .icon-Megaphone-2 - \e731
+// .icon-Meeting - \e732
+// .icon-Map-marker - \e733
+// .icon-Map-loaction - \e734
+// .icon-Loupe - \e735
+// .icon-Logout - \e736
+// .icon-Location-nearby - \e737
+// .icon-Location-nearme - \e738
+// .icon-Library - \e739
+// .icon-Left-double-arrow - \e73a
+// .icon-Keychain - \e73b
+// .icon-Junk - \e73c
+// .icon-Item-arrangement - \e73d
+// .icon-Invoice - \e73e
+// .icon-Inbox-full - \e73f
+// .icon-Headset - \e740
+// .icon-Harddrive-alt - \e741
+// .icon-Handshake - \e742
+// .icon-Graduate - \e743
+// .icon-Globe-inverted-europe-africa - \e744
+// .icon-Globe-inverted-asia - \e745
+// .icon-Globe-inverted-america - \e746
+// .icon-Globe-europe-africa - \e747
+// .icon-Globe-asia - \e748
+// .icon-Glasses - \e749
+// .icon-Footprints - \e74a
+// .icon-Folders - \e74b
+// .icon-Folder-outline - \e74c
+// .icon-Flashlight - \e74d
+// .icon-Firewall - \e74e
+// .icon-Fire - \e74f
+// .icon-Filter-arrows - \e750
+// .icon-Files - \e751
+// .icon-Filecabinet - \e752
+// .icon-Facebook-like - \e753
+// .icon-Drop - \e754
+// .icon-Door-open - \e755
+// .icon-Door-open-alt - \e756
+// .icon-Diskimage - \e757
+// .icon-Diploma - \e758
+// .icon-Diploma-alt - \e759
+// .icon-Diagonal-arrow - \e75a
+// .icon-Diagonal-arrow-alt - \e75b
+// .icon-Desktop - \e75c
+// .icon-Defrag - \e75d
+// .icon-Cupcake - \e75e
+// .icon-Crown - \e75f
+// .icon-Crown-alt - \e760
+// .icon-Columns - \e761
+// .icon-Clouddrive - \e762
+// .icon-Circuits - \e763
+// .icon-Circle-dotted - \e764
+// .icon-Circle-dotted-active - \e765
+// .icon-Certificate - \e766
+// .icon-Categories - \e767
+// .icon-Cashregister - \e768
+// .icon-Browserwindow - \e769
+// .icon-Brackets - \e76a
+// .icon-Bomb - \e76b
+// .icon-Boat-shipping - \e76c
+// .icon-Blueprint - \e76d
+// .icon-Birthdaycake - \e76e
+// .icon-Binoculars - \e76f
+// .icon-Binary-code - \e770
+// .icon-Billboard - \e771
+// .icon-Award-2 - \e772
+// .icon-Auctionhammer - \e773
+// .icon-Art-easel - \e774
+// .icon-Application-window - \e775
+// .icon-Application-window-alt - \e776
+// .icon-Application-error - \e777
+// .icon-App - \e778
+// .icon-Anchor - \e779
+// .icon-Zoom-out - \e77a
+// .icon-Zoom-in - \e77b
+// .icon-Z-axis-rotation - \e77c
+// .icon-Y-axis-rotation - \e77d
+// .icon-X-axis-rotation - \e77e
+// .icon-Wrong - \e77f
+// .icon-Wrench - \e780
+// .icon-Windows - \e781
+// .icon-Wifi - \e782
+// .icon-Wand - \e783
+// .icon-Voice - \e784
+// .icon-Video - \e785
+// .icon-Vcard - \e786
+// .icon-Utilities - \e787
+// .icon-Users - \e788
+// .icon-Users-alt - \e789
+// .icon-User - \e78a
+// .icon-Usb - \e78b
+// .icon-Unlocked - \e78c
+// .icon-Universal - \e78d
+// .icon-Umbrella - \e78e
+// .icon-Trash - \e78f
+// .icon-Trash-alt - \e790
+// .icon-Trafic - \e791
+// .icon-Tools - \e792
+// .icon-Time - \e793
+// .icon-Thumbnails - \e794
+// .icon-Thumbnails-small - \e795
+// .icon-Thumbnail-list - \e796
+// .icon-Thumb-up - \e797
+// .icon-Thumb-down - \e798
+// .icon-Terminal - \e799
+// .icon-Target - \e79a
+// .icon-Tags - \e79b
+// .icon-Tag - \e79c
+// .icon-Tab - \e79d
+// .icon-Sync - \e79e
+// .icon-Stop - \e79f
+// .icon-Stop-alt - \e7a0
+// .icon-Sound - \e7a1
+// .icon-Sound-off - \e7a2
+// .icon-Sound-medium - \e7a3
+// .icon-Sound-low - \e7a4
+// .icon-Slideshow - \e7a5
+// .icon-Shuffle - \e7a6
+// .icon-Shoppingbasket - \e7a7
+// .icon-Shoppingbasket-alt - \e7a8
+// .icon-Shift - \e7a9
+// .icon-Shield - \e7aa
+// .icon-Share - \e7ab
+// .icon-Settings - \e7ac
+// .icon-Search - \e7ad
+// .icon-Script - \e7ae
+// .icon-Script-alt - \e7af
+// .icon-Screensharing - \e7b0
+// .icon-Scan - \e7b1
+// .icon-Rss - \e7b2
+// .icon-Resize - \e7b3
+// .icon-Reply-arrow - \e7b4
+// .icon-Repeat - \e7b5
+// .icon-Repeat-one - \e7b6
+// .icon-Remove - \e7b7
+// .icon-Refresh - \e7b8
+// .icon-Record - \e7b9
+// .icon-Read-only - \e7ba
+// .icon-Rate - \e7bb
+// .icon-Radio - \e7bc
+// .icon-Radio-alt - \e7bd
+// .icon-Pushpin - \e7be
+// .icon-Printer-alt - \e7bf
+// .icon-Print - \e7c0
+// .icon-Previous - \e7c1
+// .icon-Previous-media - \e7c2
+// .icon-Power - \e7c3
+// .icon-Podcast - \e7c4
+// .icon-Plugin - \e7c5
+// .icon-Play - \e7c6
+// .icon-Pin-location - \e7c7
+// .icon-Piechart - \e7c8
+// .icon-Pictures - \e7c9
+// .icon-Pictures-alt - \e7ca
+// .icon-Pictures-alt-2 - \e7cb
+// .icon-Picture - \e7cc
+// .icon-Phone - \e7cd
+// .icon-People - \e7ce
+// .icon-People-alt - \e7cf
+// .icon-Pause - \e7d0
+// .icon-Pannel-close - \e7d1
+// .icon-Panel-show - \e7d2
+// .icon-Page-restricted - \e7d3
+// .icon-Page-remove - \e7d4
+// .icon-Page-add - \e7d5
+// .icon-Outdent - \e7d6
+// .icon-Out-box - \e7d7
+// .icon-Out - \e7d8
+// .icon-Osx - \e7d9
+// .icon-Ordered-list - \e7da
+// .icon-Notepad - \e7db
+// .icon-Next - \e7dc
+// .icon-Next-media - \e7dd
+// .icon-Navigation - \e7de
+// .icon-Navigation-vertical - \e7df
+// .icon-Navigation-up - \e7e0
+// .icon-Navigation-top - \e7e1
+// .icon-Navigation-right - \e7e2
+// .icon-Navigation-left - \e7e3
+// .icon-Navigation-last - \e7e4
+// .icon-Navigation-horizontal - \e7e5
+// .icon-Navigation-first - \e7e6
+// .icon-Navigation-down - \e7e7
+// .icon-Navigation-bottom - \e7e8
+// .icon-Music - \e7e9
+// .icon-Movie - \e7ea
+// .icon-Movie-alt - \e7eb
+// .icon-Mouse - \e7ec
+// .icon-Mousecursor - \e7ed
+// .icon-Mobile - \e7ee
+// .icon-Message - \e7ef
+// .icon-Message-open - \e7f0
+// .icon-Medal - \e7f1
+// .icon-Map - \e7f2
+// .icon-Map-alt - \e7f3
+// .icon-Mailbox - \e7f4
+// .icon-Logout-2 - \e7f5
+// .icon-Lock - \e7f6
+// .icon-Locate - \e7f7
+// .icon-Loading - \e7f8
+// .icon-Load - \e7f9
+// .icon-List - \e7fa
+// .icon-Link - \e7fb
+// .icon-Lightbulb - \e7fc
+// .icon-Lightbulb-active - \e7fd
+// .icon-Light-up - \e7fe
+// .icon-Light-down - \e7ff
+// .icon-Layout - \e800
+// .icon-Laptop - \e801
+// .icon-Keyboard - \e802
+// .icon-Key - \e803
+// .icon-Iphone - \e804
+// .icon-Info - \e805
+// .icon-Infinity - \e806
+// .icon-Indent - \e807
+// .icon-Inbox - \e808
+// .icon-Inactive-line - \e809
+// .icon-Home - \e80a
+// .icon-Help - \e80b
+// .icon-Help-alt - \e80c
+// .icon-Headphones - \e80d
+// .icon-HD - \e80e
+// .icon-Handtool - \e80f
+// .icon-Handtool-alt - \e810
+// .icon-Handpointer - \e811
+// .icon-Handpointer-alt - \e812
+// .icon-Handactive - \e813
+// .icon-Handactive-alt - \e814
+// .icon-Hammer - \e815
+// .icon-Globe - \e816
+// .icon-Gift - \e817
+// .icon-Game - \e818
+// .icon-Fullscreen - \e819
+// .icon-Fullscreen-alt - \e81a
+// .icon-Font - \e81b
+// .icon-Folder - \e81c
+// .icon-Folder-open - \e81d
+// .icon-Flash - \e81e
+// .icon-Flag - \e81f
+// .icon-Flag-alt - \e820
+// .icon-Firewire - \e821
+// .icon-Favorite - \e822
+// .icon-Factory - \e823
+// .icon-Eye - \e824
+// .icon-Exit-fullscreen - \e825
+// .icon-Ethernet - \e826
+// .icon-Equalizer - \e827
+// .icon-Enter - \e828
+// .icon-Employee - \e829
+// .icon-Eject - \e82a
+// .icon-Edit - \e82b
+// .icon-Download - \e82c
+// .icon-Documents - \e82d
+// .icon-Document - \e82e
+// .icon-Display - \e82f
+// .icon-Disc - \e830
+// .icon-Delete - \e831
+// .icon-Dashboard - \e832
+// .icon-Cut - \e833
+// .icon-Curve - \e834
+// .icon-Creditcard - \e835
+// .icon-Creditcard-alt - \e836
+// .icon-Coverflow - \e837
+// .icon-Conversation - \e838
+// .icon-Contrast - \e839
+// .icon-Connection - \e83a
+// .icon-Company - \e83b
+// .icon-Command - \e83c
+// .icon-Color-picker - \e83d
+// .icon-Color-bucket - \e83e
+// .icon-Code - \e83f
+// .icon-Cloud - \e840
+// .icon-Cloud-upload - \e841
+// .icon-Client - \e842
+// .icon-Checkbox - \e843
+// .icon-Checkbox-empty - \e844
+// .icon-Checkbox-dotted - \e845
+// .icon-Checkbox-dotted-active - \e846
+// .icon-Check - \e847
+// .icon-Chat - \e848
+// .icon-Chat-active - \e849
+// .icon-Chart - \e84a
+// .icon-Capslock - \e84b
+// .icon-Camcorder - \e84c
+// .icon-Calendar - \e84d
+// .icon-Calendar-alt - \e84e
+// .icon-Burn - \e84f
+// .icon-Bulleted-list - \e850
+// .icon-Bug - \e851
+// .icon-Brush - \e852
+// .icon-Box - \e853
+// .icon-Bookmark - \e854
+// .icon-Book - \e855
+// .icon-Book-alt - \e856
+// .icon-Book-alt-2 - \e857
+// .icon-Bluetooth - \e858
+// .icon-Block - \e859
+// .icon-Bell - \e85a
+// .icon-Bell-off - \e85b
+// .icon-Battery-low - \e85c
+// .icon-Battery-full - \e85d
+// .icon-Bars - \e85e
+// .icon-Barchart - \e85f
+// .icon-Badge-restricted - \e860
+// .icon-Badge-remove - \e861
+// .icon-Badge-count - \e862
+// .icon-Badge-add - \e863
+// .icon-Attachment - \e864
+// .icon-Arrow-up - \e865
+// .icon-Arrow-right - \e866
+// .icon-Arrow-left - \e867
+// .icon-Arrow-down - \e868
+// .icon-Alt - \e869
+// .icon-Alert - \e86a
+// .icon-Alert-alt - \e86b
+// .icon-Adressbook - \e86c
+// .icon-Add - \e86d
+// .icon-3d - \e86e
+// .icon-Dice-6 - \e86f
+// .icon-Dice-5 - \e870
+// .icon-Dice-4 - \e871
+// .icon-Dice-3 - \e872
+// .icon-Dice-2 - \e873
+// .icon-Dice-1 - \e874
+// .icon-Bold - \e875
+// .icon-Italic - \e876
+// .icon-Football - \e877
+// .icon-Card - \e878
+// .icon-Card-alt - \e879
+// .icon-Cards - \e87A
+// .icon-Cards-alt - \e87B
+// .icon-Field - \e87C
+// .icon-Hamburger - \e87D
+// .icon-Close - \e87E
+// .icon-Arrow-alt-left - \e87F
+// .icon-Arrow-alt-right - \e880
+// .icon-Arrow-alt-up - \e881
+// .icon-Arrow-alt-down - \e882
+// .icon-Standfirst - \e887
+// .icon-Kicker - \e888
+//
+// Styleguide 5.2
+
+@if $include-html-icon-classes{
+    #{$icon}{
+        font-family: 'Helveticons';
+        speak: none;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icon-YouTube:before { content: "\e6e8"; }
+    .icon-Yahoo:before { content: "\e6e9"; }
+    .icon-XBL:before { content: "\e6ea"; }
+    .icon-Wordpress:before { content: "\e6eb"; }
+    .icon-Vimeo:before { content: "\e6ec"; }
+    .icon-Twitter:before { content: "\e6ed"; }
+    .icon-Tumblr:before { content: "\e6ee"; }
+    .icon-Technorati:before { content: "\e6ef"; }
+    .icon-StumbleUpon:before { content: "\e6f0"; }
+    .icon-Skype:before { content: "\e6f1"; }
+    .icon-myspace:before { content: "\e6f2"; }
+    .icon-MSNMessenger:before { content: "\e6f3"; }
+    .icon-Linkedin:before { content: "\e6f4"; }
+    .icon-Lastfm:before { content: "\e6f5"; }
+    .icon-Google:before { content: "\e6f6"; }
+    .icon-Friendfeed:before { content: "\e6f7"; }
+    .icon-Flickr:before { content: "\e6f8"; }
+    .icon-Facebook:before { content: "\e6f9"; }
+    .icon-Digg:before { content: "\e6fa"; }
+    .icon-Delicious:before { content: "\e6fb"; }
+    .icon-Blogger:before { content: "\e6fc"; }
+    .icon-bebo:before { content: "\e6fd"; }
+    .icon-Amazon:before { content: "\e6fe"; }
+    .icon-Zip:before { content: "\e600"; }
+    .icon-Yenbag:before { content: "\e601"; }
+    .icon-Wineglass:before { content: "\e602"; }
+    .icon-Width:before { content: "\e603"; }
+    .icon-War:before { content: "\e604"; }
+    .icon-Wallet:before { content: "\e605"; }
+    .icon-Wallplug:before { content: "\e606"; }
+    .icon-Userfemales:before { content: "\e607"; }
+    .icon-Userfemales-alt:before { content: "\e608"; }
+    .icon-Userfemale:before { content: "\e609"; }
+    .icon-Usbconnector:before { content: "\e60a"; }
+    .icon-Undo:before { content: "\e60b"; }
+    .icon-Tv:before { content: "\e60c"; }
+    .icon-Tvold:before { content: "\e60d"; }
+    .icon-Truck:before { content: "\e60e"; }
+    .icon-Trophy:before { content: "\e60f"; }
+    .icon-Tree:before { content: "\e610"; }
+    .icon-Train:before { content: "\e611"; }
+    .icon-Traffic-alt:before { content: "\e612"; }
+    .icon-Top:before { content: "\e613"; }
+    .icon-Timer:before { content: "\e614"; }
+    .icon-Ticket:before { content: "\e615"; }
+    .icon-Theif:before { content: "\e616"; }
+    .icon-Theater:before { content: "\e617"; }
+    .icon-Temperature:before { content: "\e618"; }
+    .icon-Temperatrure-alt:before { content: "\e619"; }
+    .icon-Takeaway-cup:before { content: "\e61a"; }
+    .icon-Tabkey:before { content: "\e61b"; }
+    .icon-T-shirt:before { content: "\e61c"; }
+    .icon-Sweatshirt:before { content: "\e61d"; }
+    .icon-Sunny:before { content: "\e61e"; }
+    .icon-Stream:before { content: "\e61f"; }
+    .icon-Stophand:before { content: "\e620"; }
+    .icon-Stacked-disks:before { content: "\e621"; }
+    .icon-Ssd:before { content: "\e622"; }
+    .icon-Split:before { content: "\e623"; }
+    .icon-Split-alt:before { content: "\e624"; }
+    .icon-Speedgauge:before { content: "\e625"; }
+    .icon-Spades:before { content: "\e626"; }
+    .icon-Snow:before { content: "\e627"; }
+    .icon-Smiley:before { content: "\e628"; }
+    .icon-Smiley-inverted:before { content: "\e629"; }
+    .icon-Sleep:before { content: "\e62a"; }
+    .icon-Single-note:before { content: "\e62b"; }
+    .icon-Simcard:before { content: "\e62c"; }
+    .icon-Sience:before { content: "\e62d"; }
+    .icon-Shorts:before { content: "\e62e"; }
+    .icon-Shoppingbasket-alt-2:before { content: "\e62f"; }
+    .icon-Shoe:before { content: "\e630"; }
+    .icon-Shipping:before { content: "\e631"; }
+    .icon-Shipping-box:before { content: "\e632"; }
+    .icon-Sharing-iphone:before { content: "\e633"; }
+    .icon-Share-alt:before { content: "\e634"; }
+    .icon-Server:before { content: "\e635"; }
+    .icon-Server-alt:before { content: "\e636"; }
+    .icon-Scull:before { content: "\e637"; }
+    .icon-Save:before { content: "\e638"; }
+    .icon-Satellite-dish:before { content: "\e639"; }
+    .icon-Safedial:before { content: "\e63a"; }
+    .icon-Safe:before { content: "\e63b"; }
+    .icon-Ruler:before { content: "\e63c"; }
+    .icon-Ruler-alt:before { content: "\e63d"; }
+    .icon-Rocket:before { content: "\e63e"; }
+    .icon-Roadsign:before { content: "\e63f"; }
+    .icon-Road:before { content: "\e640"; }
+    .icon-Redo:before { content: "\e641"; }
+    .icon-Receipt-yen:before { content: "\e642"; }
+    .icon-Receipt-pound:before { content: "\e643"; }
+    .icon-Receipt-euro:before { content: "\e644"; }
+    .icon-Receipt-dollar:before { content: "\e645"; }
+    .icon-Re-post:before { content: "\e646"; }
+    .icon-Rain:before { content: "\e647"; }
+    .icon-Radioreceiver:before { content: "\e648"; }
+    .icon-Quote:before { content: "\e649"; }
+    .icon-Qrcode:before { content: "\e64a"; }
+    .icon-Pulse:before { content: "\e64b"; }
+    .icon-Price-yen:before { content: "\e64c"; }
+    .icon-Price-pound:before { content: "\e64d"; }
+    .icon-Price-euro:before { content: "\e64e"; }
+    .icon-Price-dollar:before { content: "\e64f"; }
+    .icon-Poweroutlet:before { content: "\e650"; }
+    .icon-Pound-bag:before { content: "\e651"; }
+    .icon-Post-it:before { content: "\e652"; }
+    .icon-Playlist:before { content: "\e653"; }
+    .icon-Playingcards:before { content: "\e654"; }
+    .icon-Planet:before { content: "\e655"; }
+    .icon-Plane:before { content: "\e656"; }
+    .icon-Piracy:before { content: "\e657"; }
+    .icon-Piggybank:before { content: "\e658"; }
+    .icon-People-alt-2:before { content: "\e659"; }
+    .icon-Pc:before { content: "\e65a"; }
+    .icon-Path:before { content: "\e65b"; }
+    .icon-Pastein:before { content: "\e65c"; }
+    .icon-Partly-cloudy:before { content: "\e65d"; }
+    .icon-Parental-control:before { content: "\e65e"; }
+    .icon-Pants:before { content: "\e65f"; }
+    .icon-Paintroller:before { content: "\e660"; }
+    .icon-Old-key:before { content: "\e661"; }
+    .icon-Network-alt:before { content: "\e662"; }
+    .icon-Navigational-arrow:before { content: "\e663"; }
+    .icon-Navigation-road:before { content: "\e664"; }
+    .icon-Namebadge:before { content: "\e665"; }
+    .icon-Mountain:before { content: "\e666"; }
+    .icon-Molecular:before { content: "\e667"; }
+    .icon-Molecular-network:before { content: "\e668"; }
+    .icon-Mindmap:before { content: "\e669"; }
+    .icon-Merge:before { content: "\e66a"; }
+    .icon-Megaphone:before { content: "\e66b"; }
+    .icon-Medicine:before { content: "\e66c"; }
+    .icon-Medical-emergency:before { content: "\e66d"; }
+    .icon-Male-symbol:before { content: "\e66e"; }
+    .icon-Male-and-female:before { content: "\e66f"; }
+    .icon-Magnet:before { content: "\e670"; }
+    .icon-Linux-tux:before { content: "\e671"; }
+    .icon-Lightning:before { content: "\e672"; }
+    .icon-Lense:before { content: "\e673"; }
+    .icon-Legal:before { content: "\e674"; }
+    .icon-Layers:before { content: "\e675"; }
+    .icon-Layers-alt:before { content: "\e676"; }
+    .icon-Lab:before { content: "\e677"; }
+    .icon-Keyhole:before { content: "\e678"; }
+    .icon-iPad:before { content: "\e679"; }
+    .icon-iMac:before { content: "\e67a"; }
+    .icon-Hourglass:before { content: "\e67b"; }
+    .icon-Height:before { content: "\e67c"; }
+    .icon-Hearts:before { content: "\e67d"; }
+    .icon-Hat:before { content: "\e67e"; }
+    .icon-Harddrive:before { content: "\e67f"; }
+    .icon-Handprint:before { content: "\e680"; }
+    .icon-Grid:before { content: "\e681"; }
+    .icon-Gps:before { content: "\e682"; }
+    .icon-Globe-alt:before { content: "\e683"; }
+    .icon-Geometry:before { content: "\e684"; }
+    .icon-Frame:before { content: "\e685"; }
+    .icon-Frame-alt:before { content: "\e686"; }
+    .icon-Forking:before { content: "\e687"; }
+    .icon-Food:before { content: "\e688"; }
+    .icon-Flowerpot:before { content: "\e689"; }
+    .icon-Fingerprint:before { content: "\e68a"; }
+    .icon-Filter:before { content: "\e68b"; }
+    .icon-Female-symbol:before { content: "\e68c"; }
+    .icon-Euro-bag:before { content: "\e68d"; }
+    .icon-Escape:before { content: "\e68e"; }
+    .icon-Energy-saving-bulb:before { content: "\e68f"; }
+    .icon-Economy:before { content: "\e690"; }
+    .icon-Eco:before { content: "\e691"; }
+    .icon-Download-alt:before { content: "\e692"; }
+    .icon-Donate:before { content: "\e693"; }
+    .icon-Dollar-bag:before { content: "\e694"; }
+    .icon-Document-dashed-line:before { content: "\e695"; }
+    .icon-Dockconnector:before { content: "\e696"; }
+    .icon-Dna:before { content: "\e697"; }
+    .icon-Directions:before { content: "\e698"; }
+    .icon-Directions-alt:before { content: "\e699"; }
+    .icon-Dice:before { content: "\e69a"; }
+    .icon-Diamonds:before { content: "\e69b"; }
+    .icon-Diamond:before { content: "\e69c"; }
+    .icon-Diagnostics:before { content: "\e69d"; }
+    .icon-Desk:before { content: "\e69e"; }
+    .icon-Departure:before { content: "\e69f"; }
+    .icon-Deletekey:before { content: "\e6a0"; }
+    .icon-Crosshair:before { content: "\e6a1"; }
+    .icon-Crop:before { content: "\e6a2"; }
+    .icon-Conversation-alt:before { content: "\e6a3"; }
+    .icon-Console:before { content: "\e6a4"; }
+    .icon-Compress:before { content: "\e6a5"; }
+    .icon-Combinationlock:before { content: "\e6a6"; }
+    .icon-Combinationlock-open:before { content: "\e6a7"; }
+    .icon-Comb:before { content: "\e6a8"; }
+    .icon-Coins:before { content: "\e6a9"; }
+    .icon-Coins-yen:before { content: "\e6aa"; }
+    .icon-Coins-yen-alt:before { content: "\e6ab"; }
+    .icon-Coins-pound:before { content: "\e6ac"; }
+    .icon-Coins-pound-alt:before { content: "\e6ad"; }
+    .icon-Coins-euro:before { content: "\e6ae"; }
+    .icon-Coins-euro-alt:before { content: "\e6af"; }
+    .icon-Coins-dollar:before { content: "\e6b0"; }
+    .icon-Coins-dollar-alt:before { content: "\e6b1"; }
+    .icon-Coins-alt:before { content: "\e6b2"; }
+    .icon-Coin:before { content: "\e6b3"; }
+    .icon-Coin-yen:before { content: "\e6b4"; }
+    .icon-Coin-pound:before { content: "\e6b5"; }
+    .icon-Coin-euro:before { content: "\e6b6"; }
+    .icon-Coin-dollar:before { content: "\e6b7"; }
+    .icon-Coffee:before { content: "\e6b8"; }
+    .icon-Cocktail:before { content: "\e6b9"; }
+    .icon-Clubs:before { content: "\e6ba"; }
+    .icon-Cloudy:before { content: "\e6bb"; }
+    .icon-Clotheshanger:before { content: "\e6bc"; }
+    .icon-Circus:before { content: "\e6bd"; }
+    .icon-Cinema:before { content: "\e6be"; }
+    .icon-Chip:before { content: "\e6bf"; }
+    .icon-Chip-alt:before { content: "\e6c0"; }
+    .icon-Chess:before { content: "\e6c1"; }
+    .icon-Chart-curve:before { content: "\e6c2"; }
+    .icon-Car:before { content: "\e6c3"; }
+    .icon-Candy:before { content: "\e6c4"; }
+    .icon-Cameraroll:before { content: "\e6c5"; }
+    .icon-Calculator:before { content: "\e6c6"; }
+    .icon-Bus:before { content: "\e6c7"; }
+    .icon-Brush-alt:before { content: "\e6c8"; }
+    .icon-Brush-alt2:before { content: "\e6c9"; }
+    .icon-Briefcase:before { content: "\e6ca"; }
+    .icon-Brick:before { content: "\e6cb"; }
+    .icon-Box-open:before { content: "\e6cc"; }
+    .icon-Box-alt:before { content: "\e6cd"; }
+    .icon-Books:before { content: "\e6ce"; }
+    .icon-Bones:before { content: "\e6cf"; }
+    .icon-Bird:before { content: "\e6d0"; }
+    .icon-Bills:before { content: "\e6d1"; }
+    .icon-Bills-yen:before { content: "\e6d2"; }
+    .icon-Bills-pound:before { content: "\e6d3"; }
+    .icon-Bills-euro:before { content: "\e6d4"; }
+    .icon-Bills-dollar:before { content: "\e6d5"; }
+    .icon-Bill:before { content: "\e6d6"; }
+    .icon-Bill-yen:before { content: "\e6d7"; }
+    .icon-Bill-pound:before { content: "\e6d8"; }
+    .icon-Bill-euro:before { content: "\e6d9"; }
+    .icon-Bill-dollar:before { content: "\e6da"; }
+    .icon-Beerglass:before { content: "\e6db"; }
+    .icon-Barcode:before { content: "\e6dc"; }
+    .icon-Band-aid:before { content: "\e6dd"; }
+    .icon-Ball:before { content: "\e6de"; }
+    .icon-Backspace:before { content: "\e6df"; }
+    .icon-Babystroller:before { content: "\e6e0"; }
+    .icon-Award:before { content: "\e6e1"; }
+    .icon-Autofill:before { content: "\e6e2"; }
+    .icon-Article:before { content: "\e6e3"; }
+    .icon-Arrivals:before { content: "\e6e4"; }
+    .icon-Alarmclock:before { content: "\e6e5"; }
+    .icon-Activity:before { content: "\e6e6"; }
+    .icon-3D-glasses:before { content: "\e6e7"; }
+    .icon-Windowsizes:before { content: "\e6ff"; }
+    .icon-Window-popin:before { content: "\e700"; }
+    .icon-Weight:before { content: "\e701"; }
+    .icon-Userglasses:before { content: "\e702"; }
+    .icon-Trash-alt-2:before { content: "\e703"; }
+    .icon-Thoughtbubble:before { content: "\e704"; }
+    .icon-Tactics:before { content: "\e705"; }
+    .icon-Store:before { content: "\e706"; }
+    .icon-Stamp:before { content: "\e707"; }
+    .icon-Squigglyline:before { content: "\e708"; }
+    .icon-Sprout:before { content: "\e709"; }
+    .icon-Speaker:before { content: "\e70a"; }
+    .icon-Soundwaves:before { content: "\e70b"; }
+    .icon-Sitemap:before { content: "\e70c"; }
+    .icon-Share-alt-2:before { content: "\e70d"; }
+    .icon-Settings-alt:before { content: "\e70e"; }
+    .icon-Settings-alt-2:before { content: "\e70f"; }
+    .icon-Sensor:before { content: "\e710"; }
+    .icon-Securitycamera:before { content: "\e711"; }
+    .icon-School:before { content: "\e712"; }
+    .icon-Sandbox-toys:before { content: "\e713"; }
+    .icon-Right-double-arrow:before { content: "\e714"; }
+    .icon-Return-to-top:before { content: "\e715"; }
+    .icon-Remote:before { content: "\e716"; }
+    .icon-Reception:before { content: "\e717"; }
+    .icon-Receipt-alt:before { content: "\e718"; }
+    .icon-Projector:before { content: "\e719"; }
+    .icon-Presentation:before { content: "\e71a"; }
+    .icon-Poll:before { content: "\e71b"; }
+    .icon-Pokerchip:before { content: "\e71c"; }
+    .icon-Photoalbum:before { content: "\e71d"; }
+    .icon-Phonering:before { content: "\e71e"; }
+    .icon-People-female:before { content: "\e71f"; }
+    .icon-Parachute-drop:before { content: "\e720"; }
+    .icon-Paperplane:before { content: "\e721"; }
+    .icon-Paperplane-alt:before { content: "\e722"; }
+    .icon-Paperbag:before { content: "\e723"; }
+    .icon-Palette:before { content: "\e724"; }
+    .icon-Pageup:before { content: "\e725"; }
+    .icon-Pagedown:before { content: "\e726"; }
+    .icon-Operator:before { content: "\e727"; }
+    .icon-Old-phone:before { content: "\e728"; }
+    .icon-Notepad-alt:before { content: "\e729"; }
+    .icon-Nodes:before { content: "\e72a"; }
+    .icon-Newspaper:before { content: "\e72b"; }
+    .icon-Newspaper-alt:before { content: "\e72c"; }
+    .icon-Multiple-windows:before { content: "\e72d"; }
+    .icon-Multiple-creditcards:before { content: "\e72e"; }
+    .icon-Microscope:before { content: "\e72f"; }
+    .icon-Message-unopened:before { content: "\e730"; }
+    .icon-Megaphone-2:before { content: "\e731"; }
+    .icon-Meeting:before { content: "\e732"; }
+    .icon-Map-marker:before { content: "\e733"; }
+    .icon-Map-loaction:before { content: "\e734"; }
+    .icon-Loupe:before { content: "\e735"; }
+    .icon-Logout:before { content: "\e736"; }
+    .icon-Location-nearby:before { content: "\e737"; }
+    .icon-Location-nearme:before { content: "\e738"; }
+    .icon-Library:before { content: "\e739"; }
+    .icon-Left-double-arrow:before { content: "\e73a"; }
+    .icon-Keychain:before { content: "\e73b"; }
+    .icon-Junk:before { content: "\e73c"; }
+    .icon-Item-arrangement:before { content: "\e73d"; }
+    .icon-Invoice:before { content: "\e73e"; }
+    .icon-Inbox-full:before { content: "\e73f"; }
+    .icon-Headset:before { content: "\e740"; }
+    .icon-Harddrive-alt:before { content: "\e741"; }
+    .icon-Handshake:before { content: "\e742"; }
+    .icon-Graduate:before { content: "\e743"; }
+    .icon-Globe-inverted-europe-africa:before { content: "\e744"; }
+    .icon-Globe-inverted-asia:before { content: "\e745"; }
+    .icon-Globe-inverted-america:before { content: "\e746"; }
+    .icon-Globe-europe-africa:before { content: "\e747"; }
+    .icon-Globe-asia:before { content: "\e748"; }
+    .icon-Glasses:before { content: "\e749"; }
+    .icon-Footprints:before { content: "\e74a"; }
+    .icon-Folders:before { content: "\e74b"; }
+    .icon-Folder-outline:before { content: "\e74c"; }
+    .icon-Flashlight:before { content: "\e74d"; }
+    .icon-Firewall:before { content: "\e74e"; }
+    .icon-Fire:before { content: "\e74f"; }
+    .icon-Filter-arrows:before { content: "\e750"; }
+    .icon-Files:before { content: "\e751"; }
+    .icon-Filecabinet:before { content: "\e752"; }
+    .icon-Facebook-like:before { content: "\e753"; }
+    .icon-Drop:before { content: "\e754"; }
+    .icon-Door-open:before { content: "\e755"; }
+    .icon-Door-open-alt:before { content: "\e756"; }
+    .icon-Diskimage:before { content: "\e757"; }
+    .icon-Diploma:before { content: "\e758"; }
+    .icon-Diploma-alt:before { content: "\e759"; }
+    .icon-Diagonal-arrow:before { content: "\e75a"; }
+    .icon-Diagonal-arrow-alt:before { content: "\e75b"; }
+    .icon-Desktop:before { content: "\e75c"; }
+    .icon-Defrag:before { content: "\e75d"; }
+    .icon-Cupcake:before { content: "\e75e"; }
+    .icon-Crown:before { content: "\e75f"; }
+    .icon-Crown-alt:before { content: "\e760"; }
+    .icon-Columns:before { content: "\e761"; }
+    .icon-Clouddrive:before { content: "\e762"; }
+    .icon-Circuits:before { content: "\e763"; }
+    .icon-Circle-dotted:before { content: "\e764"; }
+    .icon-Circle-dotted-active:before { content: "\e765"; }
+    .icon-Certificate:before { content: "\e766"; }
+    .icon-Categories:before { content: "\e767"; }
+    .icon-Cashregister:before { content: "\e768"; }
+    .icon-Browserwindow:before { content: "\e769"; }
+    .icon-Brackets:before { content: "\e76a"; }
+    .icon-Bomb:before { content: "\e76b"; }
+    .icon-Boat-shipping:before { content: "\e76c"; }
+    .icon-Blueprint:before { content: "\e76d"; }
+    .icon-Birthdaycake:before { content: "\e76e"; }
+    .icon-Binoculars:before { content: "\e76f"; }
+    .icon-Binary-code:before { content: "\e770"; }
+    .icon-Billboard:before { content: "\e771"; }
+    .icon-Award-2:before { content: "\e772"; }
+    .icon-Auctionhammer:before { content: "\e773"; }
+    .icon-Art-easel:before { content: "\e774"; }
+    .icon-Application-window:before { content: "\e775"; }
+    .icon-Application-window-alt:before { content: "\e776"; }
+    .icon-Application-error:before { content: "\e777"; }
+    .icon-App:before { content: "\e778"; }
+    .icon-Anchor:before { content: "\e779"; }
+    .icon-Zoom-out:before { content: "\e77a"; }
+    .icon-Zoom-in:before { content: "\e77b"; }
+    .icon-Z-axis-rotation:before { content: "\e77c"; }
+    .icon-Y-axis-rotation:before { content: "\e77d"; }
+    .icon-X-axis-rotation:before { content: "\e77e"; }
+    .icon-Wrong:before { content: "\e77f"; }
+    .icon-Wrench:before { content: "\e780"; }
+    .icon-Windows:before { content: "\e781"; }
+    .icon-Wifi:before { content: "\e782"; }
+    .icon-Wand:before { content: "\e783"; }
+    .icon-Voice:before { content: "\e784"; }
+    .icon-Video:before { content: "\e785"; }
+    .icon-Vcard:before { content: "\e786"; }
+    .icon-Utilities:before { content: "\e787"; }
+    .icon-Users:before { content: "\e788"; }
+    .icon-Users-alt:before { content: "\e789"; }
+    .icon-User:before { content: "\e78a"; }
+    .icon-Usb:before { content: "\e78b"; }
+    .icon-Unlocked:before { content: "\e78c"; }
+    .icon-Universal:before { content: "\e78d"; }
+    .icon-Umbrella:before { content: "\e78e"; }
+    .icon-Trash:before { content: "\e78f"; }
+    .icon-Trash-alt:before { content: "\e790"; }
+    .icon-Trafic:before { content: "\e791"; }
+    .icon-Tools:before { content: "\e792"; }
+    .icon-Time:before { content: "\e793"; }
+    .icon-Thumbnails:before { content: "\e794"; }
+    .icon-Thumbnails-small:before { content: "\e795"; }
+    .icon-Thumbnail-list:before { content: "\e796"; }
+    .icon-Thumb-up:before { content: "\e797"; }
+    .icon-Thumb-down:before { content: "\e798"; }
+    .icon-Terminal:before { content: "\e799"; }
+    .icon-Target:before { content: "\e79a"; }
+    .icon-Tags:before { content: "\e79b"; }
+    .icon-Tag:before { content: "\e79c"; }
+    .icon-Tab:before { content: "\e79d"; }
+    .icon-Sync:before { content: "\e79e"; }
+    .icon-Stop:before { content: "\e79f"; }
+    .icon-Stop-alt:before { content: "\e7a0"; }
+    .icon-Sound:before { content: "\e7a1"; }
+    .icon-Sound-off:before { content: "\e7a2"; }
+    .icon-Sound-medium:before { content: "\e7a3"; }
+    .icon-Sound-low:before { content: "\e7a4"; }
+    .icon-Slideshow:before { content: "\e7a5"; }
+    .icon-Shuffle:before { content: "\e7a6"; }
+    .icon-Shoppingbasket:before { content: "\e7a7"; }
+    .icon-Shoppingbasket-alt:before { content: "\e7a8"; }
+    .icon-Shift:before { content: "\e7a9"; }
+    .icon-Shield:before { content: "\e7aa"; }
+    .icon-Share:before { content: "\e7ab"; }
+    .icon-Settings:before { content: "\e7ac"; }
+    .icon-Search:before { content: "\e7ad"; }
+    .icon-Script:before { content: "\e7ae"; }
+    .icon-Script-alt:before { content: "\e7af"; }
+    .icon-Screensharing:before { content: "\e7b0"; }
+    .icon-Scan:before { content: "\e7b1"; }
+    .icon-Rss:before { content: "\e7b2"; }
+    .icon-Resize:before { content: "\e7b3"; }
+    .icon-Reply-arrow:before { content: "\e7b4"; }
+    .icon-Repeat:before { content: "\e7b5"; }
+    .icon-Repeat-one:before { content: "\e7b6"; }
+    .icon-Remove:before { content: "\e7b7"; }
+    .icon-Refresh:before { content: "\e7b8"; }
+    .icon-Record:before { content: "\e7b9"; }
+    .icon-Read-only:before { content: "\e7ba"; }
+    .icon-Rate:before { content: "\e7bb"; }
+    .icon-Radio:before { content: "\e7bc"; }
+    .icon-Radio-alt:before { content: "\e7bd"; }
+    .icon-Pushpin:before { content: "\e7be"; }
+    .icon-Printer-alt:before { content: "\e7bf"; }
+    .icon-Print:before { content: "\e7c0"; }
+    .icon-Previous:before { content: "\e7c1"; }
+    .icon-Previous-media:before { content: "\e7c2"; }
+    .icon-Power:before { content: "\e7c3"; }
+    .icon-Podcast:before { content: "\e7c4"; }
+    .icon-Plugin:before { content: "\e7c5"; }
+    .icon-Play:before { content: "\e7c6"; }
+    .icon-Pin-location:before { content: "\e7c7"; }
+    .icon-Piechart:before { content: "\e7c8"; }
+    .icon-Pictures:before { content: "\e7c9"; }
+    .icon-Pictures-alt:before { content: "\e7ca"; }
+    .icon-Pictures-alt-2:before { content: "\e7cb"; }
+    .icon-Picture:before { content: "\e7cc"; }
+    .icon-Phone:before { content: "\e7cd"; }
+    .icon-People:before { content: "\e7ce"; }
+    .icon-People-alt:before { content: "\e7cf"; }
+    .icon-Pause:before { content: "\e7d0"; }
+    .icon-Pannel-close:before { content: "\e7d1"; }
+    .icon-Panel-show:before { content: "\e7d2"; }
+    .icon-Page-restricted:before { content: "\e7d3"; }
+    .icon-Page-remove:before { content: "\e7d4"; }
+    .icon-Page-add:before { content: "\e7d5"; }
+    .icon-Outdent:before { content: "\e7d6"; }
+    .icon-Out-box:before { content: "\e7d7"; }
+    .icon-Out:before { content: "\e7d8"; }
+    .icon-Osx:before { content: "\e7d9"; }
+    .icon-Ordered-list:before { content: "\e7da"; }
+    .icon-Notepad:before { content: "\e7db"; }
+    .icon-Next:before { content: "\e7dc"; }
+    .icon-Next-media:before { content: "\e7dd"; }
+    .icon-Navigation:before { content: "\e7de"; }
+    .icon-Navigation-vertical:before { content: "\e7df"; }
+    .icon-Navigation-up:before { content: "\e7e0"; }
+    .icon-Navigation-top:before { content: "\e7e1"; }
+    .icon-Navigation-right:before { content: "\e7e2"; }
+    .icon-Navigation-left:before { content: "\e7e3"; }
+    .icon-Navigation-last:before { content: "\e7e4"; }
+    .icon-Navigation-horizontal:before { content: "\e7e5"; }
+    .icon-Navigation-first:before { content: "\e7e6"; }
+    .icon-Navigation-down:before { content: "\e7e7"; }
+    .icon-Navigation-bottom:before { content: "\e7e8"; }
+    .icon-Music:before { content: "\e7e9"; }
+    .icon-Movie:before { content: "\e7ea"; }
+    .icon-Movie-alt:before { content: "\e7eb"; }
+    .icon-Mouse:before { content: "\e7ec"; }
+    .icon-Mousecursor:before { content: "\e7ed"; }
+    .icon-Mobile:before { content: "\e7ee"; }
+    .icon-Message:before { content: "\e7ef"; }
+    .icon-Message-open:before { content: "\e7f0"; }
+    .icon-Medal:before { content: "\e7f1"; }
+    .icon-Map:before { content: "\e7f2"; }
+    .icon-Map-alt:before { content: "\e7f3"; }
+    .icon-Mailbox:before { content: "\e7f4"; }
+    .icon-Logout-2:before { content: "\e7f5"; }
+    .icon-Lock:before { content: "\e7f6"; }
+    .icon-Locate:before { content: "\e7f7"; }
+    .icon-Loading:before { content: "\e7f8"; }
+    .icon-Load:before { content: "\e7f9"; }
+    .icon-List:before { content: "\e7fa"; }
+    .icon-Link:before { content: "\e7fb"; }
+    .icon-Lightbulb:before { content: "\e7fc"; }
+    .icon-Lightbulb-active:before { content: "\e7fd"; }
+    .icon-Light-up:before { content: "\e7fe"; }
+    .icon-Light-down:before { content: "\e7ff"; }
+    .icon-Layout:before { content: "\e800"; }
+    .icon-Laptop:before { content: "\e801"; }
+    .icon-Keyboard:before { content: "\e802"; }
+    .icon-Key:before { content: "\e803"; }
+    .icon-Iphone:before { content: "\e804"; }
+    .icon-Info:before { content: "\e805"; }
+    .icon-Infinity:before { content: "\e806"; }
+    .icon-Indent:before { content: "\e807"; }
+    .icon-Inbox:before { content: "\e808"; }
+    .icon-Inactive-line:before { content: "\e809"; }
+    .icon-Home:before { content: "\e80a"; }
+    .icon-Help:before { content: "\e80b"; }
+    .icon-Help-alt:before { content: "\e80c"; }
+    .icon-Headphones:before { content: "\e80d"; }
+    .icon-HD:before { content: "\e80e"; }
+    .icon-Handtool:before { content: "\e80f"; }
+    .icon-Handtool-alt:before { content: "\e810"; }
+    .icon-Handpointer:before { content: "\e811"; }
+    .icon-Handpointer-alt:before { content: "\e812"; }
+    .icon-Handactive:before { content: "\e813"; }
+    .icon-Handactive-alt:before { content: "\e814"; }
+    .icon-Hammer:before { content: "\e815"; }
+    .icon-Globe:before { content: "\e816"; }
+    .icon-Gift:before { content: "\e817"; }
+    .icon-Game:before { content: "\e818"; }
+    .icon-Fullscreen:before { content: "\e819"; }
+    .icon-Fullscreen-alt:before { content: "\e81a"; }
+    .icon-Font:before { content: "\e81b"; }
+    .icon-Folder:before { content: "\e81c"; }
+    .icon-Folder-open:before { content: "\e81d"; }
+    .icon-Flash:before { content: "\e81e"; }
+    .icon-Flag:before { content: "\e81f"; }
+    .icon-Flag-alt:before { content: "\e820"; }
+    .icon-Firewire:before { content: "\e821"; }
+    .icon-Favorite:before { content: "\e822"; }
+    .icon-Factory:before { content: "\e823"; }
+    .icon-Eye:before { content: "\e824"; }
+    .icon-Exit-fullscreen:before { content: "\e825"; }
+    .icon-Ethernet:before { content: "\e826"; }
+    .icon-Equalizer:before { content: "\e827"; }
+    .icon-Enter:before { content: "\e828"; }
+    .icon-Employee:before { content: "\e829"; }
+    .icon-Eject:before { content: "\e82a"; }
+    .icon-Edit:before { content: "\e82b"; }
+    .icon-Download:before { content: "\e82c"; }
+    .icon-Documents:before { content: "\e82d"; }
+    .icon-Document:before { content: "\e82e"; }
+    .icon-Display:before { content: "\e82f"; }
+    .icon-Disc:before { content: "\e830"; }
+    .icon-Delete:before { content: "\e831"; }
+    .icon-Dashboard:before { content: "\e832"; }
+    .icon-Cut:before { content: "\e833"; }
+    .icon-Curve:before { content: "\e834"; }
+    .icon-Creditcard:before { content: "\e835"; }
+    .icon-Creditcard-alt:before { content: "\e836"; }
+    .icon-Coverflow:before { content: "\e837"; }
+    .icon-Conversation:before { content: "\e838"; }
+    .icon-Contrast:before { content: "\e839"; }
+    .icon-Connection:before { content: "\e83a"; }
+    .icon-Company:before { content: "\e83b"; }
+    .icon-Command:before { content: "\e83c"; }
+    .icon-Color-picker:before { content: "\e83d"; }
+    .icon-Color-bucket:before { content: "\e83e"; }
+    .icon-Code:before { content: "\e83f"; }
+    .icon-Cloud:before { content: "\e840"; }
+    .icon-Cloud-upload:before { content: "\e841"; }
+    .icon-Client:before { content: "\e842"; }
+    .icon-Checkbox:before { content: "\e843"; }
+    .icon-Checkbox-empty:before { content: "\e844"; }
+    .icon-Checkbox-dotted:before { content: "\e845"; }
+    .icon-Checkbox-dotted-active:before { content: "\e846"; }
+    .icon-Check:before { content: "\e847"; }
+    .icon-Chat:before { content: "\e848"; }
+    .icon-Chat-active:before { content: "\e849"; }
+    .icon-Chart:before { content: "\e84a"; }
+    .icon-Capslock:before { content: "\e84b"; }
+    .icon-Camcorder:before { content: "\e84c"; }
+    .icon-Calendar:before { content: "\e84d"; }
+    .icon-Calendar-alt:before { content: "\e84e"; }
+    .icon-Burn:before { content: "\e84f"; }
+    .icon-Bulleted-list:before { content: "\e850"; }
+    .icon-Bug:before { content: "\e851"; }
+    .icon-Brush:before { content: "\e852"; }
+    .icon-Box:before { content: "\e853"; }
+    .icon-Bookmark:before { content: "\e854"; }
+    .icon-Book:before { content: "\e855"; }
+    .icon-Book-alt:before { content: "\e856"; }
+    .icon-Book-alt-2:before { content: "\e857"; }
+    .icon-Bluetooth:before { content: "\e858"; }
+    .icon-Block:before { content: "\e859"; }
+    .icon-Bell:before { content: "\e85a"; }
+    .icon-Bell-off:before { content: "\e85b"; }
+    .icon-Battery-low:before { content: "\e85c"; }
+    .icon-Battery-full:before { content: "\e85d"; }
+    .icon-Bars:before { content: "\e85e"; }
+    .icon-Barchart:before { content: "\e85f"; }
+    .icon-Badge-restricted:before { content: "\e860"; }
+    .icon-Badge-remove:before { content: "\e861"; }
+    .icon-Badge-count:before { content: "\e862"; }
+    .icon-Badge-add:before { content: "\e863"; }
+    .icon-Attachment:before { content: "\e864"; }
+    .icon-Arrow-up:before { content: "\e865"; }
+    .icon-Arrow-right:before { content: "\e866"; }
+    .icon-Arrow-left:before { content: "\e867"; }
+    .icon-Arrow-down:before { content: "\e868"; }
+    .icon-Alt:before { content: "\e869"; }
+    .icon-Alert:before { content: "\e86a"; }
+    .icon-Alert-alt:before { content: "\e86b"; }
+    .icon-Adressbook:before { content: "\e86c"; }
+    .icon-Add:before { content: "\e86d"; }
+    .icon-3d:before { content: "\e86e"; }
+    .icon-Dice-6:before { content: "\e86f"; }
+    .icon-Dice-5:before { content: "\e870"; }
+    .icon-Dice-4:before { content: "\e871"; }
+    .icon-Dice-3:before { content: "\e872"; }
+    .icon-Dice-2:before { content: "\e873"; }
+    .icon-Dice-1:before { content: "\e874"; }
+    .icon-Bold:before { content: "\E875"; }
+    .icon-Italic:before { content: "\e876"; }
+    .icon-Football:before { content: "\e877"; }
+    .icon-Card:before { content: "\e878"; }
+    .icon-Card-alt:before { content: "\e879"; }
+    .icon-Cards:before { content: "\e87A"; }
+    .icon-Cards-alt:before { content: "\e87B"; }
+    .icon-Field:before { content: "\e87C"; }
+    .icon-Hamburger:before { content: "\e87D"; }
+    .icon-Close:before { content: "\e87E"; }
+    .icon-Arrow-alt-left:before { content: "\e87F"; }
+    .icon-Arrow-alt-right:before { content: "\e880"; }
+    .icon-Arrow-alt-up:before { content: "\e881"; }
+    .icon-Arrow-alt-down:before { content: "\e882"; }
+    .icon-Dagbladet:before { content: "\e883"; }
+    .icon-Dagbladet-alt:before { content: "\e884"; }
+    .icon-DBiD-db:before { content: "\e885"; }
+    .icon-DBiD-id:before { content: "\e886"; }
+    .icon-Standfirst:before { content: "\e887"; }
+    .icon-Kicker:before { content: "\e888"; }
+}
+
+
+
+// Other icons
+//
+// Additional icons wchich are not included in the icon font
+//
+// Markup:
+// <span class="{$modifiers}"></span>
+//
+// .icon-testpilot - testpilot 
+//
+// Styleguide 5.3
+
+.icon-testpilot { 
+	display:block;
+	height:16px;
+	width: 16px;
+	background: url('/assets/icon/small-navigation/testpilot-32.png') no-repeat;
+	background-size: 16px;
+}
+
+.icon-arrow { 
+	display:block;
+	height:16px;
+	width: 16px;
+	background: url('/assets/icon/arrow.svg') no-repeat;
+	background-size: 16px;
+}
+

@@ -1,0 +1,86 @@
+// Range slider
+//
+// Deprecated: This range slider from foundation is deprecated.
+//
+// Markup:
+// <div class="range-slider round" data-slider>
+//   <span class="range-slider-handle" role="slider" tabindex="0"></span>
+//   <span class="range-slider-active-segment"></span>
+//   <input type="hidden">
+// </div>
+
+.range-slider.round{
+    margin: 0;
+    box-sizing: content-box;
+    border-left: none;
+    border-right: none;
+    height: 3px;
+    border-radius: 0;
+    .range-slider-handle{
+        top: -0.95rem;
+        background: radial-gradient(center, ellipse cover,  $ui-color 0%, $ui-color 35%, rgba(255, 255, 255, 0) 38%);
+        cursor: ew-resize;
+    }
+    &:hover{
+        .range-slider-handle{
+            background: $ui-color;
+        }
+    }
+    .range-slider-active-segment{
+        height: 3px;
+        background-color: $ui-color;
+    }
+}
+
+// Range
+//
+// RequiresJS: For documentation see [db.libs.rangeSlider](/jsdocs/db.libs.rangeSlider.html).
+//
+// Markup:
+// <input min="0" max="100" type="range" />
+//
+// Styleguide 8.1.5
+
+input[type="range"]{
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 1.12rem 0;
+
+    @for $i from 1 through 100{
+        &.value-#{$i}{
+            &::-webkit-slider-runnable-track{
+                background-size: #{$i}% 100%;
+            }
+        }
+    }
+
+    &::-webkit-slider-runnable-track{
+        height: 3px;
+        background: linear-gradient($ui-color, $ui-color) no-repeat $color-lightgrey;
+        background-size: 0% 100%;
+    }
+    &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        background-color: $ui-color;
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        top: 1.5px;
+        position: relative;
+        box-shadow: $z-shadow-1;
+        transform: translateY(-50%);
+        transition: all 100ms linear;
+        cursor: ew-resize;
+    }
+    &:focus{
+        outline: none;
+        &::-webkit-slider-thumb{
+            width: 24px;
+            height: 24px;
+            border-radius: 24px;
+        }
+    }
+    &:hover{
+
+    }
+}

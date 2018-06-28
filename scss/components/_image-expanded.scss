@@ -1,0 +1,22 @@
+// Expanded
+//
+// RequiresJS: Make the figure expand the full width of the page. Add `data-image-expand` to the figure tag to enable.
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject" data-image-expand>
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption">
+//     <strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span>
+//   </figcaption>
+// </figure>
+//
+// Styleguide 10.6
+
+figure[data-image-expand]{
+    //NOTE: This requies javascript to position the figure correctly
+    width: 100vw;
+    figcaption{
+        padding-left: $column-gutter / 2;
+        padding-right: $column-gutter / 2;
+    }
+}

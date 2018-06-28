@@ -1,0 +1,280 @@
+// Figure
+//
+// The figure element is a wrapper for images, video or other graphical elements.
+//
+// Styleguide 10
+
+// Images
+//
+// Tags: Images
+//
+// Styleguide 10.1
+
+// Responsive images
+//
+// Loading images in a responsive layout at its simplest is just using the srcset-attribute. [Picturefill](http://scottjehl.github.io/picturefill/) is implemented as a polyfill for browsers that not yet supports srcset.
+//
+// Tags: Responsive Images
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="image" itemprop="contentURL" sizes="100vw" srcset="/assets/test/small-q60.jpg 320w, /assets/test/medium-q60.jpg 640w, /assets/test/large-q60.jpg 1024w">
+// </figure>
+//
+// Styleguide 10.1.1
+
+// Responsive images forced
+//
+// RequiresJS: For some layouts we need to force a specific image for each layout. We use the same syntax as srcset but prefix srcset with data. A small javascript will choose the correct image for each layout. The size specified for each image should match the breakpoint targeted. Note that only one image for each preakpoint should be specified.
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="image" itemprop="contentURL" data-srcset="/assets/test/small-q60.jpg 320w, /assets/test/medium-q60.jpg 640w, /assets/test/large-q60.jpg 1024w">
+// </figure>
+//
+// Styleguide 10.1.2
+
+// Lazyload
+//
+// RequiresJS: Images can be lazyloaded in two ways and works both with `data-src` and `data-srcset`. See documentation for [db.libs.imageDefer](/jsdocs/db.libs.imageDefer.html).
+// * `data-defer="load"` defers loading of the image untill the `onload` event is fired or `app.js` is loaded, whatever comes last. This is because `app.js` is loaded async and the `onload` event can be fired before `app.js` is loaded.
+// * `data-defer="view"` defers loading untill til image is about to enter the viewable part of the screen.
+//
+// Tags: Layzload
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="image" itemprop="contentURL" data-defer="load" data-srcset="/assets/test/small-q60.jpg 320w, /assets/test/medium-q60.jpg 640w, /assets/test/large-q60.jpg 1024w">
+// </figure>
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="image" itemprop="contentURL" data-defer="view" data-src="/assets/test/large-q60.jpg">
+// </figure>
+//
+// Styleguide 10.1.3
+
+// Video
+//
+// Wrap the video in `.flex-video` to make the video responsive wihtin the figure element.
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <div class="flex-video">
+//     <iframe src="//www.dbtv.no/player/1824660370001?autoplay=false&amp;vpShares=nyheter&amp;vpNoCompanion=true" width="480" height="270" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+//   </div>
+//   <figcaption class="caption" itemprop="caption" data-expand>
+//     <strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span>
+//     <a class="toggle">Vis mer</a>
+//   </figcaption>
+// </figure>
+//
+// Styleguide 10.2
+
+// Charts
+//
+// Wrap the video in `.flex-video` to make the video responsive wihtin the figure element.
+//
+// Tags: Charts
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+// </figure>
+//
+// Styleguide 10.3
+
+// Caption
+//
+// Tags: Caption
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption"><strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span></figcaption>
+// </figure>
+//
+// Styleguide 10.4
+
+figure {
+    margin: 0 0 rem-calc(15) 0;
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+
+    .flex-video{
+        margin-bottom: 0;
+    }
+
+    figcaption {
+        padding-top: 1rem;
+        position: relative;
+    }
+
+}
+
+// Expandable
+//
+// RequiresJS: *(Only tiggered for small viewports)* For small screens we can show only parts of the caption, and let the user toggle the visiability. Add `data-expand` attribute to the figure element to enable.
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption" data-expand>
+//     <strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span>
+//     <a href="#" class="toggle">Vis mer</a>
+//   </figcaption>
+// </figure>
+//
+// Styleguide 10.4.1
+
+@mixin caption-expanded(){
+    white-space: normal;
+    padding-right: 0;
+    .toggle{
+        display: none;
+    }
+}
+
+@mixin caption-contracted(){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 20%;
+}
+
+figcaption{
+    &[data-expand]{
+        @media #{$small-only}{
+            @include caption-contracted;
+            &.active{
+                @include caption-expanded;
+            }
+            .toggle{
+                position: absolute;
+                right: 0;
+                width: 20%;
+                text-indent: 0.4rem;
+            }
+        }
+        @media #{$medium-up}{
+            .toggle{
+                display: none;
+            }
+        }
+    }
+}
+
+// Border
+//
+// Applies only to images inside the figure
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img class="border" itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption"><strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span></figcaption>
+// </figure>
+//
+// Styleguide 10.5
+
+img{
+    &.border{
+        border: 1px solid $secondary-color;
+    }
+}
+
+// Passepartout
+//
+// Applies only to images inside the figure
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject">
+//   <img class="passepartout" itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption"><strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span></figcaption>
+// </figure>
+//
+// Styleguide 10.5.1
+
+img{
+    &.passepartout{
+        border: 1px solid $secondary-color;
+        padding: 3px;
+    }
+}
+
+// Group
+//
+// Group figures together with a common caption
+//
+// Styleguide 10.8
+
+// Two
+//
+// Markup:
+// <figure class="group two" itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/232/232278/23227870/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption" data-expand>
+//     <strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span>
+//     <a class="toggle" tabindex="0">Vis mer</a>
+//   </figcaption>
+// </figure>
+//
+// Styleguide 10.8.1
+
+// Three
+//
+// Markup:
+// <figure class="group three" itemscope itemtype="http://schema.org/ImageObject">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/232/232278/23227870/jpg/active/978x.jpg">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption" data-expand>
+//     <strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span>
+//     <a class="toggle" tabindex="0">Vis mer</a>
+//   </figcaption>
+// </figure>
+//
+// Styleguide 10.8.2
+
+figure.group{
+    img{
+        margin-bottom: 1rem;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    @media #{$medium-up}{
+        img{
+            float: left;
+            &:last-of-type{
+                margin-bottom: 1rem;
+            }
+        }
+        &.two{
+            img{
+                width: 50%;
+                &:nth-child(odd){
+                    padding-right: 0.5rem;
+                }
+                &:nth-child(even){
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+        &.three{
+            img{
+                width: 33.3333%;
+                &:nth-child(3n+1){
+                    padding-right: 0.66rem;
+                }
+                &:nth-child(3n+2){
+                    padding-right: 0.33rem;
+                    padding-left: 0.33rem;
+                }
+                &:nth-child(3n+3){
+                    padding-left: 0.66rem;
+                }
+            }
+        }
+    }
+}

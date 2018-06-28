@@ -1,0 +1,123 @@
+@mixin article-beat-base(){
+    margin-bottom: $column-gutter / 2;
+    .cover{
+        min-height: 3.125rem;
+        @media #{$large-up}{
+            min-height: 25rem;
+        }
+        .image{
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            z-index: $z-index-page;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        .gradient{
+            background: linear-gradient(to bottom, rgba(34,34,34,0) 0%, rgba(34,34,34,0.8) 100%);
+            position: absolute;
+            z-index: $z-index-page + 1;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        .intro{
+            padding: $column-gutter / 2 0;
+            position: relative;
+            z-index: $z-index-page + 2;
+            @media #{$medium-up}{
+                padding: 0 $column-gutter / 2;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+            h1{
+                text-shadow: 0 1px 1px rgba(34, 34, 34, 0.5);
+                font-style: italic;
+            }
+        }
+    }
+    .copy{
+        padding: $column-gutter / 2;
+        *{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .article-list{
+            li{
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+@mixin article-beat-style($bg: $secondary-color, $headline-color: 'inherit', $color: $color-black){
+    background-color: $bg;
+    color: $color;
+    @if $headline-color == 'inherit'{
+        $headline-color: $bg;
+    }
+    .cover{
+        .intro{
+            h1{
+                color: $headline-color;
+            }
+        }
+    }
+    .copy{
+        a{
+            color: $color;
+        }
+    }
+}
+
+// Article beat
+//
+// Markup:
+// <div class="article-beat {$modifiers} small-12 medium-12 large-12 column">
+//   <div class="row" data-equalizer>
+//     <div class="small-12 medium-6 large-6 column cover" data-equalizer-watch>
+//       <div class="image" style="background-image: url(http://gfx.dagbladet.no/labrador/360/360919/36091986/jpg/active/978x.jpg);"></div>
+//       <div class="gradient"></div>
+//       <div class="intro">
+//         <span class="label">Live</span>
+//         <h1>I dag starter Premier League</h1>
+//         <a href="#" class="button round white outline"><span class="icon-Target"></span> Følg kampene direkte</a>
+//       </div>
+//     </div>
+//     <div class="small-12 medium-6 large-6 column copy" data-equalizer-watch>
+//       <p class="standfirst">La helgen starte og rigg deg til for et skikkelig fotballmaraton.</p>
+//       <ul class="article-list no-bullet">
+//         <li><a href="#"><img src="http://placehold.it/60x60" /> Stoke vartet opp med lekre scoringer tok og tre poeng mot Tottenham</a></li>
+//         <li><a href="#"><img src="http://placehold.it/60x60" /> Mata kom rett fra benken og sikret United-seier </a></li>
+//         <li><a href="#"><img src="http://placehold.it/60x60" /> Agüero reddet City med offside- og kunstmål</a></li>
+//         <li><a href="#"><img src="http://placehold.it/60x60" /> Swanseas tre drømmeminutter robbet Arsenal for poengene</a></li>
+//       </ul>
+//     </div>
+//   </div>
+// </div>
+//
+// .primary - Primary
+// .black - Black
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+//
+// Styleguide 23.0
+
+.article-beat{
+    @include article-beat-base;
+    @include article-beat-style;
+    &.primary{ @include article-beat-style($bg: $primary-color, $color: $white); }
+    &.black{ @include article-beat-style($bg: $color-black, $headline-color: $white, $color: $white); }
+    &.yellow{ @include article-beat-style($bg: $color-yellow, $color: $color-black); }
+    &.green{ @include article-beat-style($bg: $color-green, $color: $color-black); }
+    &.blue{ @include article-beat-style($bg: $color-blue, $color: $color-black); }
+}

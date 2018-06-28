@@ -1,0 +1,157 @@
+// TV-Guide (Slim version)
+//
+// RequiresJS: Listing of todays TV programming.
+//
+// Template: templates/partials/tvguide-slim.mustache
+//
+// Styleguide 25.1
+
+.tv-slim {
+    .guide-header{
+        margin-bottom: 1rem;
+    }
+    .sea{
+        display: none;
+        background-color: #00F5F9;
+        color: $white;
+        border-color: #00F5F9;
+    }
+
+    .channel-logo-container {
+        width: 70px;
+        float: left;
+
+        .channel{
+            display: block;
+            height: 28px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 5px 5px 5px 5px;
+        }
+    }
+
+
+    .channel-content {
+        width: 100%;
+        float: left;
+        border: 1px solid $color-lightgrey;
+        margin-bottom: 2rem;
+        @media #{$small-only} {
+            margin-bottom: 1rem;
+        }
+        .channel-header {
+            float: left;
+            width: 100%;
+            position: relative;
+            img {
+                padding: 0.5rem;
+                float: left;
+                height: 38px;
+            }
+            h1 {
+                padding: 0.5rem;
+                float: left;
+                border-left: 1px solid $color-lightgrey;
+                font-size: 1em;
+                margin: 0 0 0 0;
+                font-weight: 500;
+            }
+            a {
+                position: absolute;
+                padding: 0.45rem;
+                top: 0;
+                right: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 0.7rem;
+                text-decoration: none;
+                #{$icon}{
+                    font-size: 1rem;
+                    position: relative;
+                    top: 0.2rem;
+                }
+            }
+        }
+        &.active{
+            .program-list{
+                display: block;
+            }
+            .channel-header a span:before{
+                content: "\e881";
+            }
+        }
+    }
+    @media #{$small-only} {
+        .sea{
+            display: block;
+        }
+        .guide-header{
+            margin-bottom: 0;
+        }
+        .program-list {
+            li:not(.first-three){
+                display:none;
+            }
+        }
+        .active .program-list li{
+            display: block;
+        }
+    }
+    .program-list {
+        float: left;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem;
+        border-top: 1px solid $color-lightgrey;
+        display: block;
+        li {
+            font-size: 0.8rem;
+            line-height: 1.8;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            height: 23px;
+            opacity: 1;
+            transition: all 0.2s ease-out;
+            &.hide{
+                display: block;
+                opacity: 0;
+                height: 0;
+            }
+            .startDate{
+                font-weight: 700;
+                margin-right: 5px;
+                &:before {
+                    content:"";
+                    border-radius: 99px;
+                    width: 6px;
+                    height: 6px;
+                    margin-top: 7px;
+                    margin-right: 5px;
+                    display: block;
+                    float: left;
+                }
+            }
+            &[data-category="4"] .startDate:before {
+                background-color: $color-blue;
+            }
+            &[data-category="6"] .startDate:before {
+                background-color: $primary-color;
+            }
+            &[data-category="11"] .startDate:before {
+                background-color: $color-green;
+            }
+            &[data-category="12"] .startDate:before {
+                background-color: $color-darkgrey;
+            }
+        }
+    }
+    .program-list-slim{
+        li:not(.first-three){
+            display:none;
+        }
+    }
+}

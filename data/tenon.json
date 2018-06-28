@@ -1,0 +1,1553 @@
+{
+  "apiErrors": [],
+  "documentSize": 424953,
+  "globalStats": {
+    "errorDensity": "141",
+    "warningDensity": "11",
+    "allDensity": "152",
+    "stdDev": "376"
+  },
+  "message": "success",
+  "request": {
+    "certainty": "0",
+    "docID": "B10FB068-16F1-DE72-BEDC-B3D1B0055BEF",
+    "importance": "1",
+    "key": "null",
+    "level": "AAA",
+    "priority": "0",
+    "projectID": "DEFAULT_PROJECT",
+    "ref": "0",
+    "reportID": "c1b3e4ba-8da8-40ef-8625-83ba78698254",
+    "responseID": "d0a5f55b27dde24f745c4b8875e67c4e",
+    "uaString": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36",
+    "url": "http://www.dagbladet.no",
+    "viewport": {
+      "height": 768,
+      "width": 1024
+    },
+    "fragment": "0",
+    "store": "1"
+  },
+  "responseExecTime": "17.50",
+  "responseTime": "2015-03-19T13:38:32.651Z",
+  "resultSet": [
+    {
+      "bpID": 118,
+      "certainty": 100,
+      "errorDescription": "Language of the document has not been set. Set the language of the document by adding the 'lang' attribute on the <html> element using an ISO 639-1 language code",
+      "errorSnippet": "<html class=\"\"><head style=\"\">\n<meta property=\"fb:app_id\" content=\"116676921744431\" style=\"\">\n\n    <!--<script type=\"text/javascript\" src=\"//www.dagbladet.no/admin/labrador/modules/labrador/lib/combine.php?elements=jquery&type",
+      "errorTitle": "Language not set",
+      "position": {
+        "column": 1,
+        "line": 2
+      },
+      "priority": 65,
+      "ref": "null",
+      "resultTitle": "Identify the primary language used in the document",
+      "signature": "44a94237c000e850648a666c8f85d30d",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 3.1.1 Language of Page"
+      ],
+      "tID": 3,
+      "xpath": "/html"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img src=\"http://gfx.dagbladet.no/g4/dagbladet-170.png\" class=\"db-logo\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 37,
+        "line": 122
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "2d6e3f576452331587ef17dd33374655",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[1]/div[1]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img class=\"plussbox_logo\" src=\"http://gfx.dagbladet.no/pluss/module_logo.png\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 9,
+        "line": 467
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "4086868a6d72df67d0a1c83c6e326206",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[1]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img src=\"http://gfx.dagbladet.no/pluss/hjernetrim_promo_strip.png\" width=\"100%\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 8,
+        "line": 613
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "543450383a82110795f9cbb921284c6e",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[2]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img src=\"http://g2.start.no/img/dbTeaser/ti/1000/1235.jpg\" class=\"quizimg\" id=\"quizimg_0\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 5,
+        "line": 864
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "3cf4bcc1c388116ac11b98fbae7586df",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/div[1]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img src=\"http://g2.start.no/img/dbTeaser/ti/1000/1236.jpg\" class=\"quizimg\" id=\"quizimg_1\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 5,
+        "line": 874
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "e9fe2abdfb79a519384cb460903ff4a2",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/div[2]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img src=\"http://g2.start.no/img/dbTeaser/ti/1000/1237.jpg\" class=\"quizimg\" id=\"quizimg_2\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 5,
+        "line": 884
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "85a4ba443f8f36c717b7d65630e93e38",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/div[3]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img style=\"border:1px solid none;\" src=\"http://gfx.dagbladet.no/tv/featured/2015/03/19/14417_216_90.jpg\" height=\"90\" width=\"216\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 128,
+        "line": 932
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "8926010f414ad58d5fc5bf6fca5bc759",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img src=\"http://gfx.dagbladet.no/tv-program/se-logo.gif\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 116,
+        "line": 933
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "e915faeadaf5ff6c376cce681f7f5e1c",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[1]/h2[1]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img style=\"margin: 0 5px\" src=\"http://www.dagbladet.no/pdf/forsider/A_170x243.jpg\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 114,
+        "line": 934
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "68a11d4de47d380f85060b0e8058d265",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/div[6]/div[1]/div[2]/a[1]/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img src=\"http://c.vindicosuite.com/creative/blank.gif\" border=\"0\" width=\"1\" height=\"1\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 141,
+        "line": 1075
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "58021dc3f8a14102c6d3c0ffc46b196e",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/img[1]"
+    },
+    {
+      "bpID": 1,
+      "certainty": 100,
+      "errorDescription": "All images must have an alt attribute. Not supplying an alt attribute will mean that users who cannot see the image will not understand what the image conveys. ",
+      "errorSnippet": "<img id=\"unispring-tp\" src=\"http://dagbladet.tns-cs.net/j0=,,,;+,cp=dagbladet%2Ffront+url=http%3A%2F%2Fwww.dagbladet.no%2F;;;?lt=i7g7dyvj&amp;x=1024x768x32\" width=\"1\" height=\"1\">",
+      "errorTitle": "Image missing alt attribute",
+      "position": {
+        "column": 33,
+        "line": 1085
+      },
+      "priority": 81,
+      "ref": "null",
+      "resultTitle": "Provide alt attributes for IMG elements",
+      "signature": "0c25843f955db8f2820975094b5cedf5",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content"
+      ],
+      "tID": 9,
+      "xpath": "/html/body/img[2]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_1\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_1\" width=\"1920\" height=\"1200\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-wid",
+      "errorTitle": "Frames do not have titles",
+      "position": {
+        "column": 28,
+        "line": 692
+      },
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "cb7b0a04db157f48fcf9a8631cf50de7",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[3]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_0\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_0\" width=\"980\" height=\"300\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-width",
+      "errorTitle": "Frames do not have titles",
+      "position": {
+        "column": 9,
+        "line": 1054
+      },
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "4f7affb75924092b10bf8cf763da2a62",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[4]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_2\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_2\" width=\"1\" height=\"1\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-width: 0p",
+      "errorTitle": "Frames do not have titles",
+      "position": {
+        "column": 5,
+        "line": 1665
+      },
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "e5fa0067ff292410aa6a7cf8a0b4b6e5",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[1]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe frameborder=\"0\" style=\"border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; vertical-align: bottom; \" src=\"http://tpc.googlesyndication.com/safeframe/1-",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "d59439c6497e00151fb13b82872de19a",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_4\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_4\" width=\"620\" height=\"530\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-width",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "a47a80633fc898abc5439784fefec892",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_5\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_5\" width=\"980\" height=\"600\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-width",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "0c8ad8028525df90d1c41706a3f43420",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[9]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_6\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_6\" width=\"180\" height=\"500\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-width",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "e2a09c43be9520740005205971ce4640",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe frameborder=\"0\" style=\"border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; vertical-align: bottom; \" src=\"http://tpc.googlesyndication.com/safeframe/1-",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "c813a5510860cf733e1e4a5dd43d45b0",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_8\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_8\" width=\"980\" height=\"150\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-width",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "f3d57996ff2769ebb678cda17764c447",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[14]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_10\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_10\" width=\"300\" height=\"400\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-wid",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "a6127da5b3c0c492a0e2b4e90fd7895c",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe src=\"http://feeds.allerinternett.no/dbfeed/\" style=\"width: 980px; height: 370px; border: 0; margin-top: 10px;\" frameborder=\"0\" scrolling=\"0\"></iframe>",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "d105f03c7300133988451b6bd1cf850b",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_11\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_11\" width=\"980\" height=\"400\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-wid",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "3ef0d530fcafc83107dea49c0058a287",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[24]/div[1]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe id=\"google_ads_iframe_/8578/dagbladet.no/forside_12\" name=\"google_ads_iframe_/8578/dagbladet.no/forside_12\" width=\"980\" height=\"150\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" style=\"border-top-width: 0px; border-right-wid",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "18f5088878d352c744792746a15d40ab",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[28]/div[2]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe src=\"http://www.dagbladet.no/tjenester/ny/dfp/\" style=\"width: 980px; height: 460px; border: 0;\" frameborder=\"0\" scrolling=\"0\"></iframe>",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "e147bc03fc1a3f6830669f0c4d354eef",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[4]/div[1]/iframe[1]"
+    },
+    {
+      "bpID": 53,
+      "certainty": 100,
+      "errorDescription": "Frames must have titles which describe the content or purpose in the frame.",
+      "errorSnippet": "<iframe style=\"position: absolute;\" src=\"https://b12.myspace.com/b12/w5k2fqGWvaUFIB\" width=\"1\" height=\"0\" marginwidth=\"0\" marginheight=\"0\" topmargin=\"0\" leftmargin=\"0\" frameborder=\"0\" scrolling=\"no\" bordercolor=\"#000000\"></iframe>",
+      "errorTitle": "Frames do not have titles",
+      "position": "",
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide clear, informative titles for all Frames and I-Frames",
+      "signature": "35985267d61db760a1b4a7cf4df9ea29",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.1 Bypass Blocks"
+      ],
+      "tID": 13,
+      "xpath": "/html/body/iframe[2]"
+    },
+    {
+      "bpID": 8,
+      "certainty": 100,
+      "errorDescription": "Code was found which uses deprecated methods to define colors. This sometimes cannot be overridden or disabled by custom CSS or by turning CSS off.",
+      "errorSnippet": "<font color=\"#d60000\">SISTE:</font>",
+      "errorTitle": "Document uses deprecated color definition",
+      "position": {
+        "column": 212,
+        "line": 378
+      },
+      "priority": 70,
+      "ref": "null",
+      "resultTitle": "Ensure content and components are readable with CSS turned off",
+      "signature": "40df2a83a7c5606692c878fcd244c685",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.2 Meaningful Sequence"
+      ],
+      "tID": 14,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/font[1]"
+    },
+    {
+      "bpID": 8,
+      "certainty": 100,
+      "errorDescription": "Code was found which uses deprecated methods to define colors. This sometimes cannot be overridden or disabled by custom CSS or by turning CSS off.",
+      "errorSnippet": "<font id=\"ext-gen16065\" color=\"#d60000\">- De var skrekk­slagne</font>",
+      "errorTitle": "Document uses deprecated color definition",
+      "position": {
+        "column": 414,
+        "line": 390
+      },
+      "priority": 70,
+      "ref": "null",
+      "resultTitle": "Ensure content and components are readable with CSS turned off",
+      "signature": "f7f1c08968c7f2db2f0f11dd8e11aef3",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.2 Meaningful Sequence"
+      ],
+      "tID": 14,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    },
+    {
+      "bpID": 8,
+      "certainty": 100,
+      "errorDescription": "Code was found which uses deprecated methods to define colors. This sometimes cannot be overridden or disabled by custom CSS or by turning CSS off.",
+      "errorSnippet": "<font color=\"#d60000\">NRK: - Vi beklager</font>",
+      "errorTitle": "Document uses deprecated color definition",
+      "position": {
+        "column": 364,
+        "line": 755
+      },
+      "priority": 70,
+      "ref": "null",
+      "resultTitle": "Ensure content and components are readable with CSS turned off",
+      "signature": "58f543fda1e375871f4287f3e6a56e8f",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.2 Meaningful Sequence"
+      ],
+      "tID": 14,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[27]/div[2]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    },
+    {
+      "bpID": 18,
+      "certainty": 100,
+      "errorDescription": "Do not use deprecated elements. They cannot be overridden by the user.",
+      "errorSnippet": "<font color=\"#d60000\">SISTE:</font>",
+      "errorTitle": "Deprecated elements found",
+      "position": {
+        "column": 212,
+        "line": 378
+      },
+      "priority": 33,
+      "ref": "null",
+      "resultTitle": "Avoid deprecated markup",
+      "signature": "a99589eacd5052a932170fbf69b85ced",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 4.1.1 Parsing"
+      ],
+      "tID": 16,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/font[1]"
+    },
+    {
+      "bpID": 18,
+      "certainty": 100,
+      "errorDescription": "Do not use deprecated elements. They cannot be overridden by the user.",
+      "errorSnippet": "<font id=\"ext-gen16065\" color=\"#d60000\">- De var skrekk­slagne</font>",
+      "errorTitle": "Deprecated elements found",
+      "position": {
+        "column": 414,
+        "line": 390
+      },
+      "priority": 33,
+      "ref": "null",
+      "resultTitle": "Avoid deprecated markup",
+      "signature": "eab0fe604bfaa21a5d2bab0f70006c49",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 4.1.1 Parsing"
+      ],
+      "tID": 16,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    },
+    {
+      "bpID": 18,
+      "certainty": 100,
+      "errorDescription": "Do not use deprecated elements. They cannot be overridden by the user.",
+      "errorSnippet": "<font color=\"#d60000\">NRK: - Vi beklager</font>",
+      "errorTitle": "Deprecated elements found",
+      "position": {
+        "column": 364,
+        "line": 755
+      },
+      "priority": 33,
+      "ref": "null",
+      "resultTitle": "Avoid deprecated markup",
+      "signature": "6b150e9102353ce056092c56ebf0f380",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 4.1.1 Parsing"
+      ],
+      "tID": 16,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[27]/div[2]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 19.30</strong> Bondi Beach (14)<p class=\"program-desc\" style=\"\">(Bondi Rescue) Australsk realityserie. Vi følger livet på en av verdens travleste strender, Bondi. Flere tusen blir reddet hvert år av badevaktene på den",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1381
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "dcc0d9e41a9e46492f4c68e2505096e0",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[1]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 19.50</strong> Ikke gjør dette hjemme (4)<p class=\"program-desc\" style=\"\">Underholdningsserie. (Ikke gjør dette hjemme.) Alle som har forsøkt å koke egg i mikrobølgeovnen, vet hvilket griseri det blir. Men hva skjer d",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1382
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "6c6f1686a73490048447fa3ed3a65a17",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[2]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 20.20</strong> Norske fordommer (5)<p class=\"program-desc\" style=\"\">Norsk humorserie. Lars Berrum og Martin Beyer-Olsen tar en humoristisk vandring i seks temaer som frembringer fordommer blant det norske folk. Vi møt",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1383
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "c66e82ece94e5fb2e996b4fee1e8674b",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[3]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 20.45</strong> Standup: Live fra Apollo (4)<p class=\"program-desc\" style=\"\">(Live at the Apollo) Britisk underholdning. Sara Pascoe og Nathan Caton er gjester hos komikeren Jon Richardson.</p></li>",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1384
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "90f2d545f5f2adda918c703e484c4e7b",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[4]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 21.30</strong> Ung og ut av skapet<p class=\"program-desc\" style=\"\">(Coming Out Diaries) Britisk dokumentar. Tre ungdommer har bestemt seg for å fortelle omverdenen hvem de egentlig er. Nathalie var født som gutt, men ",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1385
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "cac40c25b486e49231545f4054be0b2e",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[5]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 22.30</strong> Venn i døden (3)<p class=\"program-desc\" style=\"\">Norsk dokumentarserie. Bestevennen til programleder Martin Melvold (24) mistet moren sin for ti år siden i tsunamien. Martin klarte ikke å være der for h",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1386
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "32f41ae70e740d0db8b94cb1fd9ac8d8",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[6]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong class=\"serie\" title=\"Serie\"> 22.55</strong> Kampen for tilværelsen (3)<p class=\"program-desc\" style=\"\">Norsk dramaserie. «Familien.» (Familien.) I Ullevål Hageby er beboerne skeptiske til den nye vaktmesteren. Den pols",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1387
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "eb844384d9b5b0848de2b74d2588e14e",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[7]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 23.40</strong> Menneskeforsøk (10)<p class=\"program-desc\" style=\"\">Dansk dokumentarserie. I vår tid dyrker vi mosjon og prestasjon som aldri før. Vi skal bli sterkere, raskere og mer utholdende i alle situasjoner. Hvo",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1388
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "669eebc81ec732f9ee271d84849b46e9",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[8]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong class=\"serie\" title=\"Serie\"> 00.10</strong> Musketerene (3)<p class=\"program-desc\" style=\"\">(The Musketeers) Britisk dramaserie. Athos, Aramis og Porthos er de tre musketerene fra Alexandre Dumas' kjente historie. De e",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1389
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "02ad4d34c64885a7c16571a2661712c2",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[9]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 01.05</strong> Livsfarlege dyr (14)<p class=\"program-desc\" style=\"\">(Deadly 60) Britisk naturprogram. Klarer Steve Backshall og teamet hans å finne de farligeste dyrene i verden? De drar til alle hjørnene av verden og",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 28,
+        "line": 1396
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "2b4edf979a53aec4328199b1dcbffdfb",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[10]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong class=\"serie\" title=\"Serie\"> 01.30</strong> Boardwalk Empire (7)<p class=\"program-desc\" style=\"\">(Boardwalk Empire) Amerikansk dramaserie. Eli konfronterer Nucky om Willies veivalg, Margaret har et uventet møte i New Y",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1397
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "f05f4b6b5569b03f677b635d4e690c21",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[11]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 02.30</strong> Bondi Beach (14)<p class=\"program-desc\" style=\"\">(Bondi Rescue) Australsk realityserie. Vi følger livet på en av verdens travleste strender, Bondi. Flere tusen blir reddet hvert år av badevaktene på den",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1398
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "4026b216c64ad3206b2b82494f98e897",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[12]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong class=\"serie\" title=\"Serie\"> 02.50</strong> Gutter er gutter (5)<p class=\"program-desc\" style=\"\">(About a Boy) Amerikansk dramaserie. (About a Plumber.) Marcus legger planer for hvordan Will kan date moren hans. Mens F",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1399
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "275cdd5b9d09b04eaf68d63782d29693",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[13]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong class=\"serie\" title=\"Serie\"> 03.10</strong> Gutter er gutter (6)<p class=\"program-desc\" style=\"\">(About a Boy) Amerikansk dramaserie. Marcus havner på legevakten der han oppdager drømmejenta. Og Will, som brakte ham di",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1400
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "ec161773c0f3603e0a29be00a3029779",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[14]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong> 03.35</strong> Som au pair i London (9)<p class=\"program-desc\" style=\"\">Finsk serie. Fire jenter reiser til London for å jobbe som au pair. Hilla og Mira må bestemme seg; skal de ta farvel eller bli værende i London? ",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1401
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "c803aff9d09aefe3363982f819a33d43",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[15]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong class=\"serie\" title=\"Serie\"> 04.05</strong> Molanders (11)<p class=\"program-desc\" style=\"\">(Molanders) Svensk dramaserie. Familien Molander forlater et hektisk liv i Stockholm og flytter til Alingsås, den lille byen de",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1402
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "e7f6184e232a246b4f591bba7a50a903",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[16]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong class=\"serie\" title=\"Serie\"> 04.45</strong> Broadchurch (2)<p class=\"program-desc\" style=\"\">(Broadchurch) Britisk krimserie. Etterforskerne Alec Hardy og Ellie Miller løser mysterier i den lille kystbyen Broadchurch i ",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1403
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "b432bb2c7a6b7fe035f0eff4e0d20c67",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[17]"
+    },
+    {
+      "bpID": 144,
+      "certainty": 100,
+      "errorDescription": "List items were found without a proper list container. Place these within a proper list container, such as OL or UL, so that their purpose is more easily understood by assistive technology users.",
+      "errorSnippet": "<li><strong>05.35</strong> SLUTT</li>",
+      "errorTitle": "List items have no parent",
+      "position": {
+        "column": 1,
+        "line": 1404
+      },
+      "priority": 84,
+      "ref": "null",
+      "resultTitle": "Use proper markup for lists and sublists",
+      "signature": "72d8abd239410fcb669e1ddead043b09",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 21,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[5]/div[2]/li[18]"
+    },
+    {
+      "bpID": 15,
+      "certainty": 100,
+      "errorDescription": "Presentational elements such as FONT and CENTER are often difficult or impossible to override with user styles or by disabling CSS. Since these elements are purely presentational, replace them with CSS.",
+      "errorSnippet": "<font color=\"#d60000\">SISTE:</font>",
+      "errorTitle": "Deprecated typography coding found",
+      "position": {
+        "column": 212,
+        "line": 378
+      },
+      "priority": 73,
+      "ref": "null",
+      "resultTitle": "Use CSS to control visual presentation of text",
+      "signature": "8b6a967c9f64648e269c3c708855fdd8",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AA: 1.4.5 Images of Text"
+      ],
+      "tID": 26,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/font[1]"
+    },
+    {
+      "bpID": 15,
+      "certainty": 100,
+      "errorDescription": "Presentational elements such as FONT and CENTER are often difficult or impossible to override with user styles or by disabling CSS. Since these elements are purely presentational, replace them with CSS.",
+      "errorSnippet": "<font id=\"ext-gen16065\" color=\"#d60000\">- De var skrekk­slagne</font>",
+      "errorTitle": "Deprecated typography coding found",
+      "position": {
+        "column": 414,
+        "line": 390
+      },
+      "priority": 73,
+      "ref": "null",
+      "resultTitle": "Use CSS to control visual presentation of text",
+      "signature": "d5a845ac15c67a4c1c5cf9dc28cbc8c4",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AA: 1.4.5 Images of Text"
+      ],
+      "tID": 26,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    },
+    {
+      "bpID": 15,
+      "certainty": 100,
+      "errorDescription": "Presentational elements such as FONT and CENTER are often difficult or impossible to override with user styles or by disabling CSS. Since these elements are purely presentational, replace them with CSS.",
+      "errorSnippet": "<font color=\"#d60000\">NRK: - Vi beklager</font>",
+      "errorTitle": "Deprecated typography coding found",
+      "position": {
+        "column": 364,
+        "line": 755
+      },
+      "priority": 73,
+      "ref": "null",
+      "resultTitle": "Use CSS to control visual presentation of text",
+      "signature": "46723fc123a4436ecbd95d05248dcc70",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AA: 1.4.5 Images of Text"
+      ],
+      "tID": 26,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[27]/div[2]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    },
+    {
+      "bpID": 131,
+      "certainty": 60,
+      "errorDescription": "This table does not contain any TH elements.  If this table is used for layout, replace it with a proper layout controlled with CSS. If that's not possible, add role=\"presentation\" to the table.",
+      "errorSnippet": "<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" class=\"seriemenu\"> \n\t\t\t\t<tbody><tr> \n\t\t\t\t\t<td><a href=\"http://go.dagbladet.no/ego.cgi/stripeboks_kvadrater/http://www.dagbladet.no/tegneserie/pondus/\"><img src=\"http://gfx",
+      "errorTitle": "Headers not identified for table",
+      "position": {
+        "column": 4,
+        "line": 922
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Provide headers for all data tables",
+      "signature": "24ccc41567ebc7e9d6c163a8ed64e99c",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships"
+      ],
+      "tID": 34,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[35]/div[1]/div[1]/div[2]/table[1]"
+    },
+    {
+      "bpID": 49,
+      "certainty": 100,
+      "errorDescription": "Provide a label for all controls. This allows all users to understand the type of information expected in the field.",
+      "errorSnippet": "<input id=\"searchTxt\" type=\"text\" class=\"text searchText\">",
+      "errorTitle": "Form element has no label",
+      "position": {
+        "column": 4,
+        "line": 153
+      },
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide explicit labels for form fields",
+      "signature": "3980085639a040bb5a63baf51137e10a",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 3.3.2 Labels or Instructions",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 4.1.2 Name, Role, Value"
+      ],
+      "tID": 38,
+      "xpath": "/html/body/div[1]/div[1]/div[5]/input[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.dagbladet.no\"><img src=\"http://gfx.dagbladet.no/g4/dagbladet-170.png\" class=\"db-logo\"></a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 0,
+        "line": 122
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "977d54a28c91baf611205b42230f3cb1",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[1]/div[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.dagbladet.no/pluss/\">\n        <img class=\"plussbox_logo\" src=\"http://gfx.dagbladet.no/pluss/module_logo.png\">\n      </a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 15,
+        "line": 489
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "df30b3a69c5bdf9f14fd2f84496ae236",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.dagbladet.no/2015/03/18/kultur/pluss/ideer/film/dokumentar/38272839/?utm_source=front&amp;utm_medium=box%20article&amp;utm_content=Aslaug Holm filmet sønnene i åtte år. Da sa den eldste stopp&amp;utm_campaign=Dagbladet%",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 15,
+        "line": 512
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "ddc7fb7a88347a10e3d97484bdf57dd7",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/p[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.dagbladet.no/2015/03/19/kultur/pluss/ekstra/litteraturanmeldelser/anmeldelser/38120644/?utm_source=front&amp;utm_medium=box%20article&amp;utm_content=Hun skriver sylskarpt og kostelig om ulykkelig forelskede&amp;utm_cam",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 15,
+        "line": 531
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "26f63c6aee3b75f4e7a01253ea660768",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/p[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.dagbladet.no/2015/03/19/kultur/pluss/musikk/katy_perry/pop/38284654/?utm_source=front&amp;utm_medium=box%20article&amp;utm_content=- Dere skandinaver vet virkelig hvordan man lager god popmusikk&amp;utm_campaign=Dagblad",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 15,
+        "line": 550
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "4524147bce31a746cf9edc3a1120dd90",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/p[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a class=\"hjernetrim-strip\" href=\"http://www.dagbladet.no/pluss/hjernetrim/\">\n      \t<img src=\"http://gfx.dagbladet.no/pluss/hjernetrim_promo_strip.png\" width=\"100%\">\n      </a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 148,
+        "line": 622
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "bbca08832a9c72b613a311a8f2807e6f",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[2]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.dagbladet.no/2015/03/19/nyheter/innenriks/akeulykke/38294859/\" title=\"To jenter i akeulykke i skianlegg i Telemark\"></a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 0,
+        "line": 708
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "ee30d278f8a2b04a78cedf79f0675d9b",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[23]/div[2]/div[1]/div[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"javascript:expandcollapse('tipsOss-38291437')\" class=\"tipsoss2400-sticker\"></a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 0,
+        "line": 745
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "6ade40677fa1e520e130bf72ec231f8e",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[25]/div[1]/div[1]/div[1]/a[2]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.start.no/external/db/teaserClick.php?m=1255&amp;p=0\">\n\t\t\t\t<img src=\"http://g2.start.no/img/dbTeaser/ti/1000/1235.jpg\" class=\"quizimg\" id=\"quizimg_0\">\n\t\t\t</a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 3,
+        "line": 892
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "7587f3d5ed007e06b3fcfbc11b07086b",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/div[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.start.no/external/db/teaserClick.php?m=1256&amp;p=1\">\n\t\t\t\t<img src=\"http://g2.start.no/img/dbTeaser/ti/1000/1236.jpg\" class=\"quizimg\" id=\"quizimg_1\">\n\t\t\t</a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 0,
+        "line": 895
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "09132f19fc4060217e8734b8d184f330",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/div[2]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.start.no/external/db/teaserClick.php?m=1257&amp;p=2\">\n\t\t\t\t<img src=\"http://g2.start.no/img/dbTeaser/ti/1000/1237.jpg\" class=\"quizimg\" id=\"quizimg_2\">\n\t\t\t</a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 0,
+        "line": 895
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "c3a3926cb2952f3538c53ec5eea3b246",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/div[3]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a id=\"startquizlogolink\" href=\"http://www.start.no/\"> </a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 0,
+        "line": 896
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "719f381ed2bec6c15afb974e4af53236",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a id=\"startquizbottomlink\" href=\"http://www.start.no/\"> </a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 108,
+        "line": 897
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "626e5c58209db01610aa25c58c7f7e6d",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[33]/a[2]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a style=\"text-decoration:none;color:#ffffff;\" href=\"http://go.dagbladet.no/ego.cgi/dbf_tvprogram_promo/http://www.se.no/anbefalt/\"><img style=\"border:1px solid none;\" src=\"http://gfx.dagbladet.no/tv/featured/2015/03/19/14417_216_90.jpg\" height=",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 9,
+        "line": 1080
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "f9c82b4377ff06824d917fa8ac153123",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.se.no\"><img src=\"http://gfx.dagbladet.no/tv-program/se-logo.gif\"></a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 14,
+        "line": 1161
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "34a7d6125441e9d73af4e44e14fb4c68",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[6]/div[1]/div[1]/h2[1]/a[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a href=\"http://www.dagbladet.no/eavis/\"><img style=\"margin: 0 5px\" src=\"http://www.dagbladet.no/pdf/forsider/A_170x243.jpg\"></a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 17,
+        "line": 1533
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "f92eb2f37f538979f78bf5d4b0371b1a",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[6]/div[1]/div[2]/a[1]"
+    },
+    {
+      "bpID": 5,
+      "certainty": 100,
+      "errorDescription": "Presentation of text should be handled via CSS. Using presentational markup like FONT, especially when mixed with CSS, can result in problems for users who wish to define their own custom styles.",
+      "errorSnippet": "<font color=\"#d60000\">SISTE:</font>",
+      "errorTitle": "Font element found",
+      "position": {
+        "column": 212,
+        "line": 378
+      },
+      "priority": 33,
+      "ref": "null",
+      "resultTitle": "Avoid using deprecated methods (font element) to define font sizes",
+      "signature": "6b0621e457ecde6b9b7a0d778448cc8b",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AA: 1.4.4 Resize text"
+      ],
+      "tID": 63,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/font[1]"
+    },
+    {
+      "bpID": 5,
+      "certainty": 100,
+      "errorDescription": "Presentation of text should be handled via CSS. Using presentational markup like FONT, especially when mixed with CSS, can result in problems for users who wish to define their own custom styles.",
+      "errorSnippet": "<font id=\"ext-gen16065\" color=\"#d60000\">- De var skrekk­slagne</font>",
+      "errorTitle": "Font element found",
+      "position": {
+        "column": 414,
+        "line": 390
+      },
+      "priority": 33,
+      "ref": "null",
+      "resultTitle": "Avoid using deprecated methods (font element) to define font sizes",
+      "signature": "194910ae30d8c46a41b96a11f97937b1",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AA: 1.4.4 Resize text"
+      ],
+      "tID": 63,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    },
+    {
+      "bpID": 5,
+      "certainty": 100,
+      "errorDescription": "Presentation of text should be handled via CSS. Using presentational markup like FONT, especially when mixed with CSS, can result in problems for users who wish to define their own custom styles.",
+      "errorSnippet": "<font color=\"#d60000\">NRK: - Vi beklager</font>",
+      "errorTitle": "Font element found",
+      "position": {
+        "column": 364,
+        "line": 755
+      },
+      "priority": 33,
+      "ref": "null",
+      "resultTitle": "Avoid using deprecated methods (font element) to define font sizes",
+      "signature": "463ab67b57db87cc0fefdf2424432ae1",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AA: 1.4.4 Resize text"
+      ],
+      "tID": 63,
+      "xpath": "/html/body/div[5]/div[2]/div[1]/div[1]/div[27]/div[2]/div[1]/div[1]/h2[1]/a[1]/span[1]/span[2]/font[1]"
+    }
+  ],
+  "resultSummary": {
+    "density": {
+      "allDensity": 18,
+      "errorDensity": 18,
+      "warningDensity": 0
+    },
+    "issues": {
+      "totalErrors": 74,
+      "totalIssues": 75,
+      "totalWarnings": 1
+    },
+    "issuesByLevel": {
+      "A": {
+        "count": 69,
+        "pct": 92
+      },
+      "AA": {
+        "count": 6,
+        "pct": 8
+      },
+      "AAA": {
+        "count": 16,
+        "pct": 21.33
+      }
+    },
+    "tests": {
+      "failing": 11,
+      "passing": 45,
+      "total": 56
+    }
+  },
+  "sourceHash": "a3c028e8275e327f7cd8b5b816119619",
+  "status": 200,
+  "clientScriptErrors": [],
+  "log": null
+}

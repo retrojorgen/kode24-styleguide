@@ -1,0 +1,77 @@
+//
+// Section-header
+//
+// Used to mark large editorial blocks of content.
+//
+// Markup:
+// <div class="section-header">
+//    <h5 class="heading">Touch the Cornballer</h5>
+// </div>
+//
+// Styleguide 12.3
+
+.section-header {
+	margin-bottom: 20px;
+	color: $color-blue;
+
+	h5 {
+		border-top: solid 1px lightgrey;
+		color: $color-blue;
+		border-bottom: solid 1px lightgrey;
+		font-weight: 600;
+		color: inherit;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: $column-gutter/2;
+		letter-spacing: 2px;
+	}
+}
+
+// Content Marketing
+//
+// Used to mark content as content marketing.
+//
+// Markup:
+// <div class="small-12 medium-12 large-12 columns content-marketing-ribbon"><p>Annonsørinnhold</p></div>
+//
+// Styleguide 12.4
+
+.content-marketing-ribbon {
+	width: 100%;
+	margin-bottom: $column-gutter / 2;
+	padding: $column-gutter / 2;
+	background: $native-advertisement-color;
+	text-align: center;
+	float:none;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	p {
+		margin: 0;
+		font-weight: 600;
+	}
+	
+	&.fixed {
+		position: fixed;
+		top: 0px;
+		width: 1010px;
+		z-index: 100;
+
+		@media #{$small-only}{
+			width: 100%;
+		}
+	}
+}
+
+.full-bleed {
+	.content-marketing-ribbon {
+		margin-bottom: 0;
+
+		&.fixed {
+			width: 100%;
+		}
+	}
+}
+

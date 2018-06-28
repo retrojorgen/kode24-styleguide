@@ -1,0 +1,161 @@
+// Review list
+//
+// List reviews.
+//
+// Markup:
+// <aside class="review-list {$modifiers} large-6 small-12 medium-12 columns">
+//   <div class="content">
+//    <h5 class="title">Siste hodetelefontester</h5>
+//    <ol class="article-list no-bullet">
+//        <li>
+//            <a href="https://www.dinside.no/a/69631319">
+//                <img src="//dbstatic.no/?imageId=69636339&width=350">
+//                <div class="text-block">
+//                    <p class="title">Beats Studio3 Wireless</p>
+//                    <p class="subtitle">Beats Studio3 Wireless er vel verdt å vurdere om du har lyst på nye hodetelefoner</p>
+//                </div>
+//                <img class="dice" src="//www.dagbladet.no/app/showcasr/public/assets/dice/5.svg" alt="">
+//            </a>
+//        </li>
+//        <li>
+//            <a href="https://www.dinside.no/a/69369333">
+//                <img src="//dbstatic.no/?imageId=69393088&width=350">
+//                <div class="text-block">
+//                    <p class="title">Kygo A9/600</p>
+//                    <p class="subtitle">Toppmodellen fra Kygo er en helt ålreit hodetelefon med litt for høy pris.</p>
+//                </div>
+//                <img class="dice" src="//www.dagbladet.no/app/showcasr/public/assets/dice/4.svg" alt="">
+//            </a>
+//        </li>
+//            <li>
+//            <a href="https://www.dinside.no/a/68935669">
+//                <img src="//dbstatic.no/?imageId=68940000&width=350">
+//                <div class="text-block">
+//                    <p class="title">Bowers and Wilkins PX</p>
+//                    <p class="subtitle">Britenes første hodesett med trådløs støydemping låter rett og slett knallbra.</p>
+//                </div>
+//                <img class="dice" src="//www.dagbladet.no/app/showcasr/public/assets/dice/5.svg" alt="">
+//            </a>
+//        </li>
+//    </ol>
+//    <a href="//www.dinside.no/tester" class="review-url">Se alle tester</a>
+//   </div>
+// </aside>
+//
+// .light - light theme
+//
+// Styleguide 31.5
+
+.review-list {
+    margin-bottom: $column-gutter/2;
+    
+    .content {
+        background: $color-sand;
+        padding: $column-gutter/2 $column-gutter/2 0 $column-gutter/2 ;
+    }
+
+    h5 {
+        color: $color-black;
+        padding: $column-gutter/4 0 $column-gutter/2 0;
+        font-weight: 400;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    .article-list {
+        margin-bottom: 0.5rem;
+        li a {
+            padding-right: 0;
+
+            img {
+                margin-right: $column-gutter/2;
+            }
+
+            .text-block {
+                color: $color-black;
+                font-size: 1rem;
+                float: left;
+                max-width: 55%;
+
+                p {
+                    margin-bottom: 0;
+                    font-size: 1rem;
+                    &.title {
+                        font-weight: 600;
+                        margin-top: -6px;
+                    }
+
+                    &.subtitle {
+                        font-style: italic;
+                    }
+                }
+            }
+
+            .dice {
+                float: right;
+                width: 30px;
+                height: 30px;
+                margin-right: 0;
+            }
+
+            &:hover {
+                .text-block p.title {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .review-url {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        padding: $column-gutter/3;
+        background: darken($color-sand, 5%);
+        color: $color-black;
+        text-align: center;
+        margin-left: -($column-gutter/2);
+        width: calc(100% + #{$column-gutter});
+
+        &:hover {
+            background: darken($color-sand, 8%);
+        }
+    }
+
+    // Light theme
+    &.light {
+
+        .content {
+            background: #fff;
+            border: 1px solid $color-lightgrey;
+        }
+        
+        h5 {
+            color: $color-black;
+        }
+
+        .article-list {
+            li a {
+                .text-block {
+                    color: $color-black;
+                }
+            }
+        }
+
+        .review-url {
+            background: darken($color-lightgrey, 3%);
+            color: $color-black;
+            &:hover {
+                background: darken($color-lightgrey, 5%);
+            }
+        }
+    }
+}
+
+// Remove padding when in bodytext
+.body-copy .review-list {
+    padding: 0;
+}

@@ -1,0 +1,192 @@
+---
+title: Article
+layout: templates/layouts/blank.mustache
+---
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="nb-NO"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="nb-NO"> <![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="nb-NO"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="nb-NO"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{app.meta.description}}">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" type="image/ico" href="{{app.meta.favicon}}">
+    <link id="db-critical" media="screen" rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+    <!--[if lt IE 10]>
+        <link media="screen" rel="stylesheet" type="text/css" href="/stylesheets/app_1.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/stylesheets/app_2.css">
+    <![endif]-->
+</head>
+<body>
+    {{> global.header }}
+    <main role="main">
+        <article class="article-entity" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+            <header class="row">
+                <div>
+                    <div>
+                        <figure itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+                            <img itemprop="contentUrl url" title="" alt="" src="//image-www-tom.labdevs.com?imageId=100461&amp;x=1.555136663525&amp;y=1.1363636363636&amp;cropw=95.193213949105&amp;croph=76.641414141414&amp;width=1010&amp;height=607" class="">
+                            <figcaption class="caption" itemprop="caption" data-expand="">
+                                Besides, you look good in a dress. Worf, It's better than music. It's jazz. You bet I'm agitated! I may be surrounded by insanity, but I am not insane.&nbsp;<a class="toggle">Vis mer</a>
+                            </figcaption> 
+                            <meta itemprop="representativeOfPage" content="true"> 
+                            <meta itemprop="width" content="1010"> 
+                            <meta itemprop="height" content="607"> 
+                        </figure> 
+                    </div> 
+                    <div class="columns"> 
+                        <h1 class="intro" itemprop="alternateHeadline">Something awesome</h1>
+                        <h2 class="headline" itemprop="headline">Your only concern is with how you obey my orders</h2> 
+                        <div class="row"> 
+                            <div class="columns small-12 medium-10 medium-centered large-8 large-uncentered">
+                                <p class="standfirst" itemprop="description">Shields up! Rrrrred alert! Mr. Worf, you sound like a man who's asking his friend if he can start dating his sister.</p>
+                                <div class="meta">
+                                    <time itemprop="datePublished" datetime="2016-08-09T12:13:00.000Z" class="published active" title="Publisert 9. august 2016 kl. 14.13" data-from-now="">8 dager</time> 
+                                    <meta itemprop="dateModified" content="2016-08-09T12:13:00.000Z"> 
+                                    <a class="facebook-share" href=""> 
+                                        <span class="js-share-count">Del</span> 
+                                    </a>
+                                </div> 
+                            </div>
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="byline columns small-12 medium-10 medium-centered large-8 large-uncentered">
+                    <span class="person" itemscope="" itemtype="http://schema.org/Person" itemprop="author"> 
+                        <a rel="author" itemprop="url" href="mailto:tom.marius.olsen@gmail.com"> 
+                            <span class="name" itemprop="name"> 
+                                <span class="firstname">Tom-Marius</span> <span class="lastname">Olsen</span> 
+                            </span> 
+                        </a> 
+                    </span>
+                </div> 
+            </header>
+            <div class="row">
+                <div class="body-copy small-12 medium-10 medium-centered large-8 large-left columns end" itemprop="articleBody">
+                    <div class="small-12 medium-6 medium-right large-6 columns large-push-6">
+                        <div class="adunit small-300x250"></div>
+                    </div>
+                    <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="review columns large-6 small-12 medium-12 right ">
+                        <div class="review-box">
+                            <p class="test-result">Testresultat</p>
+                            <div class="review-image">
+                                <img itemprop="image" title="" alt="" src="//image-www-tom.labdevs.com?imageId=100466&amp;width=256&amp;height=128" class="">
+                            </div>
+                            <h1 itemprop="name" class="name review-name">Asus EeeBook E200HA</h1>
+                            <div class="rating-box small-centered columns">
+                                <span itemprop="reviewRating" class="review-rating">6</span>
+                                <div class="dice">     
+                                    <img src="/assets/icon/dices/6.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="review-pros-cons">
+                                <div class="small-12 column small-centered">
+                                    <div class="text-center">
+                                        <span class="icon-Thumb-up text-green"></span>
+                                    </div>
+                                    <p itemprop="description">Masse komfort, god plass, stille, fabelaktig girkasse</p>
+                                </div>
+                                <div class="small-12 column small-centered">
+                                    <div class="text-center">
+                                        <span class="icon-Thumb-down text-red"></span>
+                                    </div>
+                                    <p itemprop="description">Lite praktiske løsninger og fleksibilitet innvendig, ikke S-Klasse nivå, dyr.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prisjakt">
+                            <div class="row">
+                                <div class="product-specs">
+                                    <p class="ad-text"><small>Annonse</small></p>
+                                    <p class="review-label">Detaljer</p>
+                                    <h3><span>Sony SRS-XB3</span></h3>
+                                    <p>Bluetooth, Batteridrevet, Støtter NFC</p>
+                                    <a href="http://www.prisjakt.no/product.php?p=3591088&amp;ref=218">Mer info på prisjakt.no</a>
+                                </div>
+                                <div class="product-shops">
+                                    <p class="review-label">De 3 billigste butikkene</p>
+                                    <div class="shop-list">
+                                        <table style="width:100%">
+                                            <tbody>
+                                                <tr itemscope="" itemtype="http://schema.org/Offer">
+                                                    <td>
+                                                        <a itemprop="seller" itemscope="" itemtype="http://schema.org/Organization" href="http://www.prisjakt.no/redirect.php?prisid=564033506&amp;ref=218&amp;api_client=1258"><strong itemprop="name">Multicom</strong></a>
+                                                    </td>
+                                                    <td>
+                                                        <a itemprop="url" href="http://www.prisjakt.no/redirect.php?prisid=564033506&amp;ref=218&amp;api_client=1258"><strong itemprop="price">1436</strong></a>
+                                                    </td>
+                                                </tr>
+                                                <tr itemscope="" itemtype="http://schema.org/Offer">
+                                                    <td>
+                                                        <a itemprop="seller" itemscope="" itemtype="http://schema.org/Organization" href="http://www.prisjakt.no/redirect.php?prisid=586846721&amp;ref=218&amp;api_client=1258"><strong itemprop="name">Proshop.no</strong></a>
+                                                    </td>
+                                                    <td>
+                                                        <a itemprop="url" href="http://www.prisjakt.no/redirect.php?prisid=586846721&amp;ref=218&amp;api_client=1258"><strong itemprop="price">1436</strong></a>
+                                                    </td>
+                                                </tr>
+                                                <tr itemscope="" itemtype="http://schema.org/Offer">
+                                                    <td>
+                                                        <a itemprop="seller" itemscope="" itemtype="http://schema.org/Organization" href="http://www.prisjakt.no/redirect.php?prisid=579348735&amp;ref=218&amp;api_client=1258"><strong itemprop="name">SIBA</strong></a>
+                                                    </td>
+                                                    <td>
+                                                        <a itemprop="url" href="http://www.prisjakt.no/redirect.php?prisid=579348735&amp;ref=218&amp;api_client=1258"><strong itemprop="price">1490</strong></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="review-label"><small> Levert av </small></p>
+                                    <a href="http://www.prisjakt.no">
+                                        <img class="prisjakt-logo" src="//styleguide.dinside.no/assets/logo/prisjakt-logo.png" alt="Prisjakt logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Sure, let the little fruit do it. HUZZAH! Don't leave your Uncle T-bag hanging. And I am rock steady. No more dizzies. [sniffs hand] Oh, God. I'm going to run this through again on "pots and pans." Hey, it was one night of wild passion! And yet you didn't notice her body? I like to look in the mirror. Michael was having brunch with Sally Sitwell at a restaurant called Skip Church's Bistro. In addition to brunch, the restaurant was known for an item on the menu called the "Skip's Scramble", an omelet that contained everything on the menu. Do not order the Skip's Scramble. Heyyyyyy Uncle Father Oscar. We need a name. Maybe "Operation Hot Mother." No, let's try to top that. (They never did.)</p>
+                    <h2 class="subhead">Popcorn shrimp… with club sauce</h2>
+                    <p>Caw ca caw, caw ca caw, caw ca caw, caw ca caw. And here you are coming out of your mother's third base! Bob Loblaw Law Blog. I got Michael out of his marriage, didn't I? Actually, she died. I just don't want him to point out my cracker ass in front of Ann.</p>
+                    <div class="small-12 medium-6 medium-right large-6 columns large-push-6">
+                        <div class="adunit small-300x250"></div>
+                    </div>
+                    <figure class="right small-12 medium-6 large-7" data-image-lightbox>
+                        <img src="/assets/test/im-a-monster.png" />
+                        <figcaption class="caption"><strong>See for more good stuff.</strong> So you take your mom to work every day? Bummer. Moms are such a pain in the ass, huh? It's, like, die already! <span class="credit">Foto: Jacques Hvistendahl / Dagbladet</span></figcaption>
+                    </figure>
+                    <p>The only thing more terrifying than the escaped lunatic's hook was his twisted call… Hey campers! When a.. man.. needs to prove to a woman that he's actually.. [pause].. When a man loves a woman.. These are my awards, Mother. From Army. The seal is for marksmanship, and the gorilla is for sand racing. Hey, look at that – you're mean sober, too. They don't appreciate him. It's his glasses… they make him look like a lizard. Plus he's self-conscious.</p>
+                    <h2 class="subhead">I'm half machine!</h2>
+                    <p>What do you expect, Mother? I'm half machine! I'm a monster!! Sweet old thing. Only two of those words describe Mom, so I know you're lying to me. Bob Loblaw Lobs Law Bomb. You might wanna lean away from that fire since you're soaked in alcohol.</p>
+                    <p>If you're suggesting I play favorites, you're wrong. I love all of my children equally. I don't care for Gob. For the same reason you should believe a hundred dollar bill is no more than a hundred pennies! So did you see the new Poof? His name's Gary, and we don't need anymore lawsuits. Fried cheese… with club sauce. Please refrain from discussing or engaging in any sort of interoffice [bleep] or [bleep] or finger[bleep] or [bleep]sting or [bleep] or even [bleep].</p>
+                    <h2 class="subhead">Neuterfest</h2>
+                    <p>There are very few intelligent, attractive and straight men in this town. Well, that certainly leaves me out. Happy Franklin Friday. Yeah, that's a cultural problem is what it is. You know, your average American male is in a perpetual state of adolescence, you know, arrested development. (Hey. That's the name of the show!) Oh, like when they say "poofter" to mean "tourist", yes.</p>
+                    <blockquote class="small-12 medium-6 left">
+                        Heyyyy uncle father Oscar.
+                        <cite>Buster Bluth</cite>
+                    </blockquote>
+                    <p>I've always been deeply passionate about nature. Perhaps you remember Neuterfest? Maybe it was the eleven months he spent in the womb. The doctor said there were claw marks on the walls of her uterus. ♪♪ Somewhere… over the rainbow… there's another rainbow… ♪♪ If I make this comeback, I'll buy you a hundred George Michaels that you can teach to drive!</p>
+                    <p>It looks like you've been looking for dragons… in the future. When a.. man.. needs to prove to a woman that he's actually.. [pause].. When a man loves a woman.. I know, I just call her Annabelle cause she's shaped like a…she's the belle of the ball! I never thought I'd miss a hand so much! Well, OK, have sex with this girl. Right now. Get in there, have some sex with her. Up yours, granny! You couldn't handle it! I need a tea to give my dingle less tingle. He's going to be all right.</p>
+                    <p>The Man Inside Me seems well reviewed. How could I say no to the woman who gave me chlamydia? We need a name. Maybe "Operation Hot Mother." No, let's try to top that. (They never did.) Mr. Zuckerkorn, you've been warned about touching. Barry: You said spanking. I'm a scholar. I enjoy scholarly pursuits. Suddenly playing with yourself is a scholarly pursuit? I'll have a vodka rocks. (Mom, it's breakfast time.) And a piece of toast.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="article-list-bottom small-12 columns end">
+                    {{> article.tags }}
+                    <h2 class="subhead">Les også:</h2>
+                    <ul class="read-this-too">
+                        <li><a href="#">The Man Inside Me seems well reviewed</a></li>
+                        <li><a href="#">Maybe it was the eleven months he spent in the womb</a></li>
+                        <li><a href="#">What do you expect, Mother? I'm half machine!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        {{> article.footer }}
+    </main>
+    {{> global.footer }}
+    <script src="/scripts/critical.min.js"></script>
+    <script src="/scripts/app.min.js"></script>
+</body>
+</html>

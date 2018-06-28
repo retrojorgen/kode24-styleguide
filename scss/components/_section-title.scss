@@ -1,0 +1,135 @@
+//
+// Section title Variables
+//
+
+$include-html-section-title-classes: $include-html-classes !default;
+$section-title-padding: 0.6em !default;
+
+//
+// Section title Mixins
+//
+
+@mixin section-title-base(){
+    position: relative;
+    //color: $header-font-color;
+    margin-bottom: $column-gutter / 2;
+    span{
+        position: relative;
+        z-index: 98;
+        padding-right: $section-title-padding;
+        display: inline-block;
+        &.no-padding {
+            padding-right: 0;
+        }
+    }
+    &:after{
+        background-color: $header-font-color;
+        content: " ";
+        height: 1px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        margin-top: -1px;
+        top: 56%;
+        z-index: 97;
+    }
+
+    &.right{
+        float: none !important;
+        text-align: right;
+        span{
+            padding-left: $section-title-padding;
+            padding-right: 0;
+        }
+    }
+
+    &.center{
+        text-align: center;
+        span{
+            padding-left: $section-title-padding;
+        }
+    }
+}
+
+@mixin section-title-style($bg: $white, $color: $header-font-color, $border-color: $header-font-color){
+    color: $color;
+    span{
+        background-color: $bg;
+    }
+    &:after{
+        background-color: $border-color;
+    }
+}
+
+@mixin section-title(){
+    @include section-title-base();
+    @include section-title-style();
+}
+
+// Section-title
+//
+// Used to mark small editorial blocks of content.
+//
+// Markup:
+// <h4 class="section-title"><span>Dette er saken</span></h4>
+//
+// Styleguide 12
+
+@if $include-html-section-title-classes{
+    .section-title{
+        @include section-title();
+    }
+}
+
+// Colors
+//
+// Markup:
+// <h4 class="section-title {$modifiers}"><span>Dette er saken</span></h4>
+//
+// .primary - Primary
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+//
+// Styleguide 12.1.1
+
+@if $include-html-section-title-classes{
+    .primary .section-title{    @include section-title-style($bg: $primary-color, $color: $white, $border-color: $white); }
+    .yellow .section-title{     @include section-title-style($bg: $color-yellow, $color: $color-black, $border-color: $color-black); }
+    .green .section-title{      @include section-title-style($bg: $color-green, $color: $color-black, $border-color: $color-black); }
+    .blue .section-title{       @include section-title-style($bg: $color-blue, $color: $color-black, $border-color: $color-black); }
+    .secondary .section-title{  @include section-title-style($bg: $secondary-color, $color: $primary-color, $border-color: $color-black); }
+    .black .section-title{      @include section-title-style($bg: $color-black, $color: $white, $border-color: $white); }
+
+    .section-title{
+        &.primary{ @include section-title-style($color: $primary-color, $border-color: $color-grey); }
+        &.yellow{ @include section-title-style($color: $color-yellow, $border-color: $color-yellow); }
+        &.green{ @include section-title-style($color: $color-green, $border-color: $color-green); }
+        &.blue{ @include section-title-style($color: $color-blue, $border-color: $color-blue); }
+        &.grey{ @include section-title-style($color: $color-grey, $border-color: $color-grey); }
+
+        &.light{ @include section-title-style($color: $white, $border-color: $white, $bg: $color-black); }
+    }
+}
+
+// Alignment
+//
+// Markup:
+// <h4 class="section-title {$modifiers}"><span>Dette er saken</span></h4>
+//
+// .center - success
+// .right - info
+//
+// Styleguide 12.1.2
+
+// Sizes
+//
+// Markup:
+// <h1 class="section-title"><span>Dette er saken</span></h1>
+// <h2 class="section-title"><span>Dette er saken</span></h2>
+// <h3 class="section-title"><span>Dette er saken</span></h3>
+// <h4 class="section-title"><span>Dette er saken</span></h4>
+// <h5 class="section-title"><span>Dette er saken</span></h5>
+// <h6 class="section-title"><span>Dette er saken</span></h6>
+//
+// Styleguide 12.1.3

@@ -1,0 +1,493 @@
+// Forms
+//
+// Styleguide 8.0
+
+// Form elements
+//
+// Styleguide 8.1
+
+// Text input
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <input type="text" placeholder="text" />
+//       <input type="password" placeholder="password" />
+//       <input type="date" placeholder="date" />
+//       <input type="datetime" placeholder="datetime" />
+//       <input type="datetime-local" placeholder="datetime-local" />
+//       <input type="month" placeholder="month" />
+//       <input type="week" placeholder="week" />
+//       <input type="email" placeholder="email" />
+//       <input type="number" placeholder="number" />
+//       <input type="search" placeholder="search" />
+//       <input type="tel" placeholder="tel" />
+//       <input type="time" placeholder="time" />
+//       <input type="url" placeholder="url" />
+//       <textarea placeholder="textarea"></textarea>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.1.1
+
+textarea{
+    line-height: 1.4;
+}
+
+// Checkbox
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <div class="checkbox">
+//         <input id="exampleCheckbox-experimental" type="checkbox" checked>
+//         <label for="exampleCheckbox-experimental"> Custom checkbox</label>
+//       </div>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.1.2
+
+input[type="radio"] + label,
+input[type="checkbox"] + label{
+    font-weight: 300;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    position: relative;
+    top: -2px;
+    left: 1px;
+    margin-right: 0.2rem;
+}
+
+.checkbox, .radio{
+    position: relative;
+    padding: 0.45rem 0;
+    display: inline-block;
+    input{
+        opacity: 0;
+        position: absolute;
+    }
+    label{
+        margin-left: 0 !important;
+        &:before{
+            content: "";
+            display: inline-block;
+            position: relative;
+            top: rem-calc(3);
+            width: rem-calc(18);
+            height: rem-calc(18);
+            border: 1px solid $color-grey;
+
+        }
+    }
+
+    input:checked+label:before{
+        border: none;
+        background-color: $ui-color;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.checkbox{
+    label:before{
+        border-radius: $global-radius;
+    }
+    input:checked+label:before{
+        background-image: url("data:image/svg+xml;utf8,<svg x='0px' y='0px' viewBox='0 0 15 12' xmlns='http://www.w3.org/2000/svg'><polygon fill='#FFF' points='5.3,12 0,6 1.5,4.8 5.3,9 13.5,0 15,1.3'/></svg>");
+        background-size: 70%;
+    }
+}
+
+// Radio
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <div class="radio">
+//         <input id="exampleRadio-experimental-1" type="radio" name="exampleRadio-experimental" checked>
+//         <label for="exampleRadio-experimental-1"> Custom radio</label>
+//       </div>
+//       <div class="radio">
+//         <input id="exampleRadio-experimental-2" type="radio" name="exampleRadio-experimental">
+//         <label for="exampleRadio-experimental-2"> Custom radio</label>
+//       </div>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.1.3
+
+.radio{
+    label:before{
+        border-radius: $global-rounded;
+    }
+
+    input:checked+label:before{
+        background-image: url("data:image/svg+xml;utf8,<svg x='0px' y='0px' viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'><circle cx='9' cy='9' r='9' fill='#FFF' /></svg>");
+        background-size: 49%;
+    }
+}
+
+//NOTE: Class added to file-upload buttons
+.file-input-overlay{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+// Select
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <select>
+//         <option value="1">Option 1</option>
+//         <option value="2">Option 2</option>
+//         <option value="3">Option 3</option>
+//         <option value="4">Option 4</option>
+//       </select>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.1.4
+
+select{
+    background-image: url("data:image/svg+xml;utf8,<svg x='0px' y='0px' viewBox='0 0 435 255' xmlns='http://www.w3.org/2000/svg'><polygon fill='#{$color-grey}' points='0,41.3 40.6,0 217.5,173.1 394.4,0 435,41.3 217.5,255'/></svg>");
+    background-size: 1rem;
+    background-position: right 0.5rem center;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        background-image: url("data:image/svg+xml;utf8,<svg x='0px' y='0px' viewBox='0 0 435 255' xmlns='http://www.w3.org/2000/svg'><polygon fill='#{$ui-color}' points='0,41.3 40.6,0 217.5,173.1 394.4,0 435,41.3 217.5,255'/></svg>");
+    }
+}
+
+// Taglist
+//
+// Experimental: For documentation see [db.libs.taglist](/jsdocs/db.libs.taglist.html)
+//
+// Markup:
+// <ul class="taglist">
+//   <li>
+//     <input type="text" placeholder="Enter tag…" />
+//     <input type="hidden" value="Tag1, Tag2, Tag3" />
+//   </li>
+// </ul>
+//
+// Styleguide 8.1.7
+
+.taglist{
+    list-style: none;
+    border: 1px solid $color-grey;
+    margin-left: 0;
+    padding-left: 0.5rem;
+    @include clearfix;
+    &.active{
+        border-color: $ui-color;
+    }
+    li{
+        float: left;
+        line-height: 2.4rem;
+    }
+    input{
+        margin-bottom: 0;
+        border: none;
+    }
+    .label{
+        font-size: 1rem;
+        margin-right: 0.2rem;
+        text-transform: none;
+        cursor: pointer;
+        &:after{
+            content: "\e87E";
+            font-family: "Helveticons";
+            font-size: 0.7rem;
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+// Labels
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <label>Label
+//         <input type="text" placeholder="placeholder" />
+//       </label>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.2
+
+// Inline
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="small-2 columns">
+//       <label for="right-label" class="right inline">Label</label>
+//     </div>
+//     <div class="small-10 columns">
+//       <input type="text" id="right-label" placeholder="Inline Text Input">
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.2.1
+
+// Pre/Postfix
+//
+// Markup:
+// <form>
+//   <div class="row collapse">
+//     <div class="small-3 large-2 columns">
+//       <span class="prefix">http://</span>
+//     </div>
+//     <div class="small-9 large-10 columns">
+//       <input type="url" placeholder="URL">
+//     </div>
+//   </div>
+//   <div class="row collapse">
+//     <div class="small-9 large-10 columns">
+//       <input type="email" placeholder="Email">
+//     </div>
+//     <div class="small-3 large-2 columns">
+//       <span class="postfix">@dagbladet.no</span>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.3
+
+.prefix, .postfix{
+    line-height: 2.3;
+}
+
+.postfix.button{
+    line-height: 2.5;
+}
+
+// Details
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <label>Label
+//         <input type="text" placeholder="placeholder" />
+//       </label>
+//       <small class="details">Some descriptive text</small>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.6
+
+.details{
+    display: block;
+    padding-top: rem-calc(6);
+    padding-bottom: rem-calc(6);
+    margin-top: -1rem;
+    margin-bottom: $form-spacing;
+    font-size: $input-error-message-font-size;
+    font-weight: $input-error-message-font-weight;
+    font-style: $input-error-message-font-style;
+    color: $color-darkgrey;
+}
+
+// Errors
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns error">
+//       <label>Label
+//         <input type="text" placeholder="placeholder" />
+//       </label>
+//       <small class="error">Invalid entry</small>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.7
+
+.error{
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea{
+        border-color: $alert-color;
+    }
+    .details{
+        display:none;
+    }
+}
+
+textarea.error{
+    border-color: $alert-color;
+}
+
+// Validation
+//
+// RequiresJS: We use [Abide](http://foundation.zurb.com/docs/components/abide.html) for valdation. Full list of [predefined patterns](http://foundation.zurb.com/docs/components/abide.html#predefined-patterns).
+//
+// Markup:
+// <form data-abide>
+//   <div class="name-field">
+//     <label>Your name
+//       <input type="text" required pattern="[a-zA-Z]+">
+//     </label>
+//     <small class="error">Name is required and must be a string.</small>
+//   </div>
+//   <div class="email-field">
+//     <label>Email
+//       <input type="email" required>
+//     </label>
+//     <small class="error">An email address is required.</small>
+//   </div>
+//   <button class="button small" type="reset">Reset</button>
+//   <button class="button small ui" type="submit">Submit</button>
+// </form>
+//
+// Styleguide 8.8
+
+// Kitchen sink
+//
+// Markup:
+// <form>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <label>Input Label
+//         <input type="text" placeholder="large-12.columns" />
+//       </label>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="large-4 columns">
+//       <label>Input Label
+//         <input type="text" placeholder="large-4.columns" />
+//       </label>
+//     </div>
+//     <div class="large-4 columns">
+//       <label>Input Label
+//         <input type="text" placeholder="large-4.columns" />
+//       </label>
+//     </div>
+//     <div class="large-4 columns">
+//       <div class="row collapse">
+//         <label>Input Label</label>
+//         <div class="small-9 columns">
+//           <input type="text" placeholder="small-9.columns" />
+//         </div>
+//         <div class="small-3 columns">
+//           <span class="postfix">.com</span>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <label>
+//         Taglist
+//         <ul class="taglist">
+//           <li><input type="text" placeholder="Enter tag…" /></li>
+//         </ul>
+//       </label>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="large-6 columns">
+//       <label>
+//         Range slider Label
+//         <input min="0" max="100" type="range" />
+//       </label>
+//     </div>
+//     <div class="large-6 columns">
+//       <label>Switches Label</label>
+//       <div class="switch round ">
+//         <input id="exampleCheckboxSwitch-k1" type="checkbox" checked>
+//         <label for="exampleCheckboxSwitch-k1"></label>
+//         Switch 1
+//       </div>
+//       <div class="switch round green">
+//         <input id="exampleCheckboxSwitch-k2" type="checkbox" checked>
+//         <label for="exampleCheckboxSwitch-k2"></label>
+//         Switch 2
+//       </div>
+//       <div class="switch round pink">
+//         <input id="exampleCheckboxSwitch-k3" type="checkbox">
+//         <label for="exampleCheckboxSwitch-k3"></label>
+//         Switch 3
+//       </div>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <label>Select Box Label
+//         <select>
+//           <option value="husker">Husker</option>
+//           <option value="starbuck">Starbuck</option>
+//           <option value="hotdog">Hot Dog</option>
+//           <option value="apollo">Apollo</option>
+//         </select>
+//       </label>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="large-6 columns">
+//       <label>Radio Label</label>
+//       <div class="radio">
+//         <input id="radio1" type="radio" name="radio-example" checked>
+//         <label for="radio1"> Custom radio</label>
+//       </div>
+//       <div class="radio">
+//         <input id="radio2" type="radio" name="radio-example" checked>
+//         <label for="radio2"> Custom radio</label>
+//       </div>
+//     </div>
+//     <div class="large-6 columns">
+//       <label>Checkbox Label</label>
+//       <div class="checkbox">
+//         <input id="checkbox1" type="checkbox" checked>
+//         <label for="checkbox1"> Checkbox 1</label>
+//       </div>
+//       <div class="checkbox">
+//         <input id="checkbox2" type="checkbox">
+//         <label for="checkbox2"> Checkbox 2</label>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="large-12 columns">
+//       <label>Textarea Label
+//         <textarea placeholder="small-12.columns"></textarea>
+//       </label>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 8.99

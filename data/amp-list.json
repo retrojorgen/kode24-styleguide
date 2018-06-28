@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "headline": "Go ahead, touch the cornballer",
+      "description": "And I wouldn't just lie there, if that's what you're thinking. That's not what I WAS thinking. No one's called him Baby Buster since high school.",
+      "image": "/assets/test/buster-134.jpg"
+    },
+    {
+      "headline": "She calls it a Mayonegg",
+      "description": "She's a contestant. It's sorta like an inner beauty pageant. Ah, there it is.",
+      "image": "/assets/test/buster-134.jpg"
+    },
+    {
+      "headline": "Juice box time",
+      "description": "It seems like only yesterday you were bursting forth from your mother's fertile womb.",
+      "image": "/assets/test/buster-134.jpg"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+// Lightbox
+//
+// RequiresJS: Lightbox that displays a image as large as possible in the viewport. Add `data-image-lightbox` to the figure-tag to enable. A different image, e.g. a larger image, that should load when the lightbox opens can se specified using the `data-options="src:http://…;"`.
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject" data-image-lightbox data-options="src:http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/0.jpg;">
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//   <figcaption class="caption" itemprop="caption" data-expand>
+//     <strong>FANT KONTANTER:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span>
+//     <a class="toggle">Vis mer</a>
+//   </figcaption>
+// </figure>
+//
+// Styleguide 10.7 
+
+figure{
+    &[data-image-lightbox]{
+        cursor: pointer;
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+        &:before{
+            font-family: 'Helveticons';
+            speak: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\e81a";
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+            position: absolute;
+            background-color: $color-black;
+            color: white;
+            text-align: center;
+            line-height: 2.4rem;
+            right: 0;
+        }
+
+        &.active{
+            cursor: pointer;
+            cursor: -webkit-zoom-out;
+            cursor: -moz-zoom-out;
+            position: fixed;
+            z-index: $z-index-lightbox;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0 !important;
+            background-color: $color-black;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin: 0;
+
+            &:before{
+                content: "\e77f";
+                background-color: white;
+                color: $color-black;
+            }
+
+            img{
+                display: none;
+            }
+
+            figcaption{
+                color: white;
+                border: none;
+                position: absolute;
+                bottom: 0;
+                background: linear-gradient(to bottom, rgba(34,34,34,0) 0%, rgba(34,34,34,0.7) 90%);
+                padding: rem-calc(15);
+
+                @include caption-expanded;
+            }
+        }
+    }
+}

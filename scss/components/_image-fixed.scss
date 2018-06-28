@@ -1,0 +1,21 @@
+// Fixed
+//
+// RequiresJS: Makes the image act as background fixed scoll.
+//
+// Markup:
+// <figure itemscope itemtype="http://schema.org/ImageObject" data-image-fixed>
+//   <img itemprop="contentURL" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+// </figure>
+//
+// Styleguide 10.6.1
+
+figure[data-image-fixed]{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 45%;
+    img, figcaption{
+        display: none;
+    }
+}

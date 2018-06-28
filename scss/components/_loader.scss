@@ -1,0 +1,129 @@
+$loader-speed: 1.5s !default;
+$loader-color: $color-black !default;
+
+@mixin loader-base(){
+    font-size: inherit;
+    width: 1.25em;
+    height: 1.25em;
+    margin-top: -1.25em;
+    position: relative;
+    top: 0.25em;
+    display: inline-block;
+    background-image: url("data:image/svg+xml;utf8,<svg x='0px' y='0px' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path fill='#{$loader-color}' d='M24.7,50C24.7,36,36,24.7,50,24.7v13.7l19.3-19.2c0,0,0,0,0,0l0,0L50,0v13.7C30,13.7,13.7,30,13.7,50c0,10.6,4.6,20.2,11.8,26.8l7.8-7.8C28,64.4,24.7,57.6,24.7,50z'/><path fill='#{$loader-color}' d='M74.5,23.3l-7.8,7.8c5.2,4.6,8.5,11.4,8.5,18.9C75.3,64,64,75.3,50,75.3V61.6L30.8,80.8L50,100V86.3C70,86.3,86.3,70,86.3,50C86.3,39.4,81.8,29.9,74.5,23.3z'/></svg>");
+    animation-fill-mode: both;
+    animation-duration: $loader-speed;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: rotate;
+}
+
+@mixin loader-style($color: $loader-color){
+    background-image: url("data:image/svg+xml;utf8,<svg x='0px' y='0px' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path fill='#{$color}' d='M24.7,50C24.7,36,36,24.7,50,24.7v13.7l19.3-19.2c0,0,0,0,0,0l0,0L50,0v13.7C30,13.7,13.7,30,13.7,50c0,10.6,4.6,20.2,11.8,26.8l7.8-7.8C28,64.4,24.7,57.6,24.7,50z'/><path fill='#{$color}' d='M74.5,23.3l-7.8,7.8c5.2,4.6,8.5,11.4,8.5,18.9C75.3,64,64,75.3,50,75.3V61.6L30.8,80.8L50,100V86.3C70,86.3,86.3,70,86.3,50C86.3,39.4,81.8,29.9,74.5,23.3z'/></svg>");
+}
+
+// Loader
+//
+// Markup:
+// <div class="loader"></div>
+//
+// Styleguide 15
+
+//FIXME: Broken, probably due to autoprefixer
+
+.loader{
+    @include loader-base;
+    &.pause{
+        animation-play-state: paused;
+    }
+
+    &.primary{
+        @include loader-style($primary-color);
+    }
+    &.ui{
+        @include loader-style($ui-color);
+    }
+
+    &.white{
+        @include loader-style($white);
+    }
+}
+
+// Pause
+//
+// Pause the loader by adding the class <code>pause</code>.
+//
+// Markup:
+// <span class="loader pause"></span>
+//
+// Styleguide 15.1
+
+// Toggle
+//
+// RequiresJS: Toggle play/pause. See documentation for [db.libs.loader](/jsdocs/db.libs.loader.html).
+//
+// Markup:
+// <span id="loader-pause-test" class="loader"></span>
+// <button class="button tiny" onclick="$('#loader-pause-test').loader('toggle');">Toggle</button>
+//
+// Styleguide 15.1.1
+
+// Size
+//
+// The size of the loader is adjusted by <code>font-size</code>.
+//
+// Markup:
+// <h1><span class="loader"></span></h1>
+// <h2><span class="loader"></span></h2>
+// <h3><span class="loader"></span></h3>
+//
+// Styleguide 15.2
+
+// Color
+//
+// Change the color of the loader using the mixin <code>@loader-style();</code>.
+//
+// Markup:
+// <h1><span class="loader primary"></span></h1>
+// <h1><span class="loader ui"></span></h1>
+//
+// Styleguide 15.3
+
+// Modal
+//
+// RequiresJS: A loader that covers the page and sits above the main content. See documentation for [db.libs.loader](/jsdocs/db.libs.loader.html).
+//
+// Markup:
+// <button onClick="db.libs.loader.createModal({ 'text': 'Laster…' })">Demo</button>
+//
+// Styleguide 15.3
+
+.loader-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $z-index-loader;
+    background-color: $reveal-overlay-bg;
+    text-align: center;
+    .loader{
+        @include loader-style($color: $white);
+        font-size: 3rem;
+        position: relative;
+        z-index: $z-index-loader + 1;
+        top: 50%;
+        display: inline-block;
+    }
+    .text{
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        z-index: $z-index-loader + 1;
+        top: 50%;
+        display: inline-block;
+        margin-left: 0.5rem;
+        transform: translateY(-40%);
+    }
+}

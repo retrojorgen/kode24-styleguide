@@ -1,0 +1,12 @@
+builds:
+  -
+    image: "digitallyseamless/nodejs-bower-grunt:latest"
+    cache:
+      - "node_modules"
+      - "bower_components"
+    steps:
+      - "npm install --quiet"
+      - "bower install --allow-root --silent"
+      - "grunt dist"
+    results:
+      - "dist/*"

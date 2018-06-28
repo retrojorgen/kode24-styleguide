@@ -1,0 +1,363 @@
+//
+// Button mixins
+//
+
+@mixin button-outline($border: $color-black, $color: $border){
+    &.outline{
+        border: 1px solid $border;
+        background: transparent;
+        color: $color;
+    }
+}
+
+@mixin button-active($bg: $color-black){
+    &.active{
+        background: scale-color($bg, $lightness: $button-function-factor);
+    }
+}
+
+// Buttons
+//
+// Click me! Buttons are mainly used for primary actions in a context or on a page.
+//
+// Markup:
+// <a class="button {$modifiers}">a.button</a>
+//
+// :hover - :hover-state
+// :focus - :focus-state
+// .active - disabled-state
+// .disabled - disabled-state
+//
+// Styleguide 7.0
+
+@if $include-html-button-classes {
+    // Default styles applied outside of media query
+    button, .button {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        @include button-style($bg: $color-blue);
+        color: $white;
+
+        &:hover, &:focus{ 
+            color: $white;
+            background: $color-red;
+        }
+        &.disabled, &[disabled] {
+            @include button-style($bg: $color-lightgrey);
+            color: $ui-color;
+            cursor: default;
+            opacity: 0.7;
+            box-shadow: none;
+        }
+
+        @include button-outline($border: $color-lightgrey, $color: $ui-color);
+        @include button-active($bg: $color-lightgrey);
+
+        &.primary {
+            @include button-style($bg: $primary-color);
+            @include button-outline($border: $primary-color);
+        }
+
+         &.sand {
+            @include button-style($bg: $color-sand);
+            @include button-outline($border: $color-sand);
+            color: $color-black;
+            &:hover{
+                background-color: $color-sand-lighter !important;
+                color: $color-black;
+            }
+        }
+
+        &.yellow {
+            @include button-style($bg: $color-yellow);
+            @include button-outline($border: $color-yellow);
+            color: $color-black;
+            &:hover{
+                color: $color-black
+            }
+        }
+
+        &.green {
+            @include button-style($bg: $color-green);
+            @include button-outline($border: $color-green);
+            color: $white;
+            &:hover{
+
+            }
+        }
+
+        &.blue {
+            @include button-style($bg: $color-blue);
+            @include button-outline($border: $color-blue);
+            &:hover{
+                background: $color-yellow;
+                @include button-outline($border: $color-yellow)
+            }
+        }
+
+        &.success { @include button-outline($border: $success-color); }
+        &.alert { @include button-outline($border: $alert-color); }
+        &.warning {
+            @include button-style($bg: $warning-color);
+            @include button-outline($border: $warning-color);
+        }
+        &.black {
+            @include button-style($bg: $color-black);
+            @include button-outline($border: $color-black);
+        }
+        &.white {
+            @include button-style($bg: $white);
+            @include button-outline($border: $white);
+            color: $white;
+        }
+        &.light {
+            @include button-style($bg: $white);
+            @include button-outline($border: $white, $color: $ui-color);
+            color: $ui-color;
+
+            &.text-red{ color: $color-red; }
+            &.text-blue{ color: $color-blue; }
+            &.text-green{ color: $color-green; }
+            &.text-yellow{ color: $color-yellow; }
+            &.text-lightgrey{ color: $color-lightgrey; }
+            &.text-grey{ color: $color-grey; }
+            &.text-darkgrey{ color: $color-darkgrey; }
+            &.text-black{ color: $color-black; }
+            &:hover{
+                background-color: $color-sand-light;
+
+            }
+        }
+
+        &.transparent {
+            background-color: transparent;
+            color: $white;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+
+        &.ui {
+            @include button-style($bg: $ui-color);
+            @include button-outline($border: $ui-color, $color: $ui-color);
+
+        }
+    }
+}
+
+// Colors
+//
+// Markup:
+// <a class="button {$modifiers}">Button</a>
+// <a class="button outline {$modifiers}">Button</a>
+//
+// .primary - $primary-color
+// .yellow - $color-yellow
+// .green - $color-green
+// .blue - $color-blue
+// .black - $color-dark
+// .success - $success-color
+// .alert - $color-red
+// .warning - $color-orange
+// .light - white
+// .white - white
+// .ui - $ui-color
+//
+// Styleguide 7.1
+
+// Size
+//
+// Markup:
+// <a class="button tiny">Button</a>
+// <a class="button small">Button</a>
+// <a class="button">Button</a>
+// <a class="button large">Button</a>
+//
+// Styleguide 7.2
+
+// Style
+//
+// Markup:
+// <a class="button radius">Button</a>
+// <a class="button round">Button</a>
+//
+// Styleguide 7.3
+
+// Expanded
+//
+// Markup:
+// <a class="button expand">Button</a>
+//
+// Styleguide 7.4
+
+@media #{$small-only}{
+    .button.small-expand{
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+// Button groups
+//
+// Markup:
+// <ul class="button-group {$modifiers}">
+//   <li><a href="#" class="button">Button one</a></li>
+//   <li><a href="#" class="button">Button two</a></li>
+//   <li><a href="#" class="button">Button three</a></li>
+// </ul>
+//
+// .radius - Radius
+// .round - Round
+// .even-3 - Expanded
+//
+// Styleguide 7.5
+
+.button-group{
+    margin-bottom: rem-calc(20);
+    .button{
+        margin-bottom: 0;
+    }
+    &.stack-for-small{
+        @media #{$small-only}{
+            & > li{
+                display: block;
+                margin: 0;
+                float: none;
+            }
+        }
+    }
+}
+
+// Icons
+//
+// Icons can be aligned both to the right and left.
+//
+// Markup:
+// <a class="button"><span class="icon-Attachment align-left"></span>Button</a>
+// <a class="button">Button<span class="icon-Attachment align-right"></span></a>
+//
+// Styleguide 7.6
+
+.button{
+    #{$icon}{
+        font-size: 1.6em;
+        line-height: 0;
+        position: relative;
+        top: 0.3rem;
+        &.align-left{
+            margin-right: 0.4em;
+            margin-left: -0.4em;
+        }
+        &.align-right{
+            margin-left: 0.4em;
+            margin-right: -0.4em;
+        }
+    }
+    &.tiny{
+        #{$icon}{
+            top: 0.25rem;
+        }
+    }
+}
+
+// Icon only
+//
+// In some cases the button might consist of only a icon. E.g. when creating a toolbar.
+//
+// Markup:
+// <ul class="button-group radius">
+//   <li><a href="#" class="tiny button icon"><span class="icon-Edit"></span></a></li>
+//   <li><a href="#" class="tiny button icon active"><span class="icon-Link"></span></a></li>
+//   <li><a href="#" class="tiny button icon"><span class="icon-Bulleted-list"></span></a></li>
+//   <li><a href="#" class="tiny button icon"><span class="icon-Contrast"></span></a></li>
+//   <li><a href="#" class="tiny button icon"><span class="icon-Picture"></span></a></li>
+//   <li><a href="#" class="tiny button icon"><span class="icon-Attachment"></span></a></li>
+// </ul>
+//
+// Styleguide 7.6.1
+
+.button{
+    &.icon{
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+}
+
+// Buttons with lables
+//
+// Markup:
+// <a href="#" class="button">Button <span class="label round">2</span></a>
+//
+// Styleguide 7.7
+
+.button{
+    .label{
+        margin-bottom: -10px;
+        position: relative;
+        top: -0.1em;
+    }
+}
+
+// Dropdown
+//
+// RequiresJS: See Foundation docs
+//
+// Markup:
+// <a href="#" data-dropdown="drop1" class="button dropdown">Dropdown Button</a>
+// <ul id="drop1" data-dropdown-content class="f-dropdown">
+//   <li><a href="#">This is a link</a></li>
+//   <li><a href="#">This is another</a></li>
+//   <li><a href="#">Yet another</a></li>
+// </ul>
+//
+// Styleguide 7.8
+
+.button{
+    &[data-dropdown]{
+        &:after{
+            content: '\e882';
+            font-family: 'Helveticons';
+            font-size: 1.2em;
+            line-height: 0;
+            position: relative;
+            top: 0.15em;
+            margin-left: 0.6em;
+        }
+    }
+}
+
+// Special buttons
+//
+// Markup:
+// <ul class="button-group">
+//   <li><a href="#" class="tiny button twitter icon"><span class="icon-Twitter"></span>Twitter</a></li>
+//   <li><a href="#" class="tiny button facebook icon"><span class="icon-Facebook"></span>Facebook</a></li>
+//   <li><a href="#" class="tiny button google icon"><span class="icon-Google"></span>Google+</a></li>
+// </ul>
+//
+// Styleguide 7.10
+
+.button{
+    &.tip{
+        .tel{
+            color: $body-font-color;
+        }
+        &.dark{
+            .tel{
+                color: $primary-color;
+            }
+        }
+    }
+
+    &.twitter{
+        @include button-style($bg: #5EA9DD);
+    }
+    &.facebook{
+        @include button-style($bg: #4E69A2);
+    }
+    &.google{
+        @include button-style($bg: #DD4B39);
+    }
+}

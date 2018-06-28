@@ -1,0 +1,161 @@
+
+// Toolbox
+//
+//<div class="row">
+//  <article class="toolbox">
+//    <div class="small-12 columns">
+//       <h1><strong>Din</strong>sides verktøykasse</h1>
+//    </div>
+//    <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+//       <li>
+//           <ul>
+//              <h2>Bolig</h2>
+//              <li><a href="http://www.dinside.no/112377/dinsides-bolig-abc">Bolig-ABC</a></li>
+//              <li><a href="http://www.dinside.no/13263/eie-elle-leie-kalkulator">Eie eller leie?</a></li>
+//              <li><a href="http://www.dinside.no/111154/hvor-mye-kan-jeg-laane">Hva kan du låne?</a></li>
+//              <li><a href="http://www.dinside.no/815994/boliglaanskalkulator">Billigste boliglån</a></li>
+//              <li><a href="http://www.dinside.no/820064/lonner-det-seg-aa-gjore-det-selv">Lønner det seg å gjøre det selv?</a></li>
+//              <li><a href="http://www.dinside.no/355324/artikkel">Varmtvannsforbruk</a></li>
+//              <li><a href="http://www.dinside.no/827034/varmepumpekalkulator/">Varmepumpekalkulator</a></li>
+//              <li><a href="http://www.dinside.no/870107/finn-billigste-innboforsikring">Finn billigste innboforsikring</a></li>
+//              <li><a href="http://www.dinside.no/870105/finn-billigste-husforsikring">Finn billigste husforsikring</a></li>
+//           </ul>
+//       </li>
+//       <li>
+//           <ul>
+//              <h2>Data og mobil</h2>
+//              <li><a href="http://www.dinside.no/tag/app">Apper</a></li>
+//              <li><a href="http://www.dinside.no/tag/slik%20gj%C3%B8r%20du%20det/">Slik gjør du det</a></li>
+//              <li><a href="http://www.dinside.no/tag/anbefalt%20produkt/">Anbefalte produkter</a></li>
+//              <li><a href="http://www.dinside.no/tester/mobil">Alle mobiltester</a></li>
+//              <li><a href="http://www.dinside.no/tester/tv">Alle TV-tester</a></li>
+//              <li><a href="http://www.dinside.no/tester/b%C3%A6rbar-pc">Alle PC-tester</a></li>
+//              <li><a href="http://www.dinside.no/tag/android">Alt om Android</a></li>
+//              <li><a href="http://www.dinside.no/tag/iphone">Alt om iPhone</a></li>
+//              <li><a href="http://www.dinside.no/tag/facebook">Alt om Facebook</a></li>
+//           </ul>
+//       </li>
+//       <li>
+//           <ul>
+//              <h2>Motor</h2>
+//              <li><a href="http://www.dinside.no/903961/finn-billigste-vinterdekk">Hva er bilen verdt?</a></li>
+//              <li><a href="http://www.dinside.no/104524/importkalkulator">Importkalkulator</a></li>
+//              <li><a href="http://www.dinside.no/219513/promillekalkulator">Promillekalkulator</a></li>
+//              <li><a href="http://www.dinside.no/1110/sjekk-heftelser-gratis">Sjekk heftelser</a></li>
+//              <li><a href="http://www.vegvesen.no/Kjoretoy/Eie+og+vedlikeholde/EU-kontroll/Kontrollfrist">Sjekk neste EU-kontroll</a></li>
+//              <li><a href="http://www.dinside.no/870091/finn-billigste-bilforsikring">Finn billigste bilforsikring</a></li>
+//              <li><a href="http://www.dinside.no/383657/sjekk-hvem-som-eier-bilen">Hvem eier bilen?</a></li>
+//           </ul>
+//       </li>
+//       <li>
+//           <ul>
+//              <h2>Reise</h2>
+//              <li><a href="http://www.dinside.no/104522/valutakalkulator">Valutakalkulator</a></li>
+//              <li><a href="http://www.dinside.no/24034/omregneren">Omregneren</a></li>
+//              <li><a href="http://www.dinside.no/362192/finn-landnummeret">Landnummer - telefon</a></li>
+//              <li><a href="http://www.dinside.no/870108/finn-billigste-reiseforsikring">Finn billigste reiseforsikring</a></li>
+//           </ul>
+//       </li>
+//       <li>
+//           <ul>
+//              <h2>Økonomi</h2>
+//              <li><a href="http://www.dinside.no/789330/slik-blir-din-skatt-i-2016">Skattekalkulator</a></li>
+//              <li><a href="http://www.dinside.no/932242/netthandelskalkulator">Netthandelskalkulator</a></li>
+//              <li><a href="http://www.dinside.no/787895/slosekalkulator">Sløsekalkulator</a></li>
+//              <li><a href="http://www.dinside.no/104471/banksparing-sparekalkulator">Sparing - best rente</a></li>
+//              <li><a href="http://www.dinside.no/5347/betalingsplan-for-laan">Betalingsplanlegger</a></li>
+//              <li><a href="http://www.dinside.no/2155/effektiv-rente">Finn effektiv rente</a></li>
+//              <li><a href="http://www.dinside.no/115169/kredittkjopskalkulatoren">Pris på kredittkjøp</a></li>
+//              <li><a href="http://www.dinside.no/936340/billigste-mobilabonnementer-vaaren-2016">Finn billigste mobilabonnement</a></li>
+//              <li><a href="http://www.dinside.no/305848/artikkel">Terminbeløp ved renteendring</a></li>
+//              <li><a href="http://www.dinside.no/870107/finn-billigste-innboforsikring">Finn billigste innboforsikring</a></li>
+//           </ul>
+//       </li>
+//       <li>
+//           <ul>
+//              <li><a href="http://www.dinside.no/870105/finn-billigste-husforsikring">Finn billigste husforsikring</a></li>
+//              <li><a href="http://www.dinside.no/870091/finn-billigste-bilforsikring">Finn billigste bilforsikring</a></li>
+//              <li><a href="http://www.dinside.no/870108/finn-billigste-reiseforsikring">Finn billigste reiseforsikring</a></li>
+//              <li><a href="http://www.dinside.no/900777/finn-billigste-forsikringspakke">Finn billigste forsikringspakke</a></li>
+//              <li><a href="http://www.dinside.no/276127/nysgjerrigperkalkulatoren">Egentlig inntekt</a></li>
+//              <li><a href="http://www.dinside.no/796283/hvor-lenge-varer-sparepengene">Så lenge varer sparepengene</a></li>
+//              <li><a href="http://www.dinside.no/382937/den-store-hva-er-du-verdt-kalkulatoren">Hvor mye er du verdt?</a></li>
+//              <li><a href="http://www.dinside.no/815994/boliglaanskalkulator">Boliglånskalkulator - billigst boliglån</a></li>
+//           </ul>
+//       </li>
+//     </li>
+//  </article>
+// </div>
+//
+// Styleguide 32.0
+
+
+.toolbox {
+    background: $color-sand;
+    padding: $column-gutter / 2;
+    margin-bottom: $column-gutter;
+    h1{
+        font-weight: 300;
+        margin-top: 0;
+        font-size: rem-calc(22);
+        text-align: center;
+        margin-bottom: $column-gutter / 2;
+        border-bottom: 1px solid $color-sand-lighter;
+        padding-bottom: $column-gutter / 4;
+        @media #{$medium-up}{
+            margin-bottom: $column-gutter;
+            font-size: rem-calc(26);
+        }
+    }
+    h2{
+        font-size: 1rem;
+    }
+    a {
+        color: $color-black;
+        text-decoration: none;
+        &:hover, &:focus {
+            color: $color-red;
+            text-decoration: underline;
+        }
+    }
+    [class*="block-grid-"]>li{
+        padding-bottom: 0;
+    }
+    ul {
+        margin:0 0 $column-gutter 0;
+        li{
+            list-style: none;
+            margin-bottom: $column-gutter / 2;
+            &:nth-last-child(2){
+                margin-bottom:0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media #{$medium-up}{
+                margin-bottom: $column-gutter;
+                &:last-child {
+                    margin-top: 33px;
+                }
+            }
+        }
+        ul{
+            margin:0;
+            li{
+                margin-bottom: 0;
+                @media #{$medium-up}{
+                    &:last-child {
+                        margin-top: 0px;
+                    }
+                }
+            }
+            &:nth-last-child(2){
+                margin-bottom:0;
+            }
+        }
+    }
+    @media #{$medium-up}{
+        padding: $column-gutter;
+    }
+}
+

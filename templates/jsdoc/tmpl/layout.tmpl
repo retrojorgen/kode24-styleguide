@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>JSDoc: <?js= title ?></title>
+    <script>
+    ;(function () {
+        'use strict';
+
+        function on(el, event, callback) {
+            el.addEventListener ? el.addEventListener(event, callback, false) : el.attachEvent && el.attachEvent('on' + event, callback);
+        }
+
+        function load() {
+            if (window.localStorage && window.XMLHttpRequest){
+                var s = document.createElement('style');
+                document.getElementsByTagName('head')[0].appendChild(s);
+                if (window.localStorage && localStorage.font_css_cache && localStorage.font_css_cache_file === f){
+                    s.innerHTML = localStorage.font_css_cache;
+                } else {
+                    var xhr = new XMLHttpRequest;
+                    xhr.open('GET', f, true);
+                    on(xhr, 'load', function() {
+                        if(xhr.readyState === 4 && xhr.status === 200){
+                            localStorage.font_css_cache = xhr.responseText;
+                            localStorage.font_css_cache_file = f;
+                            s.innerHTML = xhr.responseText;
+                        }
+                    });
+                    xhr.send();
+                }
+            } else {
+                var c = document.createElement('link');
+                c.href = f;
+                c.rel = 'stylesheet';
+                c.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(c);
+                document.cookie = 'font_css_cache';
+            }
+        }
+
+        var useSSL = "https:" == document.location.protocol;
+        //var f = (useSSL ? "https:" : "http:") + '//styleguide.dinside.no/stylesheets/fonts.css';
+        var f = '/stylesheets/fonts.css';
+        window.localStorage && localStorage.font_css_cache || document.cookie.indexOf('font_css_cache') > -1 ? load() : on(window, 'load', load);
+    })();
+    </script>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/app.css">
+</head>
+
+<body>
+
+<main class="row">
+    <div class="small-12 column">
+        <h1 class="subheader"><?js= title ?></h1>
+        <?js= content ?>
+    </div>
+</main>
+
+<script src="/scripts/app.min.js"></script>
+<script src="/scripts/styleguide.min.js"></script>
+<script> prettyPrint(); </script>
+<script>
+    (function() {
+        var $source = $('.prettyprint.source.linenums');
+        if($source.length){
+            var lineNumber = parseInt( document.location.hash.substring(1).replace('line', '') || 0 );
+            var $line = $source.find('li:nth-child('+lineNumber+')');
+            if($line.length){
+                $line.addClass('selected');
+                $(window).scrollTop($line.offset().top);
+            }
+        }
+    })();
+</script>
+</body>
+</html>

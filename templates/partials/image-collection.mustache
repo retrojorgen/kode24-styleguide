@@ -1,0 +1,10 @@
+<div class="image-collection five-up" data-image-collection>
+    {{#image-collection}}
+    <div class="item" {{#data-collection-more}}data-collection-more="{{data-collection-more}}"{{/data-collection-more}} style="background-image: url({{src}});">
+        <div class="caption">{{caption}}</div>
+    </div>
+    {{/image-collection}}
+    <a class="close" title="Lukk"><span class="icon-Close"></span></a>
+    <a class="prev" title="Forrige"><span class="icon-Arrow-alt-left"></span></a>
+    <a class="next" title="Neste"><span class="icon-Arrow-alt-right"></span></a>
+</div>

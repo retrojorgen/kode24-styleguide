@@ -1,0 +1,1037 @@
+//
+// Article preview Variables
+//
+
+$include-html-article-preview-classes: true !default;
+$include-html-article-preview-background-classes: $include-html-article-preview-classes !default;
+$include-html-article-preview-nativeads-classes: $include-html-article-preview-classes !default;
+$article-box-preview-padding: $column-gutter / 2;
+
+//
+// Article preview Mixins
+//
+
+@mixin article-preview-base(){
+    margin-bottom: $article-box-preview-padding;
+    &>a{
+        overflow: auto;
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        padding-bottom: $article-box-preview-padding;
+        @media #{$large-up}{
+            &:hover{
+                .headline{
+                    text-decoration: underline;
+                }
+            }
+            &:active{
+                opacity: 0.8;
+            }
+        }
+        &.nolink{
+            cursor: default;
+            &:hover{
+                .headline{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    figure{
+        margin: 0;
+        padding-bottom: 0;
+        position: relative;
+        overflow: visible;
+        height: 0;
+
+        img {
+            position:absolute;
+            height: 100%;
+        }
+    }
+
+    img{
+        max-width: none;
+        width: 100%;
+        padding: 0;
+        opacity: 1;
+        &.border{
+            border: 1px solid $color-grey;
+        }
+    }
+
+    .headline{
+        //-webkit-hyphens: manual;
+        //background-color: transparent;
+        //font-size: 1rem;
+        //line-height: 1.2;
+        //color: inherit;
+        //display: block;
+        //&:after{
+        //    display: none;
+        //}
+        //&.italic,
+        //em{
+        //    font-style: italic;
+        //}
+        //&.bold,
+        //strong{
+        //    font-weight: 500;
+        //}
+        overflow: hidden;
+    }
+
+    .deck{
+        color: inherit;
+    }
+
+    .standfirst{
+        background-color: transparent;
+        font-size: rem-calc(18px);
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        color: inherit;
+        display: block;
+        &:after{
+            display: none;
+        }
+        #{$icon}{
+            line-height: 0;
+            position: relative;
+            top: 4px;
+            color: $primary-color;
+            //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
+            margin-right: -0.4em;
+        }
+    }
+
+    .comments{
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $color-darkgrey;
+        &:before{
+            font-family: "Helveticons";
+            content: "\e848";
+            font-size: 0.8rem;
+            position: relative;
+            top: 2px;
+            margin-right: 0.2rem;
+        }
+    }
+
+    .published{
+        background-color: transparent;
+        color: $color-darkgrey;
+        margin-right: 0.5rem;
+        display: none;
+    }
+
+    &.hide-image {
+        figure {
+            display: none;
+        }
+    }
+}
+
+@mixin article-preview-style($bg: $body-background-color, $color: false, $padding: $article-box-preview-padding, $icon-color: inherit){
+    $contrasting-color: $color-black;
+    @if color-contrast($bg, rgb(255, 255, 255)) > 4.5 {
+        $contrasting-color: white;
+    } @else if $bg == $color-black {
+        $contrasting-color: white;
+    }
+
+    @if $color{
+        $contrasting-color: $color;
+    }
+
+    color: $contrasting-color;
+
+    &>a{
+        background-color: $bg;
+        padding: $padding;
+    }
+
+    .kicker{
+        background-color: inherit;
+        color: inherit;
+        margin-top: -#{$padding};
+    }
+
+    @if lightness($bg) < 90%{
+        .published, .comments{
+            color: inherit;
+        }
+    }
+
+    .standfirst{
+        #{$icon}{
+            color: $icon-color;
+        }
+    }
+
+    .label{
+        background-color: $contrasting-color;
+        color: $bg;
+    }
+
+    .related{
+        background-color: $bg;
+        padding: 0 $padding;
+        color: inherit;
+        h1{
+            @include section-title-style($bg: $bg, $color: $contrasting-color, $border-color: $contrasting-color);
+        }
+        ul{
+            color: inherit;
+            a{
+                color: inherit;
+            }
+        }
+    }
+
+    .actions{
+        background-color: $bg;
+        padding: 0 $padding;
+    }
+}
+
+// Article preview
+//
+// The article preview is a versatile element used to list articles and their most basic information. The article preview folds into our [Grid](section-5.html) where `small-n`, `medium-n` and `large-n` sets the width.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article" data-id="3074764762">
+//     <a itemprop="url" class="{$modifiers}">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//       <span class="comments" data-comment-count>111</span>
+//     </a>
+//   </article>
+// </div>
+//
+// :hover - Hover
+// :active - Active
+// .nolink - Not clickable
+//
+// Styleguide 20.0
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        @include article-preview-base();
+    }
+}
+
+// Headlines
+//
+// Headlines can be adjusted independently for each breakpoint using classes <code>small-size-n</code>, <code>medium-size-n</code> and <code>large-size-n</code>. In the same way as our gird sizes, our headline sizes are inherited from <code>small-size-n</code> and up.
+// The headline sizes range from 1 to 150 within each breakpoint. Note that for consistency when inhereting sizes, <code>small-size-n</code> and <code>medium-size-n</code> the font size is set using <code>vw</code> and for <code>large-size-n</code> set using <code>px</code>.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <h1 itemprop="headline" class="headline small-size-65 medium-size-65 large-size-65"><span class="primary">SISTE:</span> Politiet vil fengsle <br /><span class="small-size-90 medium-size-90 large-size-90">SOS Rasisme-leder</span><br /> <span class="small-size-60 medium-size-60 large-size-55">i fire uker for grovt bedrageri</span></h1>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.1
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        .headline{
+            &.primary, .primary{ color: $primary-color; }
+            &.yellow, .yellow{ color: $color-yellow; }
+            &.green, .green{ color: $color-green; }
+            &.blue, .blue{ color: $color-blue; }
+            &.black, .black{ color: $color-black; }
+            &.secondary, .secondary{ color: $secondary-color; }
+        }
+    }
+}
+
+// Standfirst
+//
+// Styleguide 20.2
+
+// Icons
+//
+// Icons can prefixed to the standfirst. This can be used e.g. for reviews.
+// *Note: This should not be used to mark types of content (see [Labels](#ref-13.3)).*
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst"><span class="icon-Dice-1">&nbsp;</span>Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.2.1
+
+// Bullets
+//
+// The standfirst can also be a bulletlist.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <ul class="standfirst">
+//         <li>Varetektsfengslet i to uker</li>
+//         <li>57-åringen ble pågrepet mandag morgen</li>
+//         <li>Brev- og besøkskontroll</li>
+//       </ul>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.2.2
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        ul.standfirst{
+            margin-left: -3px;
+            list-style-position: outside;
+            list-style: none;
+            li{
+                position: relative;
+                padding-left: 1.2em;
+                &:before{
+                    content: '\e7b9';
+                    font-family: "Helveticons";
+                    color: $primary-color;
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                }
+            }
+        }
+    }
+}
+
+// Editorial markings
+//
+// Styleguide 20.5
+
+// Labels
+//
+// Lables can be used to mark type of content or as a signpost marking regular columns and article series.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <span class="label">VIDEO</span><span class="label purple">TEMA</span><time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.5.1
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        .label{
+            margin-right: 1px;
+            &:last-of-type{
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+// Kicker
+//
+// A kicker can be added to the article preview and as a secondary header.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns {$modifiers}" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <div class="kicker">Dagbladet avslører:</div>
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// .opinion - Opinion
+//
+// Styleguide 20.5.2
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        .kicker{
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 0.5em 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: $body-bg;
+            background-color: $body-font-color;
+            @media #{$medium-up}{
+                font-size: 1rem;
+            }
+        }
+        &.opinion{
+            .kicker{
+                background-color: $color-black;
+                font-weight: lighter;
+                font-size: 0.8rem;
+             }
+        }
+    }
+}
+
+// Deck
+//
+// An article can have a secondary title.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns {$modifiers}" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h2 class="deck">Beløp i millionklassen:</h2>
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.5.3
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        .deck{
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 2rem 0 0;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+}
+// Bylinephoto
+//
+// An article can have a bylinephoto depicting the author of the article.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns {$modifiers}" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <img class="byline" src="http://www.dagbladet.no/meninger/assets/images/bylines/msi.png">
+//       <h2 class="deck">Marie Simonsen</h2>
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.5.4
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        img.byline{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: inline-block;
+            margin: -1.5rem $column-gutter / 2 0;
+            position: relative;
+            @media #{$medium-up}{
+                width: 4rem;
+                height: 4rem;
+                margin-top: -2rem;
+            }
+            &+.deck{
+                display: inline-block;
+                position: relative;
+                padding-top: 0;
+                margin-top: 0;
+                top: 0.2rem;
+            }
+            &.no-article-image {
+                margin-top:0;
+            }
+        }
+    }
+}
+
+// Related
+//
+// Related articles can be appended as list below the article preview.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//     <aside class="related">
+//       <h1><span>Mer om saken</span></h1>
+//       <ul>
+//         <li><a>- Vi fant mer penger enn hva det er normalt å ha hjemme</a></li>
+//         <li><a>- Kjell Gunnar Larsen og SOS Rasisme er uskyldige</a></li>
+//       </ul>
+//     </aside>
+//   </article>
+// </div>
+//
+// Styleguide 20.6
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        .related{
+            h1{
+                font-size: 1rem;
+                margin-top: 0;
+                @include section-title-base();
+                @include section-title-style($border-color: $secondary-color);
+            }
+            ul{
+                font-weight: 300;
+                margin-bottom: 0;
+                padding-bottom: 0.8rem;
+                color: $primary-color;
+                a{
+                    color: $ui-color;
+                    &:active{
+                        color: $color-black;
+                    }
+                    &:visited{
+                        color: rgb(102, 0, 153);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Icons
+//
+// Related links can be marked up with a icon indication the type of content.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//     <aside class="related">
+//       <h1><span>Mer om saken</span></h1>
+//       <ul class="no-bullets">
+//         <li><span class="icon-Pictures-alt-2"></span><a>- Vi fant mer penger enn hva det er normalt å ha hjemme</a></li>
+//         <li><span class="icon-Play"></span><a>- Kjell Gunnar Larsen og SOS Rasisme er uskyldige</a></li>
+//       </ul>
+//     </aside>
+//   </article>
+// </div>
+//
+// Styleguide 20.6.1
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        .related{
+            ul.no-bullets{
+                margin-left: 1.5rem;
+                list-style: none;
+                li{
+                    position: relative;
+                    #{$icon}{
+                        font-size: 1.2rem;
+                        top: 2px;
+                        left: -1.5rem;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Secondary actions
+//
+// A button or group of buttons can be appended encouraging a secondary behavior.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 medium-6 large-6 {$modifiers} columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//     <div class="actions">
+//       <a href="#" class="button radius expand primary tip">Tips oss <span class="tel">2400</span></a>
+//     </div>
+//   </article>
+//   <article class="preview small-12 medium-6 large-6 {$modifiers} columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//     <div class="actions">
+//       <ul class="button-group even-2">
+//         <li><a href="#" class="button secondary"><span class="icon-Target align-left">&nbsp;</span>Livestudio</a></li>
+//         <li><a href="#" class="button secondary"><span class="icon-Checkbox-dotted-active align-left">&nbsp;</span>Sjekk deg selv</a></li>
+//       </ul>
+//     </div>
+//   </article>
+// </div>
+//
+// Styleguide 20.7
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        .actions{
+            .button{
+                #{$icon}{
+                    //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
+                    margin-right: -0.5rem;
+                }
+            }
+        }
+    }
+}
+
+// Background colors
+//
+// The article preview can be framed with a background color. NOTE: We need more information here about when the different color sould be used.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview {$modifiers} small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst"><span class="icon-Lab">&nbsp;</span>Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <span class="label">VIDEO</span><time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// .primary - Red
+// .blue - Blue
+// .yellow - Yellow
+// .sand - Sand
+// .green - Green
+// .secondary - Secondary
+//
+// Styleguide 20.8
+
+@if $include-html-article-preview-background-classes{
+
+    article.preview.primary{
+        @include article-preview-style($bg: $primary-color);
+    }
+    article.preview.sand{
+        @include article-preview-style($bg: $color-sand, $icon-color: $primary-color);
+    }
+    article.preview.yellow{
+        @include article-preview-style($bg: $color-yellow);
+    }
+    article.preview.green{
+        @include article-preview-style($bg: $color-green);
+    }
+    article.preview.blue{
+        @include article-preview-style($bg: $color-blue);
+    }
+    article.preview.secondary{
+        @include article-preview-style($bg: $secondary-color, $icon-color: $primary-color);
+    }
+    article.preview.black{
+        @include article-preview-style($bg: $color-black, $icon-color: $primary-color);
+    }
+
+
+
+}
+
+// Text only
+//
+// The image can be omitted if none is available.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview {$modifiers} small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// .primary - Red
+// .black - Black
+// .secondary - Secondary
+//
+// Styleguide 20.9
+
+// Float images
+//
+// Images can be floated <code>left</code> or <code>right</code> but must be accompanied by a widt with % units.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article" data-id="3074764762">
+//     <a itemprop="url">
+//       <figure class="{$modifiers}" style="width:50%; padding-bottom: 28.58%;">
+//         <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       </figure>
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//       <span class="comments" data-comment-count>111</span>
+//     </a>
+//   </article>
+// </div>
+//
+// .left - Left
+// .right - Right
+//
+// Styleguide 20.10
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        figure{
+            &.left {
+                margin-right: $column-gutter / 2;
+            }
+            @media #{$small-only}{
+                &.small-only-left {
+                    margin-right: $column-gutter / 2;
+                }
+            }
+            @media #{$medium-only}{
+                &.medium-only-left {
+                    margin-right: $column-gutter / 2;
+                }
+            }
+            @media #{$large-up}{
+                &.large-left {
+                    margin-right: $column-gutter / 2;
+                }
+            }
+            &.right {
+                margin-left: $column-gutter / 2;
+            }
+            @media #{$small-only}{
+                &.small-only-right {
+                    margin-left: $column-gutter / 2;
+                }
+            }
+            @media #{$medium-only}{
+                &.medium-only-right {
+                    margin-left: $column-gutter / 2;
+                }
+            }
+            @media #{$large-up}{
+                &.large-right {
+                    margin-left: $column-gutter / 2;
+                }
+            }
+        }
+    }
+}
+
+// Extrinsic content
+//
+// When displaying content that links to articles from other sites the kicker **must** read *Eksternt innhold*. Additionally a label should state the site of the original sender.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-6 extrinsic columns" itemscope itemtype="http://schema.org/WPAdBlock" role="article" data-id="3074764762">
+//     <a itemprop="url" rel="nofollow">
+//       <div class="kicker">Eksternt innhold</div>
+//       <img itemprop="image" title="" alt="" src="/assets/test/extrinsic-1.jpg">
+//       <h1 itemprop="headline" class="headline">Hva har skjedd med Jessica Simpson?</h1>
+//       <p itemprop="description" class="standfirst">Viste fram blåmerke på Instagram.</p>
+//       <span class="label" itemprop="publisher">Se&Hør</span> <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.11
+
+@if $include-html-article-preview-classes{
+    article.preview{
+        &.extrinsic{ @include article-preview-style($bg: $secondary-color, $color: $body-font-color, $icon-color: $primary-color); }
+    }
+}
+
+// Native advertising
+//
+// When displaying native advertisements the kicker and label **must** read *Annonsørinnhold*. Following the label the text must state the advertisers name. The advertisements color is specifically chosen **not** to be too close to the colors used by editorial content.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview native-advertisement small-12 medium-6 columns" itemscope itemtype="http://schema.org/WPAdBlock" role="article" data-id="3074764762">
+//     <a itemprop="url" rel="nofollow">
+//       <div class="kicker">fra fjordland</div>
+//       <img itemprop="image" title="" alt="" src="/assets/test/native-advertisement.jpg">
+//       <h1 itemprop="headline" class="headline">Dette er Norges beste kake</h1>
+//       <p itemprop="description" class="standfirst">Oppskriften finner du her. </p>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.12
+
+@if $include-html-article-preview-nativeads-classes{
+    article.preview.native-advertisement{
+        .kicker {
+            background-color: $native-advertisement-color;
+            font-size: .7rem;
+            line-height: 1.63rem;
+            padding: 0 $column-gutter / 2;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: white !important;
+            &:before {
+                content: 'ANNONSØRINNHOLD ';
+            }
+        }
+        .label{
+            background-color: $native-advertisement-color;
+            color: $white;
+        }
+        .label-text{
+            &:before {
+                content:'Annonsørinnhold';
+                font-weight: 300;
+                text-align: center;
+                text-decoration: none;
+                line-height: 1;
+                white-space: nowrap;
+                display: inline-block;
+                position: relative;
+                margin-bottom: auto;
+                margin-right: 0.25rem;
+                padding: 0.25rem 0.5rem 0.25rem;
+                font-size: 0.6875rem;
+                background-color: $native-advertisement-color;
+                color: $white;
+            }
+            color: scale-color($native-advertisement-color, $lightness: -10%);
+        }
+    }
+}
+
+// Article preview blog
+//
+// Article preview blog
+//
+// Markup:
+// <div class="row">
+//     <article class="preview {$modifiers} blog small-12 medium-12 columns" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+//         <a itemprop="url" style="background-image: url('http://gfx.dagbladet.no/labrador/429/429014/42901400/jpg/active/0.jpg')">
+//             <h2 class="deck">Marie Simonsen:</h2>
+//             <h1 itemprop="headline" class="headline">Litt spesielt</h1>
+//             <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//             <span class="label white">BLOGGINNLEGG</span><time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//         </a>
+//     </article>
+// </div>
+//
+// .teal - Teal
+// .secondary - Secondary
+//
+// Styleguide 20.15
+
+article.preview.blog{
+    &>a{
+        @media #{$medium-up}{
+            padding: $column-gutter $column-gutter/2;
+        }
+        figure {
+            display: none;
+        }
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        &:after {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: block;
+            content: '';
+            background-color: rgba(86, 144, 145, 0.9);
+        }
+        h1, h2, p, span, time {
+            position: relative;
+            z-index: 3;
+        }
+        img.byline {
+            display: none;
+        }
+    }
+    .deck{
+        padding-top: 0.2rem;
+    }
+    .headline{
+        font-family: 'Butler', serif;
+    }
+    //Depricated but might be used after all.
+/*     figure{
+        display: none;
+        @media #{$medium-up}{
+            display: block;
+            position: absolute;
+            width: calc(50% - #{$column-gutter / 2});
+            height: 100%;
+            top: 0;
+            right: #{$column-gutter / 2};
+            background-position: center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        img{
+            display: none;
+        }
+    } */
+}
+
+// Article preview horizontal
+//
+// An article preview which is set horizontal to be listed after eachother.
+//
+// Markup:
+// <div class="row">
+//      <article class="preview horizontal small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article" data-id="3074764762">
+//          <a itemprop="url">
+//              <figure>
+//                  <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//              </figure>
+//              <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//              <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//              <time class="published" itemprop="datePublished" datetime="2014-04-23" title="Publisert 23. april 2014">Publisert 23. april 2014</time>
+//          </a>
+//      </article>
+//      <article class="preview horizontal small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article" data-id="3074764762">
+//          <a itemprop="url">
+//              <figure>
+//                  <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//              </figure>
+//              <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//              <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//              <time class="published" itemprop="datePublished" datetime="2014-04-23" title="Publisert 23. april 2014">Publisert 23. april 2014</time>
+//          </a>
+//      </article>
+//      <article class="preview horizontal small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article" data-id="3074764762">
+//          <a itemprop="url">
+//              <figure>
+//                  <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//              </figure>
+//              <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//              <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//              <span class="label">VIDEO</span><time class="published" itemprop="datePublished" datetime="2014-04-23" title="Publisert 23. april 2014">Publisert 23. april 2014</time>
+//          </a>
+//      </article>
+// </div>
+//
+// Styleguide 20.16
+
+article.preview.horizontal{
+    a{
+        position: relative;
+        padding-left: 6rem + $column-gutter / 2;
+        figure {
+            position: absolute;
+            height: auto;
+            left: 0;
+            width: 6rem;
+            img {
+                position: static;
+                height: auto;
+            }
+        }
+
+        .headline {
+            padding-top: 0;
+            font-size: 1.2em !important;
+        }
+        .standfirst {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        .published {
+            display: inline-block;
+        }
+
+    }
+}
+
+// Kitchen sink
+//
+// Putting it all together.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview {$modifiers} small-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <div class="kicker">Dagbladet avslører:</div>
+//       <img itemprop="image" title="" alt="" src="/assets/test/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//     <aside class="related">
+//       <h1><span>Mer om saken</span></h1>
+//       <ul class="no-bullets">
+//         <li><span class="icon-Pictures-alt-2"></span><a href="http://www.dagbladet.no/2014/04/28/nyheter/innenriks/sos_rasisme/33015560/">- Vi fant mer penger enn hva det er normalt å ha hjemme</a></li>
+//         <li><span class="icon-Play"></span><a href="http://www.dagbladet.no/2014/04/29/nyheter/innenriks/sos_rasisme/tjen_folket/33033722/">- Kjell Gunnar Larsen og SOS Rasisme er uskyldige</a></li>
+//       </ul>
+//     </aside>
+//     <div class="actions">
+//       <a href="#" class="button radius expand primary tip">Tips oss <span class="tel">2400</span></a>
+//     </div>
+//   </article>
+// </div>
+//
+// .primary - Red
+// .black - Black
+// .secondary - Secondary
+//
+// Styleguide 20.18

@@ -1,0 +1,31 @@
+// Side nav
+//
+// Markup:
+// <ul class="side-nav">
+//   <li class="heading">Section</li>
+//   <li><a href="#">Link 1</a></li>
+//   <li><a href="#">Link 2</a></li>
+//   <li><a href="#">Link 3</a></li>
+//   <li class="divider"></li>
+//   <li><a href="#">Link 4</a></li>
+//   <li><a href="#" class="active">Link 5</a></li>
+// </ul>
+//
+// Styleguide 11.6
+
+.side-nav{
+    li{
+        &.heading{
+            //font-weight: 700;
+            letter-spacing: 1px;
+            //text-transform: uppercase;
+            //color: $color-darkgrey;
+        }
+        &.divider{
+            margin: 15px 0;
+        }
+        a.active:not(.button){
+            color: $primary-color;
+        }
+    }
+}

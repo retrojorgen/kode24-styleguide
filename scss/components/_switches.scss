@@ -1,0 +1,67 @@
+@mixin switch-style($color: $ui-color){
+    input:checked+label{
+        background-color: scale-color($color, $lightness: 35%);
+        &:after{
+            background-color: $color;
+        }
+    }
+}
+
+// Switch
+//
+// Switches use checkboxes or raiobuttons.
+//
+// Markup:
+// <div class="switch round {$modifiers}">
+//   <input id="exampleCheckboxSwitch-{$modifiers}" type="checkbox" checked>
+//   <label for="exampleCheckboxSwitch-{$modifiers}"></label>
+// </div>
+//
+// .red - Red
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+//
+// Styleguide 8.1.6
+
+.switch.round{
+    display: inline-block;
+    padding: 0.45rem 1rem 0.45rem 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    input{
+        position: absolute;
+        top: 9px;
+        left: 10px;
+    }
+
+    label{
+        top: 2px;
+        height: 1rem;
+        width: 3rem;
+        transition: background-color $switch-paddle-transition-speed $switch-paddle-transition-ease;
+        &:after{
+            top: 1rem;
+            left: 0;
+            transform: translateY(-1.25rem);
+            box-shadow: $z-shadow-1;
+
+            transition: all $switch-paddle-transition-speed $switch-paddle-transition-ease;
+            transition-property: left, background-color;
+        }
+    }
+
+    input:checked+label{
+        &:after{
+            left: 1.5rem;
+        }
+    }
+
+    @include switch-style;
+}
+
+.switch.round{
+    &.red{ @include switch-style($color-red); }
+    &.yellow{ @include switch-style($color-yellow); }
+    &.green{ @include switch-style($color-green); }
+    &.blue{ @include switch-style($color-blue); }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Styleguide",
+  "authors": [
+    "DB Medialab <http://medialaben.no/>"
+  ],
+  "private": true,
+  "dependencies": {
+    "foundation": "5.5.1",
+    "jquery": "~2.1.3",
+    "fastclick": "~1.0.6",
+    "google-code-prettify": "~1.0.4",
+    "moment": "~2.9.0",
+    "picturefill": "~2.2.0",
+    "mousetrap": "~1.4.6",
+    "showdown": "0.3.4",
+    "mustache.js": "1.1.0",
+    "raven-js": "~1.1.16",
+    "screenfull": "~2.0.0",
+    "photoswipe": "^4.1.1"
+  }
+}

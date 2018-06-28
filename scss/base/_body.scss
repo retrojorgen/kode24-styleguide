@@ -1,0 +1,10 @@
+/*
+* This is done to make sure that wallpaper (ad) is not making the page
+* have sidescroll on small desktop devices.
+* Potential other things also, but the current issue is the wallpaper ad.
+**/
+@media #{$large-up} {
+    body {
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,250 @@
+// Carousel header
+//
+// RequiresJS: Carousel of image with lightbox and arrow navigation. This variation should be used in top of articles.
+//
+// Template: templates/partials/image-carousel.mustache
+//
+// Styleguide 10.11
+
+//FIXME: Allow for thumbnails and high res images. Update icons to icon-font.
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+.image-carousel{
+    position: relative;
+    margin-bottom: 1rem;
+    @include clearfix();
+    .main-image{
+        width: 100%;
+        padding-bottom: 66%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .thumbnail-wrapper {
+        width: 100%;
+        height: 80px;      
+        left: $column-gutter;
+        overflow-x: scroll;
+         @media #{$large-up} {
+            width: 500px;
+            margin-top: -50px;
+            margin-left: $column-gutter * 2;
+        } 
+    }
+
+    .thumbnail-overflow-wrapper{
+        width: 1000px;
+    }
+    
+    //Used when more than five items
+        .item{
+            width: 80px;
+            padding-bottom: 80px;
+            position:relative;
+            // &:nth-child(5){
+            //     cursor: pointer;
+            //     &:before{
+            //         content: '';
+            //         display: block;
+            //         background-color: $color-lightgrey;
+            //         background-color: transparentize($color-lightgrey, 0.2);
+            //         width: 100%;
+            //         height: 100%;
+            //         position: absolute;
+            //         left:  0;
+            //         top: 0;
+            //     }
+            //     &:after{
+            //         content: 'Se alle';
+            //         content: attr(data-collection-more);
+            //         width: 100%;
+            //         position: absolute;
+            //         text-align: center;
+            //         top: 50%;
+            //         color: $ui-color;
+            //         text-decoration: underline;
+            //         font-weight: 700;
+            //         margin-top: rem-calc(-12);
+            //     }
+            // }
+        }
+
+    .lightbox{
+        font-family: 'Helveticons';
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        position: absolute;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        line-height: 2.4rem;
+        right: 0;
+        top: 0;
+        font-size: 1rem;
+    }
+    .close{
+        display: none;
+        width: 2.4rem;
+        height: 2.4rem;
+        position: absolute;
+        background-color: white;
+        color: $color-black;
+        text-align: center;
+        line-height: 2.4rem;
+        right: 0;
+        top: 0;
+        text-decoration: none;
+        z-index: 151;
+        &:hover{
+            color: $ui-color;
+        }
+        #{$icon}{
+            line-height: inherit;
+            font-size: 1.2rem;
+            position: relative;
+            top: -1px;
+        }
+    }
+
+    .prev,
+    .next{
+        position: absolute;
+        z-index: 151;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none;
+        color: $white;
+        &:hover{
+            color: $ui-color;
+        }
+        #{$icon}{
+            font-size: 2rem;
+        }
+    }
+
+    .prev{
+        margin-left: 1rem;
+    }
+
+    .next{
+        right: 0;
+        margin-right: 1rem;
+    }
+
+    .item{
+        display: block;
+        float: left;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+        .caption{
+            display: none;
+            width: 100%;
+            color: white;
+            border: none;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(34,34,34,0) 0%, rgba(34,34,34,0.7) 90%);
+            padding: rem-calc(15);
+        }
+    }
+
+    //Show all items. Only used when there is 10+ items.
+    &.showAll{
+        .item{
+            &:nth-child(9){
+                cursor: -webkit-zoom-in;
+                cursor: -moz-zoom-in;
+                &:after{
+                    display: none;
+                }
+            }
+            &:nth-child(1n+10){
+                display: block;
+            }
+        }
+    }
+
+    // Styles for when the collection is open
+    &.active{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: $z-index-image-collection;
+        background-color: $color-black;
+
+        .item{
+            position: absolute;
+            display: block !important;
+            left: 0;
+            opacity: 0;
+            width: 100% !important;
+            height: 100% !important;
+            background-size: contain;
+            float: none;
+            padding-bottom: 0;
+            border: none;
+            transform: scale(0.8, 0.8);
+            cursor: pointer;
+            //Fixes z-index for all items
+            //FIXME: Use z-index from z-index scale!
+            @for $i from 1 through 20{
+                &:nth-of-type(#{$i}){
+                    z-index: 150 - $i;
+                }
+            }
+
+            &:nth-child(9){
+                &:after{
+                    display: none;
+                }
+            }
+
+            &.active{
+                transform: scale(1, 1);
+                opacity: 1;
+            }
+
+            &.shake{
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-name: shake;
+            }
+
+            .caption{
+                display: block;
+            }
+        }
+
+        @media #{$medium-up}{
+            .prev,
+            .next{
+                display: block;
+            }
+        }
+
+        .close{
+            display: block;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+

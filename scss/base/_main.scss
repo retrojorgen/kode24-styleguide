@@ -1,0 +1,11 @@
+main{
+    background-color: $white;
+    z-index: $z-index-page;
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: $row-width;
+}

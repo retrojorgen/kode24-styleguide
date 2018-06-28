@@ -1,0 +1,29 @@
+.f-dropdown{
+    border: 1px solid $color-lightgrey;
+    li{
+        transition: all 0.1s ease-in-out;
+       &:hover{
+            background: rgba(0,100,180,0.1);
+            transition: all 0.1s ease-in-out;
+        }
+        a{
+            border-bottom: 1px solid $color-lightgrey;
+            text-decoration: none;
+            &:focus{
+                background: $ui-color;
+                color: $white;
+            }
+        }
+        &:last-child{
+            a{
+                border-bottom: none;
+            }
+        }
+    }
+    &:before{
+        // border-color: transparent transparent transparent $white;
+    }
+     &:after{
+        border-color: transparent transparent $white transparent;
+    }
+}

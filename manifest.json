@@ -1,0 +1,44 @@
+{
+  "name": "Dinside",
+  "short_name": "Dinside",
+  "icons": [
+    {
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-57",
+        "sizes": "57x57",
+        "type": "image/png"     
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-72",
+        "sizes": "72x72",
+        "type": "image/png"
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-96",
+        "sizes": "96x96",
+        "type": "image/png"
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-120",
+        "sizes": "120x120",
+        "type": "image/png"
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-128",
+        "sizes": "128x128",
+        "type": "image/png"
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-144",
+        "sizes": "144x144",
+        "type": "image/png"
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-152",
+        "sizes": "152x152",
+        "type": "image/png"
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-195",
+        "sizes": "195x195",
+        "type": "image/png"
+  },{
+        "src": "http://styleguide.dinside.no/assets/favicon/dinside/favicon-228",
+        "sizes": "228x228",
+        "type": "image/png"
+  }
+],
+"start_url": "/"
+}

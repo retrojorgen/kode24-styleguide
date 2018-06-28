@@ -1,0 +1,66 @@
+.dashboard{
+    background-color: $color-black;
+}
+
+.dashboard{
+    .panel{
+        border: none;
+        //padding: rem-calc(15);
+    }
+}
+
+.dashboard{
+    .pageheader{
+        border-bottom: none;
+        .title{
+            &.lighter-green{
+                color: $color-green-lighter;
+            }
+            &.lighter-pink{
+                color: $color-pink-lighter;
+            }
+        }
+    }
+}
+
+.dashboard{
+    .section-title{
+        color: $color-darkgrey;
+        span{
+            background-color: $color-black;
+        }
+        &:after{
+            background-color: $color-darkgrey;
+        }
+    }
+}
+
+.dashboard{
+
+    .chart{
+        &.line{
+            .line{
+                circle{
+                    fill: $color-black !important;
+
+                }
+            }
+        }
+        &.pie{
+            .donut{
+                fill: $color-black;
+            }
+        }
+    }
+}
+
+.dashboard{
+    h1.subheader{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        small{
+            color: inherit;
+        }
+    }
+}

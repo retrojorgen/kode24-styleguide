@@ -1,0 +1,798 @@
+// Reviews
+//
+// Styleguide 31
+
+// Review-box
+//
+// Basic review element for articles, the element can be used in various widths with a simple grid change
+//
+//Markup:
+//  <div class="row">
+//    <div itemprop="review" class="review small-12 columns">
+//      <div class="hidden" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+//        <meta itemprop="worstRating" content="1">
+//        <meta itemprop="ratingValue" content="3">
+//        <meta itemprop="bestRating" content="6">
+//      </div>
+//      <div class="review-box">
+//        <p class="test-result">Testresultat</p>
+//        <h1 itemprop="name" class="name review-name">Asus EeeBook E200HA</h1>
+//        <div class="rating-box small-centered columns">
+//          <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+//            <div class="dice">
+//              <img src="../assets/icon/dices/6.svg" alt="">
+//            </div>
+//          </div>
+//        </div>
+//        <div class="review-pros-cons">
+//          <div class="row">
+//            <div class="small-12 column small-centered">
+//              <div class="text-center">
+//                <span class="icon-Thumb-up text-green"></span>
+//              </div>
+//              <p itemprop="description">Masse komfort, god plass, stille, fabelaktig girkasse</p>
+//            </div>
+//          </div>
+//          <div class="row">
+//            <div class="small-12 column small-centered">
+//              <div class="text-center">
+//                <span class="icon-Thumb-down text-red"></span>
+//              </div>
+//              <p class="last" itemprop="description">Lite praktiske løsninger og fleksibilitet innvendig, ikke S-Klasse nivå, dyr.</p>
+//            </div>
+//          </div>
+//        </div>
+//      </div>
+//    </div>
+//  </div>
+//
+// Styleguide 31.1
+
+
+//General review box styling
+.review{
+    padding: 0;
+    margin-bottom: $column-gutter;
+}
+.review-box {
+    background-color: $color-sand;
+    padding: $column-gutter / 1.5;
+    @media #{$medium-up} {
+        padding: $column-gutter;
+    }
+    .review-image{
+        margin: $column-gutter / 2 0;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .review-rating{
+        display: none;
+    }
+    .dice {
+        display: block;
+        margin: 0 auto $column-gutter / 2 auto;
+        min-height: none;
+        min-width: none;
+        width: 50px;
+        height: 39px;
+        @media #{$medium-up} {
+            width: 65px;
+            height: 51px;
+            // margin: 0 auto $column-gutter auto;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-size: rem-calc(22);
+        margin-bottom: $column-gutter / 2;
+        margin-top: 0;
+        @media #{$medium-up} {
+            // margin-bottom: $column-gutter;
+            font-size: rem-calc(26);
+        }
+    }
+    h2 {
+        text-align: center;
+        font-weight: 300;
+        font-size: rem-calc(18);
+        margin-top: rem-calc(-5);
+        margin-bottom: rem-calc(25);
+    }
+    a{
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        &.test-result {
+            margin-bottom: 0;
+        }
+        &.creator {
+            margin-bottom: $column-gutter;
+        }
+        &.review-label {
+            font-size: rem-calc(14);
+            margin-bottom: 0.55rem;
+        }
+        &.last {
+            margin-bottom: 0;
+        }
+    }
+
+    [class^="icon-"], [class*=" icon-"]{
+        font-size: 1.875rem;
+        @media #{$medium-up} {
+            font-size: 2rem;
+        }
+    }
+
+    blockquote {
+        font-weight: 300;
+        font-size: 18px;
+        font-style: italic;
+        text-align: center;
+        line-height: initial;
+        span {
+            font-size: 26px;
+        }
+    }
+
+    .review-meta-block {
+        margin-bottom: rem-calc(15);
+    }
+
+    .centre{
+        text-align: center;
+    }
+
+    //Tag button modifications
+    .button.tiny {
+        opacity: 0.6;
+        text-align: center;
+        padding-top: 0.4rem;
+        padding-right: 0.6rem;
+        padding-bottom: 0.4rem;
+        margin-bottom: rem-calc(25);
+        padding-left: 0.6rem;
+        font-size: rem-calc(10);
+        &:hover {
+            opacity: 1;
+        }
+    }
+} // review-box end
+
+
+// Prisjakt product-ad
+//
+// Element for showing the last reviews. Can be used on the frontpage or in an article
+//
+// Markup:
+// <aside class="prisjakt {$modifiers} small-12 columns">
+//     <div class="product-specs">
+//         <p class="review-label">Detaljer</p>
+//         <h3><span>Sony GTK-XB7</span></h3>
+//         <p class="description">Bluetooth, Sort, Blå, Rød, 470 W, USB-kontakt<br>
+//         <a class="more-link" href="http://www.prisjakt.no/product.php?p=3583043&amp;ref=218">Mer info på prisjakt.no</a></p>
+//     </div>
+//     <div class="product-shops">
+//         <span class="review-label">De billigste butikkene</span>
+//         <a href="#" class="prisjakt-link">Se alle prisene</a>
+//         <ol class="shop-list">
+//             <li>
+//                 <a href="#"itemscope itemtype="http://schema.org/Offer">
+//                     <span class="item">Spaceworld Soundgarden</span>
+//                     <span class="cost">3390,-</span>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a href="#"itemscope itemtype="http://schema.org/Offer">
+//                     <span class="item">CDON</span>
+//                     <span class="cost">3395,-</span>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a href="#"itemscope itemtype="http://schema.org/Offer">
+//                     <span class="item">Elkjøp</span>
+//                     <span class="cost">3395,-</span>
+//                 </a>
+//             </li>
+//         </ol>
+//     </div>
+//     <div class="product-logo">
+//         <p class="review-label"><small> Levert av </small></p>
+//         <a class="prisjakt-link" href="http://www.prisjakt.no">
+//           <img class="prisjakt-logo" src="/assets/logo/prisjakt-logo.png" alt="Prisjakt logo">
+//         </a>
+//     </div>
+//</aside>
+//
+// .fullwidth - Show the "default" version with fullwidth blocks on all sizes.
+// .compact - Kompakt versjon av prisboksen for mer plass på mobil eller steder man trenger flere bokser.
+// .strip - Stripe med ett produkt for "superduper kompakt" utseende.
+//
+// Styleguide 31.2
+
+
+.large-12 {}
+.large-6 {}
+.large-12.compact {}
+.large-6.compact{}
+.small-12 {}
+.small-12.compact {}
+
+.prisjakt {
+    &:before {
+        position: absolute;
+        color: #999;
+        text-align: center;
+        content: 'Annonse';
+        display: block;
+        width: 100%;
+        top: -15px;
+        left: 0px;
+        font-size: 9px;
+    }
+    position: relative;
+    margin-top: 1rem;
+    padding: $column-gutter / 2;
+    min-height: 220px;
+    background: $color-sand-dark;
+    display: inline-block;
+    .ad-text {
+        display: none;
+    }
+    .review-label {
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    .product-specs{
+        margin-bottom: $column-gutter;
+    }
+    p.description {
+        margin-bottom: 0;
+    }
+    &:not(.strip):not(.compact) .product-shops{
+        li {
+            padding: $column-gutter / 4;
+            background-color: $color-sand;
+            &:nth-of-type(even){
+                background-color: $color-sand-light;
+            }
+        }
+    }
+    // List only two products in compact
+    &.compact .product-shops {
+        li:nth-child(n+3){
+            display :none;
+        }
+    }
+    // List only one product in strip
+
+    .product-shops {
+        position: relative;
+        .review-label {
+            margin-bottom: $column-gutter / 4;
+            text-transform: none;
+        }
+        .prisjakt-logo{
+            width: 100px;
+        }
+        .prisjakt-link {
+            float: right;
+        }
+        .shop-list {
+            list-style: none;
+            margin: 2px 0 $column-gutter / 2;
+            font-size: .9em;
+            clear: both;
+            li {
+                .item {
+                    font-weight: bold;
+                }
+                .cost {
+                    float: right;
+                }
+            }
+
+        }
+        .all-prices {
+            position: absolute;
+            bottom: -8px;
+            left: 10px;
+            font-size:12px
+        }
+    }
+
+    @media #{$large-up} {
+        &.large-10:not(.fullwidth) {
+            .product-shops,
+            .product-specs {
+                width: 50%;
+                float: left;
+            }
+            .product-logo {
+                width: 50%;
+                float: right;
+            }
+        }
+
+    }
+    @media #{$medium-up} {
+        &.compact,
+        &.strip {
+            .product-shops {
+                width: 50%;
+            }
+        }
+        &.large-12:not(.fullwidth),
+        &.large-11:not(.fullwidth) {
+            .product-shops,
+            .product-specs {
+                width: 50%;
+                float: left;
+            }
+            .product-logo {
+                width: 50%;
+                float: right;
+            }
+        }
+    }
+
+
+
+    &.compact {
+        padding: 5px;
+        margin-bottom: 20px;
+        .product-shops,
+        .product-specs,
+        .product-logo {
+            padding:5px 10px
+        }
+        .prisjakt-link {
+            font-size: .9em;
+        }
+        .product-specs{
+            width: 40%;
+            float: left;
+            margin-bottom: 0;
+            h3 {
+                font-size: rem-calc(16);
+                line-height: 1.2;
+            }
+            .review-label,
+            .description,
+            & > a {
+                display: none;
+            }
+        }
+
+        .product-shops {
+            float: left;
+            .shop-list {
+                margin-bottom: 5px;
+            }
+            &:before {
+                margin-bottom: 0px;
+                font-size: .9em;
+                font-weight: 600;
+                content: 'Billigst:'
+            }
+            .review-label {
+                display: none;
+            }
+            .price {
+                white-space: nowrap;
+                margin-left: 5px;
+            }
+            .all-prices {
+                bottom: 0;
+            }
+
+        }
+
+        .product-logo {
+            float: left;
+            position: absolute;
+            bottom: 5px;
+            width: auto;
+            img {
+                max-width: 100px;
+            }
+            small {
+                font-size: 10px;
+            }
+        }
+
+        @media #{$small-only} {
+            .product-shops {
+                width: 60%;
+            }
+        }
+    }
+
+     &.strip {
+        & > .product-specs,
+        & > .product-shops,
+        & > .product-logo {
+            display: inline-block;
+            width: auto !important;
+        }
+        padding: 5px 15px 2px;
+        min-height: 0px !important;
+        margin-bottom: 20px;
+        .product-specs,
+        h3,
+        .shop-list ul li {
+            display: inline-block;
+            width: auto;
+        }
+        h3 {
+            display: inline-block;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .product-shops {
+            position: absolute;
+            top: 4px;
+        }
+        .product-specs {
+            max-width: 35%;
+            max-height: 1em;
+        }
+
+        .product-shops,
+        .product-specs,
+        .product-logo {
+            padding:5px 10px
+        }
+        table {
+            margin-bottom: 1rem;
+        }
+        .prisjakt-link,
+        .review-label,
+        .description {
+            display: none;
+        }
+        .product-specs {
+            margin-bottom: 0;
+            h3 {
+                font-size: rem-calc(16);
+                line-height: 1.2;
+            }
+        }
+
+        .product-shops {
+            li {
+                &:nth-child(n+2){
+                    display :none;
+                }
+                &:first-child {
+                    &:before {
+                        content: 'Billigst hos:';
+                        padding-right: 1em;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    .cost {
+                        float: none;
+                        padding-left: 1em;
+                    }
+                    .item {
+                        text-decoration: underline;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .shop-list {
+                margin: 2px;
+            }
+            .all-prices {
+                bottom: 0;
+            }
+
+        }
+
+        .product-logo {
+            float: right;
+            position: relative;
+            margin-bottom: -40px;
+            text-align: right;
+            width: 95px;
+            img {
+                max-width: 75px;
+            }
+            .prisjakt-link {
+                display: block;
+            }
+        }
+
+        @media #{$small-only} {
+            .product-shops,
+            .product-specs {
+                display: inline-block;
+                width: auto;
+            }
+            .product-shops li:first-child {
+                &:before {
+                    content: 'Billigst:';
+                    padding-right: .2em;
+                }
+                .cost {
+                    padding-left: .2em;
+                }
+            }
+            .product-logo {
+                display: none;
+            }
+        }
+    }
+}
+
+// Last reviews collection
+//
+// Element for showing the last reviews. Can be used on the frontpage or in an article
+//
+//Markup:
+//<div class="row">
+//    <div class="testbox-front small-only-12 columns">
+//        <div class="inside-first">
+//            <h3>Siste tester fra <b>Din</b>side</h3>
+//            <a href="/tester/" class="lesmer top">Se alle testene</a>
+//            <article>
+//                <a href="#">
+//                    <img src="http://bilde.dinside.no/el-sykkel-test+haibike+sduro+trekking+rc+2016.jpg?o=5334796&amp;w=410&amp;h=230&amp;ee=1461756111">
+//                    <h1>TEST: Haibike Sduro Trekking RC 2016</h1>
+//                    <p>Noe i nærheten av en perfekt elsykkel.</p>
+//                </a>
+//            </article>
+//        </div>
+//        <div class="inside-second">
+//                <ul class="testlist">
+//                    <li>
+//                        <a href="#">
+//                            <img src="http://bilde.dinside.no/test+apple+ipad+pro+med+97-tommers+skjerm.jpg?o=5334896&amp;w=140&amp;h=90&amp;ee=1461827512">
+//                            <h4>TEST: Apple iPad Pro med 9,7-tommers skjerm</h4>
+//                            <p>Topp skjerm, kameraer og lyd - men stiv pris.</p>
+//                        </a>
+//                    </li>
+//                    <li>
+//                        <a href="#">
+//                            <img src="http://bilde.dinside.no/test-holder+det+g%E5ende+i+et+d%F8gn.jpg?o=5331356&amp;w=140&amp;h=90&amp;ee=1460468561">
+//                            <h4>Holder det gående i et døgn</h4>
+//                            <p>Kan spille musikk i et døgn og lades bare på tre timer.</p>
+//                        </a>
+//                    </li>
+//                    <li>
+//                        <a href="#">
+//                            <img src="http://bilde.dinside.no/test+apple+iphone+se.jpg?o=5332391&amp;w=140&amp;h=90&amp;ee=1460720121" data-pin-nopin="true">
+//                            <h4>TEST: Apple iPhone SE</h4>
+//                            <p>Den beste «lille» smarttelefonen akkurat nå.</p>
+//                        </a>
+//                    </li>
+//                    <li>
+//                        <a href="#">
+//                            <img src="http://bilde.dinside.no/test-huawei+p9.jpg?o=5331127&amp;w=140&amp;h=90&amp;ee=1460448574">
+//                            <h4>Huawei P9</h4>
+//                            <p>Har to kameraer på baksiden noe for seg?</p>
+//                        </a>
+//                    </li>
+//                    <a class="text-blue" href="/tester/" class="lesmer last">Se alle testene</a>
+//                </ul>
+//        </div>
+//    </div>
+//</div>
+//
+// Styleguide 31.3
+
+
+// Testbox on front
+.testbox-front{
+    margin-bottom: $column-gutter;
+    a{
+        display: block;
+        text-decoration: none;
+        color: $black;
+        &:hover, &:active {
+            text-decoration: underline;
+            color: $black;
+        }
+    }
+    h3{
+        font-weight: 300;
+        b{
+            font-weight: 800;
+        }
+    }
+     @media #{$large-up} {
+        display: table;
+    }
+    .lesmer{
+        &.top{
+            display: none;
+        }
+    }
+    .inside-first {
+        padding: $column-gutter;
+        background: $color-sand-dark;
+        img{
+            width: 100%;
+        }
+         @media #{$large-up} {
+            width: 50%;
+            display: table-cell;
+        }
+    }
+    .inside-second {
+        padding: $column-gutter;
+        background: $color-sand;
+        @media #{$large-up} {
+            width: 50%;
+            display: table-cell;
+        }
+    }
+    .testlist{
+        margin: 0;
+        li {
+            clear: both;
+            margin-bottom: $column-gutter;
+            list-style: none;
+            img{
+                float: right;
+                margin-bottom: $column-gutter;
+                margin-left: $column-gutter;
+            }
+        }
+    }
+}
+
+// Review Preview
+//
+// Element for showing the last reviews in a search lookup page or other lists.
+// Articles in the list can be hightlighted with a review score/dice using <code>.dice-1</code><code>.dice-1</code>...<code>.dice-6</code>
+//
+// Markup:
+// <div class="row">
+//   <article class="columns large-4 small-6 review-preview {$modifiers}">
+//     <a href="#">
+//       <figure>
+//         <img src="/assets/cars/audi-q7.jpg">
+//       </figure>
+//       <h2>Audi</h2>
+//       <h1>q7</h1>
+//       <ul>
+//         <li>Fra 575 000</li>
+//       </ul>
+//     </a>
+//   </article>
+//   <article class="columns large-4 small-6 review-preview {$modifiers}">
+//     <a href="#">
+//       <figure>
+//         <img src="/assets/cars/merc-s-class.jpg">
+//       </figure>
+//       <h2>Merchedes Benz</h2>
+//       <h1>S-klasse</h1>
+//       <ul>
+//         <li>Fra 675 000</li>
+//       </ul>
+//     </a>
+//   </article>
+//   <article class="columns large-4 small-6 review-preview {$modifiers}">
+//     <a href="#">
+//       <figure>
+//         <img src="/assets/cars/merc-glk.jpg">
+//       </figure>
+//       <h2>Merchedes Benz</h2>
+//       <h1>GLK</h1>
+//       <ul>
+//         <li>Fra 485 000</li>
+//       </ul>
+//     </a>
+//   </article>
+// </div>
+//
+// .dice-1 - Review with score 1 (lowest)
+// .dice-6 - Review with score 6 (highest)
+// .dice-multi - Review with multipe scores (assorted)
+//
+// Styleguide 31.4
+
+.review-preview {
+    text-align: center;
+    h1 {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin-top: 0;
+    }
+    h2 {
+        font-size: 1em;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            h1 {
+                text-decoration: underline;
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        margin-left: 0;
+        color: $color-grey;
+        font-size: .8em;
+    }
+
+    //figure {
+    //    position: relative;
+    //    padding-top: 57%;
+    //    background: $color-lightgrey;
+    //    img {
+    //        position: absolute;
+    //        bottom: 0;
+    //        left: 0;
+    //    }
+    //}
+
+     @for $dice from 1 through 6 {
+        &.dice-#{$dice} {
+            figure {
+                &:before {
+                    background: url('../assets/icon/dices/#{$dice}.svg');
+                }
+            }
+        }
+    }
+    &.dice-multi {
+        figure {
+            &:before {
+                background: url('../assets/icon/dices/multi.svg');
+            }
+        }
+    }
+    &[class^="dice-"], &[class*=" dice-"] {
+        figure {
+            display: relative;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: -12px;
+                width: 60px;
+                height: 47px;
+                // Use absolute size since cover makes it blurry
+                background-size: 60px;
+                background-repeat: no-repeat;
+                background-position: left bottom;
+                z-index: 2;
+            }
+        }
+    }
+    @media #{$small-only} {
+        h1 {
+            font-size: 1.2em;
+        }
+        h2 {
+            font-size: .8em;
+        }
+        @for $size from 1 through 6 {
+            &.small-#{$size} {
+                figure {
+                    &:before {
+                        left: -9px;
+                        background-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

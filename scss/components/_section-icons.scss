@@ -1,0 +1,147 @@
+//
+// Section-icon Variables
+//
+
+$section-icon-tiny: 1.88rem !default;
+$section-icon-small: 2.5rem !default;
+$section-icon-large: 3.75rem !default;
+$section-icon-default-background: $primary-color !default;
+
+//
+// Section-icon Mixins
+//
+
+@mixin section-icon-base(){
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem;
+    float: left;
+    position: relative;
+    text-align: center;
+    @include section-icon-size('small');
+    @media #{$medium-up}{
+        @include section-icon-size('large');
+    }
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@mixin section-icon-style($bg: $section-icon-default-background, $color: $white){
+    background-color: $bg;
+    color: $color;
+    svg{
+        circle,ellipse,line,path,polygon,polyline,rect{
+            fill: $color;
+        }
+    }
+}
+
+@mixin section-icon-size($size: 'small'){
+    @if $size == 'tiny'{
+        margin: 0 0.5rem 0.5rem 0;
+        width: $section-icon-tiny;
+        height: $section-icon-tiny;
+        [class^="icon-"], [class*=" icon-"]{
+            line-height: 1.7rem;
+            font-size: 1.5rem;
+        }
+        img, svg{
+            padding: 0.5rem;
+        }
+    }
+    @if $size == 'small'{
+    	margin: 0 0.5rem 0.5rem 0;
+        width: $section-icon-small;
+        height: $section-icon-small;
+        [class^="icon-"], [class*=" icon-"]{
+            line-height: 2.225rem;
+            font-size: 1.75rem;
+        }
+        img, svg{
+            padding: 0.5rem;
+        }
+    }
+    @if $size == 'large'{
+    	margin: 0 1rem 1rem 0;
+        width: $section-icon-large;
+        height: $section-icon-large;
+        [class^="icon-"], [class*=" icon-"]{
+            line-height: 3.5rem;
+            font-size: 2.75rem;
+        }
+        img, svg{
+            padding: 0.75rem;
+        }
+    }
+}
+
+@mixin section-icon(){
+    @include section-icon-base();
+    @include section-icon-style();
+}
+
+// Section icons
+//
+// The section-icon is rarely used alone, but rather as a part of other more complex components.
+//
+// Markup:
+// <div class="section-icon">
+//  <span class="icon-Chat-active"></span>
+// </div>
+//
+// Styleguide 5.1
+
+.section-icon {
+    @include section-icon();
+}
+
+// Size
+//
+// Force a constant size of the section-icon.
+//
+// Markup:
+// <div class="section-icon large">
+//  <span class="icon-Chat-active"></span>
+// </div>
+// <div class="section-icon small">
+//  <span class="icon-Chat-active"></span>
+// </div>
+// <div class="section-icon tiny">
+//  <span class="icon-Chat-active"></span>
+// </div>
+//
+// Styleguide 5.1.1
+
+.section-icon {
+    &.tiny{
+        @include section-icon-size('tiny');
+    }
+    &.small{
+        @include section-icon-size('small');
+    }
+    &.large{
+        @include section-icon-size('large');
+    }
+}
+
+// Icon font, Images and SVG
+//
+// The icon font, images or svg can be used as to create the icons.
+//
+// Markup:
+// <div class="section-icon">
+//  <span class="icon-Chat-active"></span>
+// </div>
+// <div class="section-icon">
+//  <img src="http://gfx.dagbladet.no/styleguide/icons/icon-chat-active.png" />
+// </div>
+// <div class="section-icon">
+//   <svg viewBox="0 0 60 60">
+//     <path d="M30.399,4.246C13.866,3.92,0.257,14.108,0.004,27c-0.088,4.482,1.45,8.701,4.188,12.312H4.191c4.709,6.05-0.43,16.45-0.43,16.45l15.174-6.535c3.269,1.033,6.822,1.635,10.544,1.708c16.533,0.326,30.141-9.862,30.395-22.755C60.129,15.287,46.932,4.572,30.399,4.246z M17.14,31.298c-2.037,0-3.688-1.651-3.688-3.688c0-2.037,1.651-3.688,3.688-3.688s3.688,1.651,3.688,3.688C20.828,29.647,19.177,31.298,17.14,31.298z M29.433,31.298c-2.037,0-3.688-1.651-3.688-3.688c0-2.037,1.651-3.688,3.688-3.688s3.688,1.651,3.688,3.688C33.121,29.647,31.47,31.298,29.433,31.298z M41.725,31.298c-2.037,0-3.688-1.651-3.688-3.688c0-2.037,1.651-3.688,3.688-3.688c2.037,0,3.688,1.651,3.688,3.688C45.413,29.647,43.762,31.298,41.725,31.298z"/>
+//   </svg>
+// </div>
+//
+// Styleguide 5.1.2

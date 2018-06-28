@@ -1,0 +1,147 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import
+    "functions",
+    "settings";
+
+$include-html-grid-classes: false;
+$include-table-visibility-classes: false;
+$include-legacy-visibility-classes: false;
+
+@import
+    "normalize",
+    "foundation/components/global",
+    "foundation/components/grid",
+    "foundation/components/visibility",
+    "foundation/components/type";
+
+$include-html-styleguide-examples: false;
+$include-html-top-nav-primary-classes: true;
+$include-html-top-nav-primary-dropdown-classes: false;
+$include-html-top-nav-secondary-classes: false;
+$include-html-top-nav-secondary-dropdown-classes: false;
+$include-html-top-nav-small-classes: false;
+$include-html-top-nav-login-classes: false;
+$include-html-top-nav-pageheader: false;
+
+$include-html-icon-classes: false;
+$include-html-section-title-classes: false;
+
+$include-html-default-headline-classes: true;
+$include-html-dynamic-headline-classes: true;
+
+$include-html-article-preview-background-classes: false;
+$include-html-article-preview-nativeads-classes: false;
+
+$include-font-style-normal: true;
+$include-font-style-italic: false;
+$include-font-icon: true;
+$include-secondary-font: false;
+
+@import
+    "base/main",
+    "base/fonts",
+    "base/image",
+    "base/colors",
+    "components/top-nav",
+    "components/icons",
+    "components/section-title",
+    "components/article-preview",
+    "components/row",
+    "components/section-icons",
+    "components/typography",
+    "components/headlines",
+    "components/utils",
+    "layouts/frontpage";
+
+.show-for-medium-up{
+    display: none !important;
+    @media #{$medium-up}{
+        display: inherit !important;
+    }
+}
+
+.hide-for-medium-up{
+    display: inherit !important;
+    @media #{$medium-up}{
+        display: none !important;
+    }
+}
+
+//NOTE: The grid is not included in it's entirety. We only include the basic classes, not 'push-' and 'pull-' etc.
+.row {
+    @include grid-row;
+    &.collapse {
+        > .column,
+        > .columns { @include grid-column($collapse:true, $float:false); }
+
+        .row {margin-left:0; margin-right:0;}
+    }
+    .row { @include grid-row($behavior:nest);
+        &.collapse { @include grid-row($behavior:nest-collapse); }
+    }
+}
+
+.column, .columns { @include grid-column($columns:$total-columns); }
+
+[class*="column"] + [class*="column"]:last-child { float: $last-child-float; }
+[class*="column"] + [class*="column"].end { float: $default-float; }
+
+@media #{$small-up} {
+    .column,
+    .columns { @include grid-column($columns:false, $position:true); }
+    @for $i from 1 through $total-columns {
+      .small-#{$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+    }
+    .row {
+        &.small-collapse {
+            > .column,
+            > .columns { @include grid-column($collapse:true, $float:false); }
+
+            .row {margin-left:0; margin-right:0;}
+        }
+    }
+}
+@media #{$medium-up} {
+    .column,
+    .columns { @include grid-column($columns:false, $position:true); }
+    @for $i from 1 through $total-columns {
+      .medium-#{$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+    }
+    .row {
+        &.medium-collapse {
+            > .column,
+            > .columns { @include grid-column($collapse:true, $float:false); }
+
+            .row {margin-left:0; margin-right:0;}
+        }
+    }
+}
+@media #{$large-up} {
+    .column,
+    .columns { @include grid-column($columns:false, $position:true); }
+    @for $i from 1 through $total-columns {
+      .large-#{$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+    }
+    .row {
+        &.large-collapse {
+            > .column,
+            > .columns { @include grid-column($collapse:true, $float:false); }
+
+            .row {margin-left:0; margin-right:0;}
+        }
+    }
+}
+
+.top-nav{
+    .primary{
+        .right{
+            display: none;
+        }
+    }
+
+    .small-navigation-toggle{
+        display: none;
+    }
+}

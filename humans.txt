@@ -1,0 +1,50 @@
+/* TEAM */
+  Inge Thorud
+  Location: Oslo
+
+  Sondre Husby Rostad
+  Location: Oslo
+
+  Magnus Hoem Hagen
+  Location: Oslo
+
+  Synne Kvamme Repp
+  Location: Oslo
+
+  Tom-Marius Olsen
+  Location: Oslo
+
+  Ola Strømman
+  Location: Oslo
+
+  Sebastian Brage Hansen
+  Location: Oslo
+
+  Thomas Krampl
+  Location: Oslo
+
+  Audun Aas
+  Location: Oslo
+
+  Guro Lindahl Flåten
+  Location: Oslo
+
+  Håkon Hagen
+  Location: Oslo
+
+  Dan Audne
+  Location: Oslo
+
+  Anita Kristoffersen
+  Location: Oslo
+
+  Paul Stølen
+  Location: Oslo
+
+/* THANKS */
+We owe beers and hugs to a lot of great projects and people from all over the web. If you are one of them and ever find yourself in Oslo we should hang out.
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: jquery, foundation, moment, mousetrap, mustache, picturefill, modernizr
+Software: grunt, assemble, sass, jasmine

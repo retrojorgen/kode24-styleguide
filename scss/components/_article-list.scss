@@ -1,0 +1,202 @@
+// Article lists
+//
+// A label-text can be added for additional information, such as number of comments, if it's a video, or if it requires a subscription to read.
+//
+// Styleguide 22.0
+
+.article-list{
+    list-style: none;
+    margin-left: 0;
+    li{
+        border-bottom: 0px solid $color-grey;
+        padding: 0.7rem 0 0.7rem 1.5rem;
+        position: relative;
+        &:last-child{
+            border-bottom: none;
+        }
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $color-grey;
+        }
+        a{
+           color: $color-black;
+           font-weight: 400;
+           padding-right: 5px;
+           text-decoration: none;
+           display: block;
+           @include clearfix;
+           &:before, &:after{
+               content: "";
+           }
+           &:hover{
+               text-decoration: underline;
+           }
+           img{
+               float: left;
+               margin-right: 0.5rem;
+               width: 3.75rem;
+               height: auto;
+           }
+        }
+        .label-text{
+            color: $color-grey;
+            text-decoration: none;
+            display: inline-block;
+        }
+    }
+}
+
+@mixin article-list-style($bg-color: $white){
+    .article-list{
+        background-color: $bg-color;
+
+        $divider-color: scale-color($bg-color, $lightness: -30%);
+        $color: $color-black;
+        @if color-contrast($bg-color, rgb(255, 255, 255)) > 4.5 {
+            $divider-color: scale-color($bg-color, $lightness: 40%);
+            $color: $white;
+        }
+
+        li{
+            border-bottom-color: $divider-color;
+            &:before{
+                color: $divider-color;
+            }
+            a{
+                color: $color;
+            }
+        }
+        .label-text{
+            color: $color;
+        }
+    }
+}
+
+// Ordered list
+//
+// Markup:
+// <ol class="article-list">
+//   <li><a href="#">Hoppet som gjør konkurrentene rasende <span class="label-text">(253 kommentarer)</span></a></li>
+//   <li><a href="#">Da Louis Van Gaal fikk se formen til rekordkjøpet Luke Shaw, ble han forferdet <span class="label-text">(Pluss)</span></a></li>
+//   <li><a href="#">Elsker nordmennene i «Hercules» <span class="label-text">(video)</span></a></li>
+// </ol>
+//
+// Styleguide 22.1
+
+ol.article-list{
+    counter-reset: counter;
+    li{
+        &:before{
+            content: counter(counter);
+            counter-increment: counter;
+        }
+    }
+}
+
+// Thumbnails
+//
+// Markup:
+// <ol class="article-list">
+//   <li><a href="#"><img src="http://placehold.it/60x60" /> Hoppet som gjør konkurrentene rasende <span class="label-text">(253 kommentarer)</span></a></li>
+//   <li><a href="#"><img src="http://placehold.it/60x60" /> Da Louis Van Gaal fikk se formen til rekordkjøpet Luke Shaw, ble han forferdet <span class="label-text">(Pluss)</span></a></li>
+//   <li><a href="#"><img src="http://placehold.it/60x60" /> Elsker nordmennene i «Hercules» <span class="label-text">(video)</span></a></li>
+// </ol>
+//
+// Styleguide 22.1.1
+
+// Unordered list
+//
+// Markup:
+// <ul class="article-list">
+//   <li><a href="#">Hoppet som gjør konkurrentene rasende <span class="label-text">(253 kommentarer)</span></a></li>
+//   <li><a href="#">Da Louis Van Gaal fikk se formen til rekordkjøpet Luke Shaw, ble han forferdet <span class="label-text">(Pluss)</span></a></li>
+//   <li><a href="#">Elsker nordmennene i «Hercules» <span class="label-text">(video)</span></a></li>
+// </ul>
+//
+// Styleguide 22.2
+
+ul.article-list{
+	li{
+		&:before{
+			content: "\e7b9";
+			font-family: "Helveticons";
+            font-size: 0.6rem;
+		}
+	}
+}
+
+// Thumbnails
+//
+// Markup:
+// <ul class="article-list">
+//   <li><a href="#"><img src="http://placehold.it/60x60" /> Hoppet som gjør konkurrentene rasende <span class="label-text">(253 kommentarer)</span></a></li>
+//   <li><a href="#"><img src="http://placehold.it/60x60" /> Da Louis Van Gaal fikk se formen til rekordkjøpet Luke Shaw, ble han forferdet <span class="label-text">(Pluss)</span></a></li>
+//   <li><a href="#"><img src="http://placehold.it/60x60" /> Elsker nordmennene i «Hercules» <span class="label-text">(video)</span></a></li>
+// </ul>
+//
+// Styleguide 22.2.1
+
+// No bullet
+//
+// Markup:
+// <ol class="article-list no-bullet">
+//   <li><a href="#">Hoppet som gjør konkurrentene rasende <span class="label-text">(253 kommentarer)</span></a></li>
+//   <li><a href="#">Da Louis Van Gaal fikk se formen til rekordkjøpet Luke Shaw, ble han forferdet <span class="label-text">(Pluss)</span></a></li>
+//   <li><a href="#">Elsker nordmennene i «Hercules» <span class="label-text">(video)</span></a></li>
+// </ol>
+//
+// Styleguide 22.3
+
+.article-list{
+    &.no-bullet{
+        li{
+            padding: 0.5rem 0 0.5rem 0;
+            &:before{
+                display: none;
+            }
+        }
+    }
+}
+
+// Thumbnails
+//
+// Markup:
+// <ol class="article-list no-bullet">
+//   <li><a href="http://example.com/123"><img src="http://placehold.it/60x60" /> Hoppet som gjør konkurrentene rasende <span class="label-text">(253 kommentarer)</span></a></li>
+//   <li><a href="http://example.com/456"><img src="http://placehold.it/60x60" /> Da Louis Van Gaal fikk se formen til rekordkjøpet Luke Shaw, ble han forferdet <span class="label-text">(Pluss)</span></a></li>
+//   <li><a href="http://example.com/789"><img src="http://placehold.it/60x60" /> Elsker nordmennene i «Hercules» <span class="label-text">(video)</span></a></li>
+// </ol>
+//
+// Styleguide 22.3.1
+
+// Color
+//
+// Markup:
+// <div class="row {$modifiers}">
+//   <div class="small-12 columns">
+//     <ol class="article-list">
+//       <li href="#"><a>Hoppet som gjør konkurrentene rasende <span class="label-text">(253 kommentarer)</span></a></li>
+//       <li href="#"><a>Da Louis Van Gaal fikk se formen til rekordkjøpet Luke Shaw, ble han forferdet <span class="label-text">(Pluss)</span></a></li>
+//       <li href="#"><a>Elsker nordmennene i «Hercules» <span class="label-text">(video)</span></a></li>
+//     </ol>
+//   </div>
+// </div>
+//
+// .primary - Primary
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+// .secondary - Secondary
+// .black - Black
+//
+// Styleguide 22.4
+
+.primary{ @include article-list-style($bg-color: $color-red); }
+.yellow{ @include article-list-style($bg-color: $color-yellow); }
+.green{ @include article-list-style($bg-color: $color-green); }
+.blue{ @include article-list-style($bg-color: $color-blue); }
+.secondary{ @include article-list-style($bg-color: $secondary-color); }
+.black{ @include article-list-style($bg-color: $color-black); }

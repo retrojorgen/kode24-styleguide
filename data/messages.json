@@ -1,0 +1,68 @@
+
+[
+    {
+        "pubDate": "NÅ",
+        "headline": "<span style='color:#d60000'>SISTE:</span> Person funnet død i Hemsedal",
+        "messages": 0,
+        "description": "Dagbladet følger saken og kommer med mer.",
+        "style": "black"
+    },
+  {
+    "pubDate": "NÅ",
+    "headline": "<span class='icon-Twitter'></span> Anne Marte Blindheim (@DBAnnemarte)",
+    "messages": 0,
+    "description": "Det Siv Jensen sier i trygdedebatten nå, er det totalt motsatte av det som står i Frp's landsstyrevedtak."
+  },
+  {
+    "pubDate": "noen sekunder siden",
+    "headline": "Trafikkulykke på Lillestrøm",
+    "messages": 1,
+    "description": "Politiet har fått melding om en stor trafikkulykke på Lillestrøm. Flere traktorer er involvert, det er uklart hvor mange som er skadd",
+    "image": "http://gfx.nrk.no//ZOdjxKXRyqRNW93oYxvDXQCvY3B-zw61YZcZggTuKTGQ"
+  },
+  {
+    "pubDate": "2 minutter siden",
+    "headline": "<span class='icon-Twitter'></span> @CNN",
+    "messages": 0,
+    "description": "President Obama has decided to release 14 Sons of Anarchy members. Six of them where convicted for murder."
+  },
+
+  {
+    "pubDate": "7 minutter siden",
+    "headline": "Relokalisering av Operaen",
+    "messages": 23,
+    "description": "Høyre skulle i kveld møtt Frp til samtaler om å flytte Operaen til Bergen - hvor den skal erstatte Brann Stadion, men møtet er nå skjøvet til i morgen, opplyser partiene i en pressemelding."
+  },
+  {
+    "pubDate": "10 minutter siden",
+    "headline": "Fotball – NM 2014",
+    "messages": 657,
+    "description": "Tromsø til cupfinalen etter sjumålsthriller mot Glimt",
+    "link": {
+      "image": "http://gfx.dagbladet.no/labrador/671/671974/6719747/jpg/active/960x.jpg",
+      "headline": "Tromsø møter RBK",
+      "description": "Direkte fra Ullevaal stadion. Komm.: Arne Scheie og Tom Nordlie."
+    }
+  },
+  {
+    "pubDate": "11 minutter siden",
+    "headline": "<span class='icon-Twitter'></span> @oslopolitiops",
+    "messages": 0,
+    "description": "Politiet har gjennomført en promillekontroll ved Frognerparken. Ingen blåste rødt, men fire menn bøtelagt for å ha kjørt med Lyn-drakt."
+  },
+  {
+    "pubDate": "13 minutter siden",
+    "headline": "Flommen i østfold",
+    "messages": "67",
+    "description": "Vi har nå fått inn et bilde fra flommen på Torstrand i Larvik. Sånn ser det ut der nå. Foto: Bjørn Langsem",
+    "image": "http://g.api.no/obscura/API/image/r1/escenic/978x1200r/201305141134235/archive/04899/flom2_2048_4899523a.jpg",
+    "style": "black"
+},
+{
+    "pubDate": "noen sekunder siden",
+    "headline": "Trafikkulykke på Lillestrøm",
+    "messages": 1,
+    "description": "Politiet har fått melding om en stor trafikkulykke på Lillestrøm. Flere traktorer er involvert, det er uklart hvor mange som er skadd",
+    "image": "http://gfx.nrk.no//ZOdjxKXRyqRNW93oYxvDXQCvY3B-zw61YZcZggTuKTGQ"
+}
+]

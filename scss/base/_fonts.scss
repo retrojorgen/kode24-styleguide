@@ -1,0 +1,102 @@
+//
+// Font Variables
+//
+
+$include-font: true !default;
+$include-font-style-normal: $include-font !default;
+$include-font-style-italic: $include-font !default;
+$include-font-icon: $include-font !default;
+$include-secondary-font: $include-font !default;
+
+// Fonts
+//
+// At Dinside we are passionate about typography and the written word. We have chosen fonts and weights with readability in mind, but that also gives us freedom to experiment.
+//
+// Styleguide 3
+
+@if $include-font{
+    @if $include-font-style-normal{
+        @font-face {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 300;
+          src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+        }
+        @font-face {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+        }
+        @font-face {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 800;
+          src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(https://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+        }
+        @font-face {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 700;
+          src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+        }
+        @font-face {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 800;
+          src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(https://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+        }
+    }
+    @if $include-font-style-italic{
+        @font-face {
+          font-family: 'Open Sans';
+          font-style: italic;
+          font-weight: 400;
+          src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+        }
+    }
+    @if $include-font-icon{
+        @font-face {
+            font-family: 'Helveticons';
+            font-style: normal;
+            font-weight: normal;
+            src: url(//styleguide.dinside.no/fonts/helveticons.woff) format('woff');
+        }
+        @font-face {
+            font-family: 'Fontello';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Fontello'), url(assets/fonts/fontello.woff) format('woff');
+        }
+    }
+}
+
+// Open Sans
+//
+// Open sans is our base font and used in most cases. It's a font with good rhythm and spacing. *Open sans Black* in large size is well suited for headlines, and *Open sans Light* is a good contrast when setting large blocks og text. Available weights are *light*, *normal*, *semi-bold*, *bold*, and *black*. The font is hosted externally and included as a stylesheet `<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700,800' rel='stylesheet' type='text/css'>`
+//
+// Markup:
+// <div class="font-example-open-sans">
+//   <h1>The five boxing wizards jump quickly.</h1>
+//   <h2>The five boxing wizards jump quickly.</h2>
+//   <h3>The five boxing wizards jump quickly.</h3>
+//   <h4>The five boxing wizards jump quickly.</h4>
+//   <h5>The five boxing wizards jump quickly.</h5>
+//   <h6>The five boxing wizards jump quickly.</h6>
+//   <p>
+//     The five boxing wizards jump quickly.<br />
+//     <strong>The five boxing wizards jump quickly.</strong><br />
+//     <em>The five boxing wizards jump quickly.</em>
+//   </p>
+// </div>
+//
+// Styleguide 3.1
+
+@if $include-html-styleguide-examples {
+    .font-example-open-sans{
+        font-family: 'Open Sans', sans-serif;
+        *{
+            font-family: inherit;
+        }
+    }
+}

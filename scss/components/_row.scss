@@ -1,0 +1,308 @@
+// Row
+//
+// Styleguide 21
+
+@mixin row-style($bg: $primary-color, $color: $white, $exclude:false){
+    padding-top: $article-box-preview-padding;
+    background-color: $bg;
+    color: $color;
+    margin-bottom: $column-gutter / 2;
+    overflow: hidden;
+    &>.deck{
+        color: $color;
+    }
+    @if $exclude{
+        &:not(.collapse){
+            article.preview.#{$exclude}{
+                & > a{
+                    padding-top: 0 !important;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+                .related, .actions{
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+// Deck
+//
+// Markup:
+// <section class="row secondary">
+//   <h1 class="deck">Dagbladet avslører:</h1>
+//   <article class="preview secondary small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+//   <article class="preview secondary small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330145/33014523/jpg/active/978x.jpg">
+//       <h1 itemprop="headline" class="headline">- Trondheim kommune politianmelder SOS Rasisme</h1>
+//       <p itemprop="description" class="standfirst">Dagblad-avsløring utløste gransking i Trondheim kommune. Nå reagerer politikerne.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </section>
+//
+// Styleguide 21.1
+
+.row{
+    &>.deck{
+        color: inherit;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        padding: 0.5em 0;
+        font-size: 0.8rem;
+        font-weight: bold;
+        background-color: inherit;
+        background-color: transparent;
+        margin-bottom: 0;
+        margin-top: -#{$article-box-preview-padding};
+        position: relative;
+        z-index: $z-index-page;
+        @media #{$medium-up}{
+            font-size: 1rem;
+        }
+    }
+}
+
+// Color
+//
+// Markup:
+// <section class="row {$modifiers}">
+//   <h1 class="deck">Dagbladet avslører:</h1>
+//   <article class="preview {$modifiers} small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+//   <article class="preview {$modifiers} small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330145/33014523/jpg/active/978x.jpg">
+//       <h1 itemprop="headline" class="headline">- Trondheim kommune politianmelder SOS Rasisme</h1>
+//       <p itemprop="description" class="standfirst">Dagblad-avsløring utløste gransking i Trondheim kommune. Nå reagerer politikerne.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </section>
+//
+// .primary - Red
+// .orange - Orange
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+// .purple - Purple
+// .burgundy - Burgundy
+// .pink - Pink
+// .secondary - Secondary
+// .black - Black
+//
+// Styleguide 21.2
+
+.row{
+    &.primary{ @include row-style($bg: $primary-color); }
+    &.yellow{ @include row-style($bg: $color-yellow, $color: $color-black); }
+    &.green{ @include row-style($bg: $color-green, $color: $color-black); }
+    &.blue{ @include row-style($bg: $color-blue, $color: $color-black); }
+    &.secondary{ @include row-style($bg: $secondary-color, $color: $color-black); }
+    &.black{ @include row-style($bg: $color-black); }
+}
+
+// Nested
+//
+// Markup:
+// <section class="row burgundy">
+//   <article class="preview burgundy small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//       <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+//   <article class="preview pink small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330145/33014523/jpg/active/978x.jpg">
+//       <h1 itemprop="headline" class="headline">- Trondheim kommune politianmelder SOS Rasisme</h1>
+//       <p itemprop="description" class="standfirst">Dagblad-avsløring utløste gransking i Trondheim kommune. Nå reagerer politikerne.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </section>
+// <section class="row purple">
+//   <article class="preview purple small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//     <a itemprop="url">
+//       <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//       <h1 itemprop="headline" class="headline small-size-40">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//       <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//       <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+//   <div class="small-12 medium-6 large-6 columns">
+//     <div class="row">
+//       <article class="preview green small-12 columns" itemscope="" itemtype="http://schema.org/NewsArticle" role="article">
+//         <a itemprop="url">
+//           <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//           <h1 itemprop="headline" class="headline small-size-20">- Vi fant mer penger enn hva det er normalt å ha hjemme</h1>
+//           <p itemprop="description" class="standfirst">Politiet om betydelig kontantbeløp funnet under razzia hjemme hos en leder i SOS Rasisme.</p>
+//           <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//         </a>
+//       </article>
+//       <article class="preview blue small-12 medium-12 large-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//         <a itemprop="url">
+//           <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330145/33014523/jpg/active/978x.jpg">
+//           <h1 itemprop="headline" class="headline small-size-20">- Trondheim kommune politianmelder SOS Rasisme</h1>
+//           <p itemprop="description" class="standfirst">Dagblad-avsløring utløste gransking i Trondheim kommune. Nå reagerer politikerne.</p>
+//           <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//         </a>
+//       </article>
+//     </div>
+//   </div>
+// </section>
+//
+// Styleguide 21.2.1
+
+// Collapsed
+//
+// Markup:
+// <div class="frontpage">
+//   <section class="row burgundy collapse">
+//     <article class="preview burgundy small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//       <a itemprop="url">
+//         <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//         <h1 itemprop="headline" class="headline">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//         <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//         <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//       </a>
+//     </article>
+//     <article class="preview pink small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//       <a itemprop="url">
+//         <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330145/33014523/jpg/active/978x.jpg">
+//         <h1 itemprop="headline" class="headline">- Trondheim kommune politianmelder SOS Rasisme</h1>
+//         <p itemprop="description" class="standfirst">Dagblad-avsløring utløste gransking i Trondheim kommune. Nå reagerer politikerne.</p>
+//         <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//       </a>
+//     </article>
+//   </section>
+//   <section class="row purple collapse">
+//     <article class="preview purple small-12 medium-6 large-6 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//       <a itemprop="url">
+//         <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/269/269931/26993179/jpg/active/978x.jpg">
+//         <h1 itemprop="headline" class="headline small-size-40">Politiet vil fengsle SOS Rasisme-leder i fire uker</h1>
+//         <p itemprop="description" class="standfirst">Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen.</p>
+//         <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//       </a>
+//     </article>
+//     <div class="small-12 medium-6 large-6 columns">
+//       <div class="row">
+//         <article class="preview green small-12 columns" itemscope="" itemtype="http://schema.org/NewsArticle" role="article">
+//           <a itemprop="url">
+//             <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330162/33016275/jpg/active/978x.jpg">
+//             <h1 itemprop="headline" class="headline small-size-20">- Vi fant mer penger enn hva det er normalt å ha hjemme</h1>
+//             <p itemprop="description" class="standfirst">Politiet om betydelig kontantbeløp funnet under razzia hjemme hos en leder i SOS Rasisme.</p>
+//             <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//           </a>
+//         </article>
+//         <article class="preview blue small-12 medium-12 large-12 columns" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+//           <a itemprop="url">
+//             <img itemprop="image" title="" alt="" src="http://gfx.dagbladet.no/labrador/330/330145/33014523/jpg/active/978x.jpg">
+//             <h1 itemprop="headline" class="headline small-size-20">- Trondheim kommune politianmelder SOS Rasisme</h1>
+//             <p itemprop="description" class="standfirst">Dagblad-avsløring utløste gransking i Trondheim kommune. Nå reagerer politikerne.</p>
+//             <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//           </a>
+//         </article>
+//       </div>
+//     </div>
+//   </section>
+// </div>
+//
+// Styleguide 21.3
+
+//NOTE: This part is a bit tricky. It fixes padding isses when nesting columns (articles) in the grid that also has padding (wrapped in colored box).
+//If you find yourself needing to make changes here, please do so cautiously. Order of these rules are important for specificity.
+.row.collapse,
+.row .row.collapse{
+    padding-top: 0;
+    overflow: hidden;
+    margin-bottom: $column-gutter / 2;
+    .deck{
+        margin-top: 0;
+    }
+    .columns{
+        margin-bottom: 0;
+    }
+    .row{
+        width: auto;
+        margin: 0;
+        max-width: none;
+        overflow: hidden;
+        & > .column,
+        & > .columns{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.row.collapse + .row.collapse{
+    margin-top: -$column-gutter / 2;
+}
+
+// Extrinsic content
+//
+// When displaying a row of content that links to articles from other sites the deck **must** read *Eksternt innhold*. Additionally see [Article preview extinsic content](/docs/section-20.html#ref-20.11).
+//
+// Markup:
+// <div class="row extrinsic">
+//   <div class="deck">Eksternt innhold</div>
+//   <article class="preview small-4 columns" itemscope itemtype="http://schema.org/WPAdBlock" role="article" data-id="3074764762">
+//     <a itemprop="url" rel="nofollow">
+//       <img itemprop="image" title="" alt="" src="/assets/test/extrinsic-1.jpg">
+//       <h1 itemprop="headline" class="headline">Hva har skjedd med Jessica Simpson?</h1>
+//       <p itemprop="description" class="standfirst">Viste fram blåmerke på Instagram.</p>
+//       <span class="label" itemprop="publisher">Se&Hør</span> <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+//   <article class="preview small-4 columns" itemscope itemtype="http://schema.org/WPAdBlock" role="article" data-id="3074764762">
+//     <a itemprop="url" rel="nofollow">
+//       <img itemprop="image" title="" alt="" src="/assets/test/extrinsic-2.jpg">
+//       <h1 itemprop="headline" class="headline">Slik blir du enkelt kvitt tørre føtter</h1>
+//       <p itemprop="description" class="standfirst">Tørr, død hud er både ekkelt og ubehagelig.</p>
+//       <span class="label pink" itemprop="publisher">KK</span> <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+//   <article class="preview small-4 columns" itemscope itemtype="http://schema.org/WPAdBlock" role="article" data-id="3074764762">
+//     <a itemprop="url" rel="nofollow">
+//       <img itemprop="image" title="" alt="" src="/assets/test/extrinsic-3.jpg">
+//       <h1 itemprop="headline" class="headline">12 «regler» alle småbarn lever etter</h1>
+//       <p itemprop="description" class="standfirst">Lever du under disse herlige regelrytterne?</p>
+//       <span class="label" itemprop="publisher">SOL</span> <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 21.4
+
+.row{
+    &.extrinsic{ @include row-style($bg: $secondary-color, $color: $color-black, $exclude: "extrinsic"); }
+}
+
+
+//FIXME: undocumented
+
+.row{
+    &.full-width{
+        max-width: none;
+    }
+}

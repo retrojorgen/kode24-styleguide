@@ -1,0 +1,282 @@
+---
+title: Front-end
+---
+
+<!-- NOTE: This document is about how to use the styleguide, not contibuting to it. For contibuting see contibuting.md -->
+
+<h1>Frontend Guidelines</h1>
+
+<h2 id="html">HTML</h2>
+
+<p>Moving forward we write all our pages using HTML5. The correct doctype is <code>&lt;!DOCTYPE html&gt;</code>. It's important that we use proper semantics in our HTML so <a href="http://diveinto.html5doctor.com/">dive in</a> and get acquainted with all the new elements in HTML5.</p>
+
+<h3>Protocol-relative URLs</h3>
+<p>To avoid mixing <code>http</code> and <code>https</code> on the same page you can use protocol relative URLs. This is assuming the site you’re pointing to has asset available on both HTTP and HTTPS.</p>
+<pre class="prettyprint lang-html">{{#escape}}
+<script src="//dagbladet.com/scripts/app.min.js"></script>
+{{/escape}}</pre>
+
+<h3>Responsive images</h3>
+<p>To tackle the current issue regarding images when building a responsive site we have implemented picturefill, a javascript polyfill for the new <code>picture</code> element (and associated features). For now we only use <code>srcset</code> and <code>sizes</code> features on the <code>img</code> element. For an in-depth explanation of how these features work read Eric Portis post <a href="http://ericportis.com/posts/2014/srcset-sizes/">Srcset and sizes</a>.</p>
+<p>For the <code>sizes</code> attribute we'll be using the same media queries as in our grid specified in the following order; large, medium, small (default). Note that the <code>length</code> value after each media query must be adjusted for each image and breakpoint.</p>
+<pre class="prettyprint lang-html">{{#escape}}
+<img sizes="(min-width: 64.063em) 100vw, (min-width: 40.063em) 100vw, 100vw" … >
+{{/escape}}</pre>
+<p>We create one image for each of the media queries specified in the <code>sizes</code> attribute. Each of these images should have the width of the largest value within the media query.</p>
+<pre class="prettyprint lang-html">{{#escape}}
+<img srcset="/test-small.jpg 640w, /test-medium.jpg 1024w, /test-large.jpg 1440w" … >
+{{/escape}}</pre>
+<p>Putting the pices together.</p>
+<pre class="prettyprint lang-html">{{#escape}}
+<img sizes="(min-width: 40.063em) 100vw, (min-width: 64.063em) 100vw, 100vw" srcset="/test-small.jpg 640w, /test-medium.jpg 1024w, /test-large.jpg 1440w" … >
+{{/escape}}</pre>
+
+<h3>Accessibility</h3>
+<p>Making content accessible to everyone is encouraged. Good accessibility can help people with disabilities (e.g. blindness and low vision, hearing loss, learning disabilities and limited movement) perceive our content in a meaningful way. There are several things we can do, but the <strong>first and most important thing is writing semantically good HTML</strong>. We cannot stress that enough.</p>
+
+<h4>Universal Design</h4>
+<blockquote class="styleguide-quote">Universal design means "designing, or accommodating, the main solution with regards to physical conditions, so that the solution may be used by as many people as possible," regardless of disability.</blockquote>
+<p>In Norway we have regulations stating new ICT solutions should be universally designed from 1st July 2014. Existing ICT solutions should be universally designed from 2021. Short version – this means that we are required to achieve a AA on <a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>. The Norwegian Ministry of Government Administration, Reform and Church Affairs has a <a href="http://uu.difi.no/veiledning/nettsider/krav-til-nettlosninger/krav-wcag">list of the cirteria required (norwegian)</a> to achieve the AA grade.</p>
+<p>In addition, we assign <a href="http://www.w3.org/TR/wai-aria/roles#landmark_roles_header">landmark roles</a> using <a href="http://www.w3.org/WAI/intro/aria">WAI-ARIA</a> to assist navigation.</p>
+
+<h3>Schemas</h3>
+<blockquote class="styleguide-quote">This site [<a href="http://schema.org">schema.org</a>] provides a collection of schemas that webmasters can use to markup HTML pages in ways recognized by major search providers, and that can also be used for structured data interoperability (e.g. in JSON). Search engines including Bing, Google, Yahoo! and Yandex rely on this markup to improve the display of search results, making it easier for people to find the right Web pages.</blockquote>
+<p>For the benefit of search providers we apply schemas where appropriate. Here are a few of the most used schemas you should be familiar with:</p>
+<ul>
+    <li><a href="http://schema.org/NewsArticle">NewsArticle</a></li>
+    <li><a href="https://schema.org/associatedMedia">associatedMedia</a></li>
+    <li><a href="https://schema.org/ImageObject">ImageObject</a></li>
+    <li><a href="https://schema.org/VideoObject">VideoObject</a></li>
+    <li><a href="http://schema.org/Review">Review</a></li>
+</ul>
+
+<h3>Outline Algorithm</h3>
+<blockquote class="styleguide-quote">The document outlining algorithm is a mechanism for producing outline summaries of Web pages based on how they are marked up. Every Web page has an outline…</blockquote>
+<p>There is a great article on Smashing Magazine regarding the <a href="http://www.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/">HTML5 Outline Algorithm</a>.</p>
+<p>So again, writing semantically good HTML, should get us far in creating a good document outline. There is a great litte <a href="http://gsnedders.html5.org/outliner/">tool</a> you can use to check the outline made by <a href="https://twitter.com/gsnedders">Geoffrey Sneddon</a></p>
+
+<h3>Loading CSS and Javascripts</h3>
+<p>Getting content in front of our readers as fast as possible is one of the most important things we do for the overall experience. <a href="https://developers.google.com/web/fundamentals/">Google Web Fundementals</a> covers the <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en">critical rendering path</a> and is worth a read.</p>
+<p>The approach is simple but delicate. Critical CSS is inlined in the head of the document, the rest is loaded after first paint. Fonts are cached in localStorage to prevent <abbr title="Flashes of unstyled content">FOUC</abbr>. See examples of how to load <a href="">CSS</a> and <a href="">Javascript</a> in a non blocking manner.</p>
+
+<h2 id="javascript">Javascript</h2>
+
+<p>Writing vanilla javascript is always preferred, but there is no point in reinveting the wheel. <a href="http://www.jquery.com">jQuery</a> is usually required on all our pages. It covers our most basic needs and fixes browser incompatibilities. In addition we use parts of <a href="http://foundation.zurb.com/">Foundation</a> that gives us a few helpful <a href="http://foundation.zurb.com/docs/javascript-utilities.html">utilities</a> like <code>throttle</code> and <code>debounce</code>. <a href="http://craig.is/killing/mice">Mousetrap</a> is available for binding keyboard shortcuts, but please don't override the browsers default shortcuts. For templating <a href="http://mustache.github.io">Mustache</a> is always at hand. <a href="http://momentjs.com/">Moment</a> is usefull for formating and manipulating dates.</p>
+<p>Avoid adding any more libraries unless they are used on <strong>all</strong> pages. Third-party libraries are added using <a href="http://bower.io/">Bower</a>.</p>
+
+<h3>Loading scripts</h3>
+<p>We want our pages to render as fast as possible. Duh! This means that scripts should not block DOM or CSSOM rendering. Loading scripts using the <code>async</code> attribute ensures this.</p>
+<pre class="prettyprint lang-html">{{#escape}}
+<body>
+    <!-- Your content -->
+    <script async src="/scripts/app.min.js"></script>
+</body>
+{{/escape}}</pre>
+
+<h3>Writing components</h3>
+<p>We try to create all our component using the same basic <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">pattern</a>. Each component is attached to the global <code>db</code> namespace. It must expose at least three public functions, <code>init</code>, <code>reflow</code> and <code>destroy</code>. <code>init</code> is called on each components when the DOM is ready. <code>reflow</code> is meant to be called when you have injected new content into the DOM, and want to attach components to the new content. Call <code>destroy</code> when you want to kill the component.</p>
+<p>Our preferred way of attaching components to elements is adding a data-attribute to the element and look for that data-attribute when initializing the component (see example below). If you need to pass options to the component, you can add the options to a <code>data-options</code> attribute as a semicolon delimited set of values, and use <code>Foundation.utils.data_options();</code> to parse these.</p>
+<p>Note how we import globals like jQuery. This allows us to alias these and more easily switch them out in the future.</p>
+<pre class="prettyprint lang-js">
+;(function() {
+    'use strict';
+
+    window.db.Mycomponent = (function($){
+        function toggle(event){
+            //Do some toggle
+        }
+
+        function init(){
+            $('[data-mycomponent]').each(function(i, el){
+                $(el).off('click').on('click', toggle);
+
+                var defaults = {
+                    text : '',
+                    classes : "fixed overlay"
+                };
+                options = $.extend({}, defaults, Foundation.utils.data_options( $(el) ));
+
+                $(el).data('options', options);
+            });
+        };
+
+        function destroy(){
+            $('[data-mycomponent]').each(function(i, el){
+                $(el).unbind('click');
+            });
+        };
+
+        //Return public pointers
+        return {
+            init: init,
+            reflow: init,
+            destroy: destroy
+        };
+    })(jQuery);
+
+})();
+</pre>
+
+<h2 id="css">CSS</h2>
+
+<p>Dagbladet is buildt as a customized fork of the <a href="http://foundation.zurb.com">Foundation</a> framework with some additional components on top.<p>
+
+<h3>Loading CSS</h3>
+<p>Critical CSS should be inlined in the <code>head</code> of the document. The critical styles can at all times be found at <code>//styleguide.dinside.no/stylesheets/critical.css</code>. The main CSS should be loaded after first paint, to make this happen place this script right before the closing body-tag:</p>
+
+<pre class="prettyprint lang-javascript">
+var cb = function() {
+    var h = document.getElementsByTagName('head')[0];
+    var useSSL = "https:" == document.location.protocol;
+
+    var l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = (useSSL ? "https:" : "http:") + '//styleguide.dinside.no/stylesheets/app.css';
+
+    h.parentNode.insertBefore(l, h);
+};
+
+var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+if(raf){
+    raf(cb);
+} else {
+    window.addEventListener('domContentLoaded', cb);
+};
+</pre>
+
+<p>We also want to load fonts as fast as possible to prevent <abbr title="Flashes of unstyled content">FOUC</abbr>. This script should be placed in the head of the page. Fonts are then stored and cahed in localStorage.</p>
+
+<pre class="prettyprint lang-javascript">
+! function() {
+    function e(e, t, n) {
+        e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+    }
+
+    function t(e) {
+        return window.localStorage && localStorage.font_css_cache && localStorage.font_css_cache_file === e
+    }
+
+    function n() {
+        if (window.localStorage && window.XMLHttpRequest)
+            if (t(o)) a(localStorage.font_css_cache);
+            else {
+                var n = new XMLHttpRequest;
+                n.open("GET", o, !0), e(n, "load", function() {
+                    4 === n.readyState && (a(n.responseText), localStorage.font_css_cache = n.responseText, localStorage.font_css_cache_file = o)
+                }), n.send()
+            } else {
+            var c = document.createElement("link");
+            c.href = o, c.rel = "stylesheet", c.type = "text/css", document.getElementsByTagName("head")[0].appendChild(c), document.cookie = "font_css_cache"
+        }
+    }
+
+    function a(e) {
+        var t = document.createElement("style");
+        t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t)
+    }
+    var useSSL = "https:" == document.location.protocol;
+    var o = (useSSL ? "https:" : "http:") + "//styleguide.dinside.no/stylesheets/fonts.css";
+    window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
+}();
+</pre>
+
+<h3>Organizing CSS Rules</h3>
+<p>
+    CSS rules are categorizes into three parts. <strong>Base</strong> rules are the defaults. They are always element selectors like <code>body, h1 and p</code>.
+    <strong>Layouts</strong> are large sections and usually appears only once on each page. Layouts are often wrappers that holds togheter several components.
+    <strong>Components</strong> are small reusable blocks of content like buttons, tables, panels or forms. They often have several variations and states.
+</p>
+<p>A fourth category, that are not really rules are <strong>animations/transitions</strong>.</p>
+
+<h4>Measurment units</h4>
+<p>We use <code>rem</code> for font-size with a base of <code>16px</code>. This allows for better scaling when creating components and layouts. In some cases, like the front page, we use <code>vm</code> to allow flexible scaling of headlines.</p>
+
+<h4>Image urls</h4>
+<p>Images that follow this project must be added to the <code>/assets</code> folder. To ensure that the right image is used with the right version of the stylesheets we use a build in helper in sass <code>image-url(some-awsome-image.jpg)</code>. <a href="https://github.com/sindresorhus/grunt-sass#imagepath">Documentation for image-path.</a> </p>
+
+<h4>Naming conventions</h4>
+<ul>
+    <li>Use <code>-</code> not underscore or camelcase when creating names. Eg. <code>.section-bar</code> or <code>.featured-content</code>.</li>
+    <li>Use the <code>is-</code> prefix for state rules. Eg. <code>.is-closed</code> or <code>.is-sticky</code>.</li>
+    <li>Use the <code>has-</code> prefix for content descriptive rules. Eg. <code>.has-related</code> or <code>.has-comments</code>.</li>
+</ul>
+
+<h4>Specificity</h4>
+<p>As a rule of thumb use class names. Try minimizing the depth of your selectors as mutch as possible. Think twice before you go combining element and classes like <code>article.preview{ … }</code>. For elements that can <strong>only occur once</strong> you should use an ID.<p>
+
+<h4>Animations and Transitions</h4>
+<p>When writing animations and transitions try your best to avoid creating jank. Using the css properties listed below will help you eliminate jank and reach the magical 60fps. Note: The element will need to be on its own composition layer.</p>
+<pre class="prettyprint lang-css">
+Position: transform: translate(npx, npx);
+Scale: transform: scale(n);
+Rotation: transform: rotate(ndeg);
+Opacity: opacity: 0…1;
+</pre>
+<p>Althoug not widely supported yet, you should also add the <a href="http://caniuse.com/#search=will-change"><code>will-change</code></a> porperty where approprite.</p>
+<pre class="prettyprint lang-css">
+.is-going-to-move{
+    will-change: transform;
+}
+</pre>
+
+<h4>Experimental and deprecated features</h4>
+<p>When working on experimental new features add a <code>-experimental</code> suffix to your the css namespace.</p>
+<pre class="prettyprint lang-css">
+.button-experimental{
+    background: rgb(214, 0, 0);
+}
+</pre>
+
+<h4>Variation for A/B tesing</h4>
+<p>When planning a A/B test with multiple variations – add a <code>-variation-#</code> suffix to each variation in the css namespace.</p>
+<pre class="prettyprint lang-css">
+.button-variation-1{
+    background: rgb(214, 0, 0);
+}
+
+.button-variation-2{
+    background: rgb(214, 0, 0);
+    text-decoration: underline;
+}
+
+.button-variation-3{
+    background: rgb(32, 32, 32);
+    text-decoration: underline;
+}
+</pre>
+
+<h3>Writing components</h3>
+<p>When creating customizable components with multiple variations, we use a simple pattern base/style.</p>
+<pre class="prettyprint lang-css">
+$mycomponent-color: #D60000 !default;
+
+// Create a -base mixin. It contains rules for the default styling of the component.
+@mixin mycomponent-base{
+    //Base styles for the component
+    …
+};
+
+// Make the component customizable by creating a -style mixin containing styles for each customizable property. Each of the property values are passed as arguments to the mixin.
+@mixin mycomponent-style($color: $mycomponent-color){
+    //Add styling like color etc. with values passed as arguments
+    //Remember to add defaluts
+    …
+};
+
+// Optinally you can create a mixin including the -base and -style mixins as a shourtcut.
+@mixin mycomponent(){
+    @include mycomponent-base;
+    @include mycomponent-style;
+}
+
+// Finally, include the mixins and create the variations needed.
+.some-classname{
+    @include mycomponent;
+    &.example-1{
+        @include mycomponent-style($color: #222222);
+    }
+    &.example-2{
+        @include mycomponent-style($color: #14A8E2);
+    }
+}
+</pre>

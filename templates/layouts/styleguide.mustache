@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#D60000">
+    <title>{{#sections.0}}{{sections.0.reference}}.0 - {{sections.0.header}}{{/sections.0}}{{^sections.0}}{{title}}{{/sections.0}} | Dinside {{pkg.name}} {{pkg.version}}</title> 
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="/stylesheets/styleguide.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <header class="styleguide-header">
+        <div class="styleguide-banner">
+            <a class="styleguide-toggle-menu icon-Hamburger"></a>
+            <img src="/assets/styleguide/dinside-logo-190.svg">
+            <h1 class="styleguide-title">{{pkg.name}} {{pkg.version}}</h1>
+            <input type="search" list="js-styleguide-lookup" class="styleguide-lookup show-for-medium-up" placeholder="Quick search" />
+            <datalist id="js-styleguide-lookup">
+                <option value="Introduction" data-url="/index.html" />
+                <option value="HTML and templates" data-url="/html-and-templates.html" />
+                <option value="Templates" data-url="/html-and-templates.html" />
+                <option value="Markup" data-url="/html-and-templates.html" />
+                <option value="Javascript" data-url="/javascript.html" />
+                <option value="CSS" data-url="/docs/index.html" />
+                <option value="Performance budget" data-url="/performance-budget.html" />
+                <option value="Microcopy" data-url="/microcopy.html" />
+                <option value="Browser support" data-url="/browser-support.html" />
+                <option value="Resources" data-url="/resources.html" />
+                <option value="Changelog" data-url="/changelog.html" />
+                {{#styleguide}}
+                    <option value="{{header}}" data-url="/docs/section-{{refParts.0}}.html" />
+                    {{#tags}}
+                        <option value="{{.}}" data-url="/docs/section-{{refParts.0}}.html" />
+                    {{/tags}}
+                    {{#sections}}
+                        {{#tags}}
+                            <option value="{{.}}" data-url="/docs/section-{{refParts.0}}.html#ref-{{reference}}" />
+                        {{/tags}}
+                        {{#sections}}
+                            {{#tags}}
+                                <option value="{{.}}" data-url="/docs/section-{{refParts.0}}.html#ref-{{reference}}" />
+                            {{/tags}}
+                        {{/sections}}
+                    {{/sections}}
+                {{/styleguide}}
+            </datalist>
+        </div>
+        <nav>
+            <ol>
+                <li><a href="/index.html">Introduction</a></li>
+                <li><a href="/design-language.html">Design language</a></li>
+                <li>
+                    <a href="/front-end.html">Code guidelines</a>
+                    <ul>
+                        <li><a href="/front-end.html#html">HTML</a></li>
+                        <li><a href="/front-end.html#javascript">Javascript</a></li>
+                        <li><a href="/front-end.html#css">CSS</a></li>
+                    </ul>
+                </li>
+                <li><a href="/microcopy.html">Microcopy</a></li>
+                <li><a href="/resources.html">Resources</a></li>
+                <li><a href="/changelog.html">Changelog</a></li>
+                <li><a href="/browser-support.html">Browser support</a></li>
+                <li class="divider"></li>
+                <li class="heading">Prototypes</li>
+                <li>
+                    <ul>
+                        <li><a href="/prototypes/frontpage.html">Frontpage</a></li>
+                        <li><a href="/prototypes/article.html">Article</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="heading">Pattern primer</li>
+                {{#styleguide}}
+                    <li>
+                        <a class="ref-level-{{refDepth}}" href="/docs/section-{{refParts.0}}.html">{{reference}}.0 - {{header}}</a> {{#requiresjs}}<span class="label secondary radius">js</span>{{/requiresjs}}
+                        <ol>
+                            {{#sections}}
+                                <li>
+                                    <a class="ref-level-{{refDepth}} {{#deprecated}}deprecated{{/deprecated}}" href="/docs/section-{{refParts.0}}.html#ref-{{reference}}">{{reference}} - {{header}}</a> {{#requiresjs}}<span class="label secondary radius">js</span>{{/requiresjs}}
+                                    <ol>
+                                        {{#sections}}
+                                            <li><a class="ref-level-{{refDepth}} {{#deprecated}}deprecated{{/deprecated}}" href="/docs/section-{{refParts.0}}.html#ref-{{reference}}">{{reference}} - {{header}}</a> {{#requiresjs}}<span class="label secondary radius">js</span>{{/requiresjs}}</li>
+                                        {{/sections}}
+                                    </ol>
+                                </li>
+                            {{/sections}}
+                        </ol>
+                    </li>
+                {{/styleguide}}
+            </ol>
+        </nav>
+    </header>
+
+    <main class="styleguide-main row">
+        <div class="small-12 columns">
+            {{> body }}
+        </div>
+    </main>
+
+    <a class="styleguide-toggle-visability" title="Toggle styleguide sidebar"><span class="icon-Close"></span></a>
+
+    <script src="/scripts/app.min.js"></script>
+    <script src="/scripts/styleguide.min.js"></script>
+</body>
+</html>

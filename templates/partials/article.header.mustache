@@ -1,0 +1,32 @@
+<header class="row">
+    <div class="columns">
+        {{> figure }}
+        <div class="row">
+            <div class="small-12 medium-10 medium-centered large-12 large-uncentered columns">
+                <h1 class="headline" itemprop="headline">{{ article.headline }} {{ article.headline }}  
+                    <a href="http://www.dinside.no/936574/asus-zenbook-pro-ux501vw#disqus_thread" data-disqus-url="http://www.dinside.no/936574/asus-zenbook-pro-ux501vw"">
+                         <span class="icon-Chat">
+                             <span class="count-comments">11 kommentarer</span>
+                        </span>
+                    </a>
+                </h1>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns small-12 medium-10 medium-centered large-8 large-uncentered">
+                <p class="standfirst" itemprop="description"><b class="text-red no-padding">Din</b><span class="text-blue">side </span>{{ article.description }}</p> 
+                <div class="meta">
+                    <a class="tiny button facebook right small-expand"><span class="icon-Facebook align-left"></span>DEL</a>
+                    <span class="label">{{article.meta.section}}</span>
+                    {{> dateline}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns small-12 medium-10 medium-centered large-8 large-uncentered">
+                {{> byline}}
+            </div>
+        </div>
+    </div>
+</header>

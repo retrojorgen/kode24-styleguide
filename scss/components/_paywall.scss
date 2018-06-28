@@ -1,0 +1,406 @@
+// Paywall
+//
+// Call to action element for use with content not available for free consumption. I.e. Paid content. Typically used on “Dagbladet Pluss” and other sections that require a valid subscription or other form of verification before showing content.<br><br>
+// To higlight/call focuse to a product in the class <code>.primary</code>.<br><br>
+// Paywalls logic should be handled server side.<br><br>
+// <strong>Note: Products in example are not actual products, they only illustrate markup</strong>.
+//
+// Markup:
+// <div class="paywall">
+//   <h3>Dinside Pluss – de beste historiene</h3>
+//   <!--<div class="large-12 columns campaign-info">
+//       <p class="text-center">
+//         <strong>Notice:</strong> there is room for campaign text. <a href="#">Clicky</a>
+//       </p>
+//   </div>-->
+//   <div class="large-12 columns">
+//     <ul class="usp">
+//       <li>Over <strong>250 kvalitetsartikler</strong> hver måned</li>
+//       <li><strong>Prisvinnende</strong> reportasjer og avsløringer</li>
+//       <li>Premium artikler innen stoffområder som bil, båt, trening, samliv, vin og reise</li>
+//       <li>Tilgang til <strong>hele papiravisen og Magasinet</strong> på PC/Mac, mobil og nettbrett</li>
+//     </ul>
+//   </div>
+//   <div class="large-12 columns products">
+//     <div class="row">
+//       <div class="large-3 columns product">
+//         <a
+//           class="button-medium-down"
+//           href="#PURCHASE-URL"
+//         >
+//           <span class="cost">39 kr</span>
+//           <span class="name">uke</span>
+//           <span class="name-abbreviation">uke</span>
+//           <span class="cost-per-day">(5,00 kr per dag)</span>
+//           <span class="subscription-discount">Ordinær pris</span>
+//           <span class="button-large-up">
+//             Kjøp nå
+//           </span>
+//         </a>
+//       </div>
+//       <div class="large-3 columns product">
+//         <a
+//           class="button-medium-down"
+//           href="#PURCHASE-URL"
+//         >
+//           <span class="cost">65 kr</span>
+//           <span class="name">måned</span>
+//           <span class="name-abbreviation">md</span>
+//           <span class="cost-per-day">(2,20 kr per dag)</span>
+//           <span class="subscription-discount">Ordinær pris</span>
+//           <span class="button-large-up">
+//             Kjøp nå
+//           </span>
+//         </a>
+//       </div>
+//       <div class="large-3 columns product primary">
+//         <a
+//           class="button-medium-down"
+//           href="#PURCHASE-URL"
+//         >
+//           <span class="cost">179 kr</span>
+//           <span class="name">3-måneder</span>
+//           <span class="name-abbreviation">3-md</span>
+//           <span class="cost-per-day">(0,95 kr per dag)</span>
+//           <span class="subscription-discount">Bestselger</span>
+//           <span class="button-large-up">
+//             Kjøp nå
+//           </span>
+//         </a>
+//       </div>
+//       <div class="large-3 columns product">
+//         <a
+//           class="button-medium-down"
+//           href="#PURCHASE-URL"
+//         >
+//           <span class="cost">349 kr</span>
+//           <span class="name">år</span>
+//           <span class="name-abbreviation">år</span>
+//           <span class="cost-per-day">(0,65 kr per dag)</span>
+//           <span class="subscription-discount">Ordinær pris</span>
+//           <span class="button-large-up">
+//             Kjøp nå
+//           </span>
+//         </a>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="large-10 large-offset-2  columns">
+//     <ul>
+//       <li>Ved abonnering på Dagbladet Pluss, godtar du våre <a href="">kjøps- og bruksvilkår</a>.</li>
+//       <li><strong>Abonnementet fornyes automatisk</strong>, og løper til du sier opp</a>.</li>
+//       <li>Abonnementet har ingen bindingstid. Du kan si det opp når som helst.</li>
+//     </ul>
+//   </div>
+//   <div class="large-10 large-offset-2 columns">
+//     <p class="text-darkgrey payment-details">
+//       <img src="/assets/paywall/visa-mastercard-small.png" /> Betal trygt med Visa eller Mastercard.
+//     </p>
+//   </div>
+//   <div class="large-12 columns text-center">
+//     <h5>Har du allerede abonnement?</h5>
+//     <a class="button pink outline radius" href="http://www.dagbladet.no/pluss/logg_inn/">
+//       Logg inn
+//     </a>
+//   </div>
+// </div>
+//
+// Styleguide 33
+
+@mixin paywall-button-base-style {
+  width: 100%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: 1px solid $paywall-secondary-color-border;
+  margin-bottom: 0;
+  font-weight: $paywall-button-font-weight;
+}
+
+@mixin paywall-underline-decoration( $width: 100px, $color: $paywall-secondary-color-accent, $space: 15px ) {
+  &:after {
+    display: block;
+    border-bottom: 3px solid $color;
+    width: $width;
+    margin: $space auto 10px;
+    content: "";
+    clear: both;
+    @include single-transition( $property: width, $speed: .5s );
+  }
+}
+
+.paywall {
+
+  // ALL VERSIONS
+
+  margin: 2rem auto;
+  display: inline-block;
+  width: 100%;
+
+  img {
+    height: 1.6em;
+    position: relative;
+    top: -.35em;
+    margin-bottom: -.6em;
+  }
+
+  .button {
+    font-weight: $paywall-button-font-weight;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: .8em;
+    @include paywall-underline-decoration( $width: 100px, $color: $paywall-primary-color, $space: 22px );
+  }
+
+  h5 {
+    margin: 1.6em 0 1em;
+  }
+
+  .campaign-info {
+    p {
+      background-color: scale-color( $color-blue, $lightness: 80% );
+      border-radius: 3px;
+      padding: 12px 24px;
+    }
+  }
+
+  .products {
+    margin: .6rem 0 2.5rem;
+  }
+
+  .icon-Check {
+    font-size: 1.2em;
+    margin-right: 5px;
+    color: $paywall-primary-color;
+  }
+  ul{
+    &.usp {
+      margin: 0 0 2rem !important;
+      overflow: visible;
+      list-style: none;
+      li {
+        position: relative;
+        margin-left: 2em;
+        &:before {
+          font-family: 'Helveticons';
+          content: "\e847";
+          color: $paywall-primary-color;
+          left: -1.4em;
+          position: absolute;
+          speak: none;
+          top: -.1em;
+          font-size: 1.2rem;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+    @media #{$large-up}{
+      &.usp {
+        margin-bottom: 3rem !important;
+        text-align: center;
+        li {
+          margin-left: 0;
+          position: relative;
+          &:before {
+            position: relative;
+            left: -.2em;
+            margin-left: -1em;
+            top: .1em;
+          }
+        }
+      }
+    }
+  }
+
+  // BIG SCREENS VERSION
+
+  @media #{$large-up}{
+    .product {
+      text-align: center;
+    }
+
+    .button-medium-down {
+      position: relative;
+      display: block;
+      padding: ( $column-gutter / 2 + 4.1rem ) ( $column-gutter / 2 ) ( $column-gutter / 2 );
+      text-decoration: none;
+      color: $body-font-color;
+      &:hover {
+        .button-large-up {
+          @include button-style( $bg: $paywall-secondary-color-hover, $bg-hover: $paywall-secondary-color-hover, $border-color: $paywall-secondary-color-border );
+        }
+        .name {
+          &:after {
+            width: 100px;
+            @include single-transition( $property: width, $speed: .15s );
+          }
+        }
+      }
+      & > span {
+        display: block;
+        font-weight: 400;
+      }
+      .name-abbreviation {
+          display: none;
+      }
+      .cost {
+        font-weight: 400;
+        font-size: 2.2em;
+        line-height: 3.8rem;
+      }
+      .cost-per-day {
+        color: scale-color( $body-font-color, $lightness: 40% );
+        display: block;
+        font-size: .8em;
+        margin-bottom: 3em;
+      }
+      .subscription-renewal {
+        font-size: .8em;
+      }
+      .subscription-binding {
+        font-size: .8em;
+        color: scale-color( $body-font-color, $lightness: 40% );
+      }
+      .button-large-up {
+        width: 100%;
+      }
+      .subscription-discount {
+        display: none;
+      }
+
+      .name {
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: $column-gutter / 2 + 1.8rem;
+        width: 80%;
+        left: 10%;
+        line-height: 1;
+        font-size: 1em;
+        font-weight: 400;
+
+        @include paywall-underline-decoration(  $width: 50px );
+
+      }
+    }
+
+    .button-large-up {
+      @include button( $bg: $white, $bg-hover: $paywall-secondary-color-hover, $border-color: $paywall-secondary-color-border );
+      @include paywall-button-base-style();
+    }
+
+
+    .primary {
+      .button-medium-down {
+        margin: 0 ( -$column-gutter / 4 );
+        border: 1px solid  scale-color( $paywall-primary-color, $lightness: 20% );
+        border-radius: 3px;
+        background: radial-gradient(ellipse at center, scale-color( $color-yellow, $lightness: 100% ) 0%, scale-color( $color-yellow, $lightness: 80% ) 100%);
+        @include single-transition( $property: border-color, $speed: .5s );
+        &:hover {
+          border-color: $paywall-primary-color;
+          .subscription-discount {
+            background-color: $paywall-primary-color;
+          }
+        }
+      }
+      .cost-per-day {
+        color: $paywall-primary-color;
+      }
+      .subscription-discount {
+        position: absolute;
+        display: block;
+        left: 20%;
+        width: 60%;
+        text-align: center;
+        color: $white;
+        background-color: scale-color( $paywall-primary-color, $lightness: 20% );
+        @include single-transition( $property: background-color, $speed: .5s );
+        text-transform: uppercase;
+        font-size: .8em;
+        line-height: 1.6em;
+        top: -.8em;
+        border-radius: 3px;
+      }
+      .name {
+        &:after {
+          border-color: $paywall-primary-color;
+        }
+      }
+      .cost {
+        font-size: 2.7em;
+      }
+      .button-medium-down:hover {
+        .button-large-up {
+          @include button-style( $bg: $paywall-primary-color-hover, $bg-hover: $paywall-primary-color-hover, $border-color: $paywall-primary-color-hover );
+        }
+      }
+      .button-large-up {
+        @include button-style( $bg: $paywall-primary-color, $bg-hover: $paywall-primary-color-hover, $border-color: $paywall-primary-color-hover );
+        border-color: $paywall-primary-color;
+      }
+    }
+  }
+
+
+  // SMALL SCREENS VERSION
+
+  @media #{$screen} and ( max-width: #{ upper-bound($medium-range) } ) {
+    .button-medium-down {
+      @include button( $bg: $white, $bg-hover: $paywall-secondary-color-hover, $border-color: $paywall-primary-color-hover  );
+      @include paywall-button-base-style();
+      font-weight: normal;
+      text-align: left;
+      margin-bottom: .8rem;
+    }
+    .primary {
+      .button-medium-down {
+        @include button-style( $bg: $paywall-primary-color, $bg-hover: $paywall-primary-color-hover, $border-color: $paywall-primary-color );
+        margin-top: 1rem;
+      }
+      .subscription-discount {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: -1.2rem;
+        left: 0;
+        text-align: center;
+        color: $paywall-primary-color;
+      }
+    }
+    .products {
+      margin-bottom: .5rem;
+    }
+    li {
+      font-size: .9em;
+    }
+    .subscription-renewal,
+    .subscription-binding,
+    .cost-per-day,
+    .subscription-discount,
+    .name {
+        display: none;
+    }
+    .name-abbreviation:before {
+        content: " / ";
+    }
+    .button-large-up {
+      float: right;
+      font-weight: bold;
+    }
+    .payment-details {
+      font-size: .8em;
+      text-align: center;
+    }
+  }
+
+}

@@ -1,0 +1,2 @@
+http://styleguide.dinside.no/scripts/app.min.js
+http://styleguide.dinside.no/stylesheets/app.css

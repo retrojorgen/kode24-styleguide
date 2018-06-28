@@ -1,0 +1,14 @@
+// Image-placeholder is used as a background for images using the data-defer (lazyload)
+
+@mixin image-placeholder{
+    // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 100 70' enable-background='new 0 0 100 70'><path fill='#222222' d='M48,44.9L28.3,24.1L14.9,48.7v6.8h66.5C73,48.2,55.1,32.7,55.1,32.7L48,44.9z M71.1,29.2c3.7,0,6.7-3,6.7-6.6c0-3.7-3-6.6-6.7-6.6c-3.7,0-6.7,3-6.7,6.6C64.5,26.3,67.5,29.2,71.1,29.2z M0,0v70h100V0H0z M91.1,61.2H9.2l0-52.1l81.9,0V61.2z'/></svg>");
+    background-color: $secondary-color;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 60px 42px;
+}
+
+img[data-srcset],img[data-defer]{
+    background-color: $secondary-color;
+    color: $secondary-color;
+}

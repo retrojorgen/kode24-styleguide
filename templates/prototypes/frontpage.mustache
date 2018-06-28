@@ -1,0 +1,24 @@
+<main class="row frontpage" role="main">
+    <div class="small-12 medium-12 large-12 columns">
+        {{#frontpage}}
+            <div class="row">
+                {{#columns}}
+                    {{#double}}
+                        <div class="{{classes}} columns">
+                            <div class="row">
+                                {{#items}}
+                                    {{> article.preview}}
+                                {{/items}}
+                            </div>
+                        </div>
+                    {{/double}}
+                    {{^double}}
+                        {{#items}}
+                            {{> article.preview}}
+                        {{/items}}
+                    {{/double}}
+                {{/columns}}
+            </div>
+        {{/frontpage}}
+    </div>
+</main>

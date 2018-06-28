@@ -1,0 +1,393 @@
+// TV-Guide
+//
+// RequiresJS: Listing of todays TV programming.
+//
+// Template: templates/partials/tvguide.mustache
+//
+// Styleguide 25
+//
+
+
+$include-html-sectionbar-classes: $include-html-classes !default;
+
+$sectionbar-main-color: $primary-color !default;
+$sectionbar-height-small: 2.5rem !default;
+$sectionbar-height-large: 3.75rem !default;
+$sectionbar-margin-bottom: 1.25rem !default;
+
+// We use this mixin to create a default selectionbar base.
+@mixin sectionbar-base(){
+    height: $sectionbar-height-small;
+    margin-bottom: $sectionbar-margin-bottom;
+    width: 100%;
+    position: relative;
+
+    @media #{$medium-up}{
+        height: $sectionbar-height-large;
+    }
+
+    .section-icon{
+        &:empty{
+            width: $sectionbar-height-small / 4;
+        }
+        #{$icon}{
+            margin-right: -1rem;
+            line-height: 1;
+        }
+        @media #{$medium-up}{
+            #{$icon}{
+                margin-right: -1.4rem;
+            }
+        }
+    }
+
+    .heading{
+        font-size: 1.25rem;
+        line-height: $sectionbar-height-small;
+        float: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        @media #{$medium-up}{
+            font-size: 1.8rem;
+            line-height: $sectionbar-height-large;
+        }
+    }
+}
+
+// We use this mixin to add selectionbar styles
+@mixin sectionbar-style($main-color: $sectionbar-main-color, $bg-color: $secondary-color, $icon-color: $white, $text-color: $body-font-color){
+    background-color: $bg-color;
+    .section-icon{
+        @include section-icon-style($bg: $main-color, $color: $icon-color);
+        @if $main-color == $bg-color{
+            border-right: 1px solid white;
+        }
+    }
+    .heading{
+        color: $text-color;
+    }
+}
+
+//FIXME: There must be better ways to solve this.
+@mixin sectionbar-nav($main-color: $sectionbar-main-color){
+    nav{
+        position: absolute;
+        z-index: $z-index-nav;
+        a{
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        @media #{$small-only}{
+            left: 0;
+            top: $sectionbar-height-small;
+            width: 100%;
+            .toggle{
+                position: absolute;
+                right: 0.5rem;
+                top: -$sectionbar-height-small/2;
+                transform: translateY(-50%);
+                margin-bottom: 0;
+            }
+            ul{
+                display: none;
+                background: $white;
+                width: 100%;
+                list-style: none;
+                margin: 0;
+                border-left: $sectionbar-height-small solid $sectionbar-main-color;
+                li{
+                    &:first-child{
+                        a{
+                            border-top: 1px solid $sectionbar-main-color;
+                        }
+                    }
+                    a.button{
+                        display: block;
+                        text-align: left;
+                        margin-bottom: 0;
+                        background-color: transparent;
+                        color: $sectionbar-main-color;
+                        border-bottom: 1px solid $sectionbar-main-color;
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+        }
+        @media #{$medium-up}{
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            .toggle{
+                display: none;
+            }
+            ul{
+                list-style: none;
+                li{
+                    float: left;
+                    margin-right: 1px;
+                    a{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin sectionbar(){
+    @include sectionbar-base();
+    @include sectionbar-style();
+    @include sectionbar-nav();
+}
+
+@if $include-html-sectionbar-classes {
+    .section-bar{
+        @include sectionbar();
+    }
+}
+
+.tv-guide {
+   .section-bar{
+        @include sectionbar-style($main-color: #00F5F9, $bg-color: transparent, $icon-color: $white, $text-color: $color-black);
+        border: 1px solid $color-lightgrey;
+        height: rem-calc(42);
+        @media #{$medium-up}{
+            margin-bottom: 0;
+            height: rem-calc(62);
+        }
+        .section-icon{
+            margin-bottom: 0;
+        }
+        nav{
+            ul{
+                border-color: #00F5F9;
+                li{
+                    a.button{
+                        color: #00F5F9;
+                        border-color: #00F5F9;
+                        &:hover{
+                            color: $white;
+                        }
+                        @media #{$medium-up}{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            a{
+                background-color: #00F5F9;
+                color: $white;
+                border-color: #00F5F9;
+                &:hover{
+                    background-color: #00F5F9;
+                    color: $white;
+                }
+            }
+        }
+    }
+    @media #{$medium-up}{
+        .tv-guide-orig {
+            .columns:first-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .tvguide-info{
+        font-size: 0.7em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-left: 1px solid $color-lightgrey;
+        padding-left: $column-gutter / 2;
+        padding-top: 1rem;
+    }
+
+    .tvguide-legend{
+        list-style: none;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0;
+        border-right: 1px solid $color-lightgrey;
+        text-align: right;
+        padding-right: $column-gutter / 2;
+        padding-top: 1rem;
+        li{
+            display: inline;
+            a{
+                color: $color-black;
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    position: relative;
+                    top: -0.1rem;
+                    border-radius: 999px;
+                    margin-right: 0.5rem;
+                }
+                &[data-category="4"]:before{
+                    background-color: $color-blue;
+                }
+                &[data-category="6"]:before{
+                    background-color: $color-red;
+                }
+                &[data-category="11"]:before{
+                    background-color: $color-green;
+                }
+                &[data-category="12"]:before{
+                    background-color: $color-darkgrey;
+                }
+            }
+        }
+    }
+
+    .tv-guide-slider{
+        border-left: 1px solid $color-lightgrey;
+        border-right: 1px solid $color-lightgrey;
+        border-bottom: 1px solid $color-lightgrey;
+        padding-bottom: 0.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        //#00F5F9
+
+        input[type="range"] {
+            width: 97%;
+
+            &::-webkit-slider-thumb{
+                background-color: #00F5F9;
+            }
+
+            &::-webkit-slider-runnable-track{
+                background: linear-gradient(#00F5F9, #00F5F9) no-repeat $color-lightgrey;
+            }
+        }
+    }
+
+    .range-slider-legend{
+        @include clearfix;
+        width: 100%;
+        span{
+            text-align: center;
+            width: 4.16%;
+            font-size: 0.6em;
+            display: block;
+            float: left;
+            &:first-child {
+                border: none;
+            }
+        }
+    }
+
+    .channel-content {
+        width: 100%;
+        float: left;
+        border: 1px solid $color-lightgrey;
+        margin-bottom: 2rem;
+        @media #{$small-only} {
+            margin-bottom: 1rem;
+        }
+        .channel-header {
+            float: left;
+            width: 100%;
+            position: relative;
+            img {
+                padding: 0.5rem;
+                float: left;
+                height: 38px;
+            }
+            h1 {
+                padding: 0.5rem;
+                float: left;
+                border-left: 1px solid $color-lightgrey;
+                font-size: 1em;
+                margin: 0 0 0 0;
+                font-weight: 500;
+            }
+            a {
+                position: absolute;
+                padding: 0.45rem;
+                top: 0;
+                right: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 0.7rem;
+                text-decoration: none;
+                #{$icon}{
+                    font-size: 1rem;
+                    position: relative;
+                    top: 0.2rem;
+                }
+            }
+        }
+        &.active{
+            .program-list{
+                display: block;
+            }
+            .channel-header a span:before{
+                content: "\e881";
+            }
+        }
+    }
+    @media #{$small-only} {
+        .program-list {
+            li:not(.first-three){
+                display:none;
+            }
+        }
+        .active .program-list li{
+            display: block;
+        }
+    }
+    .program-list {
+        float: left;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem;
+        border-top: 1px solid $color-lightgrey;
+        display: block;
+        li {
+            font-size: 0.8rem;
+            line-height: 1.8;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            height: 23px;
+            opacity: 1;
+            transition: all 0.2s ease-out;
+            &.hide{
+                display: block;
+                opacity: 0;
+                height: 0;
+            }
+            .startDate{
+                font-weight: 700;
+                margin-right: 5px;
+                &:before {
+                    content:"";
+                    border-radius: 99px;
+                    width: 6px;
+                    height: 6px;
+                    margin-top: 7px;
+                    margin-right: 5px;
+                    display: block;
+                    float: left;
+                }
+            }
+            &[data-category="4"] .startDate:before {
+                background-color: $color-blue;
+            }
+            &[data-category="6"] .startDate:before {
+                background-color: $primary-color;
+            }
+            &[data-category="11"] .startDate:before {
+                background-color: $color-green;
+            }
+            &[data-category="12"] .startDate:before {
+                background-color: $color-darkgrey;
+            }
+        }
+    }
+}

@@ -1,0 +1,997 @@
+// Tables
+//
+// Tables are styled simplistic so that data is as readable as possible.
+// For small screens, wide tables are scrollable horizontally when wider than the viewport.
+//
+// Markup:
+// <table>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: $column-gutter * 2;
+
+    @media #{$medium-up}{
+        display: table;
+    }
+
+    tr{
+        border-bottom: $table-border-size $table-border-style $table-border-color;
+        th,td{
+            display: $table-display;
+            line-height: $table-line-height;
+            text-align: left;
+            border-right: $table-border-size $table-border-style $table-border-color;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+
+    thead{
+        background-color: $table-head-bg;
+        text-transform: uppercase;
+        border-top: 2px solid $color-blue;
+        font-weight: $table-head-font-weight;
+        color: $table-head-font-color;
+        font-size: $table-head-font-size;
+        th,td{
+            padding: $table-head-padding;
+            font-weight: inherit;
+        }
+    }
+
+    tbody{
+        tr{
+            &:first-child{
+                border-top: $table-border-size $table-border-style $table-border-color;
+            }
+            background-color: $table-bg;
+            &.even,
+            &.alt,
+            &:nth-of-type(even) { background-color: $table-even-row-bg; }
+            th,td{
+                padding: $table-row-padding;
+                font-size: $table-row-font-size;
+                color: $table-row-font-color;
+            }
+        }
+    }
+
+    tfoot{
+        background-color: $table-head-bg;
+        border-top: 1px solid $table-bg;
+        td{
+            padding: $table-head-padding;
+            font-size: $table-head-font-size;
+            font-weight: $table-head-font-weight;
+            color: $table-head-font-color;
+        }
+    }
+}
+
+// Header
+//
+// Markup:
+// <table>
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th>Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.1
+
+// Sorting
+//
+// RequiresJS: For small datasets sorting can be done in the browser. See documentation for [db.libs.tableSort](/jsdocs/db.libs.tableSort.html).
+//
+// Markup:
+// <table>
+//   <thead>
+//     <tr class="has-tip" data-tooltip aria-haspopup="true" title="Click to on the column to sort">
+//       <td>#</td>
+//       <td><a class="desc" data-sortable="string">Lag</a></td>
+//       <td><a class="desc active" data-sortable>Poeng</a></td>
+//       <td><a class="desc" data-sortable="date">Neste kamp</a></td>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>86</td>
+//       <td>2015-03-17</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>84</td>
+//       <td>2015-03-13</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>82</td>
+//       <td>2015-03-20</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.1.1
+
+table{
+    thead{
+        a{
+            text-decoration: none;
+            color: $color-black;
+            &.active{
+                color: $ui-color;
+            }
+            &.asc,
+            &.desc{
+                &:after{
+                    font-family: "Helveticons";
+                    margin-left: 0.5rem;
+                    position: relative;
+                    top: 1px;
+                    line-height: 0;
+                }
+            }
+            &.asc:after{
+                content: "\e881";
+            }
+            &.desc:after{
+                content: "\e882";
+            }
+        }
+    }
+}
+
+// Footer
+//
+// Markup:
+// <table>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+//   <tfoot>
+//     <tr>
+//         <td colspan="8" class="center"><a href="#">Se hele tabellen</a></td>
+//     </tr>
+//   <tfoot>
+// </table>
+//
+// Styleguide 9.2
+
+// Aligning column content
+//
+// Markup:
+// <table>
+//   <thead>
+//     <tr>
+//       <th class="text-center">#</th>
+//       <th>Lag</th>
+//       <th class="text-center">Kamper</th>
+//       <th class="text-center">Vunnet</th>
+//       <th class="text-center">Uavgjorte</th>
+//       <th class="text-center">Tap</th>
+//       <th class="text-center">Mål</th>
+//       <th class="text-right">Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td class="text-center">1</td>
+//       <td>Manchester City</td>
+//       <td class="text-center">38</td>
+//       <td class="text-center">27</td>
+//       <td class="text-center">5</td>
+//       <td class="text-center">6</td>
+//       <td class="text-center">102/37</td>
+//       <td class="text-right">86</td>
+//     </tr>
+//     <tr>
+//       <td class="text-center">2</td>
+//       <td>Liverpool</td>
+//       <td class="text-center">38</td>
+//       <td class="text-center">26</td>
+//       <td class="text-center">6</td>
+//       <td class="text-center">6</td>
+//       <td class="text-center">101/50</td>
+//       <td class="text-right">84</td>
+//     </tr>
+//     <tr>
+//       <td class="text-center">3</td>
+//       <td>Chelsea</td>
+//       <td class="text-center">38</td>
+//       <td class="text-center">26</td>
+//       <td class="text-center">6</td>
+//       <td class="text-center">6</td>
+//       <td class="text-center">101/50</td>
+//       <td class="text-right">84</td>
+//     </tr>
+//     <tr>
+//       <td class="text-center">4</td>
+//       <td>Arsenal</td>
+//       <td class="text-center">38</td>
+//       <td class="text-center">26</td>
+//       <td class="text-center">6</td>
+//       <td class="text-center">6</td>
+//       <td class="text-center">101/50</td>
+//       <td class="text-right">84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.3
+
+/*table{
+    tr{
+        th,td{
+            //Defaults left
+            &.center{
+                text-align: center;
+            }
+            &.right{
+                text-align: right;
+            }
+        }
+    }
+}*/
+
+// Main column
+//
+// Markup:
+// <table>
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th class="main">Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td class="main">Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td class="main">Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td class="main">Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>4</td>
+//       <td class="main">Arsenal</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.4
+
+table{
+    tr{
+        th,td{
+            &.main{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// No wrap
+//
+// `no-wrap` can be applied to the table, to rows or to individual cells.
+//
+// Markup:
+// <table class="no-wrap">
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th>Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Brighton and Hove Albion</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.5
+
+table{
+    &.no-wrap{
+        td, th{
+            white-space: nowrap;
+        }
+    }
+    tr{
+        &.no-wrap{
+            td, th{
+                white-space: nowrap;
+            }
+        }
+    }
+    td, th{
+        &.no-wrap{
+            white-space: nowrap;
+        }
+    }
+}
+
+// Highlight rows and cells
+//
+// Styleguide 9.6
+
+// Row
+//
+// Markup:
+// <table class="no-wrap">
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th>Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr class="success">
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr class="secondary">
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr class="secondary">
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr class="alert">
+//       <td>4</td>
+//       <td>Arsenal</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.6.1
+
+table{
+    tbody{
+        tr,td{
+            &.success{
+                background-color: $success-color;
+                color: white;
+                td{
+                    color: inherit;
+                }
+            }
+            &.alert{
+                background-color: $alert-color;
+                color: white;
+                td{
+                    color: inherit;
+                }
+            }
+            &.secondary{
+                background-color: $table-even-row-bg;
+            }
+        }
+
+    }
+}
+
+// Row alternate
+//
+// Markup:
+// <table class="no-wrap">
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th>Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr class="success-alerternate">
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr class="secondary-alerternate">
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr class="secondary-alerternate">
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr class="alert-alerternate">
+//       <td>4</td>
+//       <td>Arsenal</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.6.2
+
+table{
+    tbody{
+        tr{
+            &.success-alerternate{
+                td:first-child{
+                    border-left: 12px solid $success-color;
+                }
+            }
+            &.alert-alerternate{
+                td:first-child{
+                    border-left: 12px solid $alert-color;
+                }
+            }
+            &.secondary-alerternate{
+                td:first-child{
+                    border-left: 12px solid darken($secondary-color, 15%);
+                }
+            }
+
+        }
+    }
+}
+
+// Cell
+//
+// Markup:
+// <table class="no-wrap">
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th>Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td class="success">Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>4</td>
+//       <td class="alert">Arsenal</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.6.3
+
+// Row dividers
+//
+// Markup:
+// <table>
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th>Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr class="divider">
+//       <td>4</td>
+//       <td>Arsenal</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>5</td>
+//       <td>Everton</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.8
+
+table{
+    tr{
+        &.divider{
+            border-bottom: 1px dashed $color-black;
+        }
+    }
+}
+
+// Subheading
+//
+// Markup:
+// <table>
+//   <tbody>
+//     <tr>
+//       <td>17</td>
+//       <td>West Bromwich</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr class="header">
+//       <td colspan="8">Rykker ned</td>
+//     </tr>
+//     <tr>
+//       <td>18</td>
+//       <td>Norwich</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>19</td>
+//       <td>Fulham</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>20</td>
+//       <td>Cardif</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.9
+
+table{
+    tr{
+        &.header{
+            td,th{
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Select row
+//
+// RequiresJS: Highlight rows by clicking. Useful when viewing wide tables.
+//
+// Markup:
+// <table data-focus>
+//   <thead>
+//     <tr>
+//       <th>#</th>
+//       <th>Lag</th>
+//       <th>Kamper</th>
+//       <th>Vunnet</th>
+//       <th>Uavgjorte</th>
+//       <th>Tap</th>
+//       <th>Mål</th>
+//       <th>Poeng</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>1</td>
+//       <td>Manchester City</td>
+//       <td>38</td>
+//       <td>27</td>
+//       <td>5</td>
+//       <td>6</td>
+//       <td>102/37</td>
+//       <td>86</td>
+//     </tr>
+//     <tr>
+//       <td>2</td>
+//       <td>Liverpool</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//     <tr>
+//       <td>3</td>
+//       <td>Chelsea</td>
+//       <td>38</td>
+//       <td>26</td>
+//       <td>6</td>
+//       <td>6</td>
+//       <td>101/50</td>
+//       <td>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.10
+
+table[data-focus]{
+    tbody{
+        tr{
+            cursor: pointer;
+            &.active{
+                td, th{
+                    background-color: $ui-color;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// Table editor
+//
+// Experimental: Simple table-editor. See documentation for [db.libs.tableEditor](/jsdocs/db.libs.tableEditor.html).
+//
+// Markup:
+// <ul class="button-group">
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('toggleHeader'); return false;">Toggle header</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('insertRow'); return false;">Insert row</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('deleteRow'); return false;">Delete row</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('insertColumn'); return false;">Insert column</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('deleteColumn'); return false;">Delete column</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('toggleColumnClass', null, 'text-left', 'text-center text-right'); return false;">Align left</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('toggleColumnClass', null, 'text-center', 'text-left text-right'); return false;">Align center</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('toggleColumnClass', null, 'text-right', 'text-left text-center'); return false;">Align right</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('toggleRowClass', null, 'success', 'alert'); return false;">Row success</a></li>
+//   <li><a class="button tiny" onclick="$('#js-table-test').tableEditor('toggleRowClass', null, 'alert', 'success'); return false;">Row alert</a></li>
+// </ul>
+// <table id="js-table-test" data-editor>
+//   <thead>
+//     <tr>
+//       <td contenteditable>#</td>
+//       <td contenteditable>Lag</td>
+//       <td contenteditable>Kamper</td>
+//       <td contenteditable>Vunnet</td>
+//       <td contenteditable>Uavgjorte</td>
+//       <td contenteditable>Tap</td>
+//       <td contenteditable>Mål</td>
+//       <td contenteditable>Poeng</td>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td contenteditable>1</td>
+//       <td contenteditable>Liverpool</td>
+//       <td contenteditable>38</td>
+//       <td contenteditable>26</td>
+//       <td contenteditable>6</td>
+//       <td contenteditable>6</td>
+//       <td contenteditable>101/50</td>
+//       <td contenteditable>84</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 9.11
+
+table[data-editor]{
+    td:focus{
+        border-bottom: 1px solid $ui-color;
+        outline: none;
+    }
+}

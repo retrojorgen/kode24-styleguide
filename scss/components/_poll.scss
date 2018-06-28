@@ -1,0 +1,242 @@
+// Poll
+//
+// Markup:
+// <form class="experimental-poll large-6 medium-8 small-12 columns">
+//   <label>
+//      <input type="radio" name="experimental-poll" value="a">
+//      <span class="description">I'M A MONSTER!!</span>
+//      <span class="score"></span>
+//      <span class="bar"></span>
+//   </label>
+//   <label>
+//      <input type="radio" name="experimental-poll" value="b">
+//      <span class="description">Coo coo ca chaw</span>
+//      <span class="score"></span>
+//      <span class="bar"></span>
+//   </label>
+//   <label>
+//      <input type="radio" name="experimental-poll" value="c">
+//      <span class="description">Heyyyy Uncle Father Oscar</span>
+//      <span class="score"></span>
+//      <span class="bar"></span>
+//   </label>
+// </form>
+//
+// Styleguide 27
+
+@mixin poll-base(){
+    label{
+        @include single-transition(background-color);
+        color: $color-black;
+        position: relative;
+        padding: $button-sml;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        overflow: hidden;
+        input[type="radio"]{
+               margin: 0 0.4rem 0 0;
+        }
+        .bar{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: $z-index-1;
+            transform: scale(0, 1.1);
+            transform-origin: 0 50%;
+            transition: all 300ms;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        .numbers {
+            position: relative;
+            z-index: $z-index-1 + 1;
+            font-weight: 400;
+            float: right;
+            transition: opacity 300ms;
+            opacity: 0;
+        }
+        .description{
+            position: relative;
+            z-index: $z-index-1 + 1;
+            float: left;
+            width: 65%;
+        }
+    }
+    &.active{
+        .numbers{
+            opacity: 1;
+        }
+    }
+}
+
+@mixin poll-style($button: $color-lightgrey, $bar: $primary-color){
+    label{
+        background-color: scale-color($button, $alpha: -85%);
+        -webkit-tap-highlight-color: scale-color($button, $alpha: -60%);
+        &:hover{
+            background-color: scale-color($button, $alpha: -75%);
+        }
+        .bar{
+            background-color: $bar;
+        }
+    }
+}
+
+.experimental-poll{
+    @include poll-base;
+    @include poll-style;
+    .button {
+        margin-bottom: 0;
+    }
+    .results {
+        margin-top: 7px;
+    }
+    .poll-actions {
+        margin-top: $column-gutter / 2;
+    }
+    &.primary{ 
+        @include poll-style($button: $white, $bar: darken($primary-color, 15%)); 
+        label {
+            color: $white;
+        }
+        .button {
+            background-color: $color-blue;
+            &:hover {
+                background-color: scale-color($color-blue, $alpha: -20%);
+            }
+        }
+        .results {
+            color: $white;
+        }
+    }
+    &.sand{ 
+        @include poll-style($button: $black, $bar: $color-blue-light);
+        label {
+            background-color: scale-color($black, $alpha: -95%);
+             &:hover{
+                background-color: scale-color($black, $alpha: -85%);
+            }
+            // For WCAG-pass
+            .bar {
+                opacity: 0.5;
+            }
+        } 
+    }
+    &.yellow{ 
+        @include poll-style($button: $black, $bar: darken($color-yellow, 30%));
+         label {
+            background-color: scale-color($black, $alpha: -95%);
+            &:hover{
+                background-color: scale-color($black, $alpha: -85%);
+            }
+        }  
+    }
+    &.blue{ 
+        label {
+            color: $white;
+        }
+        @include poll-style($button: $white, $bar: darken($color-blue, 15%)); 
+        .results {
+            color: $white;
+        }
+    }
+    &.black{ 
+        label {
+            color: $white;
+        }
+        @include poll-style($button: $white, $bar: $primary-color);
+        .results {
+            color: $white;
+        }
+    }
+
+    //After vote
+    &.active{
+        label {
+            //examples
+            .bar {
+                //examples
+                &.one{
+                    transform: scale(0.21, 1.1);
+                }
+                &.two{
+                   transform: scale(0.66, 1.1);
+                }
+                &.three{
+                    transform: scale(0.14, 1.1);
+                }
+            } 
+        }
+    }
+}
+
+// Colors
+//
+// Markup:
+// <form class="experimental-poll panel {$modifiers} large-6 medium-8 small-12 columns">
+//   <div class="copy">
+//     <h5 class="uppercase">Are you a monster?</h5>
+//     <p>Lolzalskjd øaksjdhgfl kajsgkqhweiuh alkdfsghl akjgfhøioqurh gøkajdflg khj</p>
+//     <label>
+//        <span class="bar"></span>
+//        <input type="radio" name="experimental-poll" value="a"> <span class="description">I'M A MONSTER!!</span> 
+//     </label>
+//     <label>
+//        <span class="bar"></span>
+//        <input type="radio" name="experimental-poll" value="b"> <span class="description">Coo coo ca chaw</span> 
+//     </label>
+//     <label>
+//        <span class="bar"></span>
+//        <input type="radio" name="experimental-poll" value="c"> <span class="description">Heyyyy Uncle Father Oscar</span> 
+//     </label>
+//     <div class="poll-actions">
+//        <a class="button primary"> Stem </a>
+//        <a class="results right"> Se resultatene </a>
+//     </div>
+//   </div>
+// </form>
+//
+// .primary - Primary
+// .sand - Sand
+// .yellow - Yellow
+// .blue - Blue
+// .black - Black
+//
+// Styleguide 27.1
+
+
+
+// Active state
+//
+// Markup:
+//      <form class="experimental-poll active {$modifiers} panel large-6 medium-8 small-12 columns">
+//       <div class="copy">
+//         <h5 class="uppercase">Are you a monster?</h5>
+//         <p>Lolzalskjd øaksjdhgfl kajsgkqhweiuh alkdfsghl akjgfhøioqurh gøkajdflg khj</p>
+//         <label>
+//            <span class="bar one"></span>
+//            <span class="description">I'M A MONSTER!!</span> <div class="numbers"><span class="score">(21%) </span><span class="amount">402</span></div>
+//         </label>
+//         <label>
+//            <span class="bar two"></span>
+//            <span class="description">Coo coo ca chaw</span> <div class="numbers"><span class="score">(66%) </span><span class="amount">1278</span></div>
+//         </label>
+//         <label>
+//            <span class="bar three"></span>
+//           <span class="description">Heyyyy Uncle Father Oscar</span> <div class="numbers"><span class="score">(14%) </span><span class="amount">265</span></div>
+//         </label>
+//         <div class="poll-actions">
+//           <small>Avstemningen er ikke styrt og reflekterer kun lesernes egne meninger.</small>
+//         </div>
+//       </div>
+//     </form>
+//
+// .primary - Primary
+// .sand - Sand
+// .yellow - Yellow
+// .blue - Blue
+// .black - Black
+//
+// Styleguide 27.2
+

@@ -1,0 +1,33 @@
+// Progress bar
+//
+// Markup:
+// <div class="progress">
+//   <span class="meter" style="width: 40%"></span>
+// </div>
+//
+// Styleguide 16
+
+// Color
+//
+// Markup:
+// <div class="progress {$modifiers}">
+//   <span class="meter" style="width: 60%"></span>
+// </div>
+//
+// .success - Success
+// .alert - Alert
+// .secondary - Secondary
+//
+// Styleguide 16.1
+
+// Style
+//
+// Markup:
+// <div class="progress {$modifiers}">
+//   <span class="meter" style="width: 30%"></span>
+// </div>
+//
+// .radius - Radius
+// .round - Round
+//
+// Styleguide 16.2

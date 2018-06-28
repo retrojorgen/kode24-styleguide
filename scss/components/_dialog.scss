@@ -1,0 +1,63 @@
+// Dialog
+//
+// RequiresJS: &nbsp;
+//
+// Markup:
+// <div class="reveal-modal small z-shadow-3" style="display: block; opacity: 1; visibility: visible; position: relative; top: 0;">
+//   <h4 class="subheader">Awesome. I have it.</h4>
+//   <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+// </div>
+//
+// Styleguide 19
+
+// Actions
+//
+// Markup:
+// <div class="reveal-modal z-shadow-3 small" style="display: block; opacity: 1; visibility: visible; position: relative; top: 0;">
+//   <h4 class="subheader">Awesome. I have it.</h4>
+//   <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+//   <footer>
+//      <ul class="button-group text-right">
+//          <li><a href="#" class="button small light text-blue">Cancel</a></li>
+//          <li><a href="#" class="button small light text-purple">Submit</a></li>
+//      </ul>
+//   </footer>
+// </div>
+//
+// Styleguide 19.1
+
+.reveal-modal{
+    footer{
+        ul{
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Demo
+//
+// Markup:
+// <a href="#" class="button small" data-reveal-id="myModal">Click Me For A Modal</a>
+// <div id="myModal" class="reveal-modal small z-shadow-3" data-reveal>
+//   <h4 class="subheader">Awesome. I have it.</h4>
+//   <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+//   <footer>
+//      <ul class="button-group text-right">
+//          <li><a href="#" class="button small light text-blue">Cancel</a></li>
+//          <li><a href="#" class="button small light text-purple">Submit</a></li>
+//      </ul>
+//   </footer>
+//   <a class="close-reveal-modal"><span class="icon-Close"></span></a>
+// </div>
+//
+// Styleguide 19.2
+
+.reveal-modal{
+    .close-reveal-modal{
+        text-decoration: none;
+        color: $color-grey;
+        &:hover{
+            color: $ui-color;
+        }
+    }
+}

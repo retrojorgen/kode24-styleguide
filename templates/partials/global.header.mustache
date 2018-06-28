@@ -1,0 +1,85 @@
+<header id="top-navigation" class="top-nav {{topnav.class}}" role="banner">
+    <div class="primary">
+        <h1 class="title">
+            <a id="js-primary-dinside" href="{{{topnav.title.url}}}" title="{{topnav.title.text}}" aria-label="{{topnav.title.text}}">
+               <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+            </a>
+        </h1>
+        <nav class="left show-for-medium-up" role="navigation">
+            <ul class="sections">
+                {{#topnav.primary.navigation}}
+                    <li class="{{#dropdown.0}}has-dropdown{{/dropdown.0}}">
+                        <a id="{{id}}" href="{{{url}}}" {{#hasDropdown}}data-dropdown="{{id}}-dropdown" aria-haspopup="true" aria-owns="{{id}}-dropdown"{{/hasDropdown}}>{{text}}</a>
+                        {{#hasDropdown}}
+                            <ul id="{{id}}-dropdown" class="f-dropdown" data-dropdown-content role="menu" aria-labelledby="{{id}}">
+                                {{#dropdown}}
+                                    <li><a id="{{id}}" href="{{{url}}}" role="menuitem">{{text}}</a></li>
+                                {{/dropdown}}
+                            </ul>
+                        {{/hasDropdown}}
+                    </li>
+                {{/topnav.primary.navigation}}
+            </ul>
+        </nav>
+        <div class="right show-for-medium-up">
+            <ul class="button-group radius">
+                {{#topnav.login}}
+                    <li><a href="#" data-dropdown="js-user" class="button light small">Logg inn</a></li>
+                {{/topnav.login}}
+            </ul>
+            {{#topnav.search}}
+                <form id="search" name="search" method="{{topnav.search.method}}" class="search show-for-medium-up" action="{{{topnav.search.action}}}">
+                    <input type="search" name="q" placeholder="{{topnav.search.placeholder}}" class="radius" required>
+                </form>
+            {{/topnav.search}}
+        </div>
+        <a class="small-navigation-toggle hide-for-medium-up" href="#">
+            Meny
+            <svg width="23px" height="23px" viewBox="0 0 23 23">
+                <rect x="0" y="0" width="23" height="5"></rect>
+                <rect x="0" y="9" width="23" height="5"></rect>
+                <rect x="0" y="18" width="23" height="5"></rect>
+            </svg>
+        </a>
+    </div>
+
+    {{#topnav.login}}
+        <div id="js-user" data-dropdown-content class="user-login f-dropdown small content"></div>
+    {{/topnav.login}}
+
+    {{#topnav.secondary}}
+        <section class="secondary">
+            <h1>
+                <a href="{{topnav.secondary.url}}">
+                    <span class="section-icon tiny" style="background-color: {{topnav.secondary.color}};"><span class="{{topnav.secondary.icon}}"></span></span> {{topnav.secondary.title}}
+                </a>
+            </h1>
+            <nav role="navigation">
+                <ul>
+                    {{#topnav.secondary.navigation}}
+                        <li class="{{#dropdown.0}}has-dropdown{{/dropdown.0}}">
+                            <a id="{{id}}" href="{{url}}" {{#hasDropdown}}data-dropdown="{{id}}-dropdown" aria-haspopup="true" aria-owns="{{id}}-dropdown"{{/hasDropdown}}>{{text}}</a>
+                            {{#hasDropdown}}
+                                <ul id="{{id}}-dropdown" class="f-dropdown" data-dropdown-content role="menu" aria-labelledby="{{id}}">
+                                    {{#dropdown}}
+                                        <li><a href="{{url}}" role="menuitem">{{text}}</a></li>
+                                    {{/dropdown}}
+                                </ul>
+                            {{/hasDropdown}}
+                        </li>
+                    {{/topnav.secondary.navigation}}
+                </ul>
+            </nav>
+            <a class="small-secondary-toggle">Mer</a>
+        </section>
+    {{/topnav.secondary}}
+    <div class="pageheader">
+    <span class="icon-arrow"></span> 
+        <ul class="{$modifiers}">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Section</a></li>
+            <li class="unavailable"><a href="#">Page</a></li>
+            <li class="current"><a href="#">Level</a></li>
+        </ul>
+    </div>
+</header>

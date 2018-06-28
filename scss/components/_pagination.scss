@@ -1,0 +1,41 @@
+// Pagination
+//
+// Markup:
+// <ul class="pagination">
+//   <li class="arrow unavailable"><a href="" class="icon-Arrow-alt-left"></a></li>
+//   <li class="current"><a href="">1</a></li>
+//   <li><a href="">2</a></li>
+//   <li><a href="">3</a></li>
+//   <li><a href="">4</a></li>
+//   <li class="unavailable"><a href="">&hellip;</a></li>
+//   <li><a href="">12</a></li>
+//   <li><a href="">13</a></li>
+//   <li class="arrow"><a href="" class="icon-Arrow-alt-right"></a></li>
+// </ul>
+//
+// Styleguide 11.5
+
+ul.pagination{
+    display: inline-block;
+    li{
+        &.arrow a{
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        &.unavailable a{
+            text-decoration: none;
+            &:hover{
+                text-decoration: inherit;
+            }
+        }
+        &.current a{
+            text-decoration: none;
+            &:hover{
+                text-decoration: inherit;
+            }
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}

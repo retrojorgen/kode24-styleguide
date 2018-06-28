@@ -1,0 +1,1116 @@
+{
+    "categories": [
+        {
+            "id": "02000000",
+            "name": "Nyheter"
+        },
+        {
+            "id": "04",
+            "name": "Sport"
+        },
+        {
+            "id": "01000001",
+            "name": "Serier"
+        },
+        {
+            "id": "01000000",
+            "name": "Filmer"
+        }
+    ],
+
+    "channels": [
+        {
+            "title": "NRK 1",
+            "name": "nrktv1",
+            "id": "1000",
+            "schedule": [
+                {
+                    "id": "17444191",
+                    "title": "Antikkduellen",
+                    "desc": "Danske antikkhandlere utfordres hver uke til å konkurrere om de beste kjøpene og den beste restaureringen.",
+                    "start": 1496723400000,
+                    "end": 1496725200000,
+                    "duration": "30",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17444192",
+                    "title": "Det gode bondeliv",
+                    "desc": "Frank og familien førsøker å drive Kastaniegården på den gode, gamle måten.",
+                    "start": 1496725200000,
+                    "end": 1496727000000,
+                    "duration": "30",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332797",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon.",
+                    "start": 1496727000000,
+                    "end": 1496727900000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332798",
+                    "title": "Politisk kvarter",
+                    "desc": "Samsending med P2.",
+                    "start": 1496727900000,
+                    "end": 1496728800000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332799",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon.",
+                    "start": 1496728800000,
+                    "end": 1496729700000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332800",
+                    "title": "Et glimt av Danmark",
+                    "desc": "Denne gangen er de i en by kjent for sine trampolineutøvere, indremisjon og et kupert terreng. Kan du gjette hvor de er?",
+                    "start": 1496729700000,
+                    "end": 1496731500000,
+                    "duration": "30",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332801",
+                    "title": "Politisk kvarter",
+                    "desc": "Samsending med P2.",
+                    "start": 1496731500000,
+                    "end": 1496732400000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332802",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med verdensværet.",
+                    "start": 1496732400000,
+                    "end": 1496735400000,
+                    "duration": "50",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17389015",
+                    "title": "Svenske arkitekturperler",
+                    "desc": "Christoffer Barnekow ser nærmere på interessante bygninger sammen med arkitekturhistorikeren Martin Rörby.",
+                    "start": 1496735400000,
+                    "end": 1496736000000,
+                    "duration": "10",
+                    "genreId": "07000000"
+                },
+                {
+                    "id": "17332804",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med verdensværet.",
+                    "start": 1496736000000,
+                    "end": 1496736600000,
+                    "duration": "10",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332805",
+                    "title": "I jegerens gryte",
+                    "desc": "Jørgen og Nikolaj er dypt inne i de svenske skogene for å skyte fugl til grytene.",
+                    "start": 1496736600000,
+                    "end": 1496739000000,
+                    "duration": "40",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332806",
+                    "title": "Lovens lange snute",
+                    "desc": "Hvert år blir det arrangert svensk mesterskap for politihunder og førerne deres. Det blir konkurrert i klasser som spor, lydighet og angrep. Og aspiranten Nova er snart klar til å bli politihund. Men vil hun klare de siste prøvene?",
+                    "start": 1496739000000,
+                    "end": 1496739600000,
+                    "duration": "10",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17332807",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med verdensværet.",
+                    "start": 1496739600000,
+                    "end": 1496740200000,
+                    "duration": "10",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332808",
+                    "title": "Med hjartet på rette staden",
+                    "desc": "Politimannen Nick har fått nok av London-livet og flytter sammen med kona si Kate til idylliske Aidensfield. Men er det så fredelig på bygda, og er det rette stedet for den moderne yrkeskvinnen Kate?",
+                    "start": 1496740200000,
+                    "end": 1496743200000,
+                    "duration": "50",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332809",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med verdensværet.",
+                    "start": 1496743200000,
+                    "end": 1496745000000,
+                    "duration": "30",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17515341",
+                    "title": "Alt for dyra",
+                    "desc": "Nina skal ha hundebursdag og det blir litt drama når datteren ser at mamma har farget pelsen på dyrene. Sento har havnet i trøbbel og er på sykehus på grunn av hunden. Miriam har bestemt seg for å reise fra Norge sammen med Bolereo, for å redde eierløse hunder og hester i Spania.",
+                    "start": 1496745000000,
+                    "end": 1496746800000,
+                    "duration": "30",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17332811",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med verdensværet.",
+                    "start": 1496746800000,
+                    "end": 1496747700000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332812",
+                    "title": "Hygge i Strömsö",
+                    "desc": "I den gamle villaen på øya nord for Vasa får vi inspirasjon og gode tips til hus og heim, fritid og kvardagsliv.",
+                    "start": 1496747700000,
+                    "end": 1496750400000,
+                    "duration": "45",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17332813",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med verdensværet.",
+                    "start": 1496750400000,
+                    "end": 1496751000000,
+                    "duration": "10",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17389016",
+                    "title": "Det gode liv i Alaska",
+                    "desc": "Midnattssola gjør Joel døgnvill og full av energi. Det lokale basketball-laget Cicely Quarks skal snart ha sin årlige kamp mot Sleetmute, og Joel blir med som trener for laget. Samtidig kommer en gammel venn av Ruth-Anne til landsbyen, og han har med seg mye spennende salgsvarer.",
+                    "start": 1496751000000,
+                    "end": 1496754000000,
+                    "duration": "50",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332815",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon.",
+                    "start": 1496754000000,
+                    "end": 1496754900000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17444193",
+                    "title": "Teenage Boss",
+                    "desc": "Maja (16) er glad i merkeklær, men moren synes det er galskap med en jakke til over 1000 kroner.",
+                    "start": 1496754900000,
+                    "end": 1496757600000,
+                    "duration": "45",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17332817",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med verdensværet.",
+                    "start": 1496757600000,
+                    "end": 1496758500000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332818",
+                    "title": "Oppfinneren",
+                    "desc": "Tusenkunstneren Erik Alfred Tesaker og familien drømmer om å skape sitt eget selvforsynte mekaniske paradis på et gammelt småbruk på Sørlandet. Det er nå blitt kald vinter på Øystøl, og Erik Alfred har travle dager for å få ferdig et nytt varmt bad for familien. Det er også tid for hogst, og gjengrodd kulturlandskap åpner seg på nytt når materialer til drømmetårnet og ved til huset hentes fra skogen. Erik Alfred lager en magisk overraskelse med glass fra bruktbutikken.",
+                    "start": 1496758500000,
+                    "end": 1496761200000,
+                    "duration": "45",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17332819",
+                    "title": "NRK Nyheter",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon.",
+                    "start": 1496761200000,
+                    "end": 1496762100000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17389017",
+                    "title": "Filmavisen 1958",
+                    "desc": "",
+                    "start": 1496762100000,
+                    "end": 1496763000000,
+                    "duration": "15",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17332820",
+                    "title": "Oddasat - nyheter på samisk",
+                    "desc": "",
+                    "start": 1496763000000,
+                    "end": 1496763900000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332821",
+                    "title": "Tegnspråknytt",
+                    "desc": "Nyheter på tegnspråk.",
+                    "start": 1496763900000,
+                    "end": 1496764200000,
+                    "duration": "5",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332822",
+                    "title": "Hagen min",
+                    "desc": "Janne Moen og Sverre Mjærums hage er full av grønne rom, labyrinter og gjemmesteder. Men Janne mangler et sted å legge seg nedpå, og snekker Stine Bjørnstad får i oppdrag å lage en hengekøye. Janne og Sverre lærer oss å støpe krukker.",
+                    "start": 1496764200000,
+                    "end": 1496766600000,
+                    "duration": "40",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332823",
+                    "title": "Extra",
+                    "desc": "Ukens Extra-trekning fra Norsk Tippings studio på Hamar.",
+                    "start": 1496766600000,
+                    "end": 1496767500000,
+                    "duration": "15",
+                    "genreId": "0000"
+                },
+                {
+                    "id": "17332824",
+                    "title": "Distriktsnyheter",
+                    "desc": "",
+                    "start": 1496767500000,
+                    "end": 1496768400000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332825",
+                    "title": "Dagsrevyen",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med magasin, sport og vær.",
+                    "start": 1496768400000,
+                    "end": 1496771100000,
+                    "duration": "45",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332826",
+                    "title": "Hagen min",
+                    "desc": "Vi besøker en romantisk hage full av roser. Eierne Helene Dahle og Jon Helge Lindberg lager en rosebue. Gartner Steinar Johansen hjelper Helene å plante ut Austin-roser, mens programleder Heidi SIvertzen-Oksmo hjelper kokken Dag TJersland med et pastamåltid. Snekker Stine Bjørnstad lager en søt fuglemater.",
+                    "start": 1496771100000,
+                    "end": 1496773440000,
+                    "duration": "39",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17444194",
+                    "title": "Paddefeiring i Austefjord",
+                    "desc": "Paddene har blitt turistattraksjon i bygda og NRK Møre og Romsdal la ettermiddagssendinga i NRK P1 til Austefjord tidleg i mai, for å feire paddene saman med bygdefolket.",
+                    "start": 1496773500000,
+                    "end": 1496775300000,
+                    "duration": "30",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17332827",
+                    "title": "Distriktsnyheter",
+                    "desc": "",
+                    "start": 1496775300000,
+                    "end": 1496775600000,
+                    "duration": "5",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332828",
+                    "title": "Dagsrevyen 21",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med Norge i dag, sport og vær.",
+                    "start": 1496775600000,
+                    "end": 1496777400000,
+                    "duration": "30",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332829",
+                    "title": "Eit enklare liv",
+                    "desc": "Andrew og Noelle lever side om side med noen av de farligste dyrene i verden. Han er fra Yorkshire og hun fra California, og de forlot storbyen for å være safariguider i Tanzania.",
+                    "start": 1496777400000,
+                    "end": 1496780100000,
+                    "duration": "45",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17332830",
+                    "title": "Lucky man",
+                    "desc": "En kvinne blir kidnappet fra kontoret sitt i Londons finansdistrikt under mystiske omstendigheter. Harry og Suri setter inn alt på å finne henne før det er for sent.",
+                    "start": 1496780100000,
+                    "end": 1496782800000,
+                    "duration": "45",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332831",
+                    "title": "Kveldsnytt",
+                    "desc": "Siste nytt fra NRKs nyhetsredaksjon med sport og vær.",
+                    "start": 1496782800000,
+                    "end": 1496783700000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332832",
+                    "title": "Torp",
+                    "desc": "Et aktuelt og dyptpløyende intervjuprogram. Hver uke inviterer programleder Ole Torp en aktuell gjest til å sitte i stolen.",
+                    "start": 1496783700000,
+                    "end": 1496785500000,
+                    "duration": "30",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332833",
+                    "title": "Husdrømmer",
+                    "desc": "Jim og Josefin har funnet en eventyrtomt i Malmö. Der vil de bygge drømmehuset sitt, som Josefin har tegnet selv. Gert Wingårdh besøker dem noen uker før byggestart, og lurer på om ikke huset burde bygges på en annen del av tomten i stedet. Det får store konsekvenser for Jim og Josefin.",
+                    "start": 1496785500000,
+                    "end": 1496789100000,
+                    "duration": "60",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332834",
+                    "title": "Indiske somre",
+                    "desc": "Aafrin får problemer da han ikke klarer å skille sitt private og politiske liv. Ralph må bli venn med den mektige maharajaen av Patiala og hans elskerinne Sirene.",
+                    "start": 1496789100000,
+                    "end": 1496791800000,
+                    "duration": "45",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332835",
+                    "title": "Nytt liv i East End",
+                    "desc": "Verden går framover, og selv helsepersonell må ta inn over seg at deikanskje bør endre livsstil. Og det går opp for folk hvor farlig det er å røyke. Violet får en ryggskade som tvinger henne til å overlate til Fred å ta vare på butikken. Det får konsekvensar hun ikke hadde tenkt seg. Søster Crane er urolig for den mentale helsa til Roseanne, en nybakt mor med en fortid som plager henne.",
+                    "start": 1496791800000,
+                    "end": 1496795400000,
+                    "duration": "60",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332836",
+                    "title": "Midnattssol",
+                    "desc": "Hvilke mørke hemmelegheiter var det Sparen delte med den samiske jenta Evelina? Kahina sender dykkere ned til fossen der hun sist ble sett. I huset til Eddie Geatki finner Kahina og Anders de siste bitene til en plan. Men hvor er Eddie?",
+                    "start": 1496795400000,
+                    "end": 1496798400000,
+                    "duration": "50",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332837",
+                    "title": "Midnattssol",
+                    "desc": "Svensk-fransk thrillerserie fra 2016.",
+                    "start": 1496798400000,
+                    "end": 1496801700000,
+                    "duration": "55",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332838",
+                    "title": "Ivanka Trump - USAs egentlige førstedame?",
+                    "desc": "Hva tror hun på, og hvor stor politisk makt har hun egentlig?",
+                    "start": 1496801700000,
+                    "end": 1496804700000,
+                    "duration": "50",
+                    "genreId": "09000000"
+                }
+            ]
+        },
+        {
+            "title": "NRK 2",
+            "name": "nrktv2",
+            "id": "1001",
+            "schedule": [
+                {
+                    "id": "17428933",
+                    "title": "De bygger \"Noas ark\"",
+                    "desc": "Den ble funnet i Egypt i 1948, men lå bortglemt i 40 år i hjemmet til den britiske piloten som fant den. Det viser seg at tavlen er en 3.700 år gammel bruksanvisning for hvordan man bygger en stor båt som kan huse mange dyr og stå imot flom. Vil dr. Finkel ved British Museum lykkes med å bygge arken?",
+                    "start": 1496730900000,
+                    "end": 1496733900000,
+                    "duration": "50",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334132",
+                    "title": "Poirot",
+                    "desc": "En kinesisk forretningsmann med et kart over en sølvgruve blir funnet drept i Chinatown. Poirot tar saken og må finne kartet og morderen.",
+                    "start": 1496733900000,
+                    "end": 1496736900000,
+                    "duration": "50",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17334133",
+                    "title": "Dyreklinikken",
+                    "desc": "Denne gangen møter Sofia blant annet krokodiller på Borneo. Hun fanger en skadet karpe i et akvarium og er med når en katt med tannsykdommen resorptive lesjoner må trekke mer enn ti tenner. Dessuten blir det tatt ultralyd av en kaiman som antas å være drektig.",
+                    "start": 1496736900000,
+                    "end": 1496740500000,
+                    "duration": "60",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334134",
+                    "title": "Undring og mangfald",
+                    "desc": "PC og Internett er en fantastisk kombinasjon, men i klasserommet kan valget mellom læring og fristelser på Internett bli vanskelig for mange. Mellom 30 og 40% av elevene i den norske vidaregående skolen opplever at de sliter med selvdisiplinen og fokus på læring når de sitter med PC åpen på pulten. Vi møter doktargradstipendiat Thomas Arnesen ved Høgskulen på Vestlandet i samtale med forskningsjournalist Olav Høgetveit.",
+                    "start": 1496740500000,
+                    "end": 1496742600000,
+                    "duration": "35",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17428935",
+                    "title": "Hjertevenner",
+                    "desc": "Tuula skal på sitt første stevnemøte. Hun skal bli kjent med Janne, som nesten har håndhilst på USAs president! Vi følger seks enslige, godt voksne mennesker som ønsker å finne kjærlighet, vennskap eller i hvert fall - godt selskap.",
+                    "start": 1496742600000,
+                    "end": 1496744100000,
+                    "duration": "25",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17334136",
+                    "title": "Det hendte her",
+                    "desc": "I Mellerud i Dalsland finner de en 250 år gammel mordgåte, verdens største ballong og en spionsentral fra andre verdenskrig.",
+                    "start": 1496744100000,
+                    "end": 1496747700000,
+                    "duration": "60",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334137",
+                    "title": "Fnatt av knott",
+                    "desc": "Insektforsker James Logan prøver å finne ut hvorfor knott og mygg ser ut til å foretrekke enkelte mennesker. De reiser til Skottland for å lære mer om de små blodsugerne.",
+                    "start": 1496747700000,
+                    "end": 1496751000000,
+                    "duration": "55",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334138",
+                    "title": "Rockheim Hall of Fame 2017",
+                    "desc": "Det blir musikkopplevelser fra blant andre Inger Lise Rypdal, Johndoe med Jonas Skybakmoen, Kirsti Sparboe.",
+                    "start": 1496751000000,
+                    "end": 1496755200000,
+                    "duration": "70",
+                    "genreId": "06000000"
+                },
+                {
+                    "id": "17334139",
+                    "title": "Billett til kjærlighet",
+                    "desc": "Charlie, Mette, Kenneth og Rickie må legge fra seg alle sine vanlige kriterier når de skal lete etter sine utkårede.",
+                    "start": 1496755200000,
+                    "end": 1496756700000,
+                    "duration": "25",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17334140",
+                    "title": "Munter mat",
+                    "desc": "Først reiser vi til Bornholm. På menyen står krakkede sild, gudhjemmadyppe, bornholmske ristepølser og brændesnude.",
+                    "start": 1496756700000,
+                    "end": 1496758500000,
+                    "duration": "30",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17334141",
+                    "title": "Med hjartet på rette staden",
+                    "desc": "Politimannen Nick har fått nok av London-livet og flytter sammen med kona si Kate til idylliske Aidensfield. Men er det så fredelig på bygda, og er det rette stedet for den moderne yrkeskvinnen Kate?",
+                    "start": 1496758500000,
+                    "end": 1496761800000,
+                    "duration": "55",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17334142",
+                    "title": "Poirot",
+                    "desc": "Mrs. Pengally ber Poirot om hjelp fordi hun har mistanke om at hennes mann vil forgifte henne. Men hun blir drept før Poirot ankommer Cornwall.",
+                    "start": 1496761800000,
+                    "end": 1496764800000,
+                    "duration": "50",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17334143",
+                    "title": "Dagsnytt atten",
+                    "desc": "Dagens viktigste debatter, intervjuer og kommentarer direkte fra radiostudio.",
+                    "start": 1496764800000,
+                    "end": 1496768400000,
+                    "duration": "60",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334144",
+                    "title": "Angkor Wat - tempelbyens fall",
+                    "desc": "En gjeng eksperter reiser til Kambodsja for å finne ut mer om sivilisasjonen som bygde den mystiske jungelbyen Angkor Wat.",
+                    "start": 1496768400000,
+                    "end": 1496771400000,
+                    "duration": "50",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334145",
+                    "title": "Med livet som innsats",
+                    "desc": "I menneskekroppen er det blodårene som leder elektrisitet aller best, og de leder den rett til hjertet. Fysiker Andreas Wahl vil bevise at elektrisitet går minste motstands vei ved å kle seg med metall og bli truffet av lynet. Vi følger Andreas på reisen fra idé til det store eksperimentet og deler hans bekymringer og utfordringer underveis når han tester naturlovene med livet som innsats.",
+                    "start": 1496771400000,
+                    "end": 1496773200000,
+                    "duration": "30",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17334146",
+                    "title": "Torp",
+                    "desc": "Et aktuelt og dyptpløyende intervjuprogram. Hver uke inviterer programleder Ole Torp en aktuell gjest til å sitte i stolen.",
+                    "start": 1496773200000,
+                    "end": 1496775600000,
+                    "duration": "40",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334147",
+                    "title": "Eventyrlige hoteller",
+                    "desc": "Mads-Arlien Søborg besøker denne gangen New York for å tilbringe en natt i telt på toppen av et tak med utsikt til Manhattan.",
+                    "start": 1496775600000,
+                    "end": 1496777400000,
+                    "duration": "30",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17334148",
+                    "title": "Arkitektens hjem",
+                    "desc": "I dag: Arild Eriksen.",
+                    "start": 1496777400000,
+                    "end": 1496779200000,
+                    "duration": "30",
+                    "genreId": "07000000"
+                },
+                {
+                    "id": "17334149",
+                    "title": "Fredriksten festning",
+                    "desc": "Fredriksten festning i Halden er i dag en fredet idyll. Men noen av de blodigste og mest dramatiske hendelsene i norsk krigshistorie fant sted nettopp her. Denne dokumentaren skildrer historien om \"Norges nøkkel\".",
+                    "start": 1496779200000,
+                    "end": 1496781000000,
+                    "duration": "30",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334150",
+                    "title": "Urix",
+                    "desc": "Går i dybden med ulike perspektiver på aktuelle saker fra hele verden. NRKs utenrikskorrespondenter bidrar med analyser og historier.",
+                    "start": 1496781000000,
+                    "end": 1496782200000,
+                    "duration": "20",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17516535",
+                    "title": "Urix spesial",
+                    "desc": "Storbritannia skal ut av EU, men hvor samlet står det britiske folket i denne prosessen? NRKs korrespondent Espen Aas har reist landet rundt for å finne ut hva helt vanlige folk håper og frykter at Brexit vil bety for dem.",
+                    "start": 1496782200000,
+                    "end": 1496783400000,
+                    "duration": "20",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334151",
+                    "title": "Hvem tror du at du er?",
+                    "desc": "Janne Formoe graver i morfarens ukjente slektshistorie. Det blir en ferd som tar Janne langt bakover i tid, og gir henne et helt nytt syn på sitt barndoms ferieparadis. Tragedier avdekkes, heltehistorier nøstes opp og Janne avslører en ganske eventyrlig hemmelighet.",
+                    "start": 1496783400000,
+                    "end": 1496787000000,
+                    "duration": "60",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334152",
+                    "title": "Et annet Jerusalem",
+                    "desc": "Helt siden 1967 har et komplekst system av politikk, byplanlegging og byråkrati sørget for å ivareta byens jødiske bosetning, men presset ut araberne. Rundt 20.000 hus er i ferd med å bli revet for å gjøre plass til arkeologiske hager og religiøse utgravninger, og mange familier har allerede mistet sine hjem.",
+                    "start": 1496787000000,
+                    "end": 1496790300000,
+                    "duration": "55",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17457449",
+                    "title": "Ivanka Trump - USAs egentlige førstedame?",
+                    "desc": "Men hva tror hun på, og hvor stor politisk makt har hun egentlig?",
+                    "start": 1496790300000,
+                    "end": 1496793300000,
+                    "duration": "50",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17457450",
+                    "title": "Med livet som innsats",
+                    "desc": "I menneskekroppen er det blodårene som leder elektrisitet aller best, og de leder den rett til hjertet. Fysiker Andreas Wahl vil bevise at elektrisitet går minste motstands vei ved å kle seg med metall og bli truffet av lynet. Vi følger Andreas på reisen fra idé til det store eksperimentet og deler hans bekymringer og utfordringer underveis når han tester naturlovene med livet som innsats.",
+                    "start": 1496793300000,
+                    "end": 1496795100000,
+                    "duration": "30",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17334154",
+                    "title": "Urix",
+                    "desc": "Går i dybden med ulike perspektiver på aktuelle saker fra hele verden. NRKs utenrikskorrespondenter bidrar med analyser og historier.",
+                    "start": 1496795100000,
+                    "end": 1496796300000,
+                    "duration": "20",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17516534",
+                    "title": "Urix spesial",
+                    "desc": "Storbritannia skal ut av EU, men hvor samlet står det britiske folket i denne prosessen? NRKs korrespondent Espen Aas har reist landet rundt for å finne ut hva helt vanlige folk håper og frykter at Brexit vil bety for dem.",
+                    "start": 1496796300000,
+                    "end": 1496797500000,
+                    "duration": "20",
+                    "genreId": "09000000"
+                },
+                {
+                    "id": "17334155",
+                    "title": "Oddasat - nyheter på samisk",
+                    "desc": "",
+                    "start": 1496797500000,
+                    "end": 1496798400000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334156",
+                    "title": "Distriktsnyheter Østlandssendingen",
+                    "desc": "",
+                    "start": 1496798400000,
+                    "end": 1496799000000,
+                    "duration": "10",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334157",
+                    "title": "Distriktsnyheter Østfold",
+                    "desc": "",
+                    "start": 1496799000000,
+                    "end": 1496799900000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334158",
+                    "title": "Distriktsnyheter Østnytt",
+                    "desc": "",
+                    "start": 1496799900000,
+                    "end": 1496800800000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334159",
+                    "title": "Distriktsnyheter Østafjells",
+                    "desc": "",
+                    "start": 1496800800000,
+                    "end": 1496801700000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334160",
+                    "title": "Distriktsnyheter Sørlandet",
+                    "desc": "",
+                    "start": 1496801700000,
+                    "end": 1496802300000,
+                    "duration": "10",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334161",
+                    "title": "Distriktsnyheter Rogaland",
+                    "desc": "",
+                    "start": 1496802300000,
+                    "end": 1496803200000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334162",
+                    "title": "Distriktsnyheter Vestlandsrevyen",
+                    "desc": "",
+                    "start": 1496803200000,
+                    "end": 1496804100000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334163",
+                    "title": "Distriktsnyheter Møre og Romsdal",
+                    "desc": "",
+                    "start": 1496804100000,
+                    "end": 1496804700000,
+                    "duration": "10",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334164",
+                    "title": "Distriktsnyheter Midtnytt",
+                    "desc": "",
+                    "start": 1496804700000,
+                    "end": 1496805300000,
+                    "duration": "10",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334165",
+                    "title": "Distriktsnyheter Nordland",
+                    "desc": "",
+                    "start": 1496805600000,
+                    "end": 1496806500000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17334166",
+                    "title": "Distriktsnyheter Nordnytt",
+                    "desc": "",
+                    "start": 1496806500000,
+                    "end": 1496807880000,
+                    "duration": "23",
+                    "genreId": "02000000"
+                }
+            ]
+        },
+        {
+            "title": "TV 2",
+            "name": "tv2",
+            "id": "1005",
+            "schedule": [
+                {
+                    "id": "17332563",
+                    "title": "Parks and Recreation",
+                    "desc": "Parkavdelingen inngår en avtale med et lokalt firma om salg av energibarer i parkene i Pawnee, men Leslie prøver å stoppe avtalen når hun oppdager hvor usunne disse barene er.",
+                    "start": 1496721600000,
+                    "end": 1496723400000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332564",
+                    "title": "Nyhetene",
+                    "desc": "",
+                    "start": 1496723400000,
+                    "end": 1496724900000,
+                    "duration": "25",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332565",
+                    "title": "God morgen Norge",
+                    "desc": "Møte med aktuelle gjester. Nyheter og værmelding hver hele og halve time.",
+                    "start": 1496724900000,
+                    "end": 1496736000000,
+                    "duration": "185",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17332566",
+                    "title": "God morgen Norge",
+                    "desc": "Møte med aktuelle gjester. Nyheter og værmelding hver hele og halve time.",
+                    "start": 1496736000000,
+                    "end": 1496743200000,
+                    "duration": "120",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17332567",
+                    "title": "Celebrity Masterchef",
+                    "desc": "Fire nye kjendiser er klare for å imponere dommerne i ukens Masterchef-runde. Journalist Kirsty Wark, historiker Ruth Goodman, tidligere rugby-kaptein Phil Vickery og skuespiller Ricky Groves må alle begynne med å lage en salat med posjert egg og sennepsdressing.",
+                    "start": 1496743200000,
+                    "end": 1496746800000,
+                    "duration": "60",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17332568",
+                    "title": "Love It or List It",
+                    "desc": "Huseiere som ønsker noe nytt får valget mellom et nytt hus eller en renovert versjon av sitt gamle hjem.",
+                    "start": 1496746800000,
+                    "end": 1496750400000,
+                    "duration": "60",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332569",
+                    "title": "Solsidan",
+                    "desc": "Alex og Annas må be Jonas komme tilbake for gjøre kjøkkenet deres ferdig, noe som fører til en haug med misforståelser. Fredde syns det er på tide at Victor skaffer seg et bedre nettverk, mens Mickan får problemer når hun inviter sine miljøbevisste venner på middag.",
+                    "start": 1496750400000,
+                    "end": 1496752200000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332570",
+                    "title": "Solsidan",
+                    "desc": "Anna mener at Alex er en mammadalt. Victor mener at hans lærerinne er ekkel, og når Fredde treffer henne, får han sjokk.",
+                    "start": 1496752200000,
+                    "end": 1496754000000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332571",
+                    "title": "En moderne familie",
+                    "desc": "Claire stiller til valg, og hele familien prøver å samle stemmer til henne. Men det går selvsagt ikke helt som planlagt.",
+                    "start": 1496754000000,
+                    "end": 1496755800000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332572",
+                    "title": "En moderne familie",
+                    "desc": "Claire forsøker å trøste Luke når han mister sin beste venn.",
+                    "start": 1496755800000,
+                    "end": 1496757600000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332573",
+                    "title": "Home and Away",
+                    "desc": "I Home and Away følger vi livene til innbyggerne i Summer Bay, en fiktiv australsk kystlandsby.",
+                    "start": 1496757600000,
+                    "end": 1496759400000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332574",
+                    "title": "Home and Away",
+                    "desc": "I Home and Away følger vi livene til innbyggerne i Summer Bay, en fiktiv australsk kystlandsby.",
+                    "start": 1496759400000,
+                    "end": 1496761200000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332575",
+                    "title": "Man with a Plan",
+                    "desc": "Trebarnsfaren Adam oppdager at foreldrerollen ikke er så lett som han trodde, når kona begynner i jobb og han blir hjemmeværende pappa.",
+                    "start": 1496761200000,
+                    "end": 1496763000000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332576",
+                    "title": "The Odd Couple",
+                    "desc": "Slasken Oscar og den ekstremt ryddige streitingen Felix er to tidligere skolekamerater som plutselig blir romkamerater etter at de begge blir skilt.",
+                    "start": 1496763000000,
+                    "end": 1496764800000,
+                    "duration": "30",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332577",
+                    "title": "Sommerhytta",
+                    "desc": "Nå har tre deltagerpar flyttet inn i en gammel butikk og skal forvandle den til 3 sommerhytter. Denne uken skal deltagerparrene starte på arbeidet inne i hytta. Men hvor gode er de egentlig på å snekre? Klarer de å gjøre ferdig ett rom på noen få dager?",
+                    "start": 1496764800000,
+                    "end": 1496766600000,
+                    "duration": "30",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17332578",
+                    "title": "Nyhetene",
+                    "desc": "",
+                    "start": 1496766600000,
+                    "end": 1496767500000,
+                    "duration": "15",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332579",
+                    "title": "Været",
+                    "desc": "",
+                    "start": 1496767500000,
+                    "end": 1496767800000,
+                    "duration": "5",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332580",
+                    "title": "Sportsnyhetene",
+                    "desc": "",
+                    "start": 1496767800000,
+                    "end": 1496768400000,
+                    "duration": "10",
+                    "genreId": "04000000"
+                },
+                {
+                    "id": "17332581",
+                    "title": "Sommerhytta",
+                    "desc": "Deltagerparene er godt i gang med ukens oppussingsprosjekt, å bygge et funksjonelt soverom med smarte løsninger. Men det er forholdsvis små rom i hyttene, det gjør ikke jobben enklere.",
+                    "start": 1496768400000,
+                    "end": 1496770200000,
+                    "duration": "30",
+                    "genreId": "03000000"
+                },
+                {
+                    "id": "17332582",
+                    "title": "Fingrene av fatet",
+                    "desc": "Christian Strand og Henriette Bruusgaard skal ut i kokkeduell! På menyen står fish and chips.",
+                    "start": 1496770200000,
+                    "end": 1496772000000,
+                    "duration": "30",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332583",
+                    "title": "Tid for hjem",
+                    "desc": "I en gammel bygård har et ungt par kjøpt sin første leilighet. Super beliggenhet og nydelig utsikt, men en planløsning de gjerne vil endre på. Soverommet deres ligger i front av huset mot utsikten, og spisestuen ligger mot bakgaten. Går det an å bytte plass på disse to rommene og få åpen løsning mellom stue og spisestue?",
+                    "start": 1496772000000,
+                    "end": 1496775600000,
+                    "duration": "60",
+                    "genreId": "10000000"
+                },
+                {
+                    "id": "17332584",
+                    "title": "Nyhetene",
+                    "desc": "",
+                    "start": 1496775600000,
+                    "end": 1496776800000,
+                    "duration": "20",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332585",
+                    "title": "Været",
+                    "desc": "",
+                    "start": 1496776800000,
+                    "end": 1496777100000,
+                    "duration": "5",
+                    "genreId": "02000000"
+                },
+                {
+                    "id": "17332586",
+                    "title": "Sportsnyhetene",
+                    "desc": "",
+                    "start": 1496777100000,
+                    "end": 1496778000000,
+                    "duration": "15",
+                    "genreId": "04000000"
+                },
+                {
+                    "id": "17332587",
+                    "title": "Grey's Anatomy",
+                    "desc": "Kjærlighet, sjalusi og et vanvittig karrierejag er noen av utfordringene for legene ved prestisjetunge Grey Sloan Memorial Hospital.",
+                    "start": 1496778000000,
+                    "end": 1496781600000,
+                    "duration": "60",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332588",
+                    "title": "Madam Secretary",
+                    "desc": "Elizabeth og president Dalton drar til Roma for å delta på G20-konferansen, men Elizabeth er bekymret for Henrys sikkerhet. Han er sendt til Israel for å forhindre terrorplanene til en dommedagskult. Samtidig avslører Blake en personlig hemmelighet til sine tidligere kollegaer som han møter på konferansen, og Elizabeth går bak Stevies rygg.",
+                    "start": 1496781600000,
+                    "end": 1496785200000,
+                    "duration": "60",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332589",
+                    "title": "Madam Secretary",
+                    "desc": "Elizabeth drar til Brussel for å få støtte av NATO mot Russland, som truer med å invadere Bulgaria. Men hele alliansen står på spill når Frankrike nekter å samarbeide. Henrys nye rolle gjør at også han må involvere seg i Russland-problematikken. Samtidig får Elizabeth ny informasjon om en gammel venn, som får henne til å sette spørsmål ved lojaliteten hans.",
+                    "start": 1496785200000,
+                    "end": 1496788500000,
+                    "duration": "55",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332590",
+                    "title": "Criminal Minds",
+                    "desc": "BAU-teamet leter etter en mistenkt som med vilje ødelegger, skamferer og endrer utseendet på sine offer. I mellomtiden har Rossi en ganske ukomfortable gjenforening med sin eks-kone, Hayden, som skjulte en stor hemmelighet for ham i over 30 år.",
+                    "start": 1496788500000,
+                    "end": 1496790900000,
+                    "duration": "40",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332591",
+                    "title": "Hawaii Five-0",
+                    "desc": "Five-0-temaet etterforsker en hendelse der et team med bombeeksperter ble angrepet. Den mistenkte truer med å detonere skjulte eksplosiver dersom ikke pyromanen Jason Sinclair blir løslatt fra fengsel. I tillegg returnerer Adam fra sykehuset, og Kono oppdager at de blir spionert på.",
+                    "start": 1496790900000,
+                    "end": 1496793600000,
+                    "duration": "45",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332592",
+                    "title": "Elementary",
+                    "desc": "Når Watson assisterer Fiona Helbron som hjalp henne i en tidligere sak, gjør hun en overraskende oppdagelse om Holmes.",
+                    "start": 1496793600000,
+                    "end": 1496796300000,
+                    "duration": "45",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332593",
+                    "title": "Suits",
+                    "desc": "Det blir mye grums både personlig og profesjonelt når Harvey avbryter Stephens date med Donna for å konfrontere ham med at Cameron ble ledet rett til Mariga.",
+                    "start": 1496796300000,
+                    "end": 1496799000000,
+                    "duration": "45",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332594",
+                    "title": "Suits",
+                    "desc": "Mens Donna pleier Harveys sår, lover den forslåtte advokaten at Stephen skal måtte betale for alt han har gjort. Men sannheten er at hele situasjonen er et resultat av Edward Darbys misforståtte forsøk på å hjelpe Ava.",
+                    "start": 1496799000000,
+                    "end": 1496801700000,
+                    "duration": "45",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332595",
+                    "title": "Suits",
+                    "desc": "Forhandlingene bringer firmaets tillitsproblemer fram i lyset, og Harvey gjør et trekk for å tippe det hele i Pearson Spectors favør. Men så kommer Scotty tilbake til byen og spør Harvey om en tjeneste som vil ha innvirkning på deres del av kaka.",
+                    "start": 1496801700000,
+                    "end": 1496804400000,
+                    "duration": "45",
+                    "genreId": "01000001"
+                },
+                {
+                    "id": "17332596",
+                    "title": "MacGyver - klassikeren",
+                    "desc": "MacGyver jobber som hemmelig agent for Phoenix-stiftelsen.",
+                    "start": 1496804400000,
+                    "end": 1496808000000,
+                    "duration": "60",
+                    "genreId": "01000001"
+                }
+            ]
+        }
+    ]
+}
+

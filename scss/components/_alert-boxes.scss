@@ -1,0 +1,97 @@
+// Alerts
+//
+// RequiresJS: &nbsp;
+//
+// Markup:
+// <div data-alert class="alert-box">
+//   <span class="icon-Lab"></span> SISTE: Politiet vil fengsle SOS Rasisme-leder i fire uker for grovt bedrageri
+//   <a class="close"><span class="icon-Close"></span></a>
+// </div>
+//
+// Styleguide 18
+
+.alert-box{
+    background-color: $ui-color;
+    #{$icon}{
+        line-height: 0;
+        position: relative;
+        top: 5px;
+        left: -3px;
+    }
+    .close{
+        text-decoration: none;
+        line-height: 1;
+        right: 0.75rem;
+        #{$icon}{
+            font-size: 1rem;
+            position: static;
+        }
+    }
+}
+
+// Color
+//
+// Markup:
+// <div data-alert class="alert-box {$modifiers}">
+//   <span class="icon-Lab"></span> SISTE: Politiet vil fengsle SOS Rasisme-leder i fire uker for grovt bedrageri
+//   <a class="close"><span class="icon-Close"></span></a>
+// </div>
+//
+// .alert - Alert
+// .success - Success
+// .warning - Warning
+// .secondary - Secondary
+// .overlay - Overlay
+//
+// Styleguide 18.1
+
+.alert-box{
+    &.overlay{
+        @include alert-style($color-black);
+    }
+}
+
+// Style
+//
+// Markup:
+// <div data-alert class="alert-box {$modifiers}">
+//   <span class="icon-Lab"></span> SISTE: Politiet vil fengsle SOS Rasisme-leder i fire uker for grovt bedrageri
+//   <a class="close"><span class="icon-Close"></span></a>
+// </div>
+//
+// .radius - Radius
+// .round - Round
+//
+// Styleguide 18.2
+
+// Alert group
+//
+// Creates fixed alert-boxes to the top of the page that stack when showing multiple alerts.
+//
+// Markup:
+// <button onClick="db.libs.alert.create({'text': 'Pssssst. You really need to hear this…'})">Default</button>
+// <button onClick="db.libs.alert.create({'text': 'Success! You are awsome.', 'classes': 'success'})">Success</button>
+// <button onClick="db.libs.alert.create({'text': 'Error! Something is terribly wrong.', 'classes': 'alert'})">Alert</button>
+// <button onClick="db.libs.alert.create({'text': 'Warning! You are about to enter a restricted area.', 'classes': 'warning'})">Warning</button>
+// <button onClick="db.libs.alert.clear()" class="outline">Clear</button>
+//
+// Styleguide 18.3
+
+.alert-group{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $z-index-alert;
+    margin-left: 0;
+    //box-shadow: 0px 0px 3px rgb(118, 118, 118);
+    li{
+        &.alert-box{
+            margin-bottom: 0;
+            border-top: 1px solid $white;
+            &:first-child{
+                border-top: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,1262 @@
+$top-nav-height-small: 50px;
+$top-nav-height-large: 60px;
+
+$include-html-top-nav-classes: true !default;
+$include-html-top-nav-primary-classes: $include-html-top-nav-classes !default;
+$include-html-top-nav-primary-dropdown-classes: $include-html-top-nav-classes !default;
+$include-html-top-nav-secondary-classes: $include-html-top-nav-classes !default;
+$include-html-top-nav-secondary-dropdown-classes: $include-html-top-nav-secondary-classes !default;
+$include-html-top-nav-small-classes: $include-html-top-nav-classes !default;
+$include-html-top-nav-login-classes: $include-html-top-nav-classes !default;
+$include-html-top-nav-app-classes: $include-html-top-nav-classes !default;
+$include-html-top-nav-pageheader: $include-html-top-nav-classes !default;
+
+// Navigation
+//
+// Styleguide 11.0
+
+// Top-nav
+//
+// RequiresJS: The primary part of the `top-nav` is global across all products. Some elements require javascript to work properly. See documentation for [db.libs.topnav](/jsdocs/db.libs.topnav.html).
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//   </div>
+// </header>
+//
+// Styleguide 11.1.0
+
+@if $include-html-top-nav-primary-classes{
+    .top-nav {
+        position: relative;
+        z-index: $z-index-nav;
+        margin-bottom: 1rem;
+        &.fixed{
+            position: fixed;
+            width: 100%;
+        }
+        .primary {
+            background: $color-sand;
+            color: $white;
+            height: $top-nav-height-small;
+            line-height: $top-nav-height-small;
+            @media #{$medium-up} {
+                height: $top-nav-height-large;
+                line-height: $top-nav-height-large;
+            }
+            .title {
+                float: left;
+                display: block;
+                margin: 0 0 0 $column-gutter / 2;
+                height: inherit;
+                line-height: inherit;
+                @media #{$medium-up} {
+                    height: $top-nav-height-large;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    height: inherit;
+                    display: block;
+                    &:hover, &:focus{
+                        svg{
+                            fill: darken($primary-color, 15%);
+                        }
+                    }
+                    svg,img{
+                        height: 100%;
+                        width: 112px;
+                        fill: $white;
+                        display: block;
+                        @media #{$medium-up} {
+                            width: 140px;
+                        }
+                    }
+                }
+            }
+
+            .left{
+                float: left;
+                height: inherit;
+            }
+
+            .right{
+                position: absolute;
+                right: $column-gutter / 2;
+                height: inherit;
+                display: block;
+                .button-group{
+                    float: left;
+                }
+            }
+        }
+        //This hides the all dropdowns, if the dropdown component is not loaded.
+        //This is important for the critical path css to work.
+        .f-dropdown{
+            position: absolute;
+            left: -9999px;
+        }
+    }
+}
+
+// Search
+//
+// *(Only visible on medium-up viewports)*
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <div class="right">
+//       <form id="search" name="search" method="get" class="search show-for-medium-up" action="http://www.dagbladet.no/tekstarkiv/">
+//         <input type="search" name="q" placeholder="Søk" class="radius" required>
+//       </form>
+//     </div>
+//   </div>
+// </header>
+//
+// Styleguide 11.1.1
+
+@if $include-html-top-nav-primary-classes{
+    .top-nav {
+        .primary {
+            .search {
+                float: left;
+                width: 50px;
+                position: relative;
+                margin-left: 1rem;
+                transition: width 150ms;
+                top: 10px;
+                cursor: text;
+                &.active{
+                    width: 200px;
+                    &:before{
+                        left: 10px;
+                    }
+                    input[type="search"]{
+                        padding-left: 35px;
+                    }
+                }
+                &:before{
+                    content: "\e7ad";
+                    font-family: "Helveticons";
+                    color: $ui-color;
+                    position: absolute;
+                    font-size: 1.2rem;
+                    left: 18px;
+                    top: -12px;
+                }
+                input[type="search"] {
+                    box-sizing: border-box;
+                    padding: 0 0 0 50px;
+                    border: 1px solid white;
+                    margin: 0;
+                    font-weight: 300;
+                    border-radius: 3px;
+
+                    background-color: #FFFFFF;
+                    font-family: inherit;
+                    box-shadow: none;
+                    color: #222222;
+                    display: block;
+                    font-size: 1rem;
+                    height: 2.4375rem;
+                    width: 100%;
+                    transition: all 0.15s linear;
+                    line-height: normal;
+                    &:focus{
+                        border-color: $ui-color;
+                        outline: none;
+                    }
+                }
+            }
+            @media #{$large-up}{
+                .search{
+                    width: 200px;
+                    &:before{
+                        left: 10px;
+                    }
+                    input[type="search"]{
+                        padding-left: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Navigation
+//
+// *(Only visible on medium-up viewports)*
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <nav class="left show-for-medium-up">
+//       <ul class="sections">
+//         <li><a href="#">Item 1</a></li>
+//         <li><a href="#">Item 2</a></li>
+//         <li><a href="#">Item 3</a></li>
+//         <li><a href="#">Item 4</a></li>
+//       </ul>
+//     </nav>
+//   </div>
+// </header>
+//
+// Styleguide 11.1.2
+
+@if $include-html-top-nav-primary-classes{
+    .top-nav{
+        .primary{
+            .left{
+                &>ul{
+                    list-style: none;
+                    margin: 0 0 0 1.25rem;
+                    &>li {
+                        position: relative;
+                        font-weight: 300;
+                        float: left;
+                        &>a{
+                            transition: all 0.1s ease-in-out;
+                            line-height: $top-nav-height-large;
+                            text-transform: capitalize;
+                            letter-spacing: 0.07rem;
+                            color: $color-blue;
+                            text-decoration: none;
+                            display: block;
+                            padding: 0 1.25rem;
+                            &:hover, &:focus{
+                                transition: all 0.1s ease-in-out;
+                                background-color: $color-sand-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .small-navigation-toggle{
+            float: right;
+            margin-right: $column-gutter / 2;
+            font-size: 0.9em;
+            //margin-top: 1px;
+            color: $color-blue;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: all 150ms ease-out;
+            &:hover, &:visited{
+                color: $color-black;
+                transition: all 150ms ease-out;
+                svg {
+                    rect{
+                        fill: $color-black;
+                    }
+                }
+            }
+            svg{
+                position: relative;
+                top: 5px;
+                transform: rotate(0deg);
+                rect{
+                    fill: $color-blue;
+                    transition: all 150ms ease-out;
+                    transform: rotate(0deg) scale(1, 1) translateY(0px) translateX(0px);
+                }
+            }
+            &.active{
+                svg{
+                    rect:nth-child(1){
+                        transform: rotate(45deg) scale(1.17,1) translateY(-2.5px) translateX(2.5px);
+                    }
+                    rect:nth-child(2){
+                        transform: scale(0.2, 1) translateX(47px);
+                    }
+                    rect:nth-child(3){
+                        transform: rotate(-45deg) scale(1.17, 1) translateY(-4px) translateX(-11.5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dropdown
+//
+// *(Only visible on medium-up viewports)*
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <nav class="left show-for-medium-up">
+//       <ul class="sections">
+//         <li class="has-dropdown">
+//           <a href="#" data-dropdown="drop-section">Item 1</a>
+//           <ul id="drop-section" class="f-dropdown" data-dropdown-content>
+//             <li><a href="#">Subitem 1</a></li>
+//             <li><a href="#">Subitem 2</a></li>
+//             <li><a href="#">Subitem 3</a></li>
+//             <li><a href="#">Subitem 4</a></li>
+//             <li><a href="#">Subitem 5</a></li>
+//             <li><a href="#">Subitem 6</a></li>
+//             <li><a href="#">Subitem 7</a></li>
+//             <li><a href="#">Subitem 8</a></li>
+//             <li><a href="#">Subitem 9</a></li>
+//           </ul>
+//         </li>
+//         <li class="has-dropdown">
+//           <a href="#" data-dropdown="drop-video">Item 2</a>
+//           <ul id="drop-video" class="f-dropdown" data-dropdown-content>
+//             <li><a href="#">Subitem 1</a></li>
+//             <li><a href="#">Subitem 2</a></li>
+//             <li><a href="#">Subitem 3</a></li>
+//             <li><a href="#">Subitem 4</a></li>
+//           </ul>
+//         </li>
+//       </ul>
+//     </nav>
+//   </div>
+// </header>
+//
+// Styleguide 11.1.3
+
+@if $include-html-top-nav-primary-dropdown-classes{
+    .top-nav{
+        .primary{
+            .left{
+                .has-dropdown{
+                    &>a{
+                        //Extra padding to compensate for the arrow
+                        padding-right: 1.75rem;
+                        &:after {
+                            content: "\e882";
+                            font-family: "Helveticons";
+                            font-size: 0.7rem;
+                            position: absolute;
+                            top: 50%;
+                            right: 13px;
+                            transform: translateY(-50%);
+                            speak: none;
+                        }
+                        &.open{
+                            &:after{
+                                content: "\e881";
+                            }
+                        }
+                    }
+                }
+                .f-dropdown{
+                    //Fixes position of the dropdown
+                    margin-top: 0;
+                    min-width: $f-dropdown-max-width;
+                }
+            }
+        }
+    }
+}
+
+// Buttons
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <div class="right">
+//       <ul class="button-group radius">
+//         <li><a href="#" class="button light small"><span class="icon-Userfemale"></span></a></li>
+//         <li><a href="#" class="button light small"><span class="icon-Share"></span></a></li>
+//         <li><a href="#" class="button light small"><span class="icon-Settings"></span></a></li>
+//       </ul>
+//     </div>
+//   </div>
+// </header>
+//
+// Styleguide 11.1.4
+
+@if $include-html-top-nav-primary-classes{
+    .top-nav {
+        .right{
+            .button-group{
+                position: relative;
+                top: 6px;
+                @media #{$medium-up}{
+                    top: 10px;
+                }
+                .button{
+                    //NOTE: A tiny hack to make the buttons and searchfield the same height;
+                    padding-top: 0.7rem;
+                    padding-bottom: 0.75rem;
+                    border-left-color: $color-sand;
+                    margin-bottom: 0;
+                    &:after{
+                        top: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// User login
+//
+// Global login. *Note that the template for the login is rendered in the client in the placeholder <code>#js-user</code>.*
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <div class="right">
+//       <ul class="button-group radius">
+//         <li><a href="#" data-dropdown="js-user" class="button light small">Logg inn</a></li>
+//       </ul>
+//     </div>
+//   </div>
+//   <div id="js-user" data-dropdown-content class="f-dropdown small content user-login"></div>
+// </header>
+//
+// Styleguide 11.1.5
+
+@if $include-html-top-nav-login-classes{
+    .user-login{
+        margin-top: 11px;
+    }
+
+    .global-login{
+        .row{
+            margin-left: -0.9375rem;
+            margin-right: -0.9375rem;
+            max-width: none;
+            width: auto;
+        }
+        &>p{
+            font-size: 0.8rem;
+            border-bottom: 1px solid $color-grey;
+            padding-bottom: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+        .help{
+            font-size: 0.8rem;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+        label{
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $color-darkgrey;
+        }
+
+        .button{
+            margin-bottom: 0;
+        }
+    }
+}
+
+// User administration
+//
+// Global account administration.
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <div class="right">
+//       <ul class="button-group radius">
+//         <li><a href="#" data-dropdown="account-panel" class="button light small"><span class="icon-Userfemale"></span></a></li>
+//       </ul>
+//     </div>
+//   </div>
+//   <div id="account-panel" data-abide data-dropdown-content class="f-dropdown small content">
+//     <p><small>Logget inn som:</small> <strong>John Arne Markussen</strong></p>
+//     <ul>
+//       <li><a href="#" class="button tiny">Kundeinformasjon</a></li>
+//       <li><a href="#" class="button tiny">Betalingsinformasjon</a></li>
+//       <li><a href="#" class="button tiny">Abonnement</a></li>
+//       <li><a href="#" class="button tiny">Mine kjøp</a></li>
+//       <li><a href="#" class="button tiny">Logg ut</a></li>
+//     </ul>
+//   </div>
+// </header>
+
+@if $include-html-top-nav-login-classes{
+    .account-panel{
+        margin-top: 11px;
+        p{
+            border-bottom: 1px solid $color-grey;
+            padding-bottom: 0.8rem;
+            font-size: 1.2rem;
+            small{
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: $color-darkgrey;
+                font-size: 0.7rem;
+            }
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            li{
+                .button{
+                    margin-bottom: 0.7rem;
+                    text-align: left;
+                }
+                &:last-child{
+                    .button{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Navigation small screens
+//
+// *(Only visible on small viewports)*
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <a class="small-navigation-toggle" href="#">
+//       Meny
+//       <svg width="23px" height="23px" viewBox="0 0 23 23">
+//         <rect x="0" y="0" width="23" height="5"/>
+//         <rect x="0" y="9" width="23" height="5"/>
+//         <rect x="0" y="18" width="23" height="5"/>
+//       </svg>
+//     </a>
+//   </div>
+// </header>
+//
+// Styleguide 11.1.7
+
+@if $include-html-top-nav-small-classes{
+    .top-nav{
+        .small-navigation{
+            background-color: $color-darker;
+            display: none;
+            &.active{
+                display: block;
+            }
+            .search{
+                padding: 0 ($column-gutter / 2) 0.6rem;
+                background-color: $color-sand;
+                input{
+                    margin-bottom: 0;
+                    border-color: $white;
+                }
+            }
+            nav {
+                ul{
+                    list-style: none;
+                    margin-left: 0;
+                    li {
+                          display: inline-block;
+                    }
+                    &.links{
+                        li{
+                            margin-right: 1.25rem;
+                        }
+                        a{
+                            display: inline-block;
+                            padding: 0.6rem 0;
+                            color: $white;
+                            text-decoration: none;
+                            [class^="icon-"], [class*=" icon-"]{
+                                position: relative;
+                                top: 4px;
+                                margin-right: 0.5rem;
+                                line-height: 0;
+                                speak: none;
+                            }
+                        }
+                    }
+                    &.buttons{
+                        li {
+                            margin-right: 0.75rem;
+                            .button{
+                                margin-bottom: 0.75rem;
+                            }
+                        }
+                        .button{
+                            .icon-testpilot{
+                                top: 0.15rem;
+                                float: left;
+                                margin-right: 0.25rem;
+                            }
+                            .icon-Thumb-up{
+                                color: $color-blue;
+                            }
+                        }
+                    }
+                }
+            }
+
+            a.text-white {
+                display: block;
+                margin-bottom: $column-gutter;
+            }
+
+            h1, h2, h3{
+                font-size: rem-calc(20);
+                font-weight: 300;
+                color: $color-yellow;
+                width: 100%;
+                float: left;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            p{ 
+               color: $white;
+            }
+            //FIXME: the buttons does not cover the whole width with margin -2px
+            .button-group.even-3 li {
+                margin:0;
+            }
+
+            .breadcrumb {
+                margin-bottom: $column-gutter / 2;
+                display: block;
+                padding: 0.6rem 0;
+                color: $white;
+                text-decoration: none;
+            }
+            .information{
+                color: $white;
+                padding:  $column-gutter;
+                background: $color-dark;
+                margin-bottom: $column-gutter / 2;
+                .button {
+                    margin-bottom: 0;
+                }
+                a{
+                    color: $white;
+                }
+            }
+            .menu-newsletter {
+                padding: $column-gutter;
+                background: $color-darkest;
+                margin-bottom: $column-gutter / 2;
+                p{
+                    margin-bottom: 0;
+                }
+        
+            }
+        }
+    }
+}
+
+// In app
+//
+// *(Only visible on small viewports)* Adding `is-app` will hide the primary navigation.
+//
+// Markup:
+// <a class="button" onclick="$('#top-navigation-inapp-test').topnav('toggleSmallNavigation'); return false;">Demo</a>
+// <header id="top-navigation-inapp-test" class="top-nav is-app" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//     <a class="small-navigation-toggle" href="#">Meny</a>
+//   </div>
+// </header>
+//
+// Styleguide 11.1.8
+
+@if $include-html-top-nav-app-classes{
+    .top-nav{
+        &.is-app{
+            top: 0;
+
+            .small-navigation.active {
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                overflow: auto;
+            }
+            .primary{
+                display: none;
+            }
+        }
+    }
+}
+
+// Secondary
+//
+// RequiresJS: The secondary navigation should be contextual and should reveal links and information that is more relevant to the section or service.
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//   </div>
+//   <section class="secondary">
+//     <h1>
+//       <a>
+//         <div class="section-icon tiny" style="background-color: rgb(140, 174, 45);">
+//           <span class="icon-Lab"></span>
+//         </div>
+//         Section name
+//       </a>
+//     </h1>
+//     <nav>
+//       <ul>
+//         <li><a>Item 1</a></li>
+//         <li><a>Item 2</a></li>
+//         <li><a>Item 3</a></li>
+//         <li><a>Item 4</a></li>
+//         <li><a>Item 5</a></li>
+//         <li><a>Item 6</a></li>
+//       </ul>
+//     </nav>
+//     <a class="small-secondary-toggle">More</a>
+//   </section>
+// </header>
+//
+// Styleguide 11.2.0
+
+//FIXME: When no section-icon is set the left margin disappear.
+@if $include-html-top-nav-secondary-classes{
+    .top-nav{
+        .secondary{
+            position: relative;
+            border-bottom: 1px solid $color-lightgrey;
+            background-color: $white;
+            @include clearfix;
+            h1{
+                margin: 0;
+                font-size: 0.9rem;
+                font-weight: 300;
+                line-height: 40px;
+                @media #{$medium-up}{
+                    float: left;
+                    padding-right: 1rem;
+                    margin-right: 1rem;
+                    border-right: 1px solid $color-lightgrey;
+                }
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05rem;
+                    white-space: nowrap;
+                    @media #{$medium-up}{
+                        white-space: normal;
+                    }
+                    .section-icon{
+                        position: relative;
+                        top: 5px;
+                        margin-bottom: 0;
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+            .small-secondary-toggle{
+                position: absolute;
+                right: 0;
+                top: 0;
+                line-height: 40px;
+                font-size: 0.9rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 0.05rem;
+                border-left: 1px solid $color-lightgrey;
+                padding: 0 1rem;
+                background-color: $white;
+                &:after {
+                    content: "\e882";
+                    font-family: "Helveticons";
+                    font-size: 0.7rem;
+                    line-height: 1;
+                    margin-left: 0.5rem;
+                    speak: none;
+                }
+                &.active{
+                    &:after{
+                        content: "\e881";
+                    }
+                }
+                @media #{$medium-up}{
+                    display: none;
+                }
+            }
+            nav{
+                border-top: 1px solid $color-lightgrey;
+                display: none;
+                &.active{
+                    display: block;
+                }
+                @media #{$medium-up}{
+                    display: block;
+                    float: left;
+                    line-height: 40px;
+                    border-top: none;
+                }
+                &>ul{
+                    list-style: none;
+                    margin: 0;
+                    display: block;
+                    &>li{
+                        display: inline-block;
+                        &>a{
+                            margin-right: 1.5rem;
+                            text-decoration: none;
+                            font-size: 0.9rem;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Secondary dropdown
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//   </div>
+//   <section class="secondary">
+//     <h1>
+//       <a>
+//         <div class="section-icon tiny" style="background-color: rgb(140, 174, 45);">
+//           <span class="icon-Lab"></span>
+//         </div>
+//         Section name
+//       </a>
+//     </h1>
+//     <nav>
+//       <ul>
+//         <li><a>Item 1</a></li>
+//         <li class="has-dropdown">
+//           <a data-dropdown="drop5">Item 2</a>
+//           <ul id="drop5" data-dropdown-content class="f-dropdown">
+//             <li><a href="#">Subitem 1</a></li>
+//             <li><a href="#">Subitem 2</a></li>
+//             <li><a href="#">Subitem 3</a></li>
+//             <li><a href="#">Subitem 4</a></li>
+//           </ul>
+//         </li>
+//         <li class="has-dropdown">
+//           <a data-dropdown="drop6">Item 3</a>
+//           <ul id="drop6" data-dropdown-content class="f-dropdown">
+//             <li><a href="#">Subitem 1</a></li>
+//             <li><a href="#">Subitem 2</a></li>
+//             <li><a href="#">Subitem 3</a></li>
+//           </ul>
+//         </li>
+//         <li><a>Item 4</a></li>
+//         <li><a>Item 5</a></li>
+//         <li><a>Item 6</a></li>
+//       </ul>
+//     </nav>
+//     <a class="small-secondary-toggle">More</a>
+//   </section>
+// </header>
+//
+// Styleguide 11.2.1
+
+@if $include-html-top-nav-secondary-dropdown-classes{
+    .top-nav{
+        .secondary{
+            .has-dropdown{
+                &>a{
+                    position: relative;
+                    margin-right: 2.3rem;
+                    &:after {
+                        content: "\e882";
+                        font-family: "Helveticons";
+                        font-size: 0.7rem;
+                        position: absolute;
+                        top: 50%;
+                        right: -16px;
+                        transform: translateY(-50%);
+                        speak: none;
+                    }
+                    &.open{
+                        &:after{
+                            content: "\e881";
+                        }
+                    }
+                }
+                .f-dropdown{
+                    margin-top: 11px;
+                    &:before {
+                        border-color: transparent transparent $ui-color transparent;
+                    }
+                }
+            }
+        }
+
+        @media #{$small-only}{
+            .secondary{
+                nav{
+                    padding: 0 0.5rem;
+                }
+                .has-dropdown{
+                    float: left;
+                    width: 100%;
+                    &>a{
+                        float: left;
+                        text-transform: uppercase;
+                        letter-spacing: 0.1em;
+                        color: $color-darkgrey;
+                        font-weight: 400;
+                        font-size: 0.8rem;
+                        &:after{
+                            display: none;
+                        }
+                    }
+                    .f-dropdown{
+                        position: static;
+                        box-shadow: none;
+                        max-width: none;
+                        margin: 0;
+                        &:before{
+                            display: none;
+                        }
+                        li{
+                            display: inline;
+                            color: $ui-color;
+                            &:hover{
+                                background-color: $white;
+                                color: $primary-color;
+                            }
+                            a{
+                                border-bottom: none;
+                                display: inline;
+                                padding: 0;
+                                line-height: 40px;
+                                margin-right: 1.5rem;
+                                color: inherit;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Page header
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//   </div>
+//   <div class="pageheader">
+//     <h2 class="title {$modifiers}"><a href="#">Something for nothing</a></h2>
+//   </div>
+// </header>
+//
+// .red - Red
+// .blue - Blue
+// .green - Green
+// .yellow - Yellow
+// .secondary - Secondary
+//
+// Styleguide 11.3
+
+@if $include-html-top-nav-pageheader{
+    .pageheader{
+        border-bottom: 1px solid $color-lightgrey;
+        height: 2rem;
+        svg, img{
+            max-height: 1rem;
+            max-width: 1rem;
+            float: left;
+            margin-right: $column-gutter / 6;
+            position: relative;
+            top: 0.5rem;
+        }
+        .title{
+            margin: 0 $column-gutter / 2 0;
+            font-size: 1rem;
+            line-height: 2rem;
+            font-weight: 400;
+            color: inherit;
+            &.red{ color: $color-red; }
+            &.blue{ color: $color-blue; }
+            &.green{ color: $color-green; }
+            &.yellow{ color: $color-yellow; }
+            &.secondary{ color: $color-darkgrey; }
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+            &:hover{
+                text-decoration: underline;
+                color: inherit;
+            }
+            &:visited{
+                color: inherit;
+            }
+        }
+    }
+}
+
+// Icon
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//   </div>
+//   <div class="pageheader">
+//     <h2 class="title blue">
+//       <a href="#">
+//         <svg width="50px" height="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;" viewBox="0 0 100 100">
+//             <g>
+//                 <path d="M50,0C22.386,0 0,22.387 0,50C0,77.614 22.386,100 50,100C77.615,100 100,77.614 100,50C100,22.387 77.615,0 50,0Z" style="fill:rgb(86,200,225);fill-rule:nonzero;"/>
+//                 <path d="M97.369,66L2.631,66C9.305,85.764 27.984,100 50,100C72.018,100 90.695,85.764 97.369,66Z" style="fill:rgb(35,172,204);fill-rule:nonzero;"/>
+//                 <path d="M67,39.283L67,30C68.105,30 69,29.104 69,28C69,26.896 68.105,26 67,26L53,26C51.896,26 51,26.896 51,28C51,29.104 51.896,30 53,30L53,39.283C45.412,42.124 40,49.421 40,58C40,69.046 48.955,78 60,78C71.047,78 80,69.046 80,58C80,49.421 74.588,42.124 67,39.283Z" style="fill:white;fill-rule:nonzero;"/>
+//                 <path d="M57,54C65.021,54 74.266,46.663 76.533,54.027C76.92,55.279 77,56.632 77,58C77,67.389 69.389,75 60,75C50.611,75 43,67.389 43,58C43,56.003 43.344,54.087 43.977,52.307C45.514,48.232 49.607,54 57,54Z" style="fill:rgb(214,0,0);fill-rule:nonzero;"/>
+//                 <rect x="53" y="30" width="14" height="1.999" style="fill:rgb(229,229,229);fill-rule:nonzero;"/>
+//                 <path d="M46,26L26,26C24.896,26 24,26.896 24,28C24,29.104 24.896,30 26,30L26,68C26,73.522 30.477,78 36,78C41.523,78 46,73.522 46,68L46,30C47.105,30 48,29.104 48,28C48,26.896 47.105,26 46,26Z" style="fill:white;fill-rule:nonzero;"/>
+//                 <rect x="26" y="30" width="20" height="1.999" style="fill:rgb(229,229,229);fill-rule:nonzero;"/>
+//                 <path d="M38.999,38.999C41.126,38.999 43.001,39.999 43.001,39.999L43.001,67C43.001,70.866 39.867,75 36.001,75C32.135,75 29.001,71.865 29.001,68L29.001,39.999C29.001,39.999 30.814,40.999 32.97,40.999C35.127,40.999 36.917,38.999 38.999,38.999Z" style="fill:rgb(250,175,38);fill-rule:nonzero;"/>
+//                 <path d="M44.375,45.549L44.375,70.465C45.686,72.106 47.244,73.535 49,74.695L49,41.32C47.244,42.479 45.687,43.91 44.375,45.549Z" style="fill:rgb(214,214,214);fill-rule:nonzero;"/>
+//                 <path d="M67,39.283L67,31.999L60,31.999L60,78C71.047,78 80,69.046 80,58C80,49.421 74.588,42.124 67,39.283Z" style="fill:rgb(238,238,238);fill-rule:nonzero;"/>
+//                 <path d="M36,78C41.523,78 46,73.522 46,68L46,31.999L36,31.999Z" style="fill:rgb(242,242,242);fill-rule:nonzero;"/>
+//                 <path d="M36,40.005L36,75C39.866,75 43,70.866 43,67L43,39.999C43,39.999 41.125,38.999 38.998,38.999C37.953,38.999 36.982,39.503 36,40.005Z" style="fill:rgb(229,157,11);fill-rule:nonzero;"/>
+//                 <path d="M34.5,57C35.881,57 37,55.88 37,54.499C37,53.119 35.881,52 34.5,52C33.119,52 32,53.119 32,54.499C32,55.88 33.12,57 34.5,57ZM38.5,49.999C39.328,49.999 40,49.328 40,48.5C40,47.671 39.328,47 38.5,47C37.672,47 37,47.671 37,48.5C37,49.328 37.672,49.999 38.5,49.999ZM38,59.999C36.896,59.999 36,60.895 36,61.999C36,63.104 36.896,64 38,64C39.104,64 40,63.104 40,61.999C40,60.896 39.105,59.999 38,59.999ZM33.5,64.999C32.672,64.999 32,65.671 32,66.499C32,67.327 32.672,68 33.5,68C34.328,68 35,67.327 35,66.499C35,65.671 34.329,64.999 33.5,64.999Z" style="fill:white;fill-opacity:0.298039;fill-rule:nonzero;"/>
+//                 <path d="M60,53.707L60,75C69.389,75 77,67.389 77,58C77,56.632 76.92,55.279 76.533,54.027C74.545,47.568 67.189,52.417 60,53.707Z" style="fill:rgb(181,0,0);fill-rule:nonzero;"/>
+//                 <g>
+//                     <path d="M54.5,57C52.566,57 51,58.566 51,60.5C51,62.433 52.566,64 54.5,64C56.434,64 58,62.433 58,60.5C58,58.566 56.434,57 54.5,57ZM63,64C61.344,64 60,65.343 60,67C60,68.657 61.344,69.999 63,69.999C64.656,69.999 66,68.657 66,67C66,65.343 64.656,64 63,64ZM64.5,57C63.672,57 63,57.671 63,58.5C63,59.328 63.672,59.999 64.5,59.999C65.328,59.999 66,59.328 66,58.5C66,57.671 65.328,57 64.5,57ZM70,59.999C68.896,59.999 68,60.895 68,61.999C68,63.104 68.896,64 70,64C71.105,64 72,63.104 72,61.999C72,60.896 71.105,59.999 70,59.999ZM71.5,54C70.672,54 70,54.671 70,55.5C70,56.328 70.672,57 71.5,57C72.328,57 73,56.328 73,55.5C73,54.671 72.328,54 71.5,54Z" style="fill:white;fill-opacity:0.298039;fill-rule:nonzero;"/>
+//                 </g>
+//                 <path d="M46,67.634C46.852,68.867 47.861,69.981 49,70.948L49,51.938C47.803,51.407 46.808,50.96 46,50.871Z" style="fill:rgb(181,0,0);fill-rule:nonzero;"/>
+//             </g>
+//         </svg>
+//         Something for nothing
+//       </a>
+//     </h2>
+//   </div>
+// </header>
+//
+// Styleguide 11.3.1
+
+// Colors
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//     </h1>
+//   </div>
+//   <div class="pageheader {$modifiers}">
+//     <h2 class="title"><a href="#">Something for nothing</a></h2>
+//   </div>
+// </header>
+//
+// .red - Red
+// .blue - Blue
+// .green - Green
+// .yellow - Yellow
+// .secondary - Secondary
+//
+// Styleguide 11.3.2
+
+
+@if $include-html-top-nav-pageheader{
+    .pageheader{
+        &.red{ background-color: $color-red; color: $white; }
+        &.blue{ background-color: $color-blue; color: $white; }
+        &.green{ background-color: $color-green; color: $white; }
+        &.yellow{ background-color: $color-yellow; }
+        &.secondary{ background-color: $color-lightgrey; }
+    }
+}
+
+// Breadcrumbs
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//       </a>
+//     </h1>
+//   </div>
+//   <div class="pageheader">
+//     <span class="icon-arrow"></span>
+//     <ul class="{$modifiers}">
+//       <li><a href="#">Home</a></li>
+//       <li><a href="#">Section</a></li>
+//       <li class="unavailable"><a href="#">Page</a></li>
+//       <li class="current"><a href="#">Level</a></li>
+//     </ul>
+//   </div>
+// </header>
+//
+// .red - Red
+// .blue - Blue
+// .green - Green
+// .yellow - Yellow
+//
+// Styleguide 11.3.3
+
+@if $include-html-top-nav-pageheader{
+    .pageheader{
+        height: 2rem;
+        .icon-arrow {
+            float: left;
+            margin-left: $column-gutter / 2;
+            margin-right: $column-gutter / 4;
+            margin-top: 6px;
+        }
+        ul{
+            margin: 0 0 0 $column-gutter / 2;
+            line-height: 2rem;
+            font-weight: 300;
+            list-style: none;
+            color: $ui-color;
+            &.red{ color: $color-red; }
+            &.blue{ color: $color-blue; }
+            &.green{ color: $color-green; }
+            &.yellow{ color: $color-yellow; }
+            &.secondary{ color: $color-darkgrey; }
+        }
+
+        li{
+            float: left;
+            color: inherit;
+            &:first-child:before{
+                content: "";
+                display: none;
+            }
+            &:before{
+                content: "/";
+                margin: 0 0.5rem;
+                color: $color-grey;
+            }
+        }
+
+        .current{
+            color: $jet;
+            a{
+                cursor: default;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .unavailable{
+            color: $color-grey;
+            a{
+                cursor: not-allowed;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+// Todays tip
+//
+// Markup:
+// <header id="top-navigation" class="top-nav" role="banner">
+//   <div class="primary">
+//     <h1 class="title">
+//       <a href="http://www.dinside.no" title="Forsiden">
+//          <img class="logo" src="/assets/styleguide/dinside-logo-190.svg" data-pin-nopin="true">
+//       </a>
+//       </a>
+//     </h1>
+//   </div>
+//   <div class="pageheader">
+//     <span class="icon-arrow"></span> <span class="tip-text">Dagens tips: <a href="#"> Tør du se hvor mye du sløser?</a></span>
+//   </div>
+// </header>
+//
+// .red - Red
+// .blue - Blue
+// .green - Green
+// .yellow - Yellow
+//
+// Styleguide 11.3.4
+
+@if $include-html-top-nav-pageheader{
+    .pageheader{
+        .tip-text {
+            float: left;
+            margin-right: $column-gutter / 4;
+            line-height: 2rem;
+            a{
+                color: $color-blue;
+            }
+        }
+    }
+}
+

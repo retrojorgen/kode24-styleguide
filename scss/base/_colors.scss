@@ -1,0 +1,226 @@
+// Colors
+//
+// Color plays an important part in our expression. Especially our fontpage. Some of our colors are bright and bold and thus should be used wisely.
+//
+// Styleguide 2
+
+.bg-red, .bg-primary{
+    background-color: $color-red;
+}
+.bg-blue{
+    background-color: $color-blue;
+}
+.bg-sand{
+    background-color: $color-sand;
+}
+.bg-green{
+    background-color: $color-green;
+}
+
+.bg-yellow{
+    background-color: $color-yellow;
+}
+
+.bg-lightgrey{
+    background-color: $color-lightgrey;
+    color: $color-darkgrey;
+}
+.bg-grey, .bg-secondary{
+    background-color: $color-grey;
+}
+.bg-darkgrey{
+    background-color: $color-darkgrey;
+}
+
+.bg-dark{
+    background-color: $color-dark;
+}
+
+.bg-darker{
+    background-color: $color-darker;
+}
+
+.bg-darkest{
+    background-color: $color-darkest;
+}
+
+.bg-black{
+    background-color: $color-black;
+}
+
+.bg-success{
+    background-color: $success-color;
+}
+.bg-alert{
+    background-color: $alert-color;
+}
+.bg-warning{
+    background-color: $warning-color;
+}
+
+.bg-ui{
+    background-color: $ui-color;
+}
+
+// Primary color
+//
+// Learn the hex by heart.
+//
+// Markup:
+// <div class="styleguide-color-bar bg-primary">#CC3612 rgb(204,54,18) $primary-color/$color-red</div>
+//
+// Styleguide 2.1
+
+// Supporting colors
+//
+// We have a wide range of supporting colors. Shades of grey is used extensively throught our site, but don't be shy, throw some color in the mix.
+//
+// Markup:
+// <div class="styleguide-color-bar bg-blue">#0064b4 rgb(0,100,180) $color-blue</div>
+// <div class="styleguide-color-bar bg-yellow">#ffd861 rgb(255,216,97) $color-yellow</div>
+// <div class="styleguide-color-bar bg-sand">#E5E1D9 rgb(229,225,217) $color-sand</div>
+// <div class="styleguide-color-bar bg-green">#839D63 rgb(131,157,99) $color-green</div>
+// <div class="styleguide-color-bar bg-lightgrey">#ECECEC rgb(236,236,236) $secondary-color/$color-lightgrey</div>
+// <div class="styleguide-color-bar bg-grey">#C0C0C0 rgb(192,192,192) $color-grey</div>
+// <div class="styleguide-color-bar bg-darkgrey">#767676 rgb(118,118,118) $color-darkgrey</div>
+// <div class="styleguide-color-bar bg-dark">#666666 rgb(102,102,102) $color-dark</div>
+// <div class="styleguide-color-bar bg-darker">#555555 rgb(85,85,85) $color-darker</div>
+// <div class="styleguide-color-bar bg-darkest">#444444 rgb(68,68,68) $color-darkest</div>
+// <div class="styleguide-color-bar bg-black">#333333 rgb(51,51,51) $color-black</div>
+//
+// Styleguide 2.2
+
+// Tints and shades
+//
+// Markup:
+// <ul class="styleguide-color-bar">
+//   <li class="{$modifiers}-darker">darker</li>
+//   <li class="{$modifiers}-dark">dark</li>
+//   <li class="{$modifiers}">&nbsp;</li>
+//   <li class="{$modifiers}-light">light</li>
+//   <li class="{$modifiers}-lighter">lighter</li>
+// </ul>
+//
+// .bg-red - Red
+// .bg-yellow - Yellow
+// .bg-green - Green
+// .bg-blue - Blue
+// .bg-sand - Sand
+//
+// Styleguide 2.2.1
+
+$color-red-darker:  darken( $color-red, 10%);
+$color-red-dark:    darken( $color-red, 5%);
+$color-red-light:   lighten($color-red, 10%);
+$color-red-lighter: lighten($color-red, 20%);
+
+.bg-red-darker{  background-color: $color-red-darker; }
+.bg-red-dark{    background-color: $color-red-dark; }
+.bg-red-light{   background-color: $color-red-light; }
+.bg-red-lighter{ background-color: $color-red-lighter; }
+
+$color-yellow-darker:  darken( $color-yellow, 15%);
+$color-yellow-dark:    darken( $color-yellow, 10%);
+$color-yellow-light:   lighten($color-yellow, 8%);
+$color-yellow-lighter: lighten($color-yellow, 12%);
+
+.bg-yellow-darker{  background-color: $color-yellow-darker; }
+.bg-yellow-dark{    background-color: $color-yellow-dark; }
+.bg-yellow-light{   background-color: $color-yellow-light; }
+.bg-yellow-lighter{ background-color: $color-yellow-lighter; }
+
+$color-green-darker:  darken( $color-green, 10%);
+$color-green-dark:    darken( $color-green, 5%);
+$color-green-light:   lighten($color-green, 5%);
+$color-green-lighter: lighten($color-green, 10%);
+
+.bg-green-darker{  background-color: $color-green-darker; }
+.bg-green-dark{    background-color: $color-green-dark; }
+.bg-green-light{   background-color: $color-green-light; }
+.bg-green-lighter{ background-color: $color-green-lighter; }
+
+$color-blue-darker:  darken( $color-blue, 10%);
+$color-blue-dark:    darken( $color-blue, 5%);
+$color-blue-light:   lighten($color-blue, 5%);
+$color-blue-lighter: lighten($color-blue, 13%);
+
+.bg-blue-darker{  background-color: $color-blue-darker; }
+.bg-blue-dark{    background-color: $color-blue-dark; }
+.bg-blue-light{   background-color: $color-blue-light; }
+.bg-blue-lighter{ background-color: $color-blue-lighter; }
+
+$color-sand-darker:  darken( $color-sand, 10%);
+$color-sand-dark:    darken( $color-sand, 5%);
+$color-sand-light:   lighten($color-sand, 5%);
+$color-sand-lighter: lighten($color-sand, 10%);
+
+.bg-sand-darker{  background-color: $color-sand-darker; }
+.bg-sand-dark{    background-color: $color-sand-dark; }
+.bg-sand-light{   background-color: $color-sand-light; }
+.bg-sand-lighter{ background-color: $color-sand-lighter; }
+
+
+// Contextual colors
+//
+// Some supporing colors also double as contextual colors used to empasize meaning. These are mainly visible as error or success messages in forms or elements that in provide feedback to the user.
+//
+// Markup:
+// <div class="styleguide-color-bar bg-success">$success-color</div>
+// <div class="styleguide-color-bar bg-alert">$alert-color</div>
+// <div class="styleguide-color-bar bg-warning">$warning-color</div>
+//
+// Styleguide 2.3
+
+// Interaction
+//
+// We have a color dedicated to elements that the user can interact with e.g. links, buttons and navigation. This color sould not be used for any other pupose.
+//
+// Markup:
+// <div class="styleguide-color-bar bg-ui">#0064b4 rgb(0,100,180) $ui-color</div>
+//
+// Styleguide 2.4
+
+// Text
+//
+// Markup:
+// <p class="{$modifiers}"><strong>I'm a monster</strong></p>
+//
+// .text-red - Red
+// .text-blue - Blue
+// .text-green - Green
+// .text-yellow - Yellow
+// .text-lightgrey - Lightgrey
+// .text-grey - Grey
+// .text-darkgrey - Darkgrey
+//
+// Styleguide 2.5
+
+.text-red{ color: $color-red !important; }
+.text-blue{ color: $color-blue !important; }
+.text-green{ color: $color-green !important; }
+.text-yellow{ color: $color-yellow !important; }
+.text-lightgrey{ color: $color-lightgrey !important; }
+.text-grey, .text-secondary{ color: $color-grey !important; }
+.text-darkgrey{ color: $color-darkgrey !important; }
+.text-black{ color: $color-black !important; }
+.text-white{ color: $white !important; }
+
+
+// Shadows
+//
+// Markup:
+// <div class="{$modifiers}" style="width:100px;height:100px;text-align:center;"></div>
+//
+// .z-shadow-1 - z-shadow-1
+// .z-shadow-2 - z-shadow-2
+// .z-shadow-3 - z-shadow-3
+// .z-shadow-4 - z-shadow-4
+// .z-shadow-5 - z-shadow-5
+//
+// Styleguide 2.6
+
+.z-shadow-1{ box-shadow: $z-shadow-1; }
+.z-shadow-2{ box-shadow: $z-shadow-2; }
+.z-shadow-3{ box-shadow: $z-shadow-3; }
+.z-shadow-4{ box-shadow: $z-shadow-4; }
+.z-shadow-5{ box-shadow: $z-shadow-5; }

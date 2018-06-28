@@ -1,0 +1,179 @@
+.beta{
+
+    .row{
+        max-width: none;
+    }
+
+    main{
+        position: relative;
+    }
+
+    [class^="frontpage-"]{
+        @media #{$small-only}{
+            position: absolute;
+            height: 498px;
+            overflow: scroll;
+            padding-top: $column-gutter / 2;
+        }
+        @media #{$large-up}{
+            position: static;
+        }
+    }
+
+    .frontpage-main{
+        left: 0;
+    }
+
+    .frontpage-live{
+        background-color: #FAFAFA;
+        left: 100%;
+
+        .secondary-navigation-alt{
+            //background-color: #FAFAFA;
+            border-left: 1px $white solid;
+            border-right: 1px $white solid;
+        }
+    }
+
+    .frontpage-discover{
+        //border-left: 1px $color-grey solid;
+        left: 200%;
+
+        .section-title{
+            font-weight: 300;
+            color: $color-darkgrey;
+            font-size: 0.8rem;
+        }
+
+        .pluss-signup{
+            h6{
+                color: $color-darkgrey;
+                text-align: center;
+                font-weight: 300;
+                font-size: 0.8rem;
+            }
+            .button.signup{
+                margin-bottom: 0.2rem;
+                color: $white;
+            }
+        }
+    }
+
+
+    .live{
+        //border: 1px solid $color-grey;
+        box-shadow: rgba(0, 0, 0, 0.258824) 0 2px 5px 0;
+        //padding-top: $column-gutter / 2;
+        //padding-left: $column-gutter / 2;
+        //padding-right: $column-gutter / 2;
+        padding: $column-gutter / 2;
+        margin-bottom: $column-gutter / 2;
+        background: $white;
+        h1{
+            font-size: 1.1rem;
+            #{$icon}{
+                display: inline-block;
+                top: 5px;
+                position: relative;
+            }
+            .label{
+                position: relative;
+                top: -4px;
+            }
+        }
+
+        &.black{
+            time{
+                color: inherit;
+            }
+            h1, a{
+                color: inherit;
+            }
+            .button{
+                margin-bottom: 0;
+            }
+
+            background-color: $color-black;
+            color: $white;
+            padding: $column-gutter / 2;
+        }
+        *:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .secondary-navigation-alt{
+        margin-bottom: $column-gutter / 2;
+        background-color: $color-lightgrey;
+        text-align: center;
+        height: 40px;
+        ul{
+            list-style: none;
+            margin: 0;
+            line-height: 40px;
+            li{
+                display: inline;
+                margin-left: 0.8rem;
+                &:first-child{
+                    margin-left: 0;
+                }
+                &.has-dropdown{
+                    a{
+                        position: relative;
+                        &:after{
+                            content: "\e882";
+                            font-family: "Helveticons";
+                            font-size: 0.7rem;
+                            position: absolute;
+                            top: 50%;
+                            right: -16px;
+                            transform: translateY(-50%);
+                            speak: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: $color-darkgrey;
+            font-weight: 400;
+        }
+    }
+
+    .small-secondary-navigation-alt{
+        .button{
+            margin-bottom: 0;
+        }
+    }
+
+    footer{
+        display: none;
+    }
+
+    .betamonster{
+        width: 100%;
+        height: 300px;
+        background-position: center center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        @media #{$medium-up}{
+            height: 600px;
+        }
+    }
+}
+
+.beta article.preview{
+    .headline{
+        @media #{$large-up}{
+            @for $i from 1 through 150{
+                $s: ($i / 10) + 1;
+                $s: $s / 2;
+                &.large-size-#{$i}, .large-size-#{$i}{
+                    font-size: #{$s}vw !important;
+                }
+            }
+        }
+    }
+}

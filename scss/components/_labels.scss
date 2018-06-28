@@ -1,0 +1,145 @@
+@mixin label-style($bg: $color-lightgrey, $color: $white){
+    background-color: $bg; 
+    color: $color; 
+    &.outline{ 
+        background-color: transparent !important;
+        border-color: $bg;
+        color: $bg !important; 
+    }
+    transition: background-color 0.2s ease-in-out;
+    &:hover{
+        background-color: darken($bg, 10%);
+    }
+}
+
+// Labels
+//
+// Markup:
+// <span class="label">Video</span>
+//
+// Styleguide 14.0
+
+.label{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    &.expand{
+        width: 100%;
+    }
+}
+
+// Colors
+//
+// Markup:
+// <span class="label {$modifiers}">Section</span>
+// <span class="label outline {$modifiers}">Section</span>
+//
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+// .secondary - Secondary
+// .black - Black
+// .white - White
+//
+// Styleguide 14.1
+
+.label{
+    &.primary{ @include label-style(); }
+    &.secondary.outline{ border-color: $secondary-color; }
+    &.sand{ @include label-style($bg: $color-sand, $color: $color-black); }
+    &.grey{ @include label-style($bg: $color-lightgrey, $color: $color-black); }
+    &.yellow{ @include label-style($bg: $color-yellow, $color: $color-black); }
+    &.green{ @include label-style($bg: $color-green, $color: $white); }
+    &.blue{ @include label-style($bg: $color-blue, $color: $white); }
+    &.black{ @include label-style($bg: $color-black); }
+    &.white{ @include label-style($bg: $white, $color: $color-black); &.outline{ color: $white; } }
+    &.ui{ @include label-style($bg: $ui-color); }
+    &.transparent{ background-color: transparent; }
+    &.outline{
+        background-color: transparent;
+        border-width: 1px;
+        border-style: solid;
+    }
+}
+
+// Icons
+//
+// Markup:
+// <span class="label"><span class="icon-Video"></span>Video</span>
+//
+// Styleguide 14.2
+
+.label{
+    #{$icon}{
+        font-size: 1.2rem;
+        line-height: 0;
+        position: relative;
+        top: 4px;
+        margin-right: 0.1em;
+        margin-left: -0.1em;
+    }
+}
+
+// List
+//
+// Markup:
+// <ul class="labels">
+//   <li>Nyheter</li><li>Innenriks</li><li>SOS Rasisme</li>
+// </ul>
+//
+// Styleguide 14.3
+
+.labels{
+    margin-left: 0;
+    &.links{
+        li {
+            padding: 0;
+            a{
+                display: block;
+                padding: 0.25rem 0.5rem 0.25rem;
+            }
+        }
+    }
+    li{
+        @include label;
+        color: $white;
+        text-transform: uppercase;
+        margin-right: 1px;
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+
+// Label-text
+//
+// Markup:
+// <span class="label">Innenriks</span> <span class="label-text">SOS Rasisme avsløringen</span>
+//
+// Styleguide 14.4
+
+.label-text{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 0.5rem;
+}
+
+// Old article label
+//
+// Markup:
+// <span class="old-article-highlight"> Hei, denne artikkelen er <strong> over ett år gammel</strong>. Vær oppmerksom på at den kan inneholde utdatert informasjon.</span>
+//
+// Styleguide 14.7
+span.old-article-highlight {
+    background: #fdfde9;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: $column-gutter / 2;
+    margin-bottom: $column-gutter / 2;
+    text-align: center;
+    border: 1px solid #e8e8cf;
+}

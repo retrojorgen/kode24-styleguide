@@ -1,0 +1,56 @@
+// Grid
+//
+// Our grid is an extremly powerfull tool. 12-column, mobile first, nest-able with column offsets and source ordering.
+// The grid is extensivly explained in the [Foundation documentation](http://foundation.zurb.com/docs/components/grid.html).
+//
+// Markup:
+// <div class="columns">
+//   <div class="row display">
+//     <div class="small-2 large-4 columns"><span class="show-for-small">2</span><span class="hide-for-small">4</span></div>
+//     <div class="small-4 large-4 columns">4</div>
+//     <div class="small-6 large-4 columns"><span class="show-for-small">6</span><span class="hide-for-small">4</span></div>
+//   </div>
+//   <div class="row display">
+//     <div class="large-3 columns"><span class="show-for-small">full</span><span class="hide-for-small">3</span></div>
+//     <div class="large-6 columns"><span class="show-for-small">full</span><span class="hide-for-small">6</span></div>
+//     <div class="large-3 columns"><span class="show-for-small">full</span><span class="hide-for-small">3</span></div>
+//   </div>
+//   <div class="row display">
+//     <div class="small-6 large-2 columns"><span class="show-for-small">6</span><span class="hide-for-small">2</span></div>
+//     <div class="small-6 large-8 columns"><span class="show-for-small">6</span><span class="hide-for-small">8</span></div>
+//     <div class="small-12 large-2 columns"><span class="show-for-small">full</span><span class="hide-for-small">2</span></div>
+//   </div>
+//   <div class="row display">
+//     <div class="small-3 columns">3</div>
+//     <div class="small-9 columns">9</div>
+//   </div>
+//   <div class="row display">
+//     <div class="large-4 columns"><span class="show-for-small">full</span><span class="hide-for-small">4</span></div>
+//     <div class="large-8 columns"><span class="show-for-small">full</span><span class="hide-for-small">8</span></div>
+//   </div>
+//   <div class="row display">
+//     <div class="small-6 large-5 columns"><span class="show-for-small">6</span><span class="hide-for-small">5</span></div>
+//     <div class="small-6 large-7 columns"><span class="show-for-small">6</span><span class="hide-for-small">7</span></div>
+//   </div>
+//   <div class="row display">
+//     <div class="large-6 columns"><span class="show-for-small">full</span><span class="hide-for-small">6</span></div>
+//     <div class="large-6 columns"><span class="show-for-small">full</span><span class="hide-for-small">6</span></div>
+//   </div>
+// </div>
+//
+// Styleguide 6
+
+@if $include-html-styleguide-examples {
+    .display{
+        background-color: rgb(238, 238, 238);
+        border: solid 1px rgb(198, 198, 198);
+        margin-bottom: 1rem !important;
+        .columns{
+            line-height: 2rem;
+            font-size: 0.8rem;
+            &:nth-child(2){
+                background-color: rgb(225, 225, 225);
+            }
+        }
+    }
+}

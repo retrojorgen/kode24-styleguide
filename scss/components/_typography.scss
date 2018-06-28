@@ -1,0 +1,528 @@
+// Typography
+//
+// We relish at the oppertunity to work with the written word. Lovingly and carefully we have covered styles for the basics like heading, paragraphs and most text-level elements.
+//
+// Styleguide 4.0
+
+// Headings
+//
+// Markup:
+// <h1>Ny gransking av SOS Rasisme</h1>
+// <h2>Ny gransking av SOS Rasisme</h2>
+// <h3>Ny gransking av SOS Rasisme</h3>
+// <h4>Ny gransking av SOS Rasisme</h4>
+// <h5>Ny gransking av SOS Rasisme</h5>
+// <h6>Ny gransking av SOS Rasisme</h6>
+//
+// Styleguide 4.1
+
+h1,h2,h3,h4,h5,h6{
+    //NOTE: This fixes a bug in Safari where &shy; does not work when using custom fonts
+    -webkit-font-variant-ligatures: no-common-ligatures;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+}
+
+//NOTE: Ajustments made in _settings.scss
+
+// Subheadings
+//
+// Markup:
+// <h1 class="subheader">Ny gransking av SOS Rasisme</h1>
+// <h2 class="subheader">Ny gransking av SOS Rasisme</h2>
+// <h3 class="subheader">Ny gransking av SOS Rasisme</h3>
+// <h4 class="subheader">Ny gransking av SOS Rasisme</h4>
+// <h5 class="subheader">Ny gransking av SOS Rasisme</h5>
+// <h6 class="subheader">Ny gransking av SOS Rasisme</h6>
+//
+// Styleguide 4.1.1
+
+//NOTE: Ajustments made in _settings.scss
+
+// Segmented headings
+//
+// Markup:
+// <h1>SOS Rasisme konkurs <small>Skylder 27 mill</small></h1>
+// <h2>SOS Rasisme konkurs <small>Skylder 27 mill</small></h2>
+// <h3>SOS Rasisme konkurs <small>Skylder 27 mill</small></h3>
+// <h4>SOS Rasisme konkurs <small>Skylder 27 mill</small></h4>
+// <h5>SOS Rasisme konkurs <small>Skylder 27 mill</small></h5>
+// <h6>SOS Rasisme konkurs <small>Skylder 27 mill</small></h6>
+//
+// Styleguide 4.1.2
+
+h1,h2,h3,h4,h5,h6{
+    small{
+        font-weight: 300;
+    }
+}
+
+// Uppercase
+//
+// Markup:
+// <h1 class="uppercase">SOS Rasisme konkurs</h1>
+// <h2 class="uppercase">SOS Rasisme konkurs</h2>
+// <h3 class="uppercase">SOS Rasisme konkurs</h3>
+// <h4 class="uppercase">SOS Rasisme konkurs</h4>
+// <h5 class="uppercase">SOS Rasisme konkurs</h5>
+// <h6 class="uppercase">SOS Rasisme konkurs</h6>
+//
+// Styleguide 4.1.3
+
+h1,h2,h3,h4,h5,h6{
+    &.uppercase{
+        text-transform: uppercase;
+    }
+}
+
+
+//NOTE: Additional ajustments made in _settings.scss
+
+// Standfirst
+//
+// Markup:
+// <div class="standfirst">
+//   <p>Midt i skauen står tidligere talsmann Kim Kopperud og viser Dagbladet hvor SOS Rasisme dumpet papirer de ikke ønsket noen skulle se.</p>
+// </div>
+//
+// Styleguide 4.2
+
+.standfirst{
+    font-weight: 400;
+    font-size: 1.15rem;
+    @media #{$medium-up}{
+        font-size: 1.5rem;
+    }
+    p{
+        font-weight: inherit;
+        font-size: inherit;
+    }
+}
+
+// Paragraphs
+//
+// Markup:
+// <p>SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra Landsrådet for norske barne- og ungdomsorganisasjoner (LNU).  Dommen er anket. Rettssaken avdekket så omfattende juks at det senere ble åpnet politietterforskning mot SOS Rasisme og dens ledelse. Etterforskningen førte til razzia mot organisasjonens lokaler i Haugesund og i Oslo.</p>
+// <p>Nedover bekken ser vi flere permer i ulike farger ligge strødd. De fleste er forvrengt av vannmasser. Innholdet i de fleste permene ser ut til å være vasket vekk. Lenger nedover er det bare hvite cellulosekuler igjen av det som en gang var innholdet i disse permene. </p>
+// <p>På åstedet bar de fleste plastpermene preg av å ha vært i vannet over lang tid. De fleste inneholdt ikke lenger lesbare dokumenter, men er omgjort til forvridde plastrester. Nedover i elva ligger små og store papirbiter omgjort til celluloseklumper. Men et par av permene har fortsatt lesbare sider, hvor kun det ytterste laget av papirark er ødelagt.</p>
+//
+// Styleguide 4.3
+
+// Body copy
+//
+// Regular paragraphs are set in the base font size, but for article body copy we have chosen to adjust the font size slightly larger for `medium-up` screens.
+//
+// Markup:
+// <div class="body-copy">
+//   <p>SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra Landsrådet for norske barne- og ungdomsorganisasjoner (LNU).  Dommen er anket. Rettssaken avdekket så omfattende juks at det senere ble åpnet politietterforskning mot SOS Rasisme og dens ledelse. Etterforskningen førte til razzia mot organisasjonens lokaler i Haugesund og i Oslo.</p>
+//   <p>Nedover bekken ser vi flere permer i ulike farger ligge strødd. De fleste er forvrengt av vannmasser. Innholdet i de fleste permene ser ut til å være vasket vekk. Lenger nedover er det bare hvite cellulosekuler igjen av det som en gang var innholdet i disse permene. </p>
+//   <p>På åstedet bar de fleste plastpermene preg av å ha vært i vannet over lang tid. De fleste inneholdt ikke lenger lesbare dokumenter, men er omgjort til forvridde plastrester. Nedover i elva ligger små og store papirbiter omgjort til celluloseklumper. Men et par av permene har fortsatt lesbare sider, hvor kun det ytterste laget av papirark er ødelagt.</p>
+// </div>
+//
+// Styleguide 4.3.1
+
+.body-copy{
+    @media #{$medium-up}{
+        p{
+            font-size: rem-calc(18px);
+        }
+    }
+}
+
+// Links
+//
+// Markup:
+// <a href="#" class="{$modifiers}">Lorem ipsum dolor sit amet</a>
+//
+// :hover - :hover
+// :focus - :focus
+// :visited - :visited
+//
+// Styleguide 4.4
+
+a{
+    &:focus{
+        color: $primary-color;
+    }
+    &:visited{
+        color: rgb(102, 0, 153);
+    }
+}
+
+// External links
+//
+// Experimental: Within the `.body-copy` there are additional styles for links. External links to other pages has a icon has a icon indicator.
+//
+// Markup:
+// <div class="body-copy">
+//   <a href="http://example.com">Link to external page</a>
+// </div>
+//
+// Styleguide 4.4.1
+
+@mixin link-icons($code){
+    &:after{
+        font-family: "Helveticons";
+        font-size: 1.2rem;
+        display: inline-block;
+        content: $code;
+        margin-left: 3px;
+        position: relative;
+        top: 4px;
+    }
+}
+
+// File links
+//
+// Experimental: Links to files has icons indicating this.
+//
+// Markup:
+// <div class="body-copy">
+//   <a href="http://example.com/file.pdf">Link to document</a><br />
+//   <a href="http://example.com/file.zip">Link to downloadable file</a>
+// </div>
+//
+// Styleguide 4.4.2
+
+.body-copy{
+    a[href$=".pdf"],
+    a[href$=".doc"]{
+        @include link-icons("\e82e");
+    }
+    a[href$=".zip"]{
+        @include link-icons("\e692");
+    }
+}
+
+// Headline links
+//
+// Experimental: Links to files has icons indicating this.
+//
+// Markup:
+// <h1><a href="#">Ny gransking av SOS Rasisme</a></h1>
+//
+// Styleguide 4.4.3
+
+h1,h2,h3,h4,h5,h6{
+    a{
+        color: $ui-color;
+        text-decoration: none;
+        &:hover,
+        &:visited{
+            text-decoration: underline;
+            color: $ui-color;
+        }
+    }
+}
+
+// Lists
+//
+// Styleguide 4.5
+
+// Unordered lists
+//
+// Markup:
+// <ul>
+//   <li>Dagbladet har avslørt høye medlemstall og fiktive identiteter i medlemsregisteret.</li>
+//   <li>SOS Rasisme har investert i flere eiendommer med penger bevilget til antirasistisk arbeid.</li>
+//   <li>SOS Rasisme kreves nå for over 17 millioner kroner totalt fra ulike støttegivere.</li>
+// </ul>
+//
+// Styleguide 4.5.1
+
+// Ordered lists
+//
+// Markup:
+// <ol>
+//   <li>Dagbladet har avslørt høye medlemstall og fiktive identiteter i medlemsregisteret.</li>
+//   <li>SOS Rasisme har investert i flere eiendommer med penger bevilget til antirasistisk arbeid.</li>
+//   <li>SOS Rasisme kreves nå for over 17 millioner kroner totalt fra ulike støttegivere.</li>
+// </ol>
+//
+// Styleguide 4.5.2
+
+// Definition lists
+//
+// Markup:
+// <dl>
+//   <dt>SOS Rasismes</dt>
+//   <dd>En norsk politisk organisasjon som oppga som sitt formål som å bekjempe rasisme.</dd>
+//   <dt>Tjen Folket</dt>
+//   <dd>En norsk kommunistisk gruppe etablert i 1998.</dd>
+//   <dt>Landsrådet for Norges barne- og ungdomsorganisasjoner</dt>
+//   <dd>En paraplyorganisasjon for 97 landsomfattende barne- og ungdomsorganisasjoner i Norge. </dd>
+// </dl>
+//
+// Styleguide 4.5.3
+
+dl{
+    @include clearfix;
+    dt{
+        clear: left;
+        margin-right: 0.3em;
+    }
+    dt,dd{
+        float: left;
+    }
+}
+
+//NOTE: Additional ajustments made in _settings.scss
+
+// Quotes
+//
+// Markup:
+// <blockquote>
+//   «De fleste taper alle pengene. Her er verdiene pantsatt til fordel for LNU»
+//   <cite>Bostyrer til Dagbladet</cite>
+// </blockquote>
+//
+// Styleguide 4.6
+
+blockquote{
+    font-size: 1.2rem;
+    font-weight: 400;
+    @media #{$medium-up}{
+        font-size: 1.4rem;
+    }
+    p{
+        margin-bottom: 0;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+    cite{
+        font-weight: 300;
+        color: $color-darkgrey;
+    }
+}
+
+// Inserts and delets
+//
+// Markup:
+// <p>Lorem ipsum dolor sit amet <del>lolz</del>, consectetur <ins>adipisicing</ins> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+//
+// Styleguide 4.7
+
+// Strong and Emphasis
+//
+// Markup:
+// <p>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <em>adipisicing</em> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+//
+// Styleguide 4.8
+
+// Bold and italic
+//
+// Markup:
+// <p>Lorem ipsum dolor <b>sit amet</b>, consectetur <i>adipisicing</i> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+//
+// Styleguide 4.9
+
+// Definition
+//
+// Markup:
+// Fordi LNU vant et søksmål og tok <dfn title="Utleggspant – panterett som blir stiftet ved beslutning av en offentlig myndighet.">utleggspant</dfn> i SOS Rasismes verdier for å sikre kravet, kan de de regne med å få mellom seks og sju millioner kroner.
+//
+// Styleguide 4.10
+
+dfn{
+    font-style: normal;
+    cursor: help;
+    border-bottom: 1px dotted $body-font-color;
+}
+
+// Abbrevation
+//
+// Markup:
+// SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra <abbr title="Landsrådet for norske barne- og ungdomsorganisasjoner">LNU</abbr>.
+//
+// Styleguide 4.11
+
+abbr{
+    font-size: 100%;
+    border-bottom: 1px dotted $body-font-color;
+}
+
+// Cite
+//
+// Markup:
+// I rapporten <cite>Trondheim kommunes tilskudd til SOS Rasisme</cite> er det krystallklare opplysninger om omfattende juks og svindel av offentlige.
+//
+// Styleguide 4.12
+
+cite{
+
+}
+
+// Caption
+//
+// Markup:
+// <div class="caption"><strong>Fant kontanter:</strong> Politiets datarådgiver Jan Christian Stødle og politioverbetjent Ellen Rinck bærer her ut esker med ulike typer beslag fra Kjell Gunnar Larsens bolig. <span itemprop="author" class="credit">Foto: Jacques Hvistendahl / Dagbladet</span></div>
+//
+// Styleguide 4.13
+
+@mixin caption(){
+    font-size: rem-calc(14px);
+    font-weight: 400;
+    border-bottom: 1px solid $secondary-color;
+    display: block;
+    padding-bottom: 1rem;
+    *{
+        font-size: inherit;
+        font-weight: inherit;
+        margin-bottom: 0;
+    }
+    strong:first-child{
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .credit {
+        text-transform: uppercase;
+        letter-spacing: 0.02rem;
+    }
+}
+
+.caption{
+    @include caption;
+}
+
+// Superscript and subscripts
+//
+// Markup:
+// Av naturlige årsaker<sup>[1]</sup> er det ikke mulig for Dagbladet<sub>[2]</sub> å få en kommentar fra Larsen. Han har tidligere avvist alle statens krav og beskyldninger om misligheter i SOS Rasisme, både i rettsapparatet og overfor Dagbladet.
+//
+// Styleguide 4.14
+
+// Byline
+//
+// Markup:
+// <div class="byline">
+//   <span class="person" itemscope itemtype="http://schema.org/Person" itemprop="author">
+//     <a rel="author" itemprop="url name" href="#">Tom-Marius Olsen</a>
+//   </span>
+//   <span class="person" itemscope itemtype="http://schema.org/Person" itemprop="author">
+//     <a rel="author" itemprop="url name" href="#">Audun Aas</a>
+//   </span>
+//   <span class="person" itemscope itemtype="http://schema.org/Person" itemprop="author">
+//     <a rel="author" itemprop="url name" href="#">Guro Flåten</a>
+//   </span>
+// </div>
+//
+// Styleguide 4.15
+
+.byline{
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: $color-darkgrey;
+
+    .person:first-child:before{
+        content: 'Av' !important;
+        margin-right: 0.1rem;
+    }
+
+    .person:before{
+        content: ',';
+        margin-right: 0.1rem;
+    }
+
+    .person:last-child:before{
+        content: 'og';
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+    }
+
+    img{
+        border-radius: 999px;
+        width: 30px !important; //FIXME: Remove important
+        height: 30px;
+        margin: 0 0.5em 0 0.4em;
+    }
+
+}
+
+// Time / Published
+//
+// Markup:
+// <time class="published" itemprop="datePublished" datetime="2014-04-23" title="Publisert 23. april 2014">Publisert 23. april 2014</time>
+//
+// Styleguide 4.16
+
+.published {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-darkgrey;
+
+    &:before{
+        content: '\e793';
+        font-family: 'Helveticons';
+        font-size: 0.8rem;
+        margin-right: 0.2rem;
+        position: relative;
+        top: 2px;
+    }
+
+    &[data-from-now]{
+        cursor: pointer;
+    }
+}
+
+// From now
+//
+// RequiresJS: Make date/time relative to now. Click to toggle it's state. For full documentation see [db.libs.fromNow](/jsdocs/db.libs.fromNow.html).
+//
+// Markup:
+// <time class="published" data-from-now itemprop="datePublished" datetime="2014-04-23T18:30:00" title="Publisert 23. april 2014">Publisert 23. april 2014</time>
+//
+// Styleguide 4.16.1
+
+// Code
+//
+// Markup:
+// <code>new Date();</code>
+//
+// Styleguide 4.17
+
+code{
+    font-size: 0.9rem;
+    padding: 0.1rem 0.3rem 0.2rem;
+    border: 1px solid $secondary-color;
+    border-radius: 3px;
+    background-color: lighten($secondary-color, 7%);
+}
+
+// Preformatted text
+//
+// Markup:
+// <pre>
+// .button-experimental{
+//   background: rgb(214, 0, 0);
+// }
+// </pre>
+//
+// Styleguide 4.18
+
+pre{
+    margin-top: emCalc(16px);
+    margin-bottom: 1.25rem;
+    clear: both;
+    padding: emCalc(16px);
+    border: 1px solid $secondary-color;
+    background-color: lighten($secondary-color, 7%);
+    overflow: auto;
+}
+
+// Syntax highlight
+//
+// RequiresJS: Uses prettyprint
+//
+// Markup:
+// <pre class="prettyprint lang-css">
+// .button-experimental{
+//   background: rgb(214, 0, 0);
+// }
+// </pre>
+//
+// Styleguide 4.18.1

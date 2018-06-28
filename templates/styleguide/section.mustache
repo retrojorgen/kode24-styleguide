@@ -1,0 +1,36 @@
+{{#sections}}
+    <div class="styleguide-depth-{{refDepth}} {{#deprecated}}is-deprecated{{/deprecated}} {{#experimental}}is-experimental{{/experimental}}">
+        <h{{refDepth}} id="ref-{{reference}}" class="styleguide-title"><a href="#ref-{{reference}}" class="icon-Link"></a><span class="styleguide-ref">{{reference}}</span> - {{header}}</h{{refDepth}}>
+        <div class="styleguide-box">
+            {{#experimental}}<span class="label yellow">Experimental</span>{{/experimental}}
+            {{#deprecated}}<span class="label secondary">Deprecated</span>{{/deprecated}}
+            {{#requiresjs}}<span class="label">Requires javascript</span>{{/requiresjs}}
+            {{{description}}}
+        </div>
+        {{#markup}}
+            <div id="styleguide-mod-example-{{reference}}" class="styleguide-mod-example">
+                {{{markup}}}
+            </div>
+        {{/markup}}
+        {{#modifiers}}
+            <div class="styleguide-mod-list">
+                <div class="styleguide-mod-desc-group">
+                    <div class="styleguide-mod-name">
+                        <code>{{name}}</code>
+                    </div>
+                    <div class="styleguide-mod-desc">
+                        {{{description}}}
+                    </div>
+                </div>
+            </div>
+            <div id="styleguide-mod-example-{{reference}}{{name}}" class="styleguide-mod-example">
+                {{{markup}}}
+            </div>
+        {{/modifiers}}
+        {{#markup}}
+            <div class="styleguide-markup">
+                <pre class="prettyprint lang-html">{{markup}}</pre>
+            </div>
+        {{/markup}}
+    </div>
+{{/sections}}

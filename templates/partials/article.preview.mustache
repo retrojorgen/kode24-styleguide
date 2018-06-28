@@ -1,0 +1,44 @@
+<article class="preview column {{classes}}" itemscope itemtype="http://schema.org/NewsArticle" role="article">
+    <a href="{{url}}" itemprop="url">
+        {{#kicker}}
+            <div class="kicker">{{kicker}}</div>
+        {{/kicker}}
+        {{#image}}
+            {{#image.srcset}}
+                <img sizes="(min-width: 40.063em) 100vw, (min-width: 64.063em) 100vw, 100vw" srcset="{{image.small}} 640w, {{image.src}}, {{image.src}} 1440w" … >
+            {{/image.srcset}}
+            {{^image.srcset}}
+                <img itemprop="image" class="{{image.classes}}" title="{{image.title}}" alt="{{image.alt}}" src="{{image.src}}">
+            {{/image.srcset}}
+        {{/image}}
+        <h1 itemprop="headline" class="headline {{headlineSize}}">{{{headline}}}</h1>
+        {{#description}}
+            <p itemprop="description" class="standfirst">{{{description}}}</p>
+        {{/description}}
+        {{#isPluss}}
+            <span class="label">Pluss</span>
+        {{/isPluss}}
+        {{#hasVideo}}
+            <span class="label">Video</span>
+        {{/hasVideo}}
+        <time itemprop="datePublished" class="published" data-from-now datetime="{{datetime}}" title="Publisert {{datePublished}}">{{datePublished}}</time>
+        {{#hasComments}}
+            <span class="comments"><span class="icon-Chat"></span>111</span>
+        {{/hasComments}}
+    </a>
+    {{#meta.hasRelated}}
+        <aside class="related">
+            <h1><span>Mer om saken</span></h1>
+            <ul>
+                {{#related}}
+                    <li><a href="{{url}}">{{headline}}</a></li>
+                {{/related}}
+            </ul>
+        </aside>
+    {{/meta.hasRelated}}
+    {{#meta.hasTipbox}}
+        <div class="actions">
+            <a href="#" class="button radius expand primary tip">Tips oss <span class="tel">2400</span></a>
+        </div>
+    {{/meta.hasTipbox}}
+</article>

@@ -1,0 +1,500 @@
+//
+// Panel Variabled
+//
+
+$panel-border-style: $panel-border-style !default;
+$panel-border-size: $panel-border-size !default;
+$panel-border-color: $color-grey !default;
+$panel-padding: $column-gutter / 2 !default;
+$panel-font-color: $panel-font-color !default;
+
+//
+// Panel Mixins
+//
+
+@mixin panel-style($bg: $white, $border: none){
+    background-color: $bg;
+    border: $border;
+    @if color-contrast($bg, rgb(255, 255, 255)) > 4.5 {
+        color: $white;
+    } @else {
+        color: $color-black;
+    }
+}
+
+// Adds styles for making expandable content boxes
+// FIXME: This needs more work before it is generic enough.
+@mixin panel-expandable(){
+    @media #{$small-only}{
+
+        .headline{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 20%;
+            margin-bottom: 0;
+        }
+
+        .toggle{
+            position: absolute;
+            top: 1.2rem;
+            right: 0;
+            width: 20%;
+            text-indent: 0.4rem;
+        }
+
+        .panel-copy{
+            display: none;
+        }
+
+        //FIXME: Add transition from inactive to active state.
+        &.active{
+            .headline{
+                white-space: normal;
+                overflow: visible;
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            .toggle{
+                display: none;
+            }
+            .panel-copy{
+                display: block;
+            }
+        }
+    }
+    @media #{$medium-up}{
+        .toggle{
+            display: none;
+        }
+    }
+}
+
+// Add 'arrow' indication origin
+//
+// $origin - string like 'left-top', 'bottom-right'
+// $size - Set the size of the 'arrow'
+
+@mixin panel-origin($origin: 'left-top', $size: 20){
+
+    $offset: (($size / 2) + 1) * -1;
+
+    &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: rem-calc($size);
+        height: rem-calc($size);
+        border-left-width: inherit;
+        border-left-style: solid;
+        border-left-color: inherit;
+        border-bottom-width: inherit;
+        border-bottom-style: solid;
+        border-bottom-color: inherit;
+        border-bottom-left-radius: inherit;
+        background-color: inherit;
+        box-shadow: inherit;
+    }
+
+    @if($origin == 'left-top' or $origin == 'left' or $origin == 'left-bottom'){
+        &:before{ left: rem-calc($offset); transform: rotateZ(45deg); }
+    }
+    @if($origin == 'right-top' or $origin == 'right' or $origin == 'right-bottom'){
+        &:before{ right: rem-calc($offset); transform: rotateZ(225deg); }
+    }
+    @if($origin == 'left-top' or $origin == 'right-top'){
+        &:before{ top: rem-calc($size); }
+    }
+    @if($origin == 'left'){
+        &:before{ top: 50%; transform: translateY(-50%) rotateZ(45deg); }
+    }
+    @if($origin == 'right'){
+        &:before{ top: 50%; transform: translateY(-50%) rotateZ(225deg); }
+    }
+    @if($origin == 'left-bottom' or $origin == 'right-bottom'){
+        &:before{ bottom: rem-calc($size); }
+    }
+    @if($origin == 'top-left' or $origin == 'top' or $origin == 'top-right'){
+        &:before{ top: rem-calc($offset); transform: rotateZ(135deg); }
+    }
+    @if($origin == 'bottom-left' or $origin == 'bottom' or $origin == 'bottom-right'){
+        &:before{ bottom: rem-calc($offset); transform: rotateZ(315deg); }
+    }
+    @if($origin == 'top-left' or $origin == 'bottom-left'){
+        &:before{ left: rem-calc($size); }
+    }
+    @if($origin == 'top'){
+        &:before{ left: 50%; transform: translateX(-50%) rotateZ(135deg); }
+    }
+    @if($origin == 'bottom'){
+        &:before{ left: 50%; transform: translateX(-50%) rotateZ(315deg); }
+    }
+    @if($origin == 'top-right' or $origin == 'bottom-right'){
+        &:before{ right: rem-calc($size); }
+    }
+}
+
+
+// Panel
+//
+// Styleguide 13
+
+.panel{
+    border-style: $panel-border-style;
+    border-width: $panel-border-size;
+    border-color: $panel-border-color;
+    margin-bottom: rem-calc(20);
+    background: $color-sand;
+    color: $panel-font-color;
+    position: relative;
+
+    h1,h2,h3,h4,h5,h6{
+        color: inherit;
+    }
+
+    // Respect the padding, fool.
+    &>:first-child { margin-top: 0; }
+    &>:last-child { margin-bottom: 0; }
+
+    &.columns, .column{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .copy{
+        padding: $panel-padding;
+        &>:last-child { margin-bottom: 0; }
+    }
+}
+
+// Style
+//
+// Markup:
+// <div class="panel {$modifiers} small-6 columns">
+//   <img src="http://gfx.dagbladet.no/labrador/330/330118/33011819/jpg/active/480x.jpg" />
+//   <div class="copy">
+//     <p>I 2009 ble det offentlig kjent at Landsrådet for Norges Barne og Ungdomsorganisasjoner (LNU) åpnet kontrollsak mot SOS Rasisme i 2009 etter mistanker om medlemsjuks. Siden den gang har LNU avslått alle søknader.</p>
+//   </div>
+// </div>
+//
+// .radius - Radius
+// .round - Round
+//
+// Styleguide 13.1
+
+.panel{
+    &.radius{
+        overflow: hidden;
+        border-radius: $global-radius;
+    }
+    &.round{
+        overflow: hidden;
+        border-radius: $global-radius * 4;
+    }
+}
+
+// Color
+//
+// Markup:
+// <div class="panel {$modifiers} z-shadow-1 small-6 columns">
+//   <img src="http://gfx.dagbladet.no/labrador/330/330118/33011819/jpg/active/480x.jpg" />
+//   <div class="copy">
+//     <h5>Headline</h5>
+//     <p>I 2009 ble det offentlig kjent at Landsrådet for Norges Barne og Ungdomsorganisasjoner (LNU) åpnet kontrollsak mot SOS Rasisme i 2009 etter mistanker om medlemsjuks. Siden den gang har LNU avslått alle søknader.</p>
+//   </div>
+// </div>
+//
+// .primary - Red
+// .sand - Sand
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+// .secondary - Secondary
+// .black - Black
+//
+// Styleguide 13.2
+
+.primary, .black{
+    .panel{
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+    }
+}
+
+.yellow, .green, .blue{
+    .panel:not(.primary):not(.orange):not(.yellow):not(.green):not(.blue):not(.purple):not(.burgundy):not(.pink):not(.secondary):not(.black){
+        background-color: transparent;
+        border: 1px solid $color-black;
+        color: $color-black;
+    }
+}
+
+.panel{
+    &.primary{ @include panel-style($bg: $color-red); }
+    &.sand{ @include panel-style($bg: $color-sand); }
+    &.yellow{ @include panel-style($bg: $color-yellow); }
+    &.green{ @include panel-style($bg: $color-green); }
+    &.blue{ @include panel-style($bg: $color-blue); }
+    &.secondary{ @include panel-style($bg: $color-lightgrey); }
+    &.black{ @include panel-style($bg: $color-black); }
+}
+
+// Divider
+//
+// Markup:
+// <div class="row">
+//   <div class="small-6 columns">
+//     <div class="panel {$modifiers} z-shadow-1">
+//       <img src="http://gfx.dagbladet.no/labrador/330/330118/33011819/jpg/active/480x.jpg" />
+//       <div class="divider dark"><h6>Dette er saken</h6></div>
+//       <div class="copy">
+//         <p>I 2009 ble det offentlig kjent at Landsrådet for Norges Barne og Ungdomsorganisasjoner (LNU) åpnet kontrollsak mot SOS Rasisme i 2009 etter mistanker om medlemsjuks. Siden den gang har LNU avslått alle søknader.</p>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="small-6 columns">
+//     <div class="panel {$modifiers} z-shadow-1">
+//       <img src="http://gfx.dagbladet.no/labrador/330/330118/33011819/jpg/active/480x.jpg" />
+//       <div class="copy">
+//         <p>I 2009 ble det offentlig kjent at Landsrådet for Norges Barne og Ungdomsorganisasjoner (LNU) åpnet kontrollsak mot SOS Rasisme i 2009 etter mistanker om medlemsjuks. Siden den gang har LNU avslått alle søknader.</p>
+//       </div>
+//       <div class="divider light"><h6>Dette er saken</h6></div>
+//     </div>
+//   </div>
+// </div>
+//
+// .primary - Primary/Red
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+//
+// Styleguide 13.3
+
+.panel{
+    .divider{
+        color: inherit;
+        padding: $panel-padding;
+        *{
+            color: inherit;
+            padding: 0;
+            margin: 0;
+        }
+        &.dark{
+            background-color: $color-grey;
+        }
+        &.light{
+            background-color: $color-lightgrey;
+        }
+
+        // &.primary{ background-color: $primary-color; }
+        // &.secondary{ background-color: $secondary-color; }
+        // &.orange{ background-color: $color-orange; }
+        // &.yellow{ background-color: $color-yellow; }
+        // &.green{ background-color: $color-green; }
+        // &.blue{ background-color: $color-blue; }
+        // &.purple{ background-color: $color-purple; }
+        // &.burgundy{ background-color: $color-burgundy; }
+        // &.pink{ background-color: $color-pink; }
+    }
+    &.primary .divider{
+        &.dark{ background-color: $color-red-dark; }
+        &.light{ background-color: $color-red-light; }
+    }
+    &.yellow .divider{
+        &.dark{ background-color:  $color-yellow-dark; }
+        &.light{ background-color: $color-yellow-light; }
+    }
+    &.green .divider{
+        &.dark{ background-color:  $color-green-dark; }
+        &.light{ background-color: $color-green-light; }
+    }
+    &.blue .divider{
+        &.dark{ background-color:  $color-blue-dark; }
+        &.light{ background-color: $color-blue-light; }
+    }
+}
+
+// Section title
+//
+// Markup:
+// <div class="panel small-6 columns has-section-title">
+//   <h4 class="section-title center {$modifiers}"><span>Dette er saken</span></h4>
+//   <div class="copy">
+//     <p>I 2009 ble det offentlig kjent at Landsrådet for Norges Barne og Ungdomsorganisasjoner (LNU) åpnet kontrollsak mot SOS Rasisme i 2009 etter mistanker om medlemsjuks. Siden den gang har LNU avslått alle søknader.</p>
+//   </div>
+// </div>
+//
+// .primary - Primary/Red
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+// .burgundy - Burgundy
+//
+// Styleguide 13.4
+
+.panel{
+    &.has-section-title{
+        margin-top: 1rem;
+    }
+    //overide section title styling
+    .section-title{
+        padding: $panel-padding 0 0 0;
+        margin: 0;
+        span{
+            background-color: transparent;
+            padding:0;
+            margin: 0;
+        }
+    }
+    &>.section-title:first-child{
+        // position: absolute;
+        // width: calc(100% + 2px);
+        // top: -1px;
+        // left: -1px;
+        // transform: translateY(-50%);
+        &:after{
+            height: 3px;
+            margin-top: -3px;
+            //overide section title styling
+            display: none;
+        }
+    }
+}
+
+// Fact box
+//
+// Fact box with image
+//
+// Markup:
+//  <div class="panel small-6 columns has-section-title sand">
+//      <h4 class="section-title center"><span>Dette er saken</span></h4>
+//      <div class="copy">
+//          <figure>
+//              <img src="http://gfx.dagbladet.no/labrador/330/330118/33011819/jpg/active/480x.jpg">
+//          </figure>
+//          <p>I 2009 ble det offentlig kjent at Landsrådet for Norges Barne og Ungdomsorganisasjoner (LNU) åpnet kontrollsak mot SOS Rasisme i 2009 etter mistanker om medlemsjuks. Siden den gang har LNU avslått alle søknader.</p>
+//      </div>
+//  </div>
+// 
+// Styleguide 13.5
+
+// Fact box
+//
+// Fact box without image
+//
+// Markup:
+//  <div class="panel small-6 columns has-section-title sand">
+//      <h4 class="section-title center "><span>Slik er batterikapasiteten på</span></h4>
+//      <div class="copy">
+//          <ul>
+//              <li><strong>iPhone 5S:</strong> 1520 mAh</li>
+//              <li><strong>iPhone SE:</strong> 1620 mAh</li>
+//              <li><strong>iPhone 6S:</strong> 1715 mAh</li>
+//              <li><strong>iPhone 6S Plus:</strong> 2750 mAh</li>
+//          </ul>
+//      </div>
+//  </div>
+// 
+// Styleguide 13.5.2
+
+
+// Infobox
+//
+// Info about the author of an article.
+//
+// Markup:
+//  <div class="panel infobox {$modifiers} small-6 columns">
+//      <figure>
+//          <img class="byline" src="http://www.dagbladet.no/meninger/assets/images/bylines/msi.png" />
+//      </figure>
+//      <h4>Innsendt av Mikael Scott Bjerkeli</h4>
+//      <div class="copy">
+//          <p>Styreleder - på vegne av og i samarbeid med Harry Benjamin ressurssenter, HBRSU- barne- og ungdomsforeningen, og HBRS foreldre- og familieforeningen.</p>
+//      </div>
+//  </div>
+// 
+// .secondary - Secondary
+// .teal - Teal
+// .primary - Primary/Red
+// .orange - Orange
+// .yellow - Yellow
+// .green - Green
+// .blue - Blue
+// .purple - Purple
+// .burgundy - Burgundy
+// .pink - Pink
+//
+// Styleguide 13.6
+
+.panel {
+    &.infobox {
+        text-align: center;
+
+        figure {
+            margin-top: $column-gutter / 2;
+            img.byline {
+                width: 15%;
+                margin-bottom: 0;
+                display: inline;
+                border-radius: 50%;
+            }
+        }
+
+        h4 {
+            margin-top: $column-gutter / 2;
+            margin-bottom: 0;
+        }
+
+        .copy {
+            padding-top: 0;
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+// Indicating origin
+//
+// Experimental: Maybe this should be moved to the new component 'card'
+//
+// Markup:
+// <div class="panel green z-shadow-1 {$modifiers}">
+//   <div class="copy">
+//     <h4>Gransking, avsløring og dommer:</h4>
+//     <p>I 2009 ble det offentlig kjent at Landsrådet for Norges Barne og Ungdomsorganisasjoner (LNU) åpnet kontrollsak mot SOS Rasisme i 2009 etter mistanker om medlemsjuks. Siden den gang har LNU avslått alle søknader.</p>
+//   </div>
+// </div>
+//
+// .origin-left-top - Indicating that the panel is from the left top
+// .origin-left - Indicating that the panel is from the left
+// .origin-left-bottom - Indicating that the panel is from the left bottom
+// .origin-right-top - Indicating that the panel is from the right top
+// .origin-right - Indicating that the panel is from the right
+// .origin-right-bottom - Indicating that the panel is from the right bottom
+// .origin-bottom-left - Indicating that the panel is from the bottom left
+// .origin-bottom - Indicating that the panel is from the bottom
+// .origin-bottom-right - Indicating that the panel is from the bottom right
+
+// .panel{
+//     &.origin-left-top{ @include panel-origin('left-top'); }
+//     &.origin-left{ @include panel-origin('left'); }
+//     &.origin-left-bottom{ @include panel-origin('left-bottom'); }
+//
+//     &.origin-right-top{ @include panel-origin('right-top'); }
+//     &.origin-right{ @include panel-origin('right'); }
+//     &.origin-right-bottom{ @include panel-origin('right-bottom'); }
+//
+//     &.origin-top-left{ @include panel-origin('top-left'); }
+//     &.origin-top{ @include panel-origin('top'); }
+//     &.origin-top-right{ @include panel-origin('top-right'); }
+//
+//     &.origin-bottom-left{ @include panel-origin('bottom-left'); }
+//     &.origin-bottom{ @include panel-origin('bottom'); }
+//     &.origin-bottom-right{ @include panel-origin('bottom-right'); }
+// }

@@ -1,0 +1,29 @@
+@media #{$small-only}{
+    .small-only-left{
+        float: left !important;
+    }
+
+    .small-only-right{
+        float: right !important;
+    }
+}
+
+@media #{$medium-only}{
+    .medium-only-left{
+        float: left !important;
+    }
+
+    .medium-only-right{
+        float: right !important;
+    }
+}
+
+@media #{$large-up}{
+    .large-left{
+        float: left !important;
+    }
+
+    .large-right{
+        float: right !important;
+    }
+}
