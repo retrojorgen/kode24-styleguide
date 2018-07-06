@@ -15,7 +15,7 @@
     "start": "grunt",
     "test": "grunt test",
     "publish": "grunt deploy",
-    "preinstall": "./node_modules/bower/bin/bower install",
+    "preinstall": "bower cache clean && bower install",
     "postinstall": "grunt dist"
   },
   "author": {
@@ -25,9 +25,6 @@
   "private": true,
   "engines": {
     "node": ">= 0.12.0"
-  },
-  "devDependencies": {
-    "bower": "^1.8.0"
   },
   "dependencies": {
     "assemble": "^0.4.37",
