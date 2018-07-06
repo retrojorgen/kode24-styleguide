@@ -5,20 +5,25 @@
 $include-html-article-preview-classes: true !default;
 $include-html-article-preview-background-classes: $include-html-article-preview-classes !default;
 $include-html-article-preview-nativeads-classes: $include-html-article-preview-classes !default;
-$article-box-preview-padding: $column-gutter / 2;
+$article-box-preview-padding: $column-gutter * 2;
 
 //
 // Article preview Mixins
 //
 
 @mixin article-preview-base(){
-    margin-bottom: $article-box-preview-padding;
+    margin-bottom: 0;
+    position: relative;
+    &.columns {
+        padding-right: 0;
+        padding-left: 0;
+    }
     &>a{
         overflow: auto;
         display: block;
         color: inherit;
         text-decoration: none;
-        padding-bottom: $article-box-preview-padding;
+        padding-bottom: 0;
         @media #{$large-up}{
             &:hover{
                 .headline{
@@ -50,6 +55,16 @@ $article-box-preview-padding: $column-gutter / 2;
             position:absolute;
             height: 100%;
         }
+        &:before {
+            content: "";
+            z-index: 11;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+        }
     }
 
     img{
@@ -60,6 +75,17 @@ $article-box-preview-padding: $column-gutter / 2;
         &.border{
             border: 1px solid $color-grey;
         }
+    }
+
+    .article-preview-text {
+        display: block;
+        position: absolute;
+        width: 100%;
+        z-index: 12;
+        left: 0;
+        bottom: 0;
+        padding: $article-box-preview-padding;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
     }
 
     .headline{
@@ -150,11 +176,14 @@ $article-box-preview-padding: $column-gutter / 2;
         $contrasting-color: $color;
     }
 
-    color: $contrasting-color;
 
     &>a{
         background-color: $bg;
-        padding: $padding;
+        padding: 0;
+    }
+
+    .article-preview-text {
+        background: linear-gradient(0deg, $bg, transparent);
     }
 
     .kicker{
@@ -178,6 +207,11 @@ $article-box-preview-padding: $column-gutter / 2;
     .label{
         background-color: $contrasting-color;
         color: $bg;
+    }
+
+    .deck,
+    .headline {
+        text-align: center;
     }
 
     .related{

@@ -1,51 +1,6 @@
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://styleguide.dinside.no/fonts/roboto-light.eot?') format('eot'),
-       url('https://styleguide.dinside.no/fonts/roboto-light.woff') format('woff'),
-       url('https://styleguide.dinside.no/fonts/roboto-light.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('https://styleguide.dinside.no/fonts/roboto-regular.eot?') format('eot'),
-       url('https://styleguide.dinside.no/fonts/roboto-regular.woff') format('woff'),
-       url('https://styleguide.dinside.no/fonts/roboto-regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 900;
-  src: url('https://styleguide.dinside.no/fonts/roboto-black.eot?') format('eot'),
-       url('https://styleguide.dinside.no/fonts/roboto-black.woff') format('woff'),
-       url('https://styleguide.dinside.no/fonts/roboto-black.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 300;
-  src: url('https://styleguide.dinside.no/fonts/roboto-lightitalic.eot?') format('eot'),
-       url('https://styleguide.dinside.no/fonts/roboto-lightitalic.woff') format('woff'),
-       url('https://styleguide.dinside.no/fonts/roboto-lightitalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 400;
-  src: url('https://styleguide.dinside.no/fonts/roboto-regularitalic.eot?') format('eot'),
-       url('https://styleguide.dinside.no/fonts/roboto-regularitalic.woff') format('woff'),
-       url('https://styleguide.dinside.no/fonts/roboto-regularitalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 900;
-  src: url('https://styleguide.dinside.no/fonts/roboto-blackitalic.eot?') format('eot'),
-       url('https://styleguide.dinside.no/fonts/roboto-blackitalic.woff') format('woff'),
-       url('https://styleguide.dinside.no/fonts/roboto-blackitalic.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+
 @font-face {
   font-family: 'Helveticons';
   font-weight: normal;

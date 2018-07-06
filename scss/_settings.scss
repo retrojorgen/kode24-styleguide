@@ -99,9 +99,9 @@ $font-weight-normal: 400 !default;
 $font-weight-bold: 800 !default;
 
 // We use these to control various global styles
-$body-bg: #FFFFFF;
-$body-font-color: #333333;
-$body-font-family: "Open Sans", helvetica, arial, sans-serif;
+$body-bg: #262822;
+$body-font-color: #fcfcfc;
+$body-font-family: 'PT Mono', monospace;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 
@@ -148,7 +148,7 @@ $paywall-primary-color:           $color-pink;
 $paywall-primary-color-hover:     scale-color( $paywall-primary-color, $lightness: 1 );
 $paywall-button-font-weight:      400;
 
-$white       : #FFFFFF;
+$white       : #fcfcfc;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -225,7 +225,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: "Open Sans", helvetica, arial, sans-serif;
+$header-font-family: 'PT Mono', monospace;
 $header-font-weight: 800;
 
 // $header-font-style: normal;
