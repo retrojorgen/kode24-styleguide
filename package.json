@@ -15,7 +15,7 @@
     "start": "grunt",
     "test": "grunt test",
     "publish": "grunt deploy",
-    "preinstall": "bower cache clean && bower install",
+    "preinstall": "",
     "postinstall": "./run.sh"
   },
   "author": {
