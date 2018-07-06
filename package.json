@@ -16,7 +16,7 @@
     "test": "grunt test",
     "publish": "grunt deploy",
     "preinstall": "",
-    "postinstall": "./run.sh"
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "author": {
     "name": "Jørgen Jacobsen",
