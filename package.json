@@ -16,7 +16,7 @@
     "test": "grunt test",
     "publish": "grunt deploy",
     "preinstall": "bower cache clean && bower install",
-    "postinstall": "grunt dist"
+    "postinstall": "./run.sh"
   },
   "author": {
     "name": "Jørgen Jacobsen",
