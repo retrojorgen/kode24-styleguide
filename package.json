@@ -26,6 +26,9 @@
   "engines": {
     "node": ">= 0.12.0"
   },
+  "devDependencies": {
+    "bower": "^1.8.0"
+  },
   "dependencies": {
     "assemble": "^0.4.37",
     "assemble-middleware-styleguide": "0.1.6",
