@@ -12,11 +12,11 @@
     "url": "git://github.com/dbmedialab/kode24-styleguide.git"
   },
   "scripts": {
-    "start": "grunt",
+    "start": "node server.js",
     "test": "grunt test",
     "publish": "grunt deploy",
     "preinstall": "",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./run.sh"
   },
   "author": {
     "name": "Jørgen Jacobsen",
@@ -27,6 +27,7 @@
     "node": ">= 0.12.0"
   },
   "dependencies": {
+    "express": "^4.16.3",
     "assemble": "^0.4.37",
     "assemble-middleware-styleguide": "0.1.6",
     "assemble-mustache": "~0.2.1",
