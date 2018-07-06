@@ -1,15 +1,15 @@
 {
   "name": "Styleguide",
-  "version": "0.28.5",
-  "description": "Style Guide for Dinside",
-  "homepage": "http://styleguide.dinside.no/",
+  "version": "0.0.1",
+  "description": "Style Guide for Kode24",
+  "homepage": "http://styleguide.kode24.no/",
   "config": {
     "dest": "dist",
     "src": "tasks/config/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dbmedialab/db-styleguide.git"
+    "url": "git://github.com/dbmedialab/kode24-styleguide.git"
   },
   "scripts": {
     "start": "grunt",
@@ -19,8 +19,8 @@
     "postinstall": "grunt dist"
   },
   "author": {
-    "name": "DB Medialab",
-    "url": "http://medialaben.com/"
+    "name": "Jørgen Jacobsen",
+    "url": "http://kode24.no/"
   },
   "private": true,
   "engines": {
