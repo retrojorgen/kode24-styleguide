@@ -92,11 +92,30 @@ $article-box-preview-padding-mobile: $column-gutter / 1.5;
         left: $article-box-preview-padding-mobile;
         bottom: 0;
         padding: $article-box-preview-padding-mobile;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
+        
+        &:before {
+            content: "";
+            position: absolute;
+            left: -$article-box-preview-padding-mobile;
+            width: calc(100% + $article-box-preview-padding-mobile*2);
+            height: 100%;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
+            pointer-events: none;
+        }
+        .deck,
+        .headlines,
+        .labels {
+            position: relative;
+        }
         @media #{$medium-up}{
             left: $article-box-preview-padding;
             width: calc(100% - $article-box-preview-padding*2);
             padding: $article-box-preview-padding/2 0;
+            &:before {
+                left: -$article-box-preview-padding;
+                width: calc(100% + $article-box-preview-padding*2);
+            }
         }
 
     }
