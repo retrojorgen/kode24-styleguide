@@ -12,12 +12,14 @@
     text-align: center;
     img {
       max-width: 500px;
+      width: 80%;
     }
   }
   .header-info {
     color: $body-font-color;
     text-transform: uppercase;
     a {
+      color: $body-font-color;
       text-decoration: none;
       border-bottom: 4px solid #ff0071;
     }
