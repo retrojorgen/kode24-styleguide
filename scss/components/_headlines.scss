@@ -5,7 +5,7 @@ $include-html-dynamic-headline-classes: $include-html-headline-classes !default;
 @if $include-html-headline-classes{
     //For small screens (default)
     .headline{
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         background-color: transparent;
         line-height: 1.1;
         color: inherit;
