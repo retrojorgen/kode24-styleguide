@@ -223,7 +223,10 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     }
 
     .article-preview-text {
-        background: linear-gradient(0deg, $bg, transparent);
+        &:before {
+            background: linear-gradient(0deg, $bg, transparent);
+        }
+        
     }
 
     .kicker{
