@@ -106,7 +106,8 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
             pointer-events: none;
         }
         .deck,
-        .headlines,
+        .headline,
+        .standfirst,
         .labels {
             position: relative;
         }
