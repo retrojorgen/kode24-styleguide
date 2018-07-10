@@ -114,7 +114,7 @@ $article-box-preview-padding-mobile: $column-gutter / 1.5;
             padding: $article-box-preview-padding/2 0;
             &:before {
                 left: -$article-box-preview-padding;
-                width: calc(100% + ($article-box-preview-padding*2)));
+                width: calc(100% + ($article-box-preview-padding*2));
             }
         }
 
