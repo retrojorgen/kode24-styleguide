@@ -93,7 +93,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
         z-index: 12;
         left: $article-box-preview-padding-mobile;
         bottom: 0;
-        padding: $article-box-preview-padding-mobile;
+        padding: $article-box-preview-padding-mobile 0;
         
         &:before {
             content: "";
@@ -150,9 +150,10 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 
     .standfirst{
         background-color: transparent;
-        font-size: rem-calc(18px);
+        font-size: rem-calc(12px);
+        
         margin-bottom: 0.5rem;
-        line-height: 1.4;
+        line-height: 1.3;
         color: inherit;
         display: block;
         &:after{
@@ -165,6 +166,10 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
             color: $primary-color;
             //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
             margin-right: -0.4em;
+        }
+        @media #{$medium-up}{
+            font-size: rem-calc(18px);
+            line-height: 1.4;
         }
     }
 
