@@ -1,5 +1,9 @@
 .frontpage{
-    margin-top: $column-gutter / 2 ;
+   
+    margin-top: 0;
+    @media #{$medium-up}{
+        margin-top: $column-gutter / 2 ;
+    }
     overflow: hidden;
     @media #{$large-up}{
         overflow: visible;
