@@ -19,6 +19,7 @@ $article-box-preview-padding-mobile: $column-gutter;
 @mixin article-preview-base(){
     margin-bottom: 0;
     position: relative;
+    overflow: hidden;
     &.columns {
         padding-right: 0;
         padding-left: 0;
