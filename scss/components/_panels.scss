@@ -141,10 +141,10 @@ $panel-font-color: $panel-font-color !default;
 
 .panel{
     border-style: $panel-border-style;
-    border-width: $panel-border-size;
-    border-color: $panel-border-color;
+    border-width: 0;
+    border-color: none;
     margin-bottom: rem-calc(20);
-    background: $color-sand;
+    background: darken($color-pink, 20%);
     color: $panel-font-color;
     position: relative;
 
