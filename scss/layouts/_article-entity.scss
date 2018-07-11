@@ -346,3 +346,11 @@
         // }
     }
 }
+
+
+.adunit {
+    &:before {
+        background-color: $color-purple;
+        color: $white;
+    }
+}
