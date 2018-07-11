@@ -243,7 +243,8 @@
     }
     .subhead,h2{
         font-size: rem-calc(22);
-        margin-bottom: 0;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
     }
     .article-list-bottom{
         margin-bottom: $column-gutter;
