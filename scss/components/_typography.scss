@@ -370,7 +370,7 @@ cite{
 @mixin caption(){
     font-size: rem-calc(14px);
     font-weight: 400;
-    border-bottom: 1px solid $secondary-color;
+    border-left: 4px solid $color-pink;
     display: block;
     padding-bottom: 1rem;
     *{
