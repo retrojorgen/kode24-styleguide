@@ -219,12 +219,12 @@ figure amp-img[itemprop~="representativeOfPage"] {
 .ad-wrapper:before {
   content: "Annonse";
   text-transform: uppercase;
-  color: #767676;
+  color: $white;
   font-size: 0.7rem;
   text-align: center;
   display: block;
   width: 320px;
-  background: #ECECEC;
+  background: $color-ad;
   line-height: 26px;
   margin: 0 auto
 }
