@@ -348,7 +348,10 @@
 }
 
 
-.adunit {
+.adunit,
+#adunit-wallpaper-left, 
+#adunit-wallpaper-right, 
+.fullbleed .adunit-wrapper {
     &:before {
         background-color: $color-purple;
         color: $white;
