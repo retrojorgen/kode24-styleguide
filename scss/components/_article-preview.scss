@@ -85,7 +85,11 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
             border: 1px solid $color-grey;
         }
     }
-
+    &.no-article-image {
+        .article-preview-text {
+            position: relative;
+        }
+    }
     .article-preview-text {
         display: block;
         position: absolute;
