@@ -1,7 +1,7 @@
 #top-navigation {
   position: relative;
   width: 100%;
-  padding: $column-gutter;
+  padding: 0 $column-gutter;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,8 +19,13 @@
     border-bottom: 1px solid rgba(255,255,255,0.3);
     justify-content: flex-start;
     #page-logo {
-      height: 40px;
-      width: auto;
+      line-height: 0;
+      font-size: 0;
+      img {
+        height: 40px;
+        width: auto;
+      }
+      
     }
   }
   #page-logo {
