@@ -137,7 +137,7 @@ $alert-color: $color-red;
 $success-color: $color-green;
 $warning-color: $color-orange;
 $info-color: #a0d3e8;
-$ui-color: $white;
+
 $native-advertisement-color: #43A047;
 
 $color-ad: $color-purple;
@@ -180,6 +180,8 @@ $white       : $body-font-color;
 // $shiny-edge-size: 0 1px 0;
 // $shiny-edge-color: rgba($white, .5);
 // $shiny-edge-active-color: rgba($black, .2);
+
+$ui-color: $white;
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
