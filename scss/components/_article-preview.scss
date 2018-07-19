@@ -19,7 +19,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 
 @mixin article-preview-base(){
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     position: relative;
     overflow: hidden;
     transition: 0.1s ease-in-out;
