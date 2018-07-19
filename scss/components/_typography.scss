@@ -143,11 +143,13 @@ h1,h2,h3,h4,h5,h6{
 // Styleguide 4.4
 
 a{
+    color: $white;
+    text-decoration-color: $color-pink;
     &:focus{
         color: $primary-color;
     }
     &:visited{
-        color: rgb(102, 0, 153);
+        color: $color-pink;
     }
 }
 
