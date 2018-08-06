@@ -10,7 +10,7 @@
     color: $white;
     padding-top: $column-gutter;
     margin-top: $column-gutter * 2;
-    background: $color-darkest;
+    background: linear-gradient(45deg, $color-purple-darkest,$color-purple-darker);
     .main-logo{
         color: $primary-color;
         text-decoration: none;
