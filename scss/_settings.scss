@@ -101,7 +101,7 @@ $font-weight-bold: 800 !default;
 // We use these to control various global styles
 $body-bg: #171716;
 $body-font-color: #fcfcfc;
-$body-font-family: 'PT Mono', monospace;
+$body-font-family: 'Plex Mono', monospace;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 
@@ -230,7 +230,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: 'PT Mono', monospace;
+$header-font-family: 'Plex Mono', monospace;
 $header-font-weight: 800;
 
 // $header-font-style: normal;

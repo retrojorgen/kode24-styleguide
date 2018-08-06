@@ -2,74 +2,13 @@
 // Font Variables
 //
 
-$include-font: true !default;
-$include-font-style-normal: $include-font !default;
-$include-font-style-italic: $include-font !default;
-$include-font-icon: $include-font !default;
-$include-secondary-font: $include-font !default;
-
 // Fonts
 //
 // At Dinside we are passionate about typography and the written word. We have chosen fonts and weights with readability in mind, but that also gives us freedom to experiment.
 //
 // Styleguide 3
 
-@if $include-font{
-    @if $include-font-style-normal{
-        @font-face {
-          font-family: 'Open Sans';
-          font-style: normal;
-          font-weight: 300;
-          src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-        }
-        @font-face {
-          font-family: 'Open Sans';
-          font-style: normal;
-          font-weight: 400;
-          src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-        }
-        @font-face {
-          font-family: 'Open Sans';
-          font-style: normal;
-          font-weight: 800;
-          src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(https://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-        }
-        @font-face {
-          font-family: 'Open Sans';
-          font-style: normal;
-          font-weight: 700;
-          src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-        }
-        @font-face {
-          font-family: 'Open Sans';
-          font-style: normal;
-          font-weight: 800;
-          src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(https://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-        }
-    }
-    @if $include-font-style-italic{
-        @font-face {
-          font-family: 'Open Sans';
-          font-style: italic;
-          font-weight: 400;
-          src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
-        }
-    }
-    @if $include-font-icon{
-        @font-face {
-            font-family: 'Helveticons';
-            font-style: normal;
-            font-weight: normal;
-            src: url(//styleguide.dinside.no/fonts/helveticons.woff) format('woff');
-        }
-        @font-face {
-            font-family: 'Fontello';
-            font-style: normal;
-            font-weight: normal;
-            src: local('Fontello'), url(assets/fonts/fontello.woff) format('woff');
-        }
-    }
-}
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans');
 
 // Open Sans
 //
@@ -94,7 +33,7 @@ $include-secondary-font: $include-font !default;
 
 @if $include-html-styleguide-examples {
     .font-example-open-sans{
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Plex Sans', sans-serif;
         *{
             font-family: inherit;
         }
