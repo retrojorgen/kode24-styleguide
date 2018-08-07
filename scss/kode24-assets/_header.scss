@@ -8,6 +8,7 @@
   align-items: center;
   background-size: cover;
   overflow: hidden;
+  margin-bottom: 0;
   @media #{$medium-up}{
     height: 300px;
   }
