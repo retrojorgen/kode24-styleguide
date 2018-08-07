@@ -16,7 +16,7 @@
     "test": "grunt test",
     "publish": "grunt deploy",
     "preinstall": "bower install --allow-root",
-    "postinstall": "node server.js"
+    "postinstall": "grunt dist"
   },
   "author": {
     "name": "Jørgen Jacobsen",
