@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                 "-h", "X-goog-meta-X-Apps-Cache-Channel: styleguide-dinside", // Cache control
                 "rsync", "-r", // Sync the files
                 "dist/.", // Folder to sync
-                "gs://styleguide.dinside.no" // Bucket name
+                "gs://styleguide.kode24.no" // Bucket name
             ],
             opts: { stdio: 'inherit' },
         }, function () {
