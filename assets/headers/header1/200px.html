@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      #header {
+        background-color: #2c1b63;
+        background: radial-gradient(#2c1b63, #281f47);
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        
+      }
+      #triangles {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-400px) translateY(-136px);
+      }
+      #header:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(http://static.tumblr.com/d3d21b3461b586a6ea6c36c0bf320c51/mv0qwkv/urXnro577/tumblr_static_2qgjda2fztc0ws08w88c0ws4c.gif);
+        opacity: 0.1;
+      }
+      #left-triangle {
+        background-color: black;
+        clip-path: url(#cp);
+        -webkit-clip-path: url(#cp);
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-blend-mode: screen;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(https://media3.giphy.com/media/vhsNmFjuN4WDS/giphy.gif);
+        background-size: 100%;
+    }
+
+      #right-triangle {
+        background-color: #4e3894;
+        clip-path: url(#cp3);
+        -webkit-clip-path: url(#cp3);
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-blend-mode: screen;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #top-right-triangle {
+        background-color: #4e3894;
+        clip-path: url(#cp2);
+        -webkit-clip-path: url(#cp2);
+        width: 200px;
+        height: 200px;
+        
+        background-size: cover;
+        background-blend-mode: screen;
+        
+        position: absolute;
+        top: -0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+      <svg width='0' height='0'>
+        <defs>
+          <clipPath id="cp">
+            <path class="st3" d="M111,137.3l9.3-5l9.4-5.1l2.3-1.3V11.1L4.3,79.9l96.8,52.1L111,137.3z M110,45.5v68.8L46.1,79.9L67,68.4
+            l0.3-21.8l20.1,10.5L110,45.5z"/>
+          </clipPath>
+          <clipPath id="cp2">
+            <polygon class="st2" points="131.8,81.2 131.8,103.7 152.3,114.8 131.8,125.8 131.8,125.8 129.5,127.1 120,132.2 110.7,137.2 
+            88.4,149.2 88.4,124.9 66.3,113 66.3,183.6 194.1,114.8 			"/>
+          </clipPath>
+          <clipPath id="cp3">
+            <polygon class="st2" points="89.1,103.5 89.1,80.6 110.2,92 110.2,69.5 67,46.2 67,91.6 			"/>
+          </clipPath>
+        </defs>
+      </svg>
+      
+      
+    <div id="header">
+      <div id="logo-container">
+        <div id="triangles">
+          <div id="left-triangle">
+
+          </div>
+          <div id="top-right-triangle">
+
+            </div>
+          <div id="right-triangle">
+
+          </div>
+        </div>
+      </div>
+    </div>    
+  </body>
+</html>

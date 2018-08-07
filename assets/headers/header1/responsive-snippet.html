@@ -1,0 +1,227 @@
+<style>
+  #kode24-graphic-header {
+    background-color: #2c1b63;
+    background: linear-gradient(45deg, #44144a,#2c1b63);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden; 
+  }
+
+  #kode24-graphic-header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(http://static.tumblr.com/d3d21b3461b586a6ea6c36c0bf320c51/mv0qwkv/urXnro577/tumblr_static_2qgjda2fztc0ws08w88c0ws4c.gif);
+    opacity: 0.1;
+  }
+
+  #kode24-graphic-header #particles-js {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #kode24-graphic-header #triangles {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-100px) translateY(-100px);
+  }
+  
+  #kode24-graphic-header #left-triangle {
+    background-color: black;
+    clip-path: url(#cp4);
+    -webkit-clip-path: url(#cp4);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://media0.giphy.com/media/V7TPf0sjNokw0/giphy.gif);
+    background-size: 100%;
+  }
+
+  #kode24-graphic-header #right-triangle {
+    background: linear-gradient(60deg, #a51ac2, #ff6161);
+    clip-path: url(#cp6);
+    -webkit-clip-path: url(#cp6);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #kode24-graphic-header #top-right-triangle {
+    background: linear-gradient(60deg, #a51ac2, #ff6161);
+    clip-path: url(#cp5);
+    -webkit-clip-path: url(#cp5);
+    width: 200px;
+    height: 200px;
+    
+    background-size: cover;
+    background-blend-mode: screen;
+    
+    position: absolute;
+    top: -0;
+    left: 0;
+  }
+  
+    @media (min-width: 1025px) {
+    
+    #kode24-graphic-header #left-triangle,
+    #kode24-graphic-header #right-triangle,
+    #kode24-graphic-header #top-right-triangle {
+      width: 400px;
+      height: 400px;
+    }
+    #kode24-graphic-header #left-triangle {
+      clip-path: url(#cp);
+      -webkit-clip-path: url(#cp);
+    }
+    #kode24-graphic-header #right-triangle {
+      clip-path: url(#cp3);
+      -webkit-clip-path: url(#cp3);
+    }
+    
+    #kode24-graphic-header #top-right-triangle {
+      clip-path: url(#cp2);
+      -webkit-clip-path: url(#cp2);
+    }
+    #kode24-graphic-header #triangles {
+      transform: translateX(-200px) translateY(-200px);
+    }
+  }
+</style>
+<svg width='0' height='0'>
+  <defs>
+    <clipPath id="cp">
+      <path class="st3" d="M224.9,282.7l19.4-10.4l19.6-10.6l4.8-2.6v-239L3,163.2l201.4,108.4L224.9,282.7z M222.8,91.7v143.1
+L89.9,163.2l43.5-23.8l0.5-45.4l41.7,21.9L222.8,91.7z"/>
+    </clipPath>
+    <clipPath id="cp2">
+        <polygon class="st2" points="268.2,166 268.2,212.8 310.9,235.8 268.2,258.8 268.2,258.8 263.3,261.4 243.7,271.9 224.3,282.4 
+    178,307.3 178,256.8 132,232 132,378.9 397.8,235.8"/>
+    </clipPath>
+    <clipPath id="cp3">
+      <polygon class="st2" points="179.3,212.3 179.3,164.6 223.4,188.4 223.4,141.6 133.3,93.1 133.3,187.6 			"/>
+    </clipPath>
+    <clipPath id="cp4">
+      <path class="st3" d="M111,137.3l9.3-5l9.4-5.1l2.3-1.3V11.1L4.3,79.9l96.8,52.1L111,137.3z M110,45.5v68.8L46.1,79.9L67,68.4
+      l0.3-21.8l20.1,10.5L110,45.5z"/>
+    </clipPath>
+    <clipPath id="cp5">
+      <polygon class="st2" points="131.8,81.2 131.8,103.7 152.3,114.8 131.8,125.8 131.8,125.8 129.5,127.1 120,132.2 110.7,137.2 
+      88.4,149.2 88.4,124.9 66.3,113 66.3,183.6 194.1,114.8 			"/>
+    </clipPath>
+    <clipPath id="cp6">
+      <polygon class="st2" points="89.1,103.5 89.1,80.6 110.2,92 110.2,69.5 67,46.2 67,91.6 			"/>
+    </clipPath>
+  </defs>
+</svg>
+      
+      
+<div id="kode24-graphic-header">
+  <div id="particles-js"></div>
+  <div id="logo-container">
+    <div id="triangles">
+      <div id="left-triangle">
+
+      </div>
+      <div id="top-right-triangle">
+
+        </div>
+      <div id="right-triangle">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 47,
+        "density": {
+          "enable": true,
+          "value_area": 631.3181133058181
+        }
+      },
+      "color": {
+        "value": "#000000"
+      },
+      "shape": {
+        "type": "triangle",
+        "stroke": {
+          "width": 3,
+          "color": "#c431e3"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.03206824121731046,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 0.3248308849205381,
+          "opacity_min": 0.024362316369040352,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 8.017060304327615,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.4,
+        "direction": "right",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
