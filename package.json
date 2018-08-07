@@ -12,7 +12,7 @@
     "url": "git://github.com/dbmedialab/kode24-styleguide.git"
   },
   "scripts": {
-    "start": "grunt",
+    "start": "node server.js",
     "test": "grunt test",
     "publish": "grunt deploy",
     "preinstall": "bower install --allow-root",
