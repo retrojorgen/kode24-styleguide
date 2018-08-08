@@ -15,7 +15,7 @@
   }
   &.article {
     height: 60px;
-    background-color: black;
+    background: linear-gradient(45deg, $color-purple-darkest,$color-purple-darker);
     justify-content: flex-start;
     align-items: flex-start;
     
