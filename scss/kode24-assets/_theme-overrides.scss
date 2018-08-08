@@ -4,11 +4,14 @@ body.light {
   &.animate {
     transition: all 0.1s ease-in-out;
   }
-  a,h1,h2,h3,h4,h5,h6,blockquote, blockquote p {
-    color: #333;
+  main {
+    a,h1,h2,h3,h4,h5,h6,blockquote, blockquote p {
+      color: #333;
+    }
+    ::selection {
+      background-color: $color-pink;
+      color: $white;
+    }
   }
-  ::selection {
-    background-color: $color-pink;
-    color: $white;
-  }
+  
 }
