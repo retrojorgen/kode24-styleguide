@@ -33,6 +33,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     &.columns {
         padding-right: 0;
         padding-left: 0;
+        position: unset;
     }
     &>a{
         overflow: auto;
