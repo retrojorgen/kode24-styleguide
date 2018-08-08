@@ -18,6 +18,10 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 // Article preview Mixins
 //
 
+.columns {
+    position: unset;
+}
+
 @mixin article-preview-base(){
     margin-bottom: 0;
     overflow: hidden;
