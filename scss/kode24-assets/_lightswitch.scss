@@ -34,12 +34,17 @@
     border-radius: 6px;
   }
   &.on {
-    bottom: auto;
-    top: 0;
+    &:before {
+      bottom: auto;
+      top: 0;
+    }
+    
   }
   &.off {
-    bottom: 0;
-    top: auto;
+    &:before {
+      bottom: 0;
+      top: auto;
+    }
   }
 }
 
