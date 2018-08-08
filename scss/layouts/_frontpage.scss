@@ -18,7 +18,7 @@
     
     &>.row{
         z-index: $z-index-page;
-        position: relative;
+        position: unset;
     }
     
     @media #{$small-only}{

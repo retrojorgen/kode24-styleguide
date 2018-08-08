@@ -20,13 +20,15 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 
 @mixin article-preview-base(){
     margin-bottom: 0;
-    position: relative;
     overflow: hidden;
     transition: 0.1s ease-in-out;
     &:hover {
         z-index: 1000000;
         transform: scale(1.01);
         box-shadow: 0 4px 11px 2px #00000038;
+    }
+    a {
+        position: relative;
     }
     &.columns {
         padding-right: 0;
