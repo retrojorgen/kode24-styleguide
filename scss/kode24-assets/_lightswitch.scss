@@ -11,7 +11,8 @@
   border-radius: 9px;
   padding: 10px;
   z-index: 10000;
-  content: "";
+  &:before {
+    content: "";
     background: linear-gradient(45deg, #a51ac2, red);
     position: absolute;
     top: 3px;
