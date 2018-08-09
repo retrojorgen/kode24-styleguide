@@ -146,10 +146,10 @@ a{
     color: $white;
     text-decoration-color: $color-pink;
     &:focus{
-        color: $primary-color;
+        color: $white;
     }
     &:visited{
-        color: $color-pink;
+        color: $white;
     }
 }
 

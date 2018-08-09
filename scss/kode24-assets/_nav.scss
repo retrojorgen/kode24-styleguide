@@ -41,7 +41,20 @@
         text-decoration: none;
         white-space: nowrap;
       }
+      &:hover {
+        transition: all 0.1s ease-in-out;
+        background: linear-gradient(45deg, #c533e3,red);
+        color: white;
+        transform: scale(1.1) translateY(-2px);
+      }
+      &:active {
+        transition: all 0.1s ease-in-out;
+        background: linear-gradient(45deg, #c533e3,red);
+        color: white;
+        transform: scale(0.9) translateY(-2px);
+      }
     }
+
   }
   .user-content {
     display: flex;
