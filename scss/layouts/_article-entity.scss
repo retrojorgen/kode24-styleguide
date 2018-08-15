@@ -1,5 +1,4 @@
 .article-entity{
-    margin-top: 1.5rem;
     //I know this is backwards styling for mobile only, but this short of breaking out of the template only for small screens.
     @media #{$small-only}{
         header{
@@ -30,9 +29,15 @@
     }
 
     header{
+        margin-top: 1.5rem;
         img{
             max-width: none;
             width: 100%;
+        }
+        .full-bleed {
+            width: 100vw;
+            margin-top: -1.5rem;
+            margin-left: calc(50% - 50vw);
         }
         .intro{
             font-size: 1.3rem;
@@ -73,7 +78,6 @@
                 line-height: 0;
                 position: relative;
                 .count-comments{
-                    font-family: "Open Sans", sans-serif;
                     color: #555;
                     top: 16px;
                     left: 0px;
@@ -129,8 +133,8 @@
 
         @media #{$medium-up}{
             figure{
-                padding-left: $column-gutter / 2;
-                padding-right: $column-gutter / 2;
+                padding-left: 0;
+                padding-right: 0;
             }
         }
     }
