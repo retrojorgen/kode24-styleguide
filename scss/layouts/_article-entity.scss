@@ -35,9 +35,12 @@
             width: 100%;
         }
         .full-bleed {
-            width: 100vw;
             margin-top: -1.5rem;
-            margin-left: calc(50% - 50vw);
+            figure {
+                width: 100vw;
+                margin-left: calc(50% - 50vw);
+            }
+            
         }
         .intro{
             font-size: 1.3rem;
