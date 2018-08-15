@@ -36,6 +36,7 @@
         }
         .full-bleed {
             margin-top: -1.5rem;
+            overflow-x: visible;
             figure {
                 width: 100vw;
                 margin-left: calc(50% - 50vw);
