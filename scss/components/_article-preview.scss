@@ -26,6 +26,8 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     margin-bottom: 0;
     overflow: hidden;
     transition: 0.1s ease-in-out;
+    margin-top: 0;
+    
     &:hover {
         z-index: 1000000;
         transform: scale(1.01);
@@ -42,6 +44,21 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     &.preview {
         position: relative;
     }
+
+    header {
+        margin-top: 1.5rem;
+        .full-bleed {
+            width: 100vw;
+            margin-top: -1.5rem;
+            margin-left: calc(50% - 50vw);
+        }
+        figure {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+
     &>a{
         overflow: auto;
         display: block;
@@ -71,6 +88,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     figure{
         margin: 0;
         padding-bottom: 0;
+        
         position: relative;
         overflow: visible;
         height: 0;
