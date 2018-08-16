@@ -21,6 +21,8 @@
     align-items: stretch;
     flex-direction: row;
     background-color: black;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
     &:before {
       content: "";
       position: absolute;
