@@ -5,8 +5,16 @@ main.frontpage .row:first-child {
 main.frontpage .row:nth-child(1n+3) {
   padding-left: 10px;
   padding-right: 10px;
+  @media #{$medium-up}{
+    padding-left: 0;
+    padding-right: 0;
+  }
   article {
     margin-top: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    @media #{$medium-up}{
+      margin-top: 0;
+    }
   }
+  
 }
