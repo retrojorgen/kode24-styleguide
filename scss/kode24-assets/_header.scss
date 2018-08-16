@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   background-size: cover;
   overflow: hidden;
   margin-bottom: 0;
@@ -15,9 +15,10 @@
   }
   &.article {
     height: 60px;
-    background: linear-gradient(45deg, $color-purple-darkest,$color-purple-darker);
+    background: linear-gradient(180deg, #0000005c, #00000000);
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: row;
     
     #page-logo {
       line-height: 0;

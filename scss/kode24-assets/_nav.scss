@@ -73,3 +73,15 @@
     }
   }
 }
+
+.article {
+  #nav-top {
+    border-bottom: 0;
+    border-top: 0;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
