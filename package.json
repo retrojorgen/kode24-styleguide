@@ -11,12 +11,19 @@
     "type": "git",
     "url": "git://github.com/dbmedialab/kode24-styleguide.git"
   },
+  /**
   "scripts": {
     "start": "node server.js",
     "test": "grunt test",
     "publish": "grunt deploy",
     "preinstall": "bower install --allow-root",
     "postinstall": "grunt dist"
+  },
+  **/
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "bower install --allow-root",
+    "test": "grunt dist"
   },
   "author": {
     "name": "Jørgen Jacobsen",
