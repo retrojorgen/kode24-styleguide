@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  background-color: black;
   background-size: cover;
   overflow: hidden;
   margin-bottom: 0;
@@ -36,7 +37,7 @@
       margin-top: 10px;
       display: inline-block;
       width: auto;
-      z-index: $z-index-1;
+      
       img {
         height: 40px;
         width: auto;
@@ -48,6 +49,7 @@
     width: 100%;
     text-align: center;
     position: relative;
+    z-index: $z-index-1;
     img {
       max-width: 500px;
       width: 80%;
