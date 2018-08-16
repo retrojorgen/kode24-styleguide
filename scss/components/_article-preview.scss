@@ -641,10 +641,10 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
                 a{
                     color: $ui-color;
                     &:active{
-                        color: $color-black;
+                        color: $white;
                     }
                     &:visited{
-                        color: rgb(102, 0, 153);
+                        color: $white;
                     }
                 }
             }
