@@ -209,12 +209,12 @@ a{
 
 h1,h2,h3,h4,h5,h6{
     a{
-        color: $ui-color;
+        color: $white;
         text-decoration: none;
         &:hover,
         &:visited{
             text-decoration: underline;
-            color: $ui-color;
+            color: inherit;
         }
     }
 }
