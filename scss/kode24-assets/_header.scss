@@ -33,6 +33,9 @@
       background: linear-gradient(180deg, #0000005c, #00000000);
       z-index: $z-index-1;
     }
+    @media #{$medium-up}  {
+      overflow: hidden;
+    }
     #page-logo {
       line-height: 0;
       font-size: 0;
