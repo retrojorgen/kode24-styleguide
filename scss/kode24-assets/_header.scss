@@ -1,7 +1,7 @@
 #top-navigation {
   position: relative;
   width: 100%;
-  padding: 0 $column-gutter;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,8 +39,8 @@
       margin-top: 10px;
       display: inline-block;
       width: auto;
-      margin-right: 20px;
-      
+      margin-right: $column-gutter;
+      padding-left: $column-gutter;
       img {
         height: 40px;
         width: auto;
