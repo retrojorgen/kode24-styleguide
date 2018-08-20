@@ -133,7 +133,7 @@ $color-purple: #643fb5;
 $color-purple-darker:  #2c1b63;
 $color-purple-darkest: #44144a;   
 
-$color-black-transparent: rgba(#color-black, 0.6);
+$color-black-transparent: rgba($color-black, 0.6);
 
 $primary-color: $color-pink;
 $secondary-color: $color-purple;
