@@ -56,6 +56,9 @@
                     position: absolute;
                     background: linear-gradient(0deg, $color-black-transparent, transparent);
                 }
+                h1, .row {
+                    position: relative;
+                }
             }
             
         }
