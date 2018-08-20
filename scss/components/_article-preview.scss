@@ -791,7 +791,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
         @include article-preview-style($bg: $secondary-color, $icon-color: $primary-color);
     }
     article.preview.black{
-        @include article-preview-style($bg: $color-black, $icon-color: $primary-color);
+        @include article-preview-style($bg: $color-black-transparent, $icon-color: $primary-color);
     }
 
 
