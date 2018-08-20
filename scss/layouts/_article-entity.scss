@@ -35,11 +35,27 @@
             width: 100%;
         }
         .full-bleed {
+            position: relative;
             margin-top: -5.3rem;
             overflow: visible !important;
             figure {
                 width: 100vw;
                 margin-left: calc(50% - 50vw);
+            }
+            .text-left {
+                position: absolute;
+                left: 0;
+                bottom: 68px;
+                width: 100%;
+                &:before {
+                    content: "";
+                    width: 100vw;
+                    margin-left: calc(50% - 50vw);
+                    bottom: 0;
+                    height: 100%;
+                    position: absolute;
+                    background: linear-gradient(0deg, $color-black-transparent, transparent);
+                }
             }
             
         }
