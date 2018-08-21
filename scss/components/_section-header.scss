@@ -47,7 +47,7 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100%;
+	width: auto;
 	height: 60px;
 	z-index: 10;
 	background: linear-gradient(90deg, #ffd861, #ff00b8);
@@ -55,7 +55,7 @@
 	padding-left: 143px;
 	display: flex;
 	align-items: center;
-
+	z-index: $z-index-2;
 	p {
 		margin: 0;
 		font-weight: 600;
