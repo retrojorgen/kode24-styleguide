@@ -70,6 +70,9 @@
 		font-weight: 600;
 		position: relative;
 		padding: 0;
+		@media #{$small-only}{
+			font-size: 0.9rem;
+		}
 	}
 	@media #{$small-only}{
 		left: auto;
