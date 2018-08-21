@@ -8,3 +8,12 @@ $dark-color: #333;
     color: $dark-color;
   }
 }
+
+.full-bleed {
+  .labFn-empty-placeholder {
+    min-height: 500px;
+    padding-top: 100px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
