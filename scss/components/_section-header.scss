@@ -51,8 +51,8 @@
 	height: 60px;
 	z-index: 10;
 	text-align: left;
-	padding-left: $column-gutter;
-	padding-right: $column-gutter;
+	padding-left: $column-gutter/2;
+	padding-right: $column-gutter/2;
 	display: flex;
 	align-items: center;
 	z-index: $z-index-2;
