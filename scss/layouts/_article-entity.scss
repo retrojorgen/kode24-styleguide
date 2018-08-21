@@ -45,8 +45,11 @@
             .text-left {
                 position: absolute;
                 left: 0;
-                bottom: 68px;
+                bottom: 15px;
                 width: 100%;
+                @media #{$medium-up}{
+                    bottom: 68px;
+                }
                 &:before {
                     content: "";
                     width: 100vw;
