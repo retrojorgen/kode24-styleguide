@@ -52,6 +52,8 @@
                     width: 100vw;
                     margin-left: calc(50% - 50vw);
                     bottom: 0;
+                    left: 0;
+                    pointer-events: none;
                     height: 100%;
                     position: absolute;
                     background: linear-gradient(0deg, $color-black-transparent, transparent);
