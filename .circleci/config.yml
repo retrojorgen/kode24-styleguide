@@ -71,7 +71,7 @@ jobs:
             gcloud auth activate-service-account --key-file $keyfile
             rm $keyfile
             # Copy all files
-            echo gsutil -m \
+            gsutil -m \
               -h "Cache-Control:max-age=600, must-revalidate, s-maxage=600" \
               -h "X-goog-meta-X-Apps-Cache-Channel: styleguide-kode24" \
               rsync -r \
