@@ -18,3 +18,23 @@ main.frontpage .row:nth-child(1n+3) {
   }
   
 }
+
+
+.jobb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  &:before {
+    content: "Ledige stillinger";
+    position: relative;
+    background: linear-gradient(45deg, #a51ac2, #ff8d00);
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: -0.9375rem;
+    width: calc(100% + 30px);
+  }
+}
