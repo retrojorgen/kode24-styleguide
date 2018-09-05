@@ -1,5 +1,8 @@
 h1,h2,h3,h4,h5,h6 {
   color: lighten($body-font-color, 20%);
+  &.headline {
+    color: lighten($body-font-color, 20%);
+  }
 }
 
 aside.panel {
@@ -17,6 +20,9 @@ body.light {
   color: #333;
   h1,h2,h3,h4,h5,h6 {
     color: darken( #333, 20%);
+    &.headline {
+      color: darken( #333, 20%);
+    }
   }
   &.animate {
     transition: all 0.1s ease-in-out;
