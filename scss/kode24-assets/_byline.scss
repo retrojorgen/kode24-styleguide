@@ -1,18 +1,21 @@
+
 .byline {
-  .byline {
-    margin-bottom: 0;
-  }
-  display: flex;
-  align-items: stretch;
-  img {
-    width: 70px !important;
-    height: 70px;
-    margin-right: $column-gutter/2;
-  }
-  .byline-info {
+  &.big {
+    .byline {
+      margin-bottom: 0;
+    }
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.3em;
+    align-items: stretch;
+    img {
+      width: 70px !important;
+      height: 70px;
+      margin-right: $column-gutter/2;
+    }
+    .byline-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.3em;
+    }
   }
 }
