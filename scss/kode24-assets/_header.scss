@@ -63,10 +63,10 @@
     }
   }
   .header-info {
-    color: $body-font-color;
+    color: inherit;
     text-transform: uppercase;
     a {
-      color: $body-font-color;
+      color: inherit;
       text-decoration: none;
       border-bottom: 4px solid #ff0071;
     }
@@ -100,10 +100,10 @@
     }
   }
   .header-info {
-    color: $body-font-color;
+    color: inherit;
     text-transform: uppercase;
     a {
-      color: $body-font-color;
+      color: inherit;
       text-decoration: none;
       border-bottom: 4px solid #ff0071;
     }
