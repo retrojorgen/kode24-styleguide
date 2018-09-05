@@ -1,20 +1,14 @@
 body.light {
   background-color: #f1f1f1;
+  color: #333;
   
   &.animate {
     transition: all 0.1s ease-in-out;
   }
   
-  main .article-entity,
-  .comment-section {
-    color: #333;
-    a,h1,h2,h3,h4,h5,h6,blockquote, blockquote p {
-      color: #333;
-    }
-    ::selection {
-      background-color: $color-pink;
-      color: $white;
-    }
+  ::selection {
+    background-color: $color-pink;
+    color: $white;
   }
   
 }

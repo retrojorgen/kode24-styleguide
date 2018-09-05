@@ -143,13 +143,13 @@ h1,h2,h3,h4,h5,h6{
 // Styleguide 4.4
 
 a{
-    color: $white;
+    color: inherit;
     text-decoration-color: $color-pink;
     &:focus{
-        color: $white;
+        color: inherit;
     }
     &:visited{
-        color: $white;
+        color: inherit;
     }
 }
 
@@ -209,7 +209,7 @@ a{
 
 h1,h2,h3,h4,h5,h6{
     a{
-        color: $white;
+        color: inherit;
         text-decoration: none;
         &:hover,
         &:visited{
@@ -305,7 +305,7 @@ blockquote{
     cite{
         text-align: right;
         font-weight: 300;
-        color: $color-pink;
+        color: inherit;
         font-size: 0.8em;
     }
 }
@@ -428,7 +428,7 @@ cite{
     margin-bottom: 1rem;
     font-size: 0.8rem;
     font-weight: 300;
-    color: $color-darkgrey;
+    color: inherit;
 
     .person:first-child:before{
         content: 'Av' !important;
