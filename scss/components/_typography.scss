@@ -492,21 +492,6 @@ cite{
 //
 // Styleguide 4.16.1
 
-// Code
-//
-// Markup:
-// <code>new Date();</code>
-//
-// Styleguide 4.17
-
-code{
-    font-size: 0.9rem;
-    padding: 0.1rem 0.3rem 0.2rem;
-    border: 1px solid $secondary-color;
-    border-radius: 3px;
-    background-color: lighten($secondary-color, 7%);
-}
-
 // Preformatted text
 //
 // Markup:
@@ -518,15 +503,6 @@ code{
 //
 // Styleguide 4.18
 
-pre{
-    margin-top: emCalc(16px);
-    margin-bottom: 1.25rem;
-    clear: both;
-    padding: emCalc(16px);
-    border: 1px solid $secondary-color;
-    background-color: lighten($secondary-color, 7%);
-    overflow: auto;
-}
 
 // Syntax highlight
 //

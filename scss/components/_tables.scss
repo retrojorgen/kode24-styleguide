@@ -41,8 +41,8 @@
 //
 // Styleguide 9
 
-:not(code) {
-    table{
+
+    table:not(.hljs-ln){
         width: 100%;
         border-collapse: collapse;
         display: block;
@@ -997,4 +997,4 @@
         }
     }
     
-}
+
