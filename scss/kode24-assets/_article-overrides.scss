@@ -23,6 +23,7 @@ code.hljs {
 p {
   a {
     text-decoration: none;
+    cursor:pointer;
     &:hover,
     &:active {
       color: inherit;
