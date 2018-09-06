@@ -22,34 +22,16 @@ code.hljs {
 
 p {
   a {
-    display:  inline-block;
-    position: relative;
-    &:before {
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 100%;
-      height: 4px;
-      content: "";
-      background-color: $color-purple;
-      z-index: 9;
+    text-decoration: none;
+    &:hover,
+    &:active {
+      color: inherit;
     }
-    &:after {
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 0;
-      height: 4px;
-      content: "";
-      background-color: $color-pink;
-      z-index: 9;
-      transition: all 0.1s ease-in-out;
-    }
-    &:hover {
-      &:after {
-        width: 100%;
-        transition: all 0.1s ease-in-out;
-      }
-    }
+    background-image: linear-gradient(45deg, $color-pink);
+    background-position: 0px 22px;
+    background-repeat: repeat-x;
+    background-size: 20px 16px;
+    overflow: visible;
+    padding-bottom: 6px;
   }
 }
