@@ -22,6 +22,9 @@ body.light {
   .full-bleed {
     h1,h2,h3,h4,h5,h6,p,.standfirst {
       color: lighten($body-font-color, 20%);
+      &.headline {
+        color: lighten($body-font-color, 20%);
+      }
     }  
   }
   h1,h2,h3,h4,h5,h6, blockquote, blockquote p {
