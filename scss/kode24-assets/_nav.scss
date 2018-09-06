@@ -29,7 +29,7 @@
       text-transform: uppercase;
       font-weight: bold;
       display: inline-block;
-      
+      color: lighten($body-font-color, 20%); 
       @media #{$medium-up}{
         display: block;
       }
@@ -48,13 +48,11 @@
       }
       &:hover {
         transition: all 0.1s ease-in-out;
-        background: linear-gradient(90deg, $color-purple, $color-purple-darker);
         color: white;
         transform: scale(1.1) translateY(-2px);
       }
       &:active {
         transition: all 0.1s ease-in-out;
-        background: linear-gradient(90deg, $color-purple, $color-purple-darker);
         color: white;
         transform: scale(0.9) translateY(-2px);
       }
@@ -90,17 +88,18 @@
     align-items: stretch;
     justify-content: flex-end;
     z-index: $z-index-1;
-    background: linear-gradient(45deg, #0064b4, #c431e3);
+    background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
     @media #{$medium-up}{
       background: transparent;
     }
     ul {
       display: flex;
+
       justify-content: flex-end;
       align-items: center;
       justify-content: flex-end;
       @media #{$medium-up}{
-        background: linear-gradient(45deg, #0064b4, #c431e3);
+        background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
       }
     }
   }

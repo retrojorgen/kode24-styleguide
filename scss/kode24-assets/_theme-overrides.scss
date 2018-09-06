@@ -18,12 +18,20 @@ aside.panel {
 body.light {
   background-color: #f1f1f1;
   color: #333;
-  h1,h2,h3,h4,h5,h6 {
+  .frontpage,
+  .full-bleed {
+    h1,h2,h3,h4,h5,h6,p,.standfirst {
+      color: lighten($body-font-color, 20%);
+    }  
+  }
+  h1,h2,h3,h4,h5,h6, blockquote, blockquote p {
     color: darken( #333, 20%);
+  
     &.headline {
       color: darken( #333, 20%);
     }
   }
+
   &.animate {
     transition: all 0.1s ease-in-out;
   }
