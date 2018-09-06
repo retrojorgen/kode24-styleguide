@@ -5,3 +5,17 @@ twitterwidget {
 iframe.fb_ltr {
   background-color: $body-bg;
 }
+
+code.hljs {
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: $body-bg;
+  padding: 1em;
+  td {
+    padding: 1px;
+  }
+  .hljs-ln-numbers {
+    padding-right: 14px;
+  }
+}
