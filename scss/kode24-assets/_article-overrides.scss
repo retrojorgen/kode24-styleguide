@@ -19,3 +19,35 @@ code.hljs {
     padding-right: 14px;
   }
 }
+
+p {
+  a {
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 4px;
+      content: "";
+      background-color: $color-purple;
+      z-index: 9;
+    }
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0;
+      height: 4px;
+      content: "";
+      background-color: $color-purple;
+      z-index: 9;
+      transition: all 0.1s ease-in-out;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+}
