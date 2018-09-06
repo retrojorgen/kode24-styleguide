@@ -22,6 +22,8 @@ code.hljs {
 
 p {
   a {
+    display:  inline-block;
+    position: relative;
     &:before {
       position: absolute;
       left: 0;
