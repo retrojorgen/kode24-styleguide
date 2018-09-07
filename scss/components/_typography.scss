@@ -469,15 +469,6 @@ cite{
     text-transform: uppercase;
     color: $color-darkgrey;
 
-    &:before{
-        content: '\e793';
-        font-family: 'Helveticons';
-        font-size: 0.8rem;
-        margin-right: 0.2rem;
-        position: relative;
-        top: 2px;
-    }
-
     &[data-from-now]{
         cursor: pointer;
     }
