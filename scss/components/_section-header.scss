@@ -42,12 +42,17 @@
 .article-entity {
 	&.jobb {
 		.content-marketing-ribbon {
-			content: "Ledig stilling";
+			&:before {
+				content: "Ledig stilling";
+			}
+			
 		}
 	}
 	&.content {
 		.content-marketing-ribbon {
-			content: "Annonsørinnhold";
+			&:before {
+				content: "Annonsørinnhold";
+			}
 		}
 	}
 }
