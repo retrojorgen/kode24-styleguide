@@ -145,7 +145,7 @@ $panel-font-color: $panel-font-color !default;
     border-color: none;
     margin-bottom: rem-calc(20);
     background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
-    color: inherit;
+    color: $white;
     position: relative;
 
     h1,h2,h3,h4,h5,h6{
