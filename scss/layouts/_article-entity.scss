@@ -180,17 +180,7 @@
     .meta{
         margin-bottom: $column-gutter;
         .facebook-share {
-            display: inline-block;
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            text-decoration: none;
-            margin-top: .2rem;
-            margin-left: $column-gutter / 2;
-            border-bottom: 2px solid $color-pink;
-            @media #{$medium-up} {
-                margin-top: 0;
-            }
+            display: none;
         }
         .label{
             margin-bottom: 0;
