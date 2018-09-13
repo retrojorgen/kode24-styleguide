@@ -38,23 +38,24 @@
 //
 // Styleguide 12.4
 
+
+
+}
+
+
 .content-marketing-ribbon {
 	padding: $column-gutter / 2;
-	float:none;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	position: fixed;
-	left: 130px;
-	top: 0;
-	width: auto;
-	height: 60px;
+	position: relative;
 	z-index: 10;
-	text-align: left;
-	padding-left: $column-gutter/2;
-	padding-right: $column-gutter/2;
-	display: flex;
-	align-items: center;
+	text-align: center;
+	padding-left: $column-gutter / 2;
+	padding-right: $column-gutter / 2;
+	display: -ms-flexbox;
+	-ms-flex-align: center;
+	margin-bottom: $column-gutter / 2;
 	z-index: $z-index-2;
 	&:before {
 		content: "";
