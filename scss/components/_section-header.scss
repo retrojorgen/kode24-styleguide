@@ -39,9 +39,18 @@
 // Styleguide 12.4
 
 
-
+.article {
+	&.jobb {
+		.content-marketing-ribbon {
+			content: "Ledig stilling";
+		}
+	}
+	&.content {
+		.content-marketing-ribbon {
+			content: "Annonsørinnhold";
+		}
+	}
 }
-
 
 .content-marketing-ribbon {
 	padding: $column-gutter / 2;
@@ -56,39 +65,26 @@
 	display: -ms-flexbox;
 	-ms-flex-align: center;
 	margin-bottom: $column-gutter / 2;
+	background: linear-gradient(45deg, #a51ac2, #ff8d00);
 	z-index: $z-index-2;
 	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
 		content: "";
-    position: absolute;
-    right: 0;
-    width: 100%;
-    top: 0;
-    height: 100%;
-    background: linear-gradient(45deg, #a51ac2, #ff8d00);
-	}
-	p {
-		margin: 0;
-		font-weight: 600;
-		position: relative;
-		padding: 0;
-		@media #{$small-only}{
+		color: white;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media #{$small-only} {
 			font-size: 0.9rem;
 		}
 	}
-	@media #{$small-only}{
-		left: auto;
-		right: 0;
-	}
-	
-	&.fixed {
-		position: fixed;
-		top: 0px;
-		width: 1010px;
-		z-index: 100;
-
-		@media #{$small-only}{
-			width: 100%;
-		}
+	p {
+		display: none;
 	}
 }
 
