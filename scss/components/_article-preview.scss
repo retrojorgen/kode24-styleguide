@@ -932,18 +932,16 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 @if $include-html-article-preview-nativeads-classes{
     article.preview.native-advertisement{
         .kicker {
-            background-color: $native-advertisement-color;
-            font-size: .7rem;
+            background: linear-gradient(45deg, #a51ac2, #ff8d00);
+            font-size: .8rem;
             line-height: 1.63rem;
-            padding: 0 $column-gutter / 2;
+            padding: .6rem $column-gutter / 2;
             font-weight: 600;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             color: white !important;
-            &:before {
-                content: 'ANNONSØRINNHOLD ';
-            }
+
         }
         .label{
             background-color: $native-advertisement-color;
@@ -951,7 +949,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
         }
         .label-text{
             &:before {
-                content:'Annonsørinnhold';
                 font-weight: 300;
                 text-align: center;
                 text-decoration: none;
@@ -963,7 +960,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
                 margin-right: 0.25rem;
                 padding: 0.25rem 0.5rem 0.25rem;
                 font-size: 0.6875rem;
-                background-color: $native-advertisement-color;
+                background: linear-gradient(45deg, #a51ac2, #ff5200);
                 color: $white;
             }
             color: scale-color($native-advertisement-color, $lightness: -10%);
