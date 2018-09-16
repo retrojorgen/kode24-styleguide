@@ -948,6 +948,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
             color: $white;
         }
         .label-text{
+            background: linear-gradient(45deg, #a51ac2, #ff5200);
             &:before {
                 font-weight: 300;
                 text-align: center;
