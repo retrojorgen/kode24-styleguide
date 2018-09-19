@@ -138,9 +138,9 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
             position: absolute;
             left: -$article-box-preview-padding-mobile;
             width: calc(100% + #{$article-box-preview-padding-mobile*2});
-            height: 100%;
+            height: 140%;
             bottom: 0;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.76), transparent);
             pointer-events: none;
         }
         .deck,
@@ -159,27 +159,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
             }
         }
 
-    }
-
-    .headline{
-        //-webkit-hyphens: manual;
-        //background-color: transparent;
-        //font-size: 1rem;
-        //line-height: 1.2;
-        //color: inherit;
-        //display: block;
-        //&:after{
-        //    display: none;
-        //}
-        //&.italic,
-        //em{
-        //    font-style: italic;
-        //}
-        //&.bold,
-        //strong{
-        //    font-weight: 500;
-        //}
-        overflow: hidden;
     }
 
     .deck{
