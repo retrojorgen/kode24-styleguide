@@ -327,9 +327,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     $extrinsic-background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
     article.preview{
         &.extrinsic{ 
-            a {
-                background: 
-            }
             @include article-preview-style($bg: $secondary-color, $color: $body-font-color, $icon-color: $primary-color); $linear-gradient: $extrinsic-background}
     }
 }
