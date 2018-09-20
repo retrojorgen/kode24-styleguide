@@ -42,3 +42,12 @@ code.hljs {
 .body-copy >div {
   margin-bottom: 20px;
 }
+
+.body-copy .preview {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
+  h1 {
+    padding: 20px;
+  }
+}
