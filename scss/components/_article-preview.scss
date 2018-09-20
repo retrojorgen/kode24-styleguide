@@ -326,8 +326,12 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 @if $include-html-article-preview-classes{
     $extrinsic-background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
     article.preview{
-        &.extrinsic{ 
-            @include article-preview-style($bg: $secondary-color, $color: $body-font-color, $icon-color: $primary-color); $linear-gradient: $extrinsic-background}
+        &.extrinsic{
+            a {
+                background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
+            } 
+            @include article-preview-style($bg: $secondary-color, $color: $body-font-color, $icon-color: $primary-color, $linear-gradient: $extrinsic-background); 
+        }
     }
 }
 
