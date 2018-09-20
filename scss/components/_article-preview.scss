@@ -221,7 +221,9 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     }
 }
 
-@mixin article-preview-style($bg: $body-background-color, $color: false, $padding: $article-box-preview-padding, $icon-color: inherit){
+
+
+@mixin article-preview-style($bg: $body-background-color, $color: false, $padding: $article-box-preview-padding, $icon-color: inherit, $linear-gradient: ""){
     $contrasting-color: $color-black;
     @if color-contrast($bg, rgb(255, 255, 255)) > 4.5 {
         $contrasting-color: white;
@@ -233,11 +235,18 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
         $contrasting-color: $color;
     }
 
-
-    &>a{
-        background-color: $bg;
-        padding: 0;
+    @if $linear-gradient != "" {
+        &>a{
+            background: $linear-gradient;
+            padding: 0;
+        }    
+    } else {
+        &>a{
+            background: $bg;
+            padding: 0;
+        }
     }
+    
 
     .article-preview-text {
         &:before {
@@ -292,6 +301,32 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     .actions{
         background-color: $bg;
         padding: 0 $padding;
+    }
+}
+
+// Extrinsic content
+//
+// When displaying content that links to articles from other sites the kicker **must** read *Eksternt innhold*. Additionally a label should state the site of the original sender.
+//
+// Markup:
+// <div class="row">
+//   <article class="preview small-6 extrinsic columns" itemscope itemtype="http://schema.org/WPAdBlock" role="article" data-id="3074764762">
+//     <a itemprop="url" rel="nofollow">
+//       <div class="kicker">Eksternt innhold</div>
+//       <img itemprop="image" title="" alt="" src="/assets/test/extrinsic-1.jpg">
+//       <h1 itemprop="headline" class="headline">Hva har skjedd med Jessica Simpson?</h1>
+//       <p itemprop="description" class="standfirst">Viste fram blåmerke på Instagram.</p>
+//       <span class="label" itemprop="publisher">Se&Hør</span> <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
+//     </a>
+//   </article>
+// </div>
+//
+// Styleguide 20.11
+
+@if $include-html-article-preview-classes{
+    $extrinsic-background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
+    article.preview{
+        &.extrinsic{ @include article-preview-style($bg: $secondary-color, $color: $body-font-color, $icon-color: $primary-color); $linear-gradient: $extrinsic-background}
     }
 }
 
@@ -865,30 +900,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
     }
 }
 
-// Extrinsic content
-//
-// When displaying content that links to articles from other sites the kicker **must** read *Eksternt innhold*. Additionally a label should state the site of the original sender.
-//
-// Markup:
-// <div class="row">
-//   <article class="preview small-6 extrinsic columns" itemscope itemtype="http://schema.org/WPAdBlock" role="article" data-id="3074764762">
-//     <a itemprop="url" rel="nofollow">
-//       <div class="kicker">Eksternt innhold</div>
-//       <img itemprop="image" title="" alt="" src="/assets/test/extrinsic-1.jpg">
-//       <h1 itemprop="headline" class="headline">Hva har skjedd med Jessica Simpson?</h1>
-//       <p itemprop="description" class="standfirst">Viste fram blåmerke på Instagram.</p>
-//       <span class="label" itemprop="publisher">Se&Hør</span> <time itemprop="datePublished" class="published" datetime="1995-03-08" title="Publisert 08.03.1995">onsdag 8. mars 1995</time>
-//     </a>
-//   </article>
-// </div>
-//
-// Styleguide 20.11
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        &.extrinsic{ @include article-preview-style($bg: $secondary-color, $color: $body-font-color, $icon-color: $primary-color); }
-    }
-}
 
 // Native advertising
 //
