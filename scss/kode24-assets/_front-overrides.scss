@@ -99,6 +99,9 @@ article.preview.small-6 + article.preview.small-6 {
   margin-bottom: 20px;
 }
 
+.row.job-carousel {
+  position: relative;
+}
 
 .row.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
   position: absolute;
