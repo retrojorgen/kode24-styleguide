@@ -48,26 +48,26 @@ main.frontpage .row:nth-child(1n+3) {
 
 
 
-.preview.large-6,
-.preview.large-7,
-.preview.large-5 {
+article.preview.large-6,
+article.preview.large-7,
+article.preview.large-5 {
   padding-right: 5px;
 }
 
-.preview.large-6 + .preview.large-6,
-.preview.large-7 + .preview.large-5,
-.preview.large-5 + .preview.large-7 {
+article.preview.large-6 + article.preview.large-6,
+article.preview.large-7 + article.preview.large-5,
+article.preview.large-5 + article.preview.large-7 {
   padding-right: 0;
   padding-left: 5px;
 }
 
-.preview.medium-6,
-.preview.small-6 {
+article.preview.medium-6,
+article.preview.small-6 {
   padding-right: 5px;
 }
 
-.preview.medium-6 + .preview.medium-6,
-.preview.small-6 + .preview.small-6 {
+article.preview.medium-6 + article.preview.medium-6,
+article.preview.small-6 + article.preview.small-6 {
   padding-right: 0;
   padding-left: 5px;
 }
