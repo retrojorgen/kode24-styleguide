@@ -41,13 +41,13 @@ main.frontpage .row:nth-child(1n+3) {
 
 
 .frontpage .row .preview {
-  .native-advertisement {
+  &.native-advertisement {
     margin-top: 20px;
     margin-bottom: 20px;
   }
   @media #{$medium-up}{
     margin-bottom: 10px;
-    .native-advertisement {
+    &.native-advertisement {
       margin-bottom: 10px;
     }
   }
