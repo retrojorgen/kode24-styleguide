@@ -101,10 +101,12 @@ article.preview.small-6 + article.preview.small-6 {
 
 .row.job-carousel {
   position: relative;
-  article a {
-    height: 500px;
+  article {
     margin-right: 5px;
     margin-left: 5px;
+  }
+  article a {
+    height: 500px;
   }
   article.preview figure {
     padding-bottom: 0 !important;
