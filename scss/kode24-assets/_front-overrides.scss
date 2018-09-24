@@ -41,8 +41,12 @@ main.frontpage .row:nth-child(1n+3) {
 
 
 .frontpage .row .preview {
-  margin-bottom: 10px;
+  @media #{$medium-up}{
+    margin-bottom: 10px;
+  }
 }
+
+
 
 .preview.large-6,
 .preview.large-7,
