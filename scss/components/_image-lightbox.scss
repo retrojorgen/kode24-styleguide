@@ -14,10 +14,12 @@
 // Styleguide 10.7 
 
 figure{
+    /*
     &[data-image-lightbox]{
         cursor: pointer;
         cursor: -webkit-zoom-in;
         cursor: -moz-zoom-in;
+        
         &:before{
             font-family: 'Helveticons';
             speak: none;
@@ -73,4 +75,5 @@ figure{
             }
         }
     }
+    */
 }
