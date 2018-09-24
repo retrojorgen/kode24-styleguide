@@ -101,6 +101,19 @@ article.preview.small-6 + article.preview.small-6 {
 
 .row.job-carousel {
   position: relative;
+  article a {
+    height: 500px;
+  }
+  article.preview figure {
+    padding-bottom: 0 !important;
+    height: calc(100% - 45px);
+    width: auto;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .row.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
