@@ -61,6 +61,17 @@ main.frontpage .row:nth-child(1n+3) {
   padding-left: 5px;
 }
 
+.preview.medium-6,
+.preview.small-6 {
+  padding-right: 5px;
+}
+
+.preview.medium-6 + .preview.medium-6,
+.preview.small-6 + .preview.small-6 {
+  padding-right: 0;
+  padding-left: 5px;
+}
+
 .native-advertisement {
   margin-top: 10px;
   margin-bottom: 20px;
