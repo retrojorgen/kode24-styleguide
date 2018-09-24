@@ -50,6 +50,9 @@ main.frontpage .row:nth-child(1n+3) {
     &.native-advertisement {
       margin-bottom: 20px;
     }
+    &.native-advertisement + &.native-advertisement {
+      margin-top: -10px;
+    }
   }
 }
 
