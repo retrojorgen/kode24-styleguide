@@ -48,7 +48,7 @@ main.frontpage .row:nth-child(1n+3) {
   @media #{$medium-up}{
     margin-bottom: 10px;
     &.native-advertisement {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
 }
