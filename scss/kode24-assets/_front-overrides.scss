@@ -50,9 +50,6 @@ main.frontpage .row:nth-child(1n+3) {
     &.native-advertisement {
       margin-bottom: 20px;
     }
-    &.native-advertisement + &.native-advertisement {
-      margin-top: -10px;
-    }
   }
 }
 
@@ -100,4 +97,29 @@ article.preview.small-6 + article.preview.small-6 {
 .native-advertisement {
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+
+.row.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(90deg, #1e1e1e, transparent);
+  content: "";
+  top: 0;
+  z-index: 40;
+  display: block;
+}
+
+.row.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(90deg, #1e1e1e, transparent);
+  content: "";
+  top: 0;
+  z-index: 40;
+  display: block;
 }
