@@ -148,6 +148,31 @@ article.preview.small-6 + article.preview.small-6 {
   .kicker {
     display: none;
   }
+  .slick-arrow {
+    position: absolute;
+    
+    z-index: 60;
+    background-color: red;
+    /* padding: 17px; */
+    margin: 0;
+    font-size: 10px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #a51ac2, #643fb5);
+    box-shadow: 0 1px 7px rgba(0,0,0,0.2);
+    &.slick-next {
+      right: -38px;
+      &::before {
+        content: ">";
+      }
+    }
+    &.slick-prev {
+      left: -38px;
+      &::before {
+        content: "<";
+      }
+    }
+  }
 }
 
 .row.job-carousel .slick-list:before {
