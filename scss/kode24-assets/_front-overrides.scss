@@ -20,8 +20,7 @@ main.frontpage .row:nth-child(1n+3) {
 }
 
 
-.frontpage .jobb,
-.front_rows.job-carousel.jobb {
+.frontpage .jobb {
   margin-top: 10px;
   margin-bottom: 10px;
   @media #{$medium-up}{
