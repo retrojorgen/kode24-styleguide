@@ -121,7 +121,10 @@ article.preview.small-6 + article.preview.small-6 {
     }
   }
   article a {
-    height: 500px;
+    height: 300px;
+    @media #{$medium-up} {
+      height: 500px;
+    }
   }
   article.native-advertisement a {
     background: transparent;
