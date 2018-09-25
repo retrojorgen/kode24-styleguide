@@ -119,7 +119,7 @@ article.preview.small-6 + article.preview.small-6 {
 
 .front_rows.job-carousel {
   margin-left: -$column-gutter / 2;
-  width: calc(100% + $column-gutter);
+  width: calc(100% + #{$column-gutter});
   .preview {
     background: transparent;
     h1 {
