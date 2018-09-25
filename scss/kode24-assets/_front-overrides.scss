@@ -160,6 +160,11 @@ article.preview.small-6 + article.preview.small-6 {
     height: 50px;
     background: linear-gradient(90deg, #a51ac2, #643fb5);
     box-shadow: 0 1px 7px rgba(0,0,0,0.2);
+    &::before {
+      margin-left: 0;
+      transform: translateY(-2px);
+      display: inline-block;
+    }
     &.slick-next {
       right: -38px;
       &::before {
