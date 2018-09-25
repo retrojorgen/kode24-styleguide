@@ -107,6 +107,7 @@ article.preview.small-6 + article.preview.small-6 {
   article {
     margin-right: 5px;
     margin-left: 5px;
+    box-shadow: 0;
     &:hover {
       box-shadow: 0;
       .figure {
