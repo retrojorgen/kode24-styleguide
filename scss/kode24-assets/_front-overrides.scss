@@ -101,7 +101,7 @@ article.preview.small-6 + article.preview.small-6 {
 
 .row.job-carousel {
   position: relative;
-  background-color: linear-gradient(90deg, #a51ac2, #ff8d00);
+  background: linear-gradient(90deg, #a51ac2, #ff8d00);
 
   article {
     margin-right: 5px;
@@ -115,6 +115,9 @@ article.preview.small-6 + article.preview.small-6 {
   }
   article a {
     height: 500px;
+  }
+  article.native-advertisement a {
+    background: transparent;
   }
   article.preview figure {
     padding-bottom: 0 !important;
@@ -131,7 +134,7 @@ article.preview.small-6 + article.preview.small-6 {
   }
 }
 
-.row.job-carousel.slick-list:before {
+.row.job-carousel .slick-list:before {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
