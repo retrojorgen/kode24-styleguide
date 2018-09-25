@@ -40,7 +40,7 @@ main.frontpage .row:nth-child(1n+3) {
 }
 
 
-.frontpage .row .preview {
+main.frontpage .row .preview {
   &.native-advertisement {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -55,7 +55,11 @@ main.frontpage .row:nth-child(1n+3) {
 
 article.preview.native-advertisement a {
   background: linear-gradient(45deg, #a51ac2, #ff8d00);
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 0 10px;
+  
+  @media #{$medium-up}{
+    padding: 0 10px 10px 10px;
+  }
   overflow: hidden;
   .kicker {
     background: transparent;
@@ -104,12 +108,12 @@ article.preview.small-6 + article.preview.small-6 {
   margin-bottom: 20px;
 }
 
-.row.job-carousel {
+ .row.job-carousel {
   position: relative;
   background: linear-gradient(90deg, #a51ac2, #ff8d00);
   margin-top: 20px;
   margin-bottom: 20px;
-  article {
+  article.preview {
     margin-right: 5px;
     margin-left: 5px;
     box-shadow: 0;
