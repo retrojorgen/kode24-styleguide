@@ -20,7 +20,8 @@ main.frontpage .row:nth-child(1n+3) {
 }
 
 
-.frontpage .jobb {
+.frontpage .jobb,
+.front_rows.job-carousel.jobb {
   margin-top: 10px;
   margin-bottom: 10px;
   &:before {
@@ -108,7 +109,8 @@ article.preview.small-6 + article.preview.small-6 {
   margin-bottom: 20px;
 }
 
- .row.job-carousel {
+ .row.job-carousel,
+ .front_rows.job-carousel {
   position: relative;
   background: linear-gradient(90deg, #a51ac2, #ff8d00);
   margin-top: 20px;
@@ -190,7 +192,8 @@ article.preview.small-6 + article.preview.small-6 {
   }
 }
 
-.row.job-carousel .slick-list:before {
+.row.job-carousel .slick-list:before,
+.front_rows.job-carousel .slick-list:before {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -201,7 +204,8 @@ article.preview.small-6 + article.preview.small-6 {
 }
 
 
-.row.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
+.row.job-carousel.slick-initialized.slick-slider.slick-dotted:before,
+.front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
   
   @media #{$medium-up}{
     position: absolute;
@@ -217,7 +221,8 @@ article.preview.small-6 + article.preview.small-6 {
   }
 }
 
-.row.job-carousel.slick-initialized.slick-slider.slick-dotted:after {
+.row.job-carousel.slick-initialized.slick-slider.slick-dotted:after,
+.front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:after {
   @media #{$medium-up}{
     position: absolute;
     right: 0;
