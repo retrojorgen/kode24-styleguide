@@ -3,20 +3,30 @@ $(function () {
   var rows = $(".frontpage .row");
   var rowToggle = false;
   var parentRow = false;
-  rows.each(function (index, element) {
+  if(window.location.href !== "https://www.kode24.no/jobb") {
+    rows.each(function (index, element) {
+      var el = $(element);
+      if(el.children().length > 1 && el.children().first().hasClass("native-advertisement")) {
+        if(rowToggle) {
+          parentRow.append(el.children().clone());
+          el.remove();
+        } else {
+          parentRow = el;
+          parentRow.addClass("job-carousel");
+          
+        }
+        rowToggle = true;
+      } else {
+        rowToggle = false;
+      }
+    });
+  }
+
+
+  $(".front_rows").each(function (index, element) {
     var el = $(element);
     if(el.children().length > 1 && el.children().first().hasClass("native-advertisement")) {
-      if(rowToggle) {
-        parentRow.append(el.children().clone());
-        el.remove();
-      } else {
-        parentRow = el;
-        parentRow.addClass("job-carousel");
-        
-      }
-      rowToggle = true;
-    } else {
-      rowToggle = false;
+      el.addClass("job-carousel");
     }
   });
   
