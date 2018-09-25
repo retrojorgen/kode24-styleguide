@@ -141,8 +141,12 @@ article.preview.small-6 + article.preview.small-6 {
     width: auto;
     overflow: hidden;
     img {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      min-height: 100%;
+      @media #{$medium-up} {
+        width: auto;
+        height: 100%;
+      }
     }
   }
   .kicker {
