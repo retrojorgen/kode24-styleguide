@@ -24,6 +24,12 @@ main.frontpage .row:nth-child(1n+3) {
 .front_rows.job-carousel.jobb {
   margin-top: 10px;
   margin-bottom: 10px;
+  @media #{$medium-up}{
+    width: 1010px;
+  }
+  .preview {
+    background: transparent;
+  }
   &:before {
     content: "Ledige stillinger";
     position: relative;
