@@ -261,23 +261,19 @@ article.preview.small-6 + article.preview.small-6 {
   }
 }
 
-.labrador_mode {
-  .front_rows {
-    &.carousel {
-      height: 40px;
-      overflow: hidden;
-      color: black;
-      background-color: lightgrey;
-      background: linear-gradient(90deg, #a51ac2, #ff8d00);
-      &:before {
-        display: block;
-        content: "Jobbkarusell";
-        text-transform: uppercase;
-        padding: 10px;
-      }
-      span {
-        background-color: transparent;
-      }
-    }
+body.labFn-edit .front_rows.carousel {
+  height: 40px;
+  overflow: hidden;
+  color: black;
+  background-color: lightgrey;
+  background: linear-gradient(90deg, #a51ac2, #ff8d00);
+  &:before {
+    display: block;
+    content: "Jobbkarusell";
+    text-transform: uppercase;
+    padding: 10px;
+  }
+  span {
+    background-color: transparent;
   }
 }
