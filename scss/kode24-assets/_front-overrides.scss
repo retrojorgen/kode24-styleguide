@@ -116,9 +116,14 @@ article.preview.small-6 + article.preview.small-6 {
   margin-bottom: 20px;
 }
 
+.article-entity {
+  .front_rows.job-carousel {
+    margin-left: -$column-gutter / 2;
+    width: calc(100% + #{$column-gutter});
+  }  
+}
 .front_rows.job-carousel {
-  margin-left: -$column-gutter / 2;
-  width: calc(100% + #{$column-gutter});
+  
   &:before {
     display: none;
   }
