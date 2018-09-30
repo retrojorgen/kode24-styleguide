@@ -1,5 +1,6 @@
 main.frontpage .row:first-child {
   height: 0;
+  overflow: hidden;
 }
 
 main.frontpage .row:nth-child(1n+3) {
