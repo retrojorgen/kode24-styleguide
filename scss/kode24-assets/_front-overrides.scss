@@ -260,7 +260,15 @@ article.preview.small-6 + article.preview.small-6 {
     pointer-events: none;
   }
 }
-
+body.labFN-edit {
+  main.frontpage {
+    .row {
+      &:first-child {
+        height: auto;
+      }
+    }
+  } 
+}
 body.labFn-edit .front_rows.carousel {
   margin-top: 20px;
   margin-bottom: 20px;

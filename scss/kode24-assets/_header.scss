@@ -58,8 +58,11 @@
     position: relative;
     z-index: $z-index-1;
     img {
-      max-width: 500px;
-      width: 80%;
+      width: 200px;
+      @media #{$medium-up}  {
+        max-width: 500px;
+        width: 80%;
+      }
     }
   }
   .header-info {
