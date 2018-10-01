@@ -87,28 +87,30 @@ article.preview.native-advertisement a {
   
 
 @media #{$medium-up}{
-  article.preview.large-6,
-  article.preview.large-7,
-  article.preview.large-5 {
-    padding-right: 5px;
-  }
+  .frontpage {  
+    article.preview.large-6,
+    article.preview.large-7,
+    article.preview.large-5 {
+      padding-right: 5px;
+    }
 
-  article.preview.large-6 + article.preview.large-6,
-  article.preview.large-7 + article.preview.large-5,
-  article.preview.large-5 + article.preview.large-7 {
-    padding-right: 0;
-    padding-left: 5px;
-  }
+    article.preview.large-6 + article.preview.large-6,
+    article.preview.large-7 + article.preview.large-5,
+    article.preview.large-5 + article.preview.large-7 {
+      padding-right: 0;
+      padding-left: 5px;
+    }
 
-  article.preview.medium-6,
-  article.preview.small-6 {
-    padding-right: 5px;
-  }
+    article.preview.medium-6,
+    article.preview.small-6 {
+      padding-right: 5px;
+    }
 
-  article.preview.medium-6 + article.preview.medium-6,
-  article.preview.small-6 + article.preview.small-6 {
-    padding-right: 0;
-    padding-left: 5px;
+    article.preview.medium-6 + article.preview.medium-6,
+    article.preview.small-6 + article.preview.small-6 {
+      padding-right: 0;
+      padding-left: 5px;
+    }
   }
 }
 .native-advertisement {
