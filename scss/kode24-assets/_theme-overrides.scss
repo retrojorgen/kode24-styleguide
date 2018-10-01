@@ -30,6 +30,16 @@ aside.panel {
 body.light {
   background-color: #f1f1f1;
   color: #333;
+  .front_rows.carousel {
+    a {
+      color: white;
+    }
+  }
+  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:after,
+  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
+    background: linear-gradient(90deg, transparent, #f1f1f1);
+  }
+
   .frontpage,
   .full-bleed {
     h1,h2,h3,h4,h5,h6,p,.standfirst {
@@ -44,6 +54,12 @@ body.light {
   .article-entity {
     .preview {
       color: white;
+      a {
+        color: white;
+      }
+      .headline {
+        color: white;
+      }
     }
   }
   h1,h2,h3,h4,h5,h6, blockquote, blockquote p {
