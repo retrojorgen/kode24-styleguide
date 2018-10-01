@@ -31,8 +31,16 @@ body.light {
   background-color: #f1f1f1;
   color: #333;
   .front_rows.carousel {
-    a {
+    .slick-list:before {
       color: white;
+    }
+    a {
+      .headline {
+        color: white;
+      }
+      .standfirst {
+        color: $body-font-color;
+      }
     }
   }
   .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:after {
