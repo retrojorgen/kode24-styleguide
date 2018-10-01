@@ -35,9 +35,11 @@ body.light {
       color: white;
     }
   }
-  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:after,
-  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
+  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:after {
     background: linear-gradient(90deg, transparent, #f1f1f1);
+  }
+  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
+    background: linear-gradient(90deg, #f1f1f1, transparent);
   }
 
   .frontpage,
