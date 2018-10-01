@@ -19,7 +19,7 @@ figure{
         cursor: pointer;
         cursor: -webkit-zoom-in;
         cursor: -moz-zoom-in;
-        
+        /**
         &:before{
             font-family: 'Helveticons';
             speak: none;
@@ -36,6 +36,7 @@ figure{
             line-height: 2.4rem;
             right: 0;
         }
+        **/
 
         &.active{
             cursor: pointer;
