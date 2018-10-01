@@ -120,8 +120,7 @@ article.preview.native-advertisement a {
 
 .article-entity {
   .front_rows.job-carousel {
-    margin-left: -$column-gutter / 2;
-    width: calc(100% + #{$column-gutter});
+    float: left;
   }  
 }
 .front_rows.job-carousel {
