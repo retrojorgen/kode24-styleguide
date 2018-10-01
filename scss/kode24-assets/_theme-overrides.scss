@@ -41,6 +41,11 @@ body.light {
       }
     }  
   }
+  .article-entity {
+    .preview {
+      color: white;
+    }
+  }
   h1,h2,h3,h4,h5,h6, blockquote, blockquote p {
     color: darken( #333, 20%);
   
