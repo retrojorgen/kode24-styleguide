@@ -85,15 +85,17 @@ article.preview.native-advertisement a {
 }
 
 .frontpage {
-  article.preview.medium-6,
-  article.preview.small-6 {
-    padding-right: 5px;
-  }
-  article.preview.medium-6 + article.preview.medium-6,
-  article.preview.small-6 + article.preview.small-6 {
+  .row {
+    article.preview.medium-6,
+    article.preview.small-6 {
+      padding-right: 5px;
+    }
+    article.preview.medium-6 + article.preview.medium-6,
+    article.preview.small-6 + article.preview.small-6 {
       padding-right: 0;
       padding-left: 5px;
-    }
+    }  
+  }
 }  
 
 @media #{$medium-up}{
