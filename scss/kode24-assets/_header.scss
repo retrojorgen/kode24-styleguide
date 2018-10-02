@@ -18,7 +18,7 @@
     height: 60px;
     
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     flex-direction: row;
     background-color: black;
     -webkit-overflow-scrolling: touch;
@@ -60,6 +60,23 @@
         }
       }
       
+    }
+    #page-tagline {
+      text-align: center;
+      color: #e5e1d9;
+      font-size: 9px;
+      letter-spacing: 3px;
+      position: relative;
+      margin-bottom: -11px;
+      z-index: 20;
+      font-family: "IBM Plex Mono",monospace;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: none;
+      @media #{$medium-up}  {
+        display: block;
+        font-size: 12px;
+      }
     }
   }
   #page-logo {
