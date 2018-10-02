@@ -280,6 +280,11 @@ article.preview.native-advertisement a {
   }
 }
 body.labFN-edit {
+  main.frontpage .row:first-child {
+    height: auto;
+    overflow: visible;
+    columns: height: auto;
+  }
   main.frontpage {
     .row {
       &:first-child {
