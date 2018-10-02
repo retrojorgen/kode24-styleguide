@@ -283,7 +283,9 @@ body.labFN-edit {
   main.frontpage .row:first-child {
     height: auto;
     overflow: visible;
-    columns: height: auto;
+    columns {
+      height: auto;
+    }
   }
   main.frontpage {
     .row {
