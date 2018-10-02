@@ -65,6 +65,21 @@
       }
     }
   }
+  #page-tagline {
+    text-align: center;
+    color: #e5e1d9;
+    font-size: 9px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: -11px;
+    z-index: 20;
+    font-family: "IBM Plex Mono",monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    @media #{$medium-up}  {
+      font-size: 19px;
+    }
+  }
   .header-info {
     color: inherit;
     text-transform: uppercase;
