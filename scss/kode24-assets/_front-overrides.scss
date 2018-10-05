@@ -413,10 +413,8 @@ body.labFn-edit .front_rows.carousel {
 
   .slick-arrow {
     position: absolute;
-    
+    cursor: pointer;
     z-index: 60;
-    background-color: red;
-    /* padding: 17px; */
     margin: 0;
     font-size: 10px;
     width: 50px;
