@@ -323,23 +323,18 @@ body.labFn-edit .front_rows.carousel {
 
 
 .auto-job-carousel {
-  background: linear-gradient(45deg, #a51ac2, #ff8d00);
   a {
     text-decoration: none;
   }
   &:before {
-    content: "Ledige stillinger";
-    position: relative;
     background: linear-gradient(45deg, #a51ac2, #ff8d00);
-    padding: 10px;
-    color: white;
-    text-transform: uppercase;
-    display: block;
-    padding: 10px;
-    text-transform: uppercase;
     text-align: center;
-    margin-left: -0.9375rem;
-    width: calc(100% + 30px);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+    content: "ledige stillinger";
+    width: 100%;
+    display: block;
   }
   .image-contain {
     width: 100%;
@@ -361,6 +356,33 @@ body.labFn-edit .front_rows.carousel {
     }
     p.standfirst {
       font-size: 16px;
+    }
+  }
+
+  .more-jobs {
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+    display: block;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(45deg, #a51ac2, #ff8d00);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      background-color: #1a1a1a;
     }
   }
 
