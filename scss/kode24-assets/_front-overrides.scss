@@ -401,6 +401,11 @@ body.labFn-edit .front_rows.carousel {
       top: 0;
       background: linear-gradient(45deg, #a51ac2, #ff8d00);
     }
+    span {
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
     &:after {
       content: "";
       position: absolute;
@@ -409,6 +414,15 @@ body.labFn-edit .front_rows.carousel {
       width: calc(100% - 4px);
       height: calc(100% - 4px);
       background-color: #1a1a1a;
+      transition: all 0.1s ease-in-out;
+    }
+    &:hover {
+      &:after {
+        left: 4px;
+        top: 4px;
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+      }
     }
   }
 
