@@ -323,6 +323,7 @@ body.labFn-edit .front_rows.carousel {
 
 
 .auto-job-carousel {
+  position: relative;
   a {
     text-decoration: none;
   }
@@ -358,6 +359,7 @@ body.labFn-edit .front_rows.carousel {
       font-size: 16px;
     }
   }
+  
 
   .more-jobs {
     
@@ -383,6 +385,44 @@ body.labFn-edit .front_rows.carousel {
       width: calc(100% - 4px);
       height: calc(100% - 4px);
       background-color: #1a1a1a;
+    }
+  }
+
+
+  .slick-arrow {
+    position: absolute;
+    
+    z-index: 60;
+    background-color: red;
+    /* padding: 17px; */
+    margin: 0;
+    font-size: 10px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #a51ac2, #643fb5);
+    box-shadow: 0 1px 7px rgba(0,0,0,0.2);
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-2px);
+    }
+    &.slick-next {
+      right: -38px;
+      &::before {
+        content: ">";
+      }
+    }
+    &.slick-prev {
+      left: -38px;
+      &::before {
+        content: "<";
+      }
     }
   }
 
