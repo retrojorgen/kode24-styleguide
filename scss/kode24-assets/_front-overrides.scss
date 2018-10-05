@@ -343,12 +343,21 @@ body.labFn-edit .front_rows.carousel {
     width: 100%;
     height: 300px;
     background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
   article {
     display: inline-block;
     width: 33%;
     vertical-align: top;
     padding: 20px;
+    position: relative;
+    .article-preview-text {
+      position: relative;
+    }
     h1.headline {
       font-size: 26px;
 
