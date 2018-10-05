@@ -327,6 +327,27 @@ body.labFn-edit .front_rows.carousel {
   a {
     text-decoration: none;
   }
+  .slick-list {
+    &:before,
+    &:after {
+      position: absolute;
+      height: 100%;
+      width: 150px;
+      content: "";
+      top: 0;
+      z-index: 40;
+      display: block;
+      pointer-events: none;
+    }
+    &:before {
+      left: 0;
+      background: linear-gradient(90deg, #1e1e1e, transparent);
+    }
+    &:after {
+      right: 0;
+      background: linear-gradient(90deg, #1e1e1e, transparent);
+    }
+  }
   &:before {
     background: linear-gradient(45deg, #a51ac2, #ff8d00);
     text-align: center;
