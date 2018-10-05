@@ -345,7 +345,7 @@ body.labFn-edit .front_rows.carousel {
     }
     &:after {
       right: 0;
-      background: linear-gradient(90deg, #1e1e1e, transparent);
+      background: linear-gradient(-90deg, #1e1e1e, transparent);
     }
   }
   &:before {
@@ -392,6 +392,8 @@ body.labFn-edit .front_rows.carousel {
     width: 100%;
     display: block;
     position: relative;
+    text-decoration: none;
+    color: white;
     &:before {
       content: "";
       position: absolute;
