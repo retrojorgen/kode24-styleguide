@@ -324,7 +324,9 @@ body.labFn-edit .front_rows.carousel {
 
 .auto-job-carousel {
   background: linear-gradient(45deg, #a51ac2, #ff8d00);
-  
+  a {
+    text-decoration: none;
+  }
   &:before {
     content: "Ledige stillinger";
     position: relative;
