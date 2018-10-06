@@ -390,8 +390,8 @@ body.labFn-edit .front_rows.carousel {
     }
   }
   article {
-    display: inline-block;
-    width: 33%;
+    display: block;
+    width: 100%;
     vertical-align: top;
     padding: 10px;
     position: relative;
@@ -400,6 +400,8 @@ body.labFn-edit .front_rows.carousel {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 
     @media #{$medium-up}{
+      display: inline-block;
+      width: 33%;
       padding: 20px;
       border-bottom: 0;
     }
