@@ -52,26 +52,27 @@ $(function () {
     autoJobcarousel.append(`
       <a href="/jobb/" class="more-jobs"><span>Se alle ledige stillinger</span></a>
     `)
-
-    adsContainer.slick({
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      centerMode: true,
-      arrows: true,
-      accessibility: true,
-      responsive: [
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            arrows: false
+    if(parseInt(autoJobcarousel.css('width').replace("px", "")) > 640) {
+      adsContainer.slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        centerMode: true,
+        arrows: true,
+        accessibility: true,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              arrows: false
+            }
           }
-        }
-      ]
-    });
+        ]
+      });
+    }
   }
   
 });
