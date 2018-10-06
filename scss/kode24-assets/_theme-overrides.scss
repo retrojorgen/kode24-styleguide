@@ -96,4 +96,45 @@ body.light {
       color: lighten($body-font-color, 10%);
     }
   }
+
+
+
+
+  .auto-job-carousel {
+    color: $body-font-color;
+    .slick-list {
+      .slick-track {
+        article {
+          box-shadow: none;
+        }
+      }
+      &:before {
+        background: linear-gradient(90deg, #f1f1f1, transparent);
+      }
+      &:after {
+        background: linear-gradient(-90deg, #f1f1f1, transparent);
+      }
+    }
+    
+    .image-contain {
+      box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    }
+
+    .article-preview-text {
+      h1.headline {
+        text-shadow: none;
+        color: #333;
+      }
+      p.standfirst {
+        text-shadow: none;
+        color: #333;
+      }
+    }
+    .more-jobs {
+      color: #333;
+      &:before {
+        background-color: #f1f1f1;
+      }
+    }
+  }
 }
