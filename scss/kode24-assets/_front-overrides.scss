@@ -327,8 +327,8 @@ body.labFn-edit .front_rows.carousel {
   margin-top: 20px;
   margin-bottom: 20px;
   .slick-slider {
-    margin-left: calc(-0.9375rem - 10px);
-    width: calc(100% + 0.9375rem + 35px);
+    margin-left: calc(-0.9375rem - -6px);
+    width: calc(100% + 0.9375rem + 5px);
     @media #{$medium-up}{
       margin-left: 0;
       width: auto;
