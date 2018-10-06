@@ -87,7 +87,7 @@ $(function () {
   var rows = $(".frontpage .row");
   var rowToggle = false;
   var parentRow = false;
-  if(window.location.href !== "https://www.kode24.no/jobb") {
+  if(window.location.href !== "https://www.kode24.no/jobb" && window.location.href !== "https://www.kode24.no/jobb/") {
     rows.each(function (index, element) {
       var el = $(element);
       if(el.children().length > 1 && el.children().first().hasClass("native-advertisement")) {
