@@ -382,8 +382,11 @@ body.labFn-edit .front_rows.carousel {
     display: inline-block;
     width: 33%;
     vertical-align: top;
-    padding: 20px;
+    padding: 10px;
     position: relative;
+    @media #{$medium-up}{
+      padding: 20px;
+    }
     .article-preview-text {
       position: relative;
     }
