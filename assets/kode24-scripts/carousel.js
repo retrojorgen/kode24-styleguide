@@ -50,7 +50,7 @@ $(function () {
 
     autoJobcarousel.append(adsContainer);
     autoJobcarousel.append(`
-      <a href="/jobb/" class="more-jobs"><span>Se alle ledige stillinger</span></a>
+      <a href="/jobb" class="more-jobs"><span>Se alle ledige stillinger</span></a>
     `)
     if(parseInt(autoJobcarousel.css('width').replace("px", "")) > 640) {
       adsContainer.slick({
