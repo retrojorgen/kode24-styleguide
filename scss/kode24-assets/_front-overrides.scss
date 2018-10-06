@@ -375,6 +375,9 @@ body.labFn-edit .front_rows.carousel {
   .image-contain {
     width: 100%;
     height: 300px;
+    @media #{$medium-up}{
+      height: 250px;
+    }
     background-size: cover;
     background-position: top center;
   }
