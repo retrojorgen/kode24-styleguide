@@ -11,7 +11,7 @@ $(function () {
   $.ajax(
     {
       type : 'GET',
-      url : "//api.dagbladet.no/article/?query=section:jobb&site_id=207",
+      url : "//api.kode24.no/article/?query=section:jobb&site_id=207",
       headers : {
       'Access-Control-Allow-Origin' : '*'
       },
