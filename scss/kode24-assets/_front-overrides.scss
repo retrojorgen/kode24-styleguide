@@ -430,6 +430,9 @@ body.labFn-edit .front_rows.carousel {
     }
     .labels {
       text-align: right;
+      .label {
+        background: linear-gradient(45deg, #a51ac2, #ff8d00);
+      }
       @media #{$medium-up}{
         text-align: left;
       }
