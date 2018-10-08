@@ -124,6 +124,8 @@ $(function () {
     centerMode: true,
     arrows: true,
     accessibility: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 480,
