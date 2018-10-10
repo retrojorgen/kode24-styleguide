@@ -16,6 +16,7 @@
         text-decoration: none;
         display: block;
         max-width: 100px;
+        margin-bottom: 20px;
         span{
             font-size: 2rem;
             position: relative;
@@ -53,6 +54,11 @@
         }
         .small-12, .small-12.end {
             margin-bottom: 0;
+        }
+    }
+    .end {
+        p {
+            font-size: 11px;
         }
     }
 }
