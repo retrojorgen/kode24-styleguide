@@ -223,12 +223,18 @@ article.preview.native-advertisement a {
     box-shadow: none !important;
     margin-top: 0 !important;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    &:nth-child(1n+4) {
+      display: none;
+    }
 
     @media #{$medium-up}{
       display: inline-block;
       width: 33%;
       padding: 20px;
       border-bottom: 0;
+      &:nth-child(1n+4) {
+        display: inline-block;
+      }
     }
     .article-preview-text {
       position: relative;
