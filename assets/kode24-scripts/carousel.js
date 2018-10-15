@@ -26,8 +26,7 @@ $(function () {
 
 
   function adNodesToCarousel (ads) {
-    console.log(ads);
-    let adsContainer = $('<div class="ads-wrapper"></div>');
+    let adsContainer = $('<div class="job-carousel-wrapper"></div>');
     ads.forEach(function (ad) {
       adsContainer.append(`
         <article id="${ad.id}">
