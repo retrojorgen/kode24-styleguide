@@ -63,7 +63,7 @@ main.frontpage .row .preview {
 
 article.preview.native-advertisement a {
   background: linear-gradient(45deg, #a51ac2, #ff8d00);
-  padding: 0 10px 0 10px;
+  padding: 0 10px 10px 10px;
   
   @media #{$medium-up}{
     padding: 0 10px 10px 10px;
@@ -75,11 +75,12 @@ article.preview.native-advertisement a {
   .article-preview-text:before {
     left: -0.6rem;
     width: calc(100% + 1.3rem);
-
+    bottom: 10px;
+    
     @media #{$medium-up}{
       left: -3.1rem;
       width: calc(100% + 6.2rem);
-      bottom: 10px;
+      
     }
   }
 }
