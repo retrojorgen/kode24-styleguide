@@ -235,7 +235,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
 // We use these to control header font styles
 $header-font-family: 'IBM Plex Mono', monospace;
-$header-font-weight: 800;
+$header-font-weight: 500;
 
 // $header-font-style: normal;
 $header-font-color: $white;
