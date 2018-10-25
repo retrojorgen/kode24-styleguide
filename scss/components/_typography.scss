@@ -293,9 +293,6 @@ blockquote{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.2s ease-in-out;
-    &:hover {
-        background: -webkit-linear-gradient(-45deg, #dd38ff, #ff4545);
-    }
     @media #{$medium-up}{
         font-size: 2rem;
         
