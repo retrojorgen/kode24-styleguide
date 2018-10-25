@@ -17,3 +17,9 @@ $dark-color: #333;
     margin-left: calc(50% - 50vw);
   }
 }
+
+.labFn-edit {
+  blockquote {
+    -webkit-text-fill-color: unset;
+  }
+}
