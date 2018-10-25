@@ -283,19 +283,19 @@ dl{
 // Styleguide 4.6
 
 blockquote{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
     margin-top: $column-gutter;
     margin-bottom: $column-gutter;
     line-height: 1.4;
     font-family: $header-font-family;
+    background: -webkit-linear-gradient(45deg, #a436bb, #ff4f4f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     @media #{$medium-up}{
-        font-size: 2.4rem;
+        font-size: 2rem;
         
-    }
-    span {
-        border-bottom: 4px solid $color-pink;
     }
     p{
         margin-bottom: 0;
@@ -306,7 +306,7 @@ blockquote{
         text-align: right;
         font-weight: 300;
         color: inherit;
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 }
 
