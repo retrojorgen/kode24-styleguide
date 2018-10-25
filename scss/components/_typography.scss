@@ -289,10 +289,13 @@ blockquote{
     margin-bottom: $column-gutter;
     line-height: 1.4;
     font-family: $header-font-family;
-    background: -webkit-linear-gradient(45deg, #a436bb, #ff4f4f);
+    background: -webkit-linear-gradient(45deg, #d300ff, #ff4f4f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background: -webkit-linear-gradient(45deg, #ff4f4f #d300ff);
+    }
     @media #{$medium-up}{
         font-size: 2rem;
         
