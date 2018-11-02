@@ -6,7 +6,7 @@ module.exports = function (grunt, pkg){
                     files: [
                         { expand: true, dot: true, cwd: './', src: ['manifest.json', '.htaccess', 'data/*.json', 'fonts/{,*/}*.{woff,woff2,ttf,eot}'], dest: '<%= config.dest %>/' },
                         { expand: true, dot: true, cwd: 'assets/favicon/styleguide/dev/', src: ['favicon.ico'], dest: '<%= config.dest %>/' },
-                        { expand: true, dot: true, cwd: 'assets/', src: ['**/*.{png,jpg,gif,svg,js}'], dest: '<%= config.dest %>/assets/' }
+                        { expand: true, dot: true, cwd: 'assets/', src: ['**/*.{png,jpg,gif,svg,js,html}'], dest: '<%= config.dest %>/assets/' }
                     ]
                 },
                 dist: {
