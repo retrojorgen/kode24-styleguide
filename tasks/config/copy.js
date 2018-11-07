@@ -18,7 +18,8 @@ module.exports = function (grunt, pkg){
                         { expand: true, cwd: '<%= config.dest %>/', src: ['scripts/**', 'fonts/**', 'assets/**'], dest: '<%= config.dest %>/<%= config.version.major %>/' },
                         { expand: true, cwd: '<%= config.dest %>/', src: ['scripts/**', 'fonts/**', 'assets/**'], dest: '<%= config.dest %>/<%= config.version.minor %>/' },
                         { expand: true, cwd: '<%= config.dest %>/', src: ['scripts/**', 'fonts/**', 'assets/**'], dest: '<%= config.dest %>/<%= config.version.patch %>/' },
-                        { expand: true, dot: true, cwd: 'assets/', src: ['**/*.js'], dest: '<%= config.dest %>/assets/' }
+                        { expand: true, dot: true, cwd: 'assets/', src: ['**/*.js'], dest: '<%= config.dest %>/assets/' },
+                        { expand: true, dot: true, cwd: 'assets/', src: ['**/*.html'], dest: '<%= config.dest %>/assets/' }
                     ]
                 }
             }
