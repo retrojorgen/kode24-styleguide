@@ -58,3 +58,34 @@ code.hljs {
 .facebook-comments .columns {
   float: none;
 }
+
+
+
+a.job-ad-cta {
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  background: linear-gradient(90deg, #7e31e3, #c431e3);
+  padding: 10px 30px;
+  border-radius: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #7e31e3, #c431e3);
+    filter: blur(14px);
+  }
+  span {
+    position: relative;
+  }
+}
