@@ -243,3 +243,19 @@
   
     }
   }
+
+
+  .light {
+		.aside-container.ads .ad, .footer-content .ad,
+		.aside-container.related .article {
+			border-bottom: 1px solid #d4d4d4;
+		}
+
+		.aside-container.ads .ad:hover, .footer-content .ad:hover,
+		.aside-container.related .article:hover {
+			background-color: #dedede;
+		}
+		.aside-container.ads .ad .cities span, .footer-content .ad .cities span {
+			background-color: #ffffff;
+		}
+	}
