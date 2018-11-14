@@ -383,7 +383,8 @@ function getPremiumAdsElement(premiumAdsList) {
 }
 
 function getAds(callback) {
-  getUrl("//api.kode24.no/article/?query=visibility_status:P&published:[2017-01-01T00:00:00Z+TO+NOW]&section:jobb&site_id=207", function(
+  getUrl("//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:jobb&limit=50&orderBy=published&site_id=207", function(
+    
     data
   ) {
     var ads = data.result.filter(ad => ad.visibility_status !== "H");
@@ -412,7 +413,7 @@ function getArticlesByTag(callback) {
   getUrl("//api.kode24.no/article/?query=id:" + articleId, function(data) {
     var tag = data.result[0].section_tag;
       getUrl(
-        '//api.kode24.no/article/?query=visibility_status:P&published:[2017-01-01T00:00:00Z+TO+NOW]&section:"' + tag + '"&site_id=207',
+        '//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:"' + tag + '"&limit=50&orderBy=published&site_id=207',
         function(data) {
           callback(data.result, tag);
         }
