@@ -90,7 +90,7 @@ function drawFrontArticleElements(articles, adsList, premiumAdsList) {
 
 
 function drawRelatedArticleElements(articles, tag, adsList, premiumAdsList) {
-  console.log('artikler tag', articles, tag);
+  
   var relatedArticles = $(
     '<div class="footer-content-related"><h3>Relaterte saker</h3></div>'
   );
@@ -147,7 +147,7 @@ function getTagsElements (tags, avoid) {
 }
 
 function drawArticle(article) {
-  console.log(article);
+  
   var tagsElement = getTagsElements(article.tags, article.section_tag);
 
   articleElement = $(`
