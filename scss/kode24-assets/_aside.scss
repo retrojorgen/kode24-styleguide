@@ -164,6 +164,11 @@
   
   .aside-container.related {
     margin-bottom: 40px;
+    display: none;
+    @media #{$medium-up} {
+      display: block;
+    }
+
     h3 {
       text-align: center;
       padding: 10px;

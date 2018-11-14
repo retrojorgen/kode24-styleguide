@@ -144,7 +144,9 @@ article.preview.native-advertisement a {
 
 
 
-
+.frontpage .auto-job-carousel {
+  display: block;
+}
 
 
 
@@ -152,9 +154,11 @@ article.preview.native-advertisement a {
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
+  display: none;
   @media #{$medium-up}{
     background-color: transparent;
     width: 100%;
+    display: block;
   }
   .slick-slider {
     margin-left: calc(-0.9375rem - -6px);
