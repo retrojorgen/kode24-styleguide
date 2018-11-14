@@ -151,7 +151,7 @@ function drawArticle(article) {
   var tagsElement = getTagsElements(article.tags, article.section_tag);
 
   articleElement = $(`
-            <a class="article article-link" href="//kode24.no/${article.published_url}">
+            <a class="article article-link" href="//kode24.no${article.published_url}">
         <div class="article-image">
         ${ article.images ? `<img src="${article.images[0].url_size}">` : `<img src="//dbstatic.no/${article.image}.jpg?width=600">`}
                     
@@ -172,7 +172,7 @@ function drawArticle(article) {
 function drawPremiumAd(premiumAd) {
   var cities = getCitysFromTags(premiumAd.tags);
   var premiumAdElement = $(`
-        <a class="premium-ad ad" href="//kode24.no/${premiumAd.published_url}">
+        <a class="premium-ad ad" href="//kode24.no${premiumAd.published_url}">
             
             <div class="ad-image"><img src="//dbstatic.no/${
         premiumAd.image
@@ -199,7 +199,7 @@ function drawPremiumAd(premiumAd) {
 function drawRegularAd(ad) {
   var cities = getCitysFromTags(ad.tags);
   var adElement = $(`
-        <a class="ad" href="//kode24.no/${ad.published_url}">
+        <a class="ad" href="//kode24.no${ad.published_url}">
             <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
         ad.full_bylines[0].imageUrl
       })">
@@ -248,7 +248,7 @@ function drawRelatedArticles(articles, tag) {
   articles.forEach(function(article, index) {
     var articleElement = $(`
         <article class="article top ${index === 0 ? "top" : ""}">
-        <a class="article-link" href="//kode24.no/${article.published_url}">
+        <a class="article-link" href="//kode24.no${article.published_url}">
          <div class="article-image"><img src="//dbstatic.no/${
            article.image
          }.jpg?width=400"></div>
@@ -271,7 +271,7 @@ function drawFrontArticles(articles) {
   articles.forEach(function(article, index) {
     var articleElement = $(`
         <article class="article">
-        <a class="article-link" href="//kode24.no/${article.url}">
+        <a class="article-link" href="//kode24.no${article.url}">
          <div class="article-image"><img src="//dbstatic.no/${
            article.imageUrl
          }"></div>
@@ -327,7 +327,7 @@ function getRegularAdsElements(adsList, premiumAdId) {
       var cities = getCitysFromTags(ad.tags);
 
       var adElement = $(`
-            <a class="ad" href="//kode24.no/${ad.published_url}">
+            <a class="ad" href="//kode24.no${ad.published_url}">
             <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
               ad.full_bylines[0].imageUrl
             })"></div>
@@ -355,7 +355,7 @@ function getPremiumAdsElement(premiumAdsList) {
   if (premiumAdsList.length) {
     premiumAd = premiumAdsList[0];
     var cities = getCitysFromTags(premiumAd.tags);
-    premiumAdElement = $(`<a class="premium-ad ad" href="//kode24.no/${
+    premiumAdElement = $(`<a class="premium-ad ad" href="//kode24.no${
       premiumAd.published_url
     }">
             <div class="ad-image"><img src="//dbstatic.no/${
@@ -383,7 +383,7 @@ function getPremiumAdsElement(premiumAdsList) {
 }
 
 function getAds(callback) {
-  getUrl("//api.kode24.no/article/?query=section:jobb&site_id=207", function(
+  getUrl("//api.kode24.no/article/?query=visibility_status:P&published:[2017-01-01T00:00:00Z+TO+NOW]&section:jobb&site_id=207", function(
     data
   ) {
     var ads = data.result.filter(ad => ad.visibility_status !== "H");
@@ -411,14 +411,12 @@ function getArticlesByTag(callback) {
   var articleId = getArticleId();
   getUrl("//api.kode24.no/article/?query=id:" + articleId, function(data) {
     var tag = data.result[0].section_tag;
-    getUrl("//api.kode24.no/article/?query=id:" + articleId, function(data) {
       getUrl(
-        '//api.kode24.no/article/?query=section:"' + tag + '"&site_id=207',
+        '//api.kode24.no/article/?query=visibility_status:P&published:[2017-01-01T00:00:00Z+TO+NOW]&section:"' + tag + '"&site_id=207',
         function(data) {
           callback(data.result, tag);
         }
       );
-    });
   });
 }
 
