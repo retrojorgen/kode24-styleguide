@@ -297,7 +297,7 @@ function drawAside(
   var asideContent = $("<div></div>").addClass("aside-desktop");
 
   var adsContainer = drawAdsContainer(adsList, premiumAdsList);
-  var adsContainerHeight = 1637;
+  var adsContainerHeight = 1884;
   asideContent.append(adsContainer);
 
   var relatedContainer = drawRelatedArticles(articles, tag);
