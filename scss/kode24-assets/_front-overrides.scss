@@ -364,7 +364,7 @@ article.preview.native-advertisement a {
 }
 
 article.preview.small-6 .article-preview-text {
-  width: calc(100% - 1.5rem);
+  width: calc(100% - 2rem);
   left: 0.75rem;
   @media #{$medium-up}{
     left: 3.75rem;
