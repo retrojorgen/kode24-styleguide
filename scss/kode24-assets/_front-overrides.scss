@@ -362,3 +362,8 @@ article.preview.native-advertisement a {
 .fb_iframe_widget_fluid {
   display: inline-block !important;
 }
+
+article.preview.small-6 .article-preview-text {
+  width: calc(100% - 1.5rem);
+  left: 0.75rem;
+}
