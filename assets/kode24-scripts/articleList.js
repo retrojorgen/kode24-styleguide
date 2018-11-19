@@ -423,7 +423,8 @@ function getArticlesByTag(callback) {
 
 function getArticleId() {
   var articleUrl = window.location.href;
-  var articleList = articleUrl.split("/");
+  var articleUrl = articleUrl.split("?")[0];
+  var articleList = articleUrl.split("/").filter(val => val !== "");
   var articleId = articleList[articleList.length - 1];
   return articleId;
 }
