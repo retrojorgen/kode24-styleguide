@@ -52,6 +52,11 @@ code.hljs {
   background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
   h1 {
     padding: 20px;
+    margin-bottom: 0;
+  }
+  .standfirst {
+    padding: 0 20px 20px 20px;
+    margin-top: -10px;
   }
 }
 
