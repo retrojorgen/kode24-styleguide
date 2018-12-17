@@ -63,23 +63,23 @@ main.frontpage .row .preview {
 
 article.preview.native-advertisement a {
   background: linear-gradient(45deg, #a51ac2, #ff8d00);
-  padding: 0 10px 10px 10px;
+  padding: 0;
   
   @media #{$medium-up}{
-    padding: 0 10px 10px 10px;
+    padding: 0;
   }
   overflow: hidden;
   .kicker {
     background: transparent;
   }
   .article-preview-text:before {
-    left: -0.6rem;
-    width: calc(100% + 1.3rem);
-    bottom: 10px;
+    left: -1.3rem;
+    width: calc(100% + 2.6rem);
+    bottom: 0;
     
     @media #{$medium-up}{
-      left: -3.1rem;
-      width: calc(100% + 6.2rem);
+      left: -3.8rem;
+      width: calc(100% + 7.6rem);
       
     }
   }
