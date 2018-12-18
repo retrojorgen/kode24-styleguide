@@ -42,14 +42,15 @@ function drawPremium (banner, selector, index) {
     var titleStyles = JSON.parse(banner.children[0].data.title_style_json);
     var fontSize = titleStyles.text_size || "";
     var textAlign = titleStyles.text_align || "";
-
+    var viewPorts = JSON.parse(banner.children[0].data.viewports_json);
     
     var imageWidth = selector.width();
     var containerWidth = imageWidth;
 
     var mobileViewport = JSON.parse(banner.children[0].data.children.image.field.viewports_json);
     var mobileWratio = mobileViewport.mobile.fields.whRatio;
-    var mobileFontSize = mobileViewport.mobile.fields.text_size || "";
+    
+    
     if(imageWidth < 500) {
         imageWidth = 600;
         wratio = mobileWratio;
@@ -59,6 +60,7 @@ function drawPremium (banner, selector, index) {
         posy = mobileViewport.mobile.fields.y;
 
     }
+    var mobileFontSize = viewPorts.mobile.fields.title_style_json.text_size || "";
 
     var bannerElement = `
 
