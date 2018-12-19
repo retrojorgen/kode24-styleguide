@@ -111,7 +111,7 @@ function drawPremium (banner, selector, index) {
             </article>
         </div>
     `;
-    selector.find(".row").not(":empty").eq(index+1).before(bannerElement);
+    selector.find(".row").has("*").eq(index+1).before(bannerElement);
     
 }
 
