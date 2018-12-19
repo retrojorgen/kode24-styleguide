@@ -1,14 +1,17 @@
 function initPremium(selector, rows) {
-    getFrontPremiumBanners( function (banners) {
+    cleanEmptyRows(() => {
+        getFrontPremiumBanners( function (banners) {
         
-        if(banners.length) {
-            shuffleArray(banners);
-            banners.forEach((banner, index) => {
-                drawPremium(banner, selector, rows[index]);
-            });
-            
-        }
+            if(banners.length) {
+                shuffleArray(banners);
+                banners.forEach((banner, index) => {
+                    drawPremium(banner, selector, rows[index]);
+                });
+                
+            }
+        })
     })
+    
 }
 
 function getItemFromArray(array, match) {
@@ -20,6 +23,17 @@ function getItemFromArray(array, match) {
     return false;
 }
 
+
+function cleanEmptyRows (callback) {
+    $(".row").each((index, row) => {
+        
+        if($(row).children().length < 1) {
+            $(row).addClass("empty");
+        }
+    })
+
+    callback();
+}
 
 function getRatio(url) {
     var props = props.split("&");
@@ -97,7 +111,7 @@ function drawPremium (banner, selector, index) {
             </article>
         </div>
     `;
-    selector.find(".row:nth-child(" + (index+2) + ")").before(bannerElement);
+    selector.find(".row").not(":empty").eq(index+2).before(bannerElement);
     
 }
 
