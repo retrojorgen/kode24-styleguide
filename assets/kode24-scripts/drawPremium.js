@@ -4,13 +4,31 @@ function initPremium(selector, rows) {
         
             if(banners.length) {
                 shuffleArray(banners);
+                var elements = getElements(selector, rows);
+                console.log(elements);
                 banners.forEach((banner, index) => {
-                    drawPremium(banner, selector, rows[index]);
+                    
+                    
+                    if(rows[index].type === "premium")
+                        drawPremium(banner, elements[index], selector);
+                    if(rows[index].type === "carousel")
+                        initCarousel(elements[index]);
                 });
                 
             }
         })
     })
+    
+}
+
+function getElements (selector, rows) {
+    selector = $(selector);
+    var elements = [];
+    for(var x = 0; x <= rows.length-1; x++) {
+        elements.push(selector.find(".row").has("*").eq(rows[x].row));
+    }
+
+    return elements;
     
 }
 
@@ -41,8 +59,8 @@ function getRatio(url) {
     var whRatio = getItemFromArray(props, "whRatio=");
 }
 
-function drawPremium (banner, selector, index) {
-    var selector = $(selector);
+function drawPremium (banner, element, parent) {
+    parent = $(parent);
     var wratio = banner.children[0].data.children.image.field.whRatio;
     var imageId = banner.children[0].data.children.image.attribute.instanceof_id;
     var cropw = banner.children[0].data.children.image.field.cropw;
@@ -58,7 +76,7 @@ function drawPremium (banner, selector, index) {
     var textAlign = titleStyles.text_align || "";
     var viewPorts = JSON.parse(banner.children[0].data.viewports_json);
     
-    var imageWidth = selector.width();
+    var imageWidth = parent.width();
     var containerWidth = imageWidth;
 
     var mobileViewport = JSON.parse(banner.children[0].data.children.image.field.viewports_json);
@@ -111,7 +129,7 @@ function drawPremium (banner, selector, index) {
             </article>
         </div>
     `;
-    selector.find(".row").has("*").eq(index+1).before(bannerElement);
+    element.before(bannerElement);
     
 }
 
