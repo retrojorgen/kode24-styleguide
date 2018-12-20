@@ -381,10 +381,10 @@ article.preview.small-6 .article-preview-text {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: -14px;
+  
   margin-bottom: 0;
   @media #{$medium-up} {
-
+    margin-top: -14px;
   }
 }
 
