@@ -375,3 +375,40 @@ article.preview.small-6 .article-preview-text {
 .labFn-edit main.frontpage .row:first-child {
   height: auto;
 }
+
+
+.carousel-ad-byline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: -14px;
+  margin-bottom: 0;
+  padding: 0;
+  padding-left: 90px;
+}
+
+.carousel-ad-company-logo {
+  width: 50px;
+  height: 50px;
+  background-size: 100% 100%;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.carousel-ad-byline h4 {
+  font-size: 13px;
+  opacity: 0.5;
+  margin-top: 16px;
+}
+
+
+.carousel.article-preview-text {
+  .carousel-ad-byline,
+  .headline,
+  .standfirst {
+    padding-left: 90px;
+  }
+}
