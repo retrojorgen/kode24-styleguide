@@ -250,8 +250,8 @@ article.preview.native-advertisement a {
       line-height: 21px;
       margin-top: 0;
       @media #{$medium-up}{
-        font-size: 26px;
-        line-height: 1.1;
+        font-size: 16px;
+        line-height: 1.4;
       }
     }
     p.standfirst {
@@ -383,32 +383,64 @@ article.preview.small-6 .article-preview-text {
   justify-content: flex-start;
   margin-top: -14px;
   margin-bottom: 0;
-  padding: 0;
-  padding-left: 90px;
+  @media #{$medium-up} {
+
+  }
 }
 
 .carousel-ad-company-logo {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-size: 100% 100%;
   border-radius: 50%;
   margin-right: 10px;
-  position: absolute;
-  left: 15px;
-  top: 18px;
+  position: relative;
+  left: 0;
+  top: 0;
+  @media #{$medium-up} {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 18px;
+  }
 }
 
 .carousel-ad-byline h4 {
   font-size: 13px;
   opacity: 0.5;
-  margin-top: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  @media #{$medium-up} {
+    margin-top: 16px;
+  }
 }
 
 
 .carousel.article-preview-text {
-  .carousel-ad-byline,
+  .carousel-ad-byline {
+    padding: 0;
+    margin-bottom: 8px;
+  }
   .headline,
   .standfirst {
-    padding-left: 90px;
+      padding-left: 90px;
+  }
+
+  @media #{$medium-up}{
+  
+    .carousel-ad-byline {
+      margin-bottom: 8px;
+    }
+
+    .carousel-ad-byline,
+    .headline,
+    .standfirst {
+      padding-left: 90px;
+    }  
+  }
+  .headline {
+    font-size: 17px;
+    line-height: 1.4;
   }
 }
