@@ -5,20 +5,19 @@ function initPremium(selector, rows) {
             if(banners.length) {
                 shuffleArray(banners);
                 var elements = getElements(selector, rows);
-                console.log(elements);
-                banners.forEach((banner, index) => {
+                elements.forEach((element, index) => {
                     
+                    if(rows[index].type === "premium" && banners.length) {
+                        drawPremium(banners.pop(), elements[index], selector);
+                    }
                     
-                    if(rows[index].type === "premium")
-                        drawPremium(banner, elements[index], selector);
-                    if(rows[index].type === "carousel")
+                    if(rows[index].type === "carousel") {
                         initCarousel(elements[index]);
+                    }
                 });
-                
             }
         })
-    })
-    
+    }) 
 }
 
 function getElements (selector, rows) {
