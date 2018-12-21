@@ -1,0 +1,38 @@
+.top-profile .kicker {
+    width: 100%;
+    background: lightgrey;
+    text-align: center;
+    text-decoration: none;
+    color: #565656;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 1px;
+}
+
+.top-profile .preload-ad-image {
+    max-width: 100%;
+}
+
+.top-profile a {
+    text-decoration: none;
+}
+
+
+.top-profile {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+
+    @media #{$medium-up} {
+        .mobile {
+            display: none;
+        }
+        .desktop {
+            display: none;
+        }
+    }
+}
