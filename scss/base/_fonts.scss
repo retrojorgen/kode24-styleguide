@@ -9,21 +9,12 @@
 // Styleguide 3
 
 
-@if $include-font{
-    @if $include-font-icon{
-        @font-face {
-            font-family: 'Helveticons';
-            font-style: normal;
-            font-weight: normal;
-            src: url(//styleguide.kode24.no/fonts/helveticons.woff) format('woff');
-        }
-        @font-face {
-            font-family: 'Fontello';
-            font-style: normal;
-            font-weight: normal;
-            src: local('Fontello'), url(assets/fonts/fontello.woff) format('woff');
-        }
-    }
+
+@font-face {
+    font-family: 'Helveticons';
+    font-style: normal;
+    font-weight: normal;
+    src: url(//styleguide.kode24.no/fonts/helveticons.woff) format('woff');
 }
 
 
