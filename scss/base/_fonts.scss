@@ -8,6 +8,29 @@
 //
 // Styleguide 3
 
+
+@if $include-font{
+    @if $include-font-style-normal{
+    }
+    @if $include-font-style-italic{
+    }
+    @if $include-font-icon{
+        @font-face {
+            font-family: 'Helveticons';
+            font-style: normal;
+            font-weight: normal;
+            src: url(//styleguide.dinside.no/fonts/helveticons.woff) format('woff');
+        }
+        @font-face {
+            font-family: 'Fontello';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Fontello'), url(assets/fonts/fontello.woff) format('woff');
+        }
+    }
+}
+
+
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,500,500i|IBM+Plex+Sans:400,400i,500,500i');
 
 // Open Sans
