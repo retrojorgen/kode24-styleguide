@@ -13,6 +13,10 @@
 //
 // Styleguide 10.7 
 
+.article-entity {
+    position: relative;
+}
+
 figure{
     
     &[data-image-lightbox]{
