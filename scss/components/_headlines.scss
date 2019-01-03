@@ -23,7 +23,7 @@ $include-html-dynamic-headline-classes: $include-html-headline-classes !default;
         strong{
             font-weight: 500;
         }
-        .headline-title-wrapper {
+        > .headline-title-wrapper {
             background-color: #000;
             color: #fff;
             display: inline;
