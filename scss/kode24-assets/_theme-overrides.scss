@@ -33,20 +33,22 @@ body.light {
   #top-navigation {
     .logo,
     #page-tagline {
-      filter: inverse(1);
+      filter: invert(1);
     }
   }
-
-  #nav-top {
-    &:after {
-      background: linear-gradient(90deg, transparent, #f1f1f1);
-    }
-    li {
-      a {
-        color: #3f3f3f;
+  .top-nav:not(.article) {
+    #nav-top {
+      &:after {
+        background: linear-gradient(90deg, transparent, #f1f1f1);
+      }
+      li {
+        a {
+          color: #3f3f3f;
+        }
       }
     }
   }
+
 
   #nav-top {
     position: relative;
