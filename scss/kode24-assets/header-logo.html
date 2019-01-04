@@ -1,0 +1,273 @@
+<style>
+  #kode24-graphic-header {
+    background-size: cover;
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden; 
+  }
+
+@media (min-width: 641px) {
+   #kode24-graphic-header {
+       height: 300px;
+   }
+}
+
+  #kode24-graphic-header:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url();
+        background-size: cover;
+        background-position: center center;
+        opacity: 0.6;
+  }
+
+  #kode24-graphic-header #particles-js {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #kode24-graphic-header #triangles {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-145px) translateY(-48px) scale(0.6);
+  }
+  
+  #kode24-graphic-header #left-triangle {
+    background-color: black;
+    clip-path: url(#cp4);
+    -webkit-clip-path: url(#cp4);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+   opacity: 1;
+    background: url(https://media3.giphy.com/media/esMcTxGMz3Hhu/giphy.gif?cid=3640f6095c2f0e277657704167ba563c);
+    background-size: 100%;
+  }
+
+  #kode24-graphic-header #right-triangle {
+    background: linear-gradient(60deg, #124686, #c431e3);
+    clip-path: url(#cp6);
+    -webkit-clip-path: url(#cp6);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #kode24-graphic-header #top-right-triangle {
+   background: linear-gradient(60deg, #124686, #c431e3);
+    clip-path: url(#cp5);
+    -webkit-clip-path: url(#cp5);
+    width: 200px;
+    height: 200px;
+    
+    background-size: cover;
+    background-blend-mode: screen;
+    
+    position: absolute;
+    top: -0;
+    left: 0;
+  }
+  
+    @media (min-width: 1025px) {
+    
+    #kode24-graphic-header #left-triangle,
+    #kode24-graphic-header #right-triangle,
+    #kode24-graphic-header #top-right-triangle {
+      width: 400px;
+      height: 400px;
+    }
+    #kode24-graphic-header #left-triangle {
+      clip-path: url(#cp);
+      -webkit-clip-path: url(#cp);
+    }
+    #kode24-graphic-header #right-triangle {
+      clip-path: url(#cp3);
+      -webkit-clip-path: url(#cp3);
+    }
+    
+    #kode24-graphic-header #top-right-triangle {
+      clip-path: url(#cp2);
+      -webkit-clip-path: url(#cp2);
+    }
+    #kode24-graphic-header #triangles {
+        transform: translateX(-374px) translateY(-119px) scale(0.6);
+    }
+  }
+</style>
+<svg width='0' height='0'>
+  <defs>
+    <clipPath id="cp">
+      <path class="st3" d="M224.9,282.7l19.4-10.4l19.6-10.6l4.8-2.6v-239L3,163.2l201.4,108.4L224.9,282.7z M222.8,91.7v143.1
+L89.9,163.2l43.5-23.8l0.5-45.4l41.7,21.9L222.8,91.7z"/>
+    </clipPath>
+    <clipPath id="cp2">
+        <polygon class="st2" points="268.2,166 268.2,212.8 310.9,235.8 268.2,258.8 268.2,258.8 263.3,261.4 243.7,271.9 224.3,282.4 
+    178,307.3 178,256.8 132,232 132,378.9 397.8,235.8"/>
+    </clipPath>
+    <clipPath id="cp3">
+      <polygon class="st2" points="179.3,212.3 179.3,164.6 223.4,188.4 223.4,141.6 133.3,93.1 133.3,187.6 			"/>
+    </clipPath>
+    <clipPath id="cp4">
+      <path class="st3" d="M111,137.3l9.3-5l9.4-5.1l2.3-1.3V11.1L4.3,79.9l96.8,52.1L111,137.3z M110,45.5v68.8L46.1,79.9L67,68.4
+      l0.3-21.8l20.1,10.5L110,45.5z"/>
+    </clipPath>
+    <clipPath id="cp5">
+      <polygon class="st2" points="131.8,81.2 131.8,103.7 152.3,114.8 131.8,125.8 131.8,125.8 129.5,127.1 120,132.2 110.7,137.2 
+      88.4,149.2 88.4,124.9 66.3,113 66.3,183.6 194.1,114.8 			"/>
+    </clipPath>
+    <clipPath id="cp6">
+      <polygon class="st2" points="89.1,103.5 89.1,80.6 110.2,92 110.2,69.5 67,46.2 67,91.6 			"/>
+    </clipPath>
+  </defs>
+</svg>
+      
+      
+<div id="kode24-graphic-header">
+  <div id="particles-js"></div>
+  <div id="logo-container">
+    <div id="triangles">
+      <div id="left-triangle">
+
+      </div>
+      <div id="top-right-triangle">
+
+        </div>
+      <div id="right-triangle">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 66,
+      "density": {
+        "enable": true,
+        "value_area": 600.1476416322727
+      }
+    },
+    "color": {
+      "value": "#79178a"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 3
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 0,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 268.3101981549727,
+      "color": "#79178a",
+      "opacity": 1,
+      "width": 0.9469771699587272
+    },
+    "move": {
+      "enable": true,
+      "speed": 1.5782952832645452,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>

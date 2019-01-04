@@ -30,6 +30,28 @@ aside.panel {
 body.light {
   background-color: #f1f1f1;
   color: #333;
+  #top-navigation {
+    .logo,
+    #page-tagline {
+      filter: inverse(1);
+    }
+  }
+
+  #nav-top {
+    &:after {
+      background: linear-gradient(90deg, transparent, #f1f1f1);
+    }
+    li {
+      a {
+        color: #3f3f3f;
+      }
+    }
+  }
+
+  #nav-top {
+    position: relative;
+    
+
   .fb-comments {
     background-color: #333;
   }

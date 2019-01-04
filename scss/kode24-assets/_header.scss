@@ -6,17 +6,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  background-color: black;
   background-size: cover;
   overflow: hidden;
   margin-bottom: 0;
   height: 130px;
   @media #{$medium-up}{
-    height: 300px;
+    height: 200px;
   }
   &.article {
     height: 60px;
-    
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
@@ -33,7 +31,7 @@
       background: linear-gradient(180deg, #0000005c, #00000000);
       z-index: $z-index-1;
     }
-    @media #{$medium-up}  {
+    @media #{$large-up}  {
       overflow: hidden;
     }
     #page-logo {
@@ -47,7 +45,9 @@
       margin-right: $column-gutter;
       padding-left: $column-gutter;
       z-index: $z-index-3;
+      transform: translateX(44px);
       @media #{$medium-up}  {
+        transform: translateX(65px);
       }
       img {
         width: 90px;
@@ -73,9 +73,11 @@
       font-weight: bold;
       text-transform: uppercase;
       display: none;
+      transform: translateX(44px);
       @media #{$medium-up}  {
         display: block;
         font-size: 12px;
+        transform: translateX(65px);
       }
     }
   }
