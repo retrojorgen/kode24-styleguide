@@ -31,7 +31,10 @@ body.light {
   background-color: #f1f1f1;
   color: #333;
   #top-navigation {
-    
+    .logo,
+    #page-tagline {
+      filter: invert(1);
+    }
     &.article {
       .logo,
       #page-tagline {
