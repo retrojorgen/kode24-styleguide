@@ -9,6 +9,9 @@
     height: 100%;
     width: 140px;
     background: linear-gradient(90deg, transparent, $body-bg);
+    @media #{$large-up}{
+      display: none;
+    }
   }
   .row {
     display: block;

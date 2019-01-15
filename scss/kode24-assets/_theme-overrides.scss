@@ -36,14 +36,26 @@ body.light {
       filter: invert(1);
     }
   }
+
+  #nav-top {
+    &:after {
+      background: linear-gradient(90deg, transparent, #f1f1f1);
+    }
+    li {
+      a {
+        color: #3f3f3f;
+      }
+    }
+  }
+
   .top-nav:not(.article) {
-    #nav-top {
+     #nav-top {
       &:after {
-        background: linear-gradient(90deg, transparent, #f1f1f1);
+        display: none;
       }
       li {
         a {
-          color: #3f3f3f;
+          color: lighten($body-font-color, 20%);
         }
       }
     }
