@@ -1,7 +1,4 @@
 // tracks clicks on outboundlinks
-
-
-<script>
 /**
 * Funksjon som sporer klikk på en utgående link i Analytics.
 * Denne funksjonen tar en gyldig nettadressestreng som argument og bruker denne strengen
@@ -14,16 +11,13 @@ var trackOutboundLink = function(url) {
      'hitCallback': function(){document.location = url;}
    })
 }
-</script>
 
-<script>
-  $(function () {
-    $("a").click(function (event) {
-      let targetUrl = event.currentTarget.href;
-      if(targetUrl.indexOf("https://www.kode24.no/") < 0) {
-        trackOutboundLink(targetUrl);
-        console.log("Went to", targetUrl);
-      }
-    })
+$(function () {
+  $("a").click(function (event) {
+    let targetUrl = event.currentTarget.href;
+    if(targetUrl.indexOf("https://www.kode24.no/") < 0) {
+      trackOutboundLink(targetUrl);
+      console.log("Went to", targetUrl);
+    }
   })
-</script>
+})
