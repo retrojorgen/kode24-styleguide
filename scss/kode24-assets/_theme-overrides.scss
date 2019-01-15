@@ -48,7 +48,7 @@ body.light {
     }
   }
 
-  .top-nav:not(.article) {
+  .top-nav.article {
      #nav-top {
       &:after {
         display: none;
