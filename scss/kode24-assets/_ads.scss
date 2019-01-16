@@ -46,6 +46,9 @@
     left: 0;
     align-items: center;
     justify-content: flex-start;
+    @media #{$medium-up} {
+        top: -10px;
+    }
     &figure {
         border-radius: 50%;
         overflow: hidden;
