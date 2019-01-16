@@ -59,39 +59,73 @@ function getRatio(url) {
 }
 
 function drawPremium (banner, element, parent) {
+
     parent = $(parent);
-    var wratio = banner.children[0].data.children.image.field.whRatio;
-    var imageId = banner.children[0].data.children.image.attribute.instanceof_id;
-    var cropw = banner.children[0].data.children.image.field.cropw;
-    var croph = banner.children[0].data.children.image.field.croph;
-    var posy = banner.children[0].data.children.image.field.y;
-    var posx = banner.children[0].data.children.image.field.x;
-    var kicker = banner.children[0].data.kicker;
-    var url = "https://www.kode24.no" + banner.children[0].data.published_url;
-    var title = banner.children[0].data.title;
-    var subTitle = banner.children[0].data.subtitle;
-    var titleStyles = JSON.parse(banner.children[0].data.title_style_json);
-    var fontSize = titleStyles.text_size || "";
-    var textAlign = titleStyles.text_align || "";
-    var viewPorts = JSON.parse(banner.children[0].data.viewports_json);
-    
+
+    var wratio = 0.53861386138614;    
+    var cropw = 100;
+    var croph = 80.712166172107;
+    var posy = 0;
+    var posx = 0;
+    var imageId = 0;
+    var kicker = "";
+    var url = "";
+    var title = "";
+    var subTitle = "";
+    var fontSize = 38;
+    var mobileFontSize = 29;
+
     var imageWidth = parent.width();
     var containerWidth = imageWidth;
 
-    var mobileViewport = JSON.parse(banner.children[0].data.children.image.field.viewports_json);
-    var mobileWratio = mobileViewport.mobile.fields.whRatio;
-    
-    
-    if(imageWidth < 500) {
-        imageWidth = 600;
-        wratio = mobileWratio;
-        cropw = mobileViewport.mobile.fields.cropw;
-        croph = mobileViewport.mobile.fields.croph;
-        posx = mobileViewport.mobile.fields.x;
-        posy = mobileViewport.mobile.fields.y;
+
+    if(     banner 
+        &&  banner.children[0] 
+        &&  banner.children[0].data) {
+
+        kicker = banner.children[0].data.kicker || kicker;
+        url = "https://www.kode24.no" + banner.children[0].data.published_url || url;
+        title = banner.children[0].data.title || "";
+        subTitle = banner.children[0].data.subtitle || "";   
+
+        if(banner.children[0].data.children.image) {
+            if(banner.children[0].data.children.image.field) {
+                wratio = banner.children[0].data.children.image.field.whRatio || wratio;
+                cropw = banner.children[0].data.children.image.field.cropw || cropw;
+                croph = banner.children[0].data.children.image.field.croph || croph;
+                posy = banner.children[0].data.children.image.field.y || posy;
+                posx = banner.children[0].data.children.image.field.x || posx;
+                
+                let viewPorts = JSON.parse(banner.children[0].data.viewports_json) || {}; 
+
+                if(imageWidth < 500) {
+                    let mobileViewport = JSON.parse(banner.children[0].data.children.image.field.viewports_json) || {};
+                    imageWidth = 600;
+                    cropw = mobileViewport.mobile.fields.cropw || 53;
+                    croph = mobileViewport.mobile.fields.croph || 100;
+                    posx = mobileViewport.mobile.fields.x || 38;
+                    posy = mobileViewport.mobile.fields.y || 0;
+                    wratio = mobileViewport && mobileViewport.mobile && mobileViewport.mobile.fields && mobileViewport.mobile.fields.whRatio ? mobileViewport.mobile.fields.whRatio : 1.246875;    
+                    mobileFontSize = viewPorts && viewPorts.mobile && viewPorts.mobile.fields.title_style_json && viewPorts.mobile.fields.title_style_json.text_size ?  viewPorts.mobile.fields.title_style_json.text_size : 29;
+                }
+        
+            }
+            if(banner.children[0].data.children.image.attribute) {
+                imageId = banner.children[0].data.children.image.attribute.instanceof_id || 0;
+            }   
+        }
+
+        if(banner.children[0].data.title_style_json) {
+            let titleStyles = JSON.parse(banner.children[0].data.title_style_json);
+
+            fontSize = titleStyles.text_size || "";
+            textAlign = titleStyles.text_align || "";
+        }
+
 
     }
-    var mobileFontSize = viewPorts.mobile.fields.title_style_json.text_size || "";
+    
+    
 
     var bannerElement = `
 
