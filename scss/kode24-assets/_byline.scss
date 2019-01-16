@@ -19,3 +19,15 @@
     }
   }
 }
+
+.jobb {
+  .byline {
+    &.big {
+      .byline-info {
+        .lastname {
+          display: none;
+        }
+      }
+    }
+  }
+}
