@@ -1,6 +1,6 @@
 function initPremium(selector, rows) {
     cleanEmptyRows(() => {
-        getFrontPremiumBanners( function (banners) {
+        getFrontPremiumBanners( function (banners, jobDocuments) {
         
             if(banners.length) {
                 shuffleArray(banners);
@@ -8,7 +8,8 @@ function initPremium(selector, rows) {
                 elements.forEach((element, index) => {
                     
                     if(rows[index].type === "premium" && banners.length) {
-                        drawPremium(banners.pop(), elements[index], selector);
+                        let banner = banners.pop();
+                        drawPremium(banner, elements[index], selector, jobDocuments);
                     }
                     
                     if(rows[index].type === "carousel") {
@@ -58,10 +59,13 @@ function getRatio(url) {
     var whRatio = getItemFromArray(props, "whRatio=");
 }
 
-function drawPremium (banner, element, parent) {
+function drawPremium (banner, element, parent, jobDocuments) {
+
+    
 
     parent = $(parent);
 
+    var id = 0;
     var wratio = 0.53861386138614;    
     var cropw = 100;
     var croph = 80.712166172107;
@@ -77,12 +81,14 @@ function drawPremium (banner, element, parent) {
 
     var imageWidth = parent.width();
     var containerWidth = imageWidth;
+    var companyImageUrl = "";
+    var companyName = "";
 
 
     if(     banner 
         &&  banner.children[0] 
         &&  banner.children[0].data) {
-
+        id = banner.children[0].data.articleId || id;
         kicker = banner.children[0].data.kicker || kicker;
         url = "https://www.kode24.no" + banner.children[0].data.published_url || url;
         title = banner.children[0].data.title || "";
@@ -124,23 +130,39 @@ function drawPremium (banner, element, parent) {
 
 
     }
+
+
+    if(jobDocuments[id]) {
+        companyName = jobDocuments[id].full_bylines[0].firstname;
+        companyImageUrl = jobDocuments[id].full_bylines[0].imageUrl;
+    }
     
     
 
     var bannerElement = `
 
         <div class="row top-listing" style="margin-top: 20px; margin-bottom: 30px;">
-            <article id="article_${banner.id}" class="preview   columns large-12 small-12 medium-12 native-advertisement" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem" role="article" data-id="${banner.id}" data-label="">
+            <article id="article_${id}" class="preview   columns large-12 small-12 medium-12 native-advertisement" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem" role="article" data-id="${banner.id}" data-label="">
                 <a itemprop="url" href="${url}">
                     <div class="kicker">${kicker}</div> 
                     <figure id="${imageId}" style="width: ${containerWidth}px; padding-bottom: ${wratio * 100}%;">
                         <img class="" itemprop="image" alt="" src="https://dbstatic.no/${imageId}.jpg?imageId=${imageId}&x=${posx}&y=${posy}&cropw=${cropw}&croph=${croph}&width=${imageWidth}&height=${Math.round(imageWidth*wratio)}&compression=80">
-                    </figure>
-                    ${
-                        (function () {
-                            if(title && typeof title === 'string') {
-                                return `
-                                <div class="article-preview-text">
+                    </figure><div class="article-preview-text">`;
+
+                    if(companyName && companyImageUrl) {
+                        bannerElement += `
+                                <div class="company-information">
+                                    <figure class="image-contain">
+                                        <img src="//dbstatic.no${companyImageUrl}">
+                                    </figure>
+                                    <span>${companyName}</span>
+                                 </div>
+                                `
+                    }
+
+                    if(title && typeof title === 'string') {
+                        bannerElement += `
+                                
                                     <h1 class="headline large-size-${fontSize} text-${textAlign} small-size-${mobileFontSize}">
                                         ${title}   
                                     </h1>
@@ -148,17 +170,13 @@ function drawPremium (banner, element, parent) {
                                     <div class="labels">
                                     </div>
                                     <span class="label-text"></span>
-                                 </div>
-                                
+                                 
                                 `
-                            } else {
-                                return ``;
-                            }
-
-                        })()
                     }
 
-                </a>
+                    
+
+                bannerElement += `</div></a>
             </article>
         </div>
     `;
@@ -176,13 +194,20 @@ function shuffleArray(array) {
 
 function getFrontPremiumBanners ( callback ) {
     getUrl("//api.kode24.no/front/?query=id:70267311", function (data) {
-        let rows = data.result[0].content["lab-dz-1"];
-        if(rows.length > 1) {
-            callback( rows.slice(1) );
-        } else {
-            callback( [] );
-        }
-        
+        getUrl("//api.kode24.no/article/?query=section:jobb&limit=200&orderBy=published&site_id=207", function(jobDocumentsResponse) {
+            let rows = data.result[0].content["lab-dz-1"];
+            let jobDocuments = {};
+            jobDocumentsResponse.result.map((job) => {
+                jobDocuments[job.id] = job;
+            })
+            
+            
+            if(rows.length > 1) {
+                callback( rows.slice(1), jobDocuments );
+            } else {
+                callback( [], {} );
+            }
+        });
 	});
 } 
 
