@@ -78,4 +78,6 @@ function shuffleArray(array) {
         ]
     });
     }
+
+    adCounterToTopNav(ads.length);
   }
