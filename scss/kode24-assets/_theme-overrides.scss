@@ -122,6 +122,15 @@ body.light {
           text-shadow: 0 0px 16px #171716e0;
         }
       }      
+    }
+    .no-shadow {
+      h1,h2,h3,h4,h5,h6,p,.standfirst {
+        
+        text-shadow: 0 !important;
+        &.headline {
+          text-shadow: 0 !important;
+        }
+      }
     }    
   }
 
