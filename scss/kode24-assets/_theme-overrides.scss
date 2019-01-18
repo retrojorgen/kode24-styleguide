@@ -23,8 +23,11 @@ aside.panel {
       color: lighten($body-font-color, 20%);
       text-shadow: 0 0px 16px #171716e0;
     }
-  }  
+  }
+ 
 }
+
+
 
 
 body.light {
@@ -102,15 +105,18 @@ body.light {
 
   .frontpage,
   .full-bleed {
-    h1,h2,h3,h4,h5,h6,p,.standfirst {
-      color: lighten($body-font-color, 20%);
-      text-shadow: 0 0px 16px #171716e0;
-      &.headline {
+    :not(.reverse-front) {
+      h1,h2,h3,h4,h5,h6,p,.standfirst {
         color: lighten($body-font-color, 20%);
         text-shadow: 0 0px 16px #171716e0;
-      }
-    }  
+        &.headline {
+          color: lighten($body-font-color, 20%);
+          text-shadow: 0 0px 16px #171716e0;
+        }
+      }  
+    }
   }
+  
   .article-entity {
     .preview {
       color: white;
