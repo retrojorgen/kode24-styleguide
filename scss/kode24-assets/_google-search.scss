@@ -3,6 +3,19 @@
   a {
     color: lighten($body-font-color, 20%);
   }
+  .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
+    color: lighten($body-font-color, 20%);
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: linear-gradient(90deg, #c431e3, #c431e3);
+    background-position: 0px 22px;
+    background-repeat: repeat-x;
+    background-size: 100% 3px;
+    overflow: visible;
+    padding-bottom: 6px;
+  }
   
   .gsc-adBlock {
     display: none;
