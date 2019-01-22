@@ -1,0 +1,40 @@
+.google-search {
+  color: lighten($body-font-color, 20%);
+  a {
+    color: lighten($body-font-color, 20%);
+  }
+  
+  .gsc-adBlock {
+    display: none;
+  }
+  table {
+    margin-bottom: 0;
+    tr {
+      background: 0;
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+  .gsc-control-cse .gsc-table-result {
+    font-family: $body-font-family;
+  }
+
+  
+
+  .gsc-control-cse,
+  .gsc-webResult.gsc-result, .gsc-results .gsc-imageResult,
+  .gsc-webResult.gsc-result {
+    background: 0;
+    border: 0;
+  }
+
+
+  .gsc-table-cell-thumbnail.gsc-thumbnail {
+    border-right: 0;
+  }
+
+  .gsc-results {
+    margin: 0;
+    width: 100%;
+  }
+}
