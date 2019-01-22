@@ -33,6 +33,14 @@ aside.panel {
 body.light {
   background-color: #f1f1f1;
   color: #333;
+  .google-search .gs-webResult.gs-result a.gs-title:visited, .google-search .gs-webResult.gs-result a.gs-title:visited b, .google-search .gs-imageResult a.gs-title:visited, .google-search .gs-imageResult a.gs-title:visited b,
+  .google-search .gs-webResult.gs-result a.gs-title:link, .google-search .gs-webResult.gs-result a.gs-title:link b, .google-search .gs-imageResult a.gs-title:link, .google-search .gs-imageResult a.gs-title:link b {
+    color: #333;
+  }
+  .google-search .gs-webResult .gs-snippet, .google-search .gs-imageResult .gs-snippet, .google-search .gs-fileFormatType {
+    color: lighen(#333, 20%);
+  }
+
   .preview {
     a {
       color: lighten($body-font-color, 20%);
