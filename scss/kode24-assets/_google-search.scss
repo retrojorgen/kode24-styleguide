@@ -10,7 +10,7 @@
   .gsc-results .gsc-cursor-box .gsc-cursor-page {
     color: lighten($body-font-color, 20%);
   }
-  
+
   .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
     color: lighten($body-font-color, 20%);
     
@@ -114,7 +114,9 @@
       border-bottom: 0
     }
   }
-
+  .gs-result .gs-title, .gs-result .gs-title * {
+    text-decoration: none !important;
+  }
 
   .gsc-results .gsc-cursor-box .gsc-cursor-current-page,
   .gsc-results .gsc-cursor-box .gsc-cursor-page {
@@ -126,8 +128,9 @@
     border-left: 0;
     border-bottom: 0;
     display: inline-block;
-    padding: 2px;
+    padding: 8px 6px;
     border-radius: 2px;
+    outline: none;
   }
 
   .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
