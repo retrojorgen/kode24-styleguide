@@ -2,7 +2,7 @@
   color: lighten($body-font-color, 20%);
   a,
   .gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
-    color: lighten($body-font-color, 20%);
+    color: #c431e3;
   }
   .gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
     color: $body-font-color;
@@ -85,7 +85,8 @@
     font-family: $body-font-family;
   }
 
-  .gsc-result .gs-title {
+  .gsc-result .gs-title,
+  .gsc-control-cse .gs-spelling, .gsc-control-cse .gs-result .gs-title, .gsc-control-cse .gs-result .gs-title * {
     height: auto;
     font-size: 20px;
   }
