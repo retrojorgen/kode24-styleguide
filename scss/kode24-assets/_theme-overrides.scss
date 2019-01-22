@@ -39,7 +39,7 @@ body.light {
     color: #333;
   }
   .google-search .gs-webResult .gs-snippet, .google-search .gs-imageResult .gs-snippet, .google-search .gs-fileFormatType {
-    color: lighen(#333, 20%);
+    color: lighten(#333, 20%);
   }
   .google-search .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
     color: lighten($body-font-color, 20%);
