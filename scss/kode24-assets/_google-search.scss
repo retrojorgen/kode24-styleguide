@@ -27,17 +27,24 @@
     display: none;
   }
   .gsc-search-button {
-    padding: 10px 22px;
-    margin: 0;
-    background: linear-gradient(60deg, #124686, #c431e3);
-    border: 0;
-    border-radius: 4px;
-    margin-left: 2px;
+    .gsc-search-button {
+      padding: 10px 22px;
+      margin: 0;
+      background: linear-gradient(60deg, #124686, #c431e3);
+      border: 0;
+      border-radius: 4px;
+      margin-left: 2px;
+    }
+    
   }
   .gsc-search-box-tools .gsc-search-box .gsc-input {
     padding: 0;
     line-height: auto;
     border-radius: 4px;
+  }
+
+  .gsc-orderby {
+    text-align: right;
   }
 
   table {
@@ -48,10 +55,16 @@
         background-color: 0;
         border-top: 0;
         border-bottom: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 0;
         &:first-child {
           background: 0;
           background-color: 0;
           border-top: 0;
+          border-bottom: 0;
+          border-right: 0;
+          border-left: 0;
           border-bottom: 0;
         }
       }
@@ -59,6 +72,9 @@
         background: 0;
         background-color: 0;
         border-top: 0;
+        border-bottom: 0;
+        border-right: 0;
+        border-left: 0;
         border-bottom: 0;
       }
     }
