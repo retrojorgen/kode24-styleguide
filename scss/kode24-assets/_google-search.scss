@@ -39,12 +39,12 @@
   }
   .gsc-search-button {
     .gsc-search-button {
-      padding: 10px 22px;
+      padding: 16px 22px;
       margin: 0;
       background: linear-gradient(60deg, #124686, #c431e3);
       border: 0;
       border-radius: 4px;
-      margin-left: 2px;
+      margin-left: 8px;
     }
     
   }
@@ -52,6 +52,8 @@
     padding: 0;
     line-height: auto;
     border-radius: 4px;
+    color: #333;
+    overflow: hidden;
   }
 
   .gsc-orderby {
