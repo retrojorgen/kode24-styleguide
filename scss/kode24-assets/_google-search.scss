@@ -19,6 +19,17 @@
     text-decoration: none;
     cursor: pointer;
   }
+  a.gs-image {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+  .gs-image-box.gs-web-image-box.gs-web-image-box-landscape {
+    width: auto;
+  }
+
   .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b {
     color: $body-font-color;
   }
