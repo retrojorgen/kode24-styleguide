@@ -7,6 +7,10 @@
   .gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
     color: $body-font-color;
   }
+  .gsc-results .gsc-cursor-box .gsc-cursor-page {
+    color: lighten($body-font-color, 20%);
+  }
+  
   .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
     color: lighten($body-font-color, 20%);
     
