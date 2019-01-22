@@ -1,6 +1,7 @@
 .google-search {
   color: lighten($body-font-color, 20%);
-  a {
+  a,
+  .gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {
     color: lighten($body-font-color, 20%);
   }
   .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
