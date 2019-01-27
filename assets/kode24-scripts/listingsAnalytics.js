@@ -1,6 +1,6 @@
 $(function () {
   if(window.location.pathname.indexOf("/jobb/") > -1) {
-    const  articleArray = /[A-Za-z:]*\/\/[0-9\.:]*\/[a-z]*\/[a-z-]*\/([0-9]*).*/.exec(window.location.href);
+    const  articleArray = /[A-Za-z:]*\/\/[0-9a-z\.:]*\/[a-z]*\/[a-z-]*\/([0-9]*).*/.exec(window.location.href);
     const articleId = articleArray[1];
     const articleObject = {
       articleId: articleId,
