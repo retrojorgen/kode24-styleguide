@@ -1,4 +1,6 @@
+console.log('waiting for callback');  
 $(function() {
+  console.log('adding content');
   var adsList = [];
   var premiumAdsList = [];
   var autoJobcarousel = $(".auto-job-carousel");
@@ -43,6 +45,7 @@ function drawFooterContent(
   tag,
   frontArticles
 ) {
+  console.log('Drawing footer');
   var footerContent = $('<div class="footer-content row"></div>');
   var relatedArticlesElements = drawRelatedArticleElements(
     articles,
@@ -294,6 +297,7 @@ function drawAside(
   articlesFront,
   articleHeight
 ) {
+  
   var asideContent = $("<div></div>").addClass("aside-desktop");
 
   var adsContainer = drawAdsContainer(adsList, premiumAdsList);
@@ -316,6 +320,7 @@ function drawAside(
   $(".body-copy")
     .parent()
     .append(asideContent);
+    console.log('drawing aside', $(".body-copy"));  
 }
 
 function getRegularAdsElements(adsList, premiumAdId) {
