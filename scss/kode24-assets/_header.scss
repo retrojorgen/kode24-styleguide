@@ -9,7 +9,7 @@
   background-size: cover;
   overflow: hidden;
   margin-bottom: 0;
-  height: 130px;
+  height: auto;
   @media #{$medium-up} {
     height: 200px;
   }
