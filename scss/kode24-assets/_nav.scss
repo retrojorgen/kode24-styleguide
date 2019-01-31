@@ -116,14 +116,13 @@
       align-items: center;
       justify-content: flex-end;
       @media #{$medium-up} {
-        background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
       }
     }
   }
 }
 .nav-badge {
   display: inline-block;
-  background: linear-gradient(45deg, #a51ac2, #ff8d00);
+  background: black;
   padding: 2px 5px;
   border-radius: 8px;
   margin-left: 6px;
