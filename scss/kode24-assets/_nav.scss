@@ -40,7 +40,7 @@
       font-family: $header-font-family;
       text-transform: uppercase;
       font-weight: normal;
-      display: inline-block;
+      display: block;
       color: lighten($body-font-color, 20%);
       &:last-child {
         padding-right: 140px;
@@ -52,7 +52,7 @@
         display: block;
       }
       a {
-        display: inline-block;
+        display: block;
         padding: 20px 11px;
         letter-spacing: 1px;
         font-size: 1em;
