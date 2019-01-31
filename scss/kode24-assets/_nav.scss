@@ -8,7 +8,7 @@
     top: 0;
     height: 100%;
     width: 140px;
-    background: linear-gradient(90deg, transparent, $body-bg);
+    background: linear-gradient(90deg, rgba($body-bg, 0), $body-bg);
     @media #{$large-up} {
       display: none;
     }
