@@ -1,4 +1,9 @@
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: lighten($body-font-color, 20%);
   &.headline {
     color: lighten($body-font-color, 20%);
@@ -16,7 +21,14 @@ aside.panel {
 
 .frontpage,
 .full-bleed {
-  h1,h2,h3,h4,h5,h6,p,.standfirst {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .standfirst {
     color: lighten($body-font-color, 20%);
     text-shadow: 0 0px 16px #171716e0;
     &.headline {
@@ -24,21 +36,25 @@ aside.panel {
       text-shadow: 0 0px 16px #171716e0;
     }
   }
- 
 }
-
-
-
 
 body.light {
   background-color: #f1f1f1;
   color: #333;
-  .google-search .gs-webResult.gs-result a.gs-title:visited, .google-search .gs-webResult.gs-result a.gs-title:visited b, .google-search .gs-imageResult a.gs-title:visited, .google-search .gs-imageResult a.gs-title:visited b,
-  .google-search .gs-webResult.gs-result a.gs-title:link, .google-search .gs-webResult.gs-result a.gs-title:link b, .google-search .gs-imageResult a.gs-title:link, .google-search .gs-imageResult a.gs-title:link b,
+  .google-search .gs-webResult.gs-result a.gs-title:visited,
+  .google-search .gs-webResult.gs-result a.gs-title:visited b,
+  .google-search .gs-imageResult a.gs-title:visited,
+  .google-search .gs-imageResult a.gs-title:visited b,
+  .google-search .gs-webResult.gs-result a.gs-title:link,
+  .google-search .gs-webResult.gs-result a.gs-title:link b,
+  .google-search .gs-imageResult a.gs-title:link,
+  .google-search .gs-imageResult a.gs-title:link b,
   .google-search .gsc-results .gsc-cursor-box .gsc-cursor-page {
     color: #333;
   }
-  .google-search .gs-webResult .gs-snippet, .google-search .gs-imageResult .gs-snippet, .google-search .gs-fileFormatType {
+  .google-search .gs-webResult .gs-snippet,
+  .google-search .gs-imageResult .gs-snippet,
+  .google-search .gs-fileFormatType {
     color: lighten(#333, 20%);
   }
   .google-search .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
@@ -78,27 +94,32 @@ body.light {
     li {
       a {
         color: #3f3f3f;
-      }
-    }
-  }
-
-  .top-nav.article {
-     #nav-top {
-      &:after {
-        display: none;
-      }
-      li {
-        a {
+        .nav-badge {
           color: lighten($body-font-color, 20%);
         }
       }
     }
   }
 
+  .top-nav.article {
+    #nav-top {
+      &:after {
+        display: none;
+      }
+      li {
+        a {
+          color: lighten($body-font-color, 20%);
+          .nav-badge {
+            color: lighten($body-font-color, 20%);
+          }
+        }
+      }
+    }
+  }
 
   #nav-top {
     position: relative;
-  }  
+  }
 
   .fb-comments {
     background-color: #333;
@@ -116,46 +137,66 @@ body.light {
       }
     }
   }
-  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:after {
+  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after,
+  .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:after {
     background: linear-gradient(90deg, transparent, #f1f1f1);
   }
-  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after, .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
+  .row.job-carousel.slick-initialized.slick-slider.slick-dotted:after,
+  .front_rows.job-carousel.slick-initialized.slick-slider.slick-dotted:before {
     background: linear-gradient(90deg, #f1f1f1, transparent);
   }
 
   .frontpage,
   .full-bleed {
-      h1,h2,h3,h4,h5,h6,p,.standfirst {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    .standfirst {
+      color: lighten($body-font-color, 20%);
+      text-shadow: 0 0px 16px #171716e0;
+      &.headline {
         color: lighten($body-font-color, 20%);
         text-shadow: 0 0px 16px #171716e0;
-        &.headline {
-          color: lighten($body-font-color, 20%);
-          text-shadow: 0 0px 16px #171716e0;
-        }
       }
+    }
     .reverse-front {
-      h1,h2,h3,h4,h5,h6,p,.standfirst {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      .standfirst {
         color: #333;
         text-shadow: none;
         &.headline {
           color: #333;
           text-shadow: none;
         }
-      }      
+      }
     }
     .no-shadow {
-      h1,h2,h3,h4,h5,h6,p,.standfirst {
-        
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      .standfirst {
         text-shadow: 0 !important;
         &.headline {
           text-shadow: 0 !important;
         }
       }
-    }    
+    }
   }
 
-
-  
   .article-entity {
     .preview {
       color: white;
@@ -167,22 +208,29 @@ body.light {
       }
     }
   }
-  h1,h2,h3,h4,h5,h6, blockquote, blockquote p {
-    color: darken( #333, 20%);
-  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  blockquote p {
+    color: darken(#333, 20%);
+
     &.headline {
-      color: darken( #333, 20%);
+      color: darken(#333, 20%);
     }
   }
 
   &.animate {
     transition: all 0.1s ease-in-out;
   }
-  
+
   ::selection {
     background-color: $color-pink;
     color: $white;
-  } 
+  }
   aside.panel {
     h5 {
       color: lighten($body-font-color, 20%);
@@ -191,9 +239,6 @@ body.light {
       color: lighten($body-font-color, 10%);
     }
   }
-
-
-
 
   .auto-job-carousel {
     color: $body-font-color;
@@ -212,7 +257,7 @@ body.light {
     }
 
     .image-contain {
-      box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     }
 
     .article-preview-text {
