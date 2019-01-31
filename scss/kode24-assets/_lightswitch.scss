@@ -1,100 +1,41 @@
-#light-switch {  
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  height: 80px;
-  width: 60px;
-  justify-content: center;
-  background: linear-gradient(45deg, #a51ac2, red);
-  align-items: center;
-  border-radius: 9px;
-  padding: 10px;
-  z-index: 10000;
-  &:before {
-    content: "";
-    background: linear-gradient(45deg, #a51ac2, red);
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    width: 100%;
-    filter: blur(10px);
-    height: 100%;
-    opacity: 0.4;
+#nav-top {
+  #light-switch-toggler {
+    padding: 10px;
+    margin-top: 4px;
   }
 }
-
-#light-switch-button {
-  height: 51px;
-  flex: 0 0 37px;
-  margin: 0;
-  border-radius: 6px;
-  background-color: black;
-  position: relative;
-  border: 1px solid black;
-  padding: 0;
-  outline: none;
-  &:before {
-    content: "";
+.light-switch {
+  #light-switch-toggler-icons {
+    border-radius: 20px;
+    background: linear-gradient(60deg, #a51ac2, #cc3612);
+    position: relative;
+    width: 60px;
+    height: 32px;
+    display: inline-block;
+    .light-switch-toggler-icon {
+      position: absolute;
+      left: 7px;
+      top: 3px;
+      &#light-switch-toggler-icon-right {
+        left: 30px;
+      }
+    }
+  }
+  #light-switch-toggler-slider {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #dedddd;
     left: 0;
-    bottom: 0;
-    height: calc(100% - 5px);
-    border-radius: 6px;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 50%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.1);
-  }
-  &.on {
-    &:before {
-      bottom: auto;
-      top: 0;
-    }
-    &:after {
-      bottom: auto;
-      top: 0;
-    }
-  }
-  &.off {
-    &:before {
-      bottom: 0;
-      top: auto;
-    }
-    &:after {
-      bottom: 0;
-      top: auto;
-    }
+    top: 0;
+    height: 100%;
+    width: 32px;
+    background-color: white;
+    border-radius: 50px;
+    outline: purple;
+    transition: all 100ms ease-in-out;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   }
 }
-
-#on-icon {
-  position: absolute;
-  border: 2px solid black;
-  padding: 0;
-  border-radius: 2px;
-  height: 7px;
-  left: 50%;
-  transform: translateX(-2px);
-  top: 10px;
+body.light {
+  #light-switch-toggler-slider {
+    transform: translateX(28px);
+  }
 }
-
-#off-icon {
-  position: absolute;
-  border: 2px solid black;
-  padding: 2px;
-  border-radius: 50%;
-  left: 50%;
-  transform: translateX(-4px);
-  bottom: 10px;
-}
-
-
