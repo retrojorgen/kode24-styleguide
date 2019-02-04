@@ -75,6 +75,7 @@ function drawPremium(banner, element, parent, jobDocuments) {
   var subTitle = "";
   var fontSize = 38;
   var mobileFontSize = 29;
+  var textAlign = "";
 
   var imageWidth = parent.width();
   var containerWidth = imageWidth;
