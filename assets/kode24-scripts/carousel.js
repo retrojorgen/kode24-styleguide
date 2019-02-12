@@ -14,7 +14,7 @@ function initCarousel(selector, isfront) {
   $.ajax({
     type: "GET",
     url:
-      "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:jobb&site_id=207",
+      "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+NOT+hidefromfp_time:[*+TO+NOW]+AND+visibility_status:P+AND+section:jobb&site_id=207&limit=2000",
     headers: {
       "Access-Control-Allow-Origin": "*"
     },

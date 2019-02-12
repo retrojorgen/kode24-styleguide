@@ -1,6 +1,6 @@
-console.log('waiting for callback');  
+console.log("waiting for callback");
 $(function() {
-  console.log('adding content');
+  console.log("adding content");
   var adsList = [];
   var premiumAdsList = [];
   var autoJobcarousel = $(".auto-job-carousel");
@@ -45,7 +45,7 @@ function drawFooterContent(
   tag,
   frontArticles
 ) {
-  console.log('Drawing footer');
+  console.log("Drawing footer");
   var footerContent = $('<div class="footer-content row"></div>');
   var relatedArticlesElements = drawRelatedArticleElements(
     articles,
@@ -54,11 +54,9 @@ function drawFooterContent(
     premiumAdsList
   );
 
-
   footerContent.append(relatedArticlesElements);
   $(".facebook-comments").after(footerContent);
 }
-
 
 function drawFrontArticleElements(articles, adsList, premiumAdsList) {
   var relatedArticles = $(
@@ -78,9 +76,7 @@ function drawFrontArticleElements(articles, adsList, premiumAdsList) {
     relatedArticlesWrapFirst.append(drawPremiumAd(adsList[1]));
   }
 
-
   relatedArticlesWrapFirst.append(drawArticle(articles[3]));
-
 
   relatedArticlesWrapSecond.append(drawArticle(articles[0]));
   relatedArticlesWrapSecond.append(drawArticle(articles[1]));
@@ -91,9 +87,7 @@ function drawFrontArticleElements(articles, adsList, premiumAdsList) {
   );
 }
 
-
 function drawRelatedArticleElements(articles, tag, adsList, premiumAdsList) {
-  
   var relatedArticles = $(
     '<div class="footer-content-related"><h3>Relaterte saker</h3></div>'
   );
@@ -102,9 +96,7 @@ function drawRelatedArticleElements(articles, tag, adsList, premiumAdsList) {
   var relatedArticlesWrapSecond = $(
     '<div class="footer-content-wrap two-col"></div>'
   );
-  var relatedArticlesWrapThird = $(
-    '<div class="footer-content-wrap"></div>'
-  );
+  var relatedArticlesWrapThird = $('<div class="footer-content-wrap"></div>');
 
   relatedArticlesWrapFirst.append(drawArticle(articles[2]));
   if (premiumAdsList.length) {
@@ -117,13 +109,12 @@ function drawRelatedArticleElements(articles, tag, adsList, premiumAdsList) {
 
   relatedArticlesWrapSecond.append(drawArticle(articles[0]));
   relatedArticlesWrapSecond.append(drawArticle(articles[1]));
-  
-  if(articles.length >= 7) {
+
+  if (articles.length >= 7) {
     relatedArticlesWrapThird.append(drawArticle(articles[4]));
     relatedArticlesWrapThird.append(drawArticle(articles[5]));
     relatedArticlesWrapThird.append(drawArticle(articles[6]));
   }
-
 
   return relatedArticles.append(
     relatedArticlesWrapSecond,
@@ -132,14 +123,14 @@ function drawRelatedArticleElements(articles, tag, adsList, premiumAdsList) {
   );
 }
 
-function getTagsElements (tags, avoid) {
+function getTagsElements(tags, avoid) {
   var tagsElementContainer = $('<div class="article-tags"></div>');
   var tagsArray = tags.split(", ");
-  tagsArray = tagsArray.filter((tag) => tag !== avoid);
+  tagsArray = tagsArray.filter(tag => tag !== avoid);
 
-  var max = (tagsArray.length-1) < 2 ? tagsArray.length-1 : 2;
+  var max = tagsArray.length - 1 < 2 ? tagsArray.length - 1 : 2;
 
-  for (var x = 0;  x <= max; x++) {
+  for (var x = 0; x <= max; x++) {
     tagsElementContainer.append(
       `
         <span>${tagsArray[x]}</span>
@@ -150,13 +141,18 @@ function getTagsElements (tags, avoid) {
 }
 
 function drawArticle(article) {
-  
   var tagsElement = getTagsElements(article.tags, article.section_tag);
 
   articleElement = $(`
-            <a class="article article-link" href="//kode24.no${article.published_url}">
+            <a class="article article-link" href="//kode24.no${
+              article.published_url
+            }">
         <div class="article-image">
-        ${ article.images ? `<img src="${article.images[0].url_size}">` : `<img src="//dbstatic.no/${article.image}.jpg?width=600">`}
+        ${
+          article.images
+            ? `<img src="${article.images[0].url_size}">`
+            : `<img src="//dbstatic.no/${article.image}.jpg?width=600">`
+        }
                     
                 </div>
         <div class="text-content">
@@ -165,12 +161,9 @@ function drawArticle(article) {
       </a>`);
 
   articleElement.find(".article-image").append(tagsElement);
-  
+
   return articleElement;
-      
 }
-
-
 
 function drawPremiumAd(premiumAd) {
   var cities = getCitysFromTags(premiumAd.tags);
@@ -178,12 +171,12 @@ function drawPremiumAd(premiumAd) {
         <a class="premium-ad ad" href="//kode24.no${premiumAd.published_url}">
             
             <div class="ad-image"><img src="//dbstatic.no/${
-        premiumAd.image
-      }.jpg?width=400"></div>
+              premiumAd.image
+            }.jpg?width=400"></div>
             <div class="ad-text">
                     <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
-            premiumAd.full_bylines[0].imageUrl
-          })"></div>
+                      premiumAd.full_bylines[0].imageUrl
+                    })"></div>
                     <h4>${premiumAd.full_bylines[0].firstname}</h4>
                     <h5>${premiumAd.title}</h5>
                     <h6>${premiumAd.subtitle}</h6>
@@ -204,8 +197,8 @@ function drawRegularAd(ad) {
   var adElement = $(`
         <a class="ad" href="//kode24.no${ad.published_url}">
             <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
-        ad.full_bylines[0].imageUrl
-      })">
+              ad.full_bylines[0].imageUrl
+            })">
             </div>
             <h4>
                 ${ad.full_bylines[0].firstname}&nbsp;
@@ -297,7 +290,6 @@ function drawAside(
   articlesFront,
   articleHeight
 ) {
-  
   var asideContent = $("<div></div>").addClass("aside-desktop");
 
   var adsContainer = drawAdsContainer(adsList, premiumAdsList);
@@ -320,7 +312,7 @@ function drawAside(
   $(".body-copy")
     .parent()
     .append(asideContent);
-    console.log('drawing aside', $(".body-copy"));  
+  console.log("drawing aside", $(".body-copy"));
 }
 
 function getRegularAdsElements(adsList, premiumAdId) {
@@ -388,19 +380,19 @@ function getPremiumAdsElement(premiumAdsList) {
 }
 
 function getAds(callback) {
-  getUrl("//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:jobb&limit=50&orderBy=published&site_id=207", function(
-    
-    data
-  ) {
-    var ads = data.result.filter(ad => ad.visibility_status !== "H");
-    var premiumAds = data.result.filter(ad => {
-      return (
-        ad.tags.indexOf("premium-jobb") > -1 ||
-        ad.tags.indexOf("fokus-jobb") > -1
-      );
-    });
-    callback(ads, premiumAds);
-  });
+  getUrl(
+    "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:jobb&limit=50&orderBy=published&site_id=207",
+    function(data) {
+      var ads = data.result.filter(ad => ad.visibility_status !== "H");
+      var premiumAds = data.result.filter(ad => {
+        return (
+          ad.tags.indexOf("premium-jobb") > -1 ||
+          ad.tags.indexOf("fokus-jobb") > -1
+        );
+      });
+      callback(ads, premiumAds);
+    }
+  );
 }
 
 function getFrontArticles(callback) {
@@ -417,12 +409,14 @@ function getArticlesByTag(callback) {
   var articleId = getArticleId();
   getUrl("//api.kode24.no/article/?query=id:" + articleId, function(data) {
     var tag = data.result[0].section_tag;
-      getUrl(
-        '//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:"' + tag + '"&limit=50&orderBy=published&site_id=207',
-        function(data) {
-          callback(data.result, tag);
-        }
-      );
+    getUrl(
+      '//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:"' +
+        tag +
+        '"&limit=50&orderBy=published&site_id=207',
+      function(data) {
+        callback(data.result, tag);
+      }
+    );
   });
 }
 
