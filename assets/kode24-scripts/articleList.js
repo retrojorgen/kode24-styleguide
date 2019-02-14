@@ -381,7 +381,7 @@ function getPremiumAdsElement(premiumAdsList) {
 
 function getAds(callback) {
   getUrl(
-    "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:jobb&limit=50&orderBy=published&site_id=207",
+    "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+NOT+hidefromfp_time:[*+TO+NOW]+AND+visibility_status:P+AND+section:jobb&site_id=207&limit=2000",
     function(data) {
       var ads = data.result.filter(ad => ad.visibility_status !== "H");
       var premiumAds = data.result.filter(ad => {
