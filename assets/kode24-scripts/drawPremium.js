@@ -159,7 +159,7 @@ function drawPremium(banner, element, parent, jobDocuments) {
                     <div class="kicker">${kicker}</div> 
                     <figure id="${imageId}" style="width: ${containerWidth}px; padding-bottom: ${wratio *
     100}%;">
-                        <img class="" itemprop="image" alt="" src="https://dbstatic.no/${imageId}.jpg?imageId=${imageId}&x=${posx}&y=${posy}&cropw=${cropw}&croph=${croph}&width=${imageWidth}&height=${Math.round(
+                        <img class="" itemprop="image" alt="" src="//dbstatic.no/${imageId}.jpg?imageId=${imageId}&x=${posx}&y=${posy}&cropw=${cropw}&croph=${croph}&width=${imageWidth}&height=${Math.round(
     imageWidth * wratio
   )}&compression=80">
                     </figure><div class="article-preview-text">`;
