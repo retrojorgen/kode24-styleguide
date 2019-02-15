@@ -42,7 +42,7 @@ function adNodesToCarousel(
     adsContainer.append(`
         <article id="${ad.id}">
         <a itemprop="url" href="${ad.published_url}">
-            <figure class="image-contain" style="background-image: url(https://dbstatic.no${
+            <figure class="image-contain" style="background-image: url(https://dbstatic.no/${
               ad.image
             }.jpg?imageid=${ad.image}&height=300&compression=80)">
             </figure>
