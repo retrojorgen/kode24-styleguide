@@ -149,7 +149,7 @@ function drawPremium(banner, element, parent, jobDocuments) {
     companyImageUrl = jobDocuments[id].full_bylines[0].imageUrl;
   }
 
-  if (!$(title).length) {
+  if (title.indexOf("headline-title-wrapper") <= -1) {
     title = `<span class="headline-title-wrapper">${title}</span>`;
   }
 
