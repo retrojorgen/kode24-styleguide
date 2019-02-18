@@ -149,6 +149,10 @@ function drawPremium(banner, element, parent, jobDocuments) {
     companyImageUrl = jobDocuments[id].full_bylines[0].imageUrl;
   }
 
+  if (!$(title).length) {
+    title = `<span class="headline-title-wrapper">${title}</span>`;
+  }
+
   var bannerElement = `
 
         <div class="row top-listing" style="margin-top: 20px; margin-bottom: 30px;">
