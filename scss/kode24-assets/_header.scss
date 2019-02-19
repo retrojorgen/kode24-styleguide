@@ -13,7 +13,12 @@
   margin-top: 0;
 
   &.invert {
-    filter: invert(1);
+    #page-logo {
+      filter: invert(1);
+    }
+    #nav-top {
+      filter: invert(1);
+    }
   }
   @media #{$medium-up} {
     height: 200px;
