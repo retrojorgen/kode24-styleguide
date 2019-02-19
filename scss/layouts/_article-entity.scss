@@ -40,16 +40,18 @@
       overflow: visible !important;
       margin-left: calc(50% - 50vw);
       width: 100vw;
+      margin-bottom: 4em;
       @media #{$medium-up} {
         margin-top: -5.9rem;
       }
       figure {
         margin: 0 0 0 0;
-        min-height: 100px;
+        min-height: 400px;
         img {
           width: 100vw;
         }
       }
+
       .text-left,
       .text-right,
       .text-center {
@@ -78,6 +80,9 @@
         .row {
           position: relative;
         }
+      }
+      .columns {
+        width: 100%;
       }
     }
     .intro {
