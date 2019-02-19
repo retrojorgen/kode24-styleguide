@@ -11,6 +11,10 @@
   margin-bottom: 0;
   height: 130px;
   margin-top: 0;
+
+  &.invert {
+    filter: invert(1);
+  }
   @media #{$medium-up} {
     height: 200px;
   }
