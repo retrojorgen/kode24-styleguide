@@ -36,13 +36,16 @@
     }
     .full-bleed {
       position: relative;
-      margin-top: -5.9rem;
+      margin-top: -6.5rem;
       overflow: visible !important;
       margin-left: calc(50% - 50vw);
       width: 100vw;
+      @media #{$medium-up} {
+        margin-top: -5.9rem;
+      }
       figure {
         margin: 0 0 0 0;
-
+        min-height: 100px;
         img {
           width: 100vw;
         }
