@@ -25,7 +25,9 @@ $dark-color: #333;
   .article-entity {
     header {
       .full-bleed {
-        .text-left {
+        .text-left,
+        .text-center,
+        .text-right {
           bottom: 52px;
         }
       }
