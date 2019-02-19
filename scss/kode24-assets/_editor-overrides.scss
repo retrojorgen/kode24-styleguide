@@ -22,4 +22,10 @@ $dark-color: #333;
   blockquote {
     -webkit-text-fill-color: unset;
   }
+
+  .full-bleed {
+    .text-left {
+      bottom: 52px;
+    }
+  }
 }
