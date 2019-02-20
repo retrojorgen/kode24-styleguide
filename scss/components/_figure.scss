@@ -94,22 +94,21 @@
 // Styleguide 10.4
 
 figure {
-    margin: 0 0 rem-calc(15) 0;
+  margin: 0 0 rem-calc(15) 0;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .flex-video {
+    margin-bottom: 0;
+  }
+
+  figcaption {
+    padding-top: 1rem;
     position: relative;
-
-    img{
-        width: 100%;
-    }
-
-    .flex-video{
-        margin-bottom: 0;
-    }
-
-    figcaption {
-        padding-top: 1rem;
-        position: relative;
-    }
-
+  }
 }
 
 // Expandable
@@ -127,23 +126,23 @@ figure {
 //
 // Styleguide 10.4.1
 
-@mixin caption-expanded(){
-    white-space: normal;
-    padding-right: 0;
-    .toggle{
-        display: none;
-    }
+@mixin caption-expanded() {
+  white-space: normal;
+  padding-right: 0;
+  .toggle {
+    display: none;
+  }
 }
 
-@mixin caption-contracted(){
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-right: 20%;
+@mixin caption-contracted() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20%;
 }
 
-figcaption{
-    /**
+figcaption {
+  /**
     &[data-expand]{
         @media #{$small-only}{
             @include caption-contracted;
@@ -164,9 +163,30 @@ figcaption{
         }
     }
     **/
-    .toggle{
-        display: none;
+  .toggle {
+    display: none;
+  }
+}
+
+.feature {
+  figcaption {
+    &[data-expand] {
+      @media #{$small-only} {
+        @include caption-contracted;
+        &.active {
+          @include caption-expanded;
+        }
+        .toggle {
+          position: absolute;
+          right: 0;
+          width: 20%;
+          text-indent: 0.4rem;
+        }
+      }
+      @media #{$medium-up} {
+      }
     }
+  }
 }
 
 // Border
@@ -181,10 +201,10 @@ figcaption{
 //
 // Styleguide 10.5
 
-img{
-    &.border{
-        border: 1px solid $secondary-color;
-    }
+img {
+  &.border {
+    border: 1px solid $secondary-color;
+  }
 }
 
 // Passepartout
@@ -199,11 +219,11 @@ img{
 //
 // Styleguide 10.5.1
 
-img{
-    &.passepartout{
-        border: 1px solid $secondary-color;
-        padding: 3px;
-    }
+img {
+  &.passepartout {
+    border: 1px solid $secondary-color;
+    padding: 3px;
+  }
 }
 
 // Group
@@ -241,45 +261,45 @@ img{
 //
 // Styleguide 10.8.2
 
-figure.group{
-    img{
+figure.group {
+  img {
+    margin-bottom: 1rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @media #{$medium-up} {
+    img {
+      float: left;
+      &:last-of-type {
         margin-bottom: 1rem;
-        &:last-of-type{
-            margin-bottom: 0;
-        }
+      }
     }
-    @media #{$medium-up}{
-        img{
-            float: left;
-            &:last-of-type{
-                margin-bottom: 1rem;
-            }
+    &.two {
+      img {
+        width: 50%;
+        &:nth-child(odd) {
+          padding-right: 0.5rem;
         }
-        &.two{
-            img{
-                width: 50%;
-                &:nth-child(odd){
-                    padding-right: 0.5rem;
-                }
-                &:nth-child(even){
-                    padding-left: 0.5rem;
-                }
-            }
+        &:nth-child(even) {
+          padding-left: 0.5rem;
         }
-        &.three{
-            img{
-                width: 33.3333%;
-                &:nth-child(3n+1){
-                    padding-right: 0.66rem;
-                }
-                &:nth-child(3n+2){
-                    padding-right: 0.33rem;
-                    padding-left: 0.33rem;
-                }
-                &:nth-child(3n+3){
-                    padding-left: 0.66rem;
-                }
-            }
-        }
+      }
     }
+    &.three {
+      img {
+        width: 33.3333%;
+        &:nth-child(3n + 1) {
+          padding-right: 0.66rem;
+        }
+        &:nth-child(3n + 2) {
+          padding-right: 0.33rem;
+          padding-left: 0.33rem;
+        }
+        &:nth-child(3n + 3) {
+          padding-left: 0.66rem;
+        }
+      }
+    }
+  }
 }
