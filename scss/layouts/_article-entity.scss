@@ -404,26 +404,28 @@
 .article-entity {
   figure {
     @media #{$large-up} {
-      &.bleed-out-large-1 {
-        margin-left: -1em;
-        width: calc(100% + 2em);
-      }
-      &.bleed-out-large-2 {
-        margin-left: -2em;
-        width: calc(100% + 4em);
-      }
-      &.bleed-out-large-3 {
-        margin-left: -3em;
-        width: calc(100% + 6em);
-      }
-      &.bleed-out-large-4 {
-        margin-left: -4em;
-        width: calc(100% + 8em);
-      }
-      &.full-bleed {
-        width: 100vw !important;
-        margin-left: calc(63.125rem / 2 - 50vw);
-        left: 0 !important;
+      &:not(.active) {
+        &.bleed-out-large-1 {
+          margin-left: -1em;
+          width: calc(100% + 2em);
+        }
+        &.bleed-out-large-2 {
+          margin-left: -2em;
+          width: calc(100% + 4em);
+        }
+        &.bleed-out-large-3 {
+          margin-left: -3em;
+          width: calc(100% + 6em);
+        }
+        &.bleed-out-large-4 {
+          margin-left: -4em;
+          width: calc(100% + 8em);
+        }
+        &.full-bleed {
+          width: 100vw !important;
+          margin-left: calc(63.125rem / 2 - 50vw);
+          left: 0 !important;
+        }
       }
     }
   }
