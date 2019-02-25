@@ -1,6 +1,7 @@
 $(function() {
+  console.log("running track");
   if (window.location.pathname.indexOf("/jobb/") > -1) {
-    console.log("adding ad");
+    console.log("adding track");
     const articleArray = /[A-Za-z:]*\/\/[0-9a-z\.:]*\/[a-z]*\/[a-z-]*\/([0-9]*).*/.exec(
       window.location.href
     );
