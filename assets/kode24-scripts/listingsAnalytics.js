@@ -1,7 +1,6 @@
 $(function() {
   console.log("running track");
   if (window.location.pathname.indexOf("/jobb/") > -1) {
-    console.log("adding track");
     const articleArray = /[A-Za-z:]*\/\/[0-9a-z\.:]*\/[a-z]*\/[a-z-]*\/([0-9]*).*/.exec(
       window.location.href
     );
@@ -9,9 +8,10 @@ $(function() {
     const articleObject = {
       articleId: articleId,
       clicked: new Date(),
-      url: window.location.url,
+      url: window.location.href,
       referrerUrl: document.referrer
     };
+    console.log("adding track", articleObject);
     if (articleId.length > 1) {
       $.post(
         "https://kode24-joblisting.herokuapp.com/api/listing/add/click",
