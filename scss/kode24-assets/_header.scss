@@ -30,6 +30,7 @@
     flex-direction: row;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
+    z-index: 1000;
     @media #{$large-up} {
       overflow: hidden;
     }
