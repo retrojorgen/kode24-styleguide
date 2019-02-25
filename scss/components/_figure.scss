@@ -168,27 +168,6 @@ figcaption {
   }
 }
 
-.feature {
-  figcaption {
-    &[data-expand] {
-      @media #{$small-only} {
-        @include caption-contracted;
-        &.active {
-          @include caption-expanded;
-        }
-        .toggle {
-          position: absolute;
-          right: 0;
-          width: 20%;
-          text-indent: 0.4rem;
-        }
-      }
-      @media #{$medium-up} {
-      }
-    }
-  }
-}
-
 // Border
 //
 // Applies only to images inside the figure
