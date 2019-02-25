@@ -19,9 +19,12 @@ $(function() {
       );
     }
     $("a").on("click", event => {
+      console.log("yo");
       let target = $(event.target);
       let url = target.prop("href");
+      console.log("href", url, url.indexOf("kode24.no"));
       if (url.indexOf("kode24.no") < 0) {
+        console.log("posting");
         $.post(
           "https://kode24-joblisting.herokuapp.com/api/listing/add/otherclick",
           {
