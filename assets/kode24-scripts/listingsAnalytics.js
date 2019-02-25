@@ -18,6 +18,20 @@ $(function() {
         articleObject
       );
     }
+    $("a").on("click", event => {
+      let target = $(event.target);
+      let url = target.prop("href");
+      if (url.indexOf("kode24.no") < 0) {
+        $.post(
+          "https://kode24-joblisting.herokuapp.com/api/listing/add/otherclick",
+          {
+            articleId: articleId,
+            clicked: new Date(),
+            url: url
+          }
+        );
+      }
+    });
     $(".job-ad-cta").on("click", () => {
       $.post(
         "https://kode24-joblisting.herokuapp.com/api/listing/add/appliedclick",
