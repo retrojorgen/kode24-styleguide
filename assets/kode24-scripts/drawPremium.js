@@ -112,7 +112,7 @@ function drawPremium(banner, element, parent, jobDocuments) {
           imageWidth = 600;
           cropw = mobileViewport.mobile.fields.cropw || 53;
           croph = mobileViewport.mobile.fields.croph || 100;
-          posx = mobileViewport.mobile.fields.x || 38;
+          posx = mobileViewport.mobile.fields.x || 0;
           posy = mobileViewport.mobile.fields.y || 0;
           wratio =
             mobileViewport &&
