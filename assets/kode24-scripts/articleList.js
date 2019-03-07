@@ -267,7 +267,7 @@ function drawFrontArticles(articles) {
   articles.forEach(function(article, index) {
     var articleElement = $(`
         <article class="article">
-        <a class="article-link" href="//kode24.no${article.url}">
+        <a class="article-link" href="${article.url}">
          <div class="article-image"><img src="//dbstatic.no/${
            article.imageUrl
          }"></div>
