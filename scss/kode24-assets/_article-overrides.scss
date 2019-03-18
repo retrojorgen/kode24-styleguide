@@ -23,7 +23,7 @@ code.hljs {
 .article-entity {
   a {
     text-decoration: none;
-    cursor:pointer;
+    cursor: pointer;
     &:hover,
     &:active {
       color: inherit;
@@ -42,7 +42,7 @@ code.hljs {
   }
 }
 
-.body-copy >div {
+.body-copy > div {
   margin-bottom: 20px;
 }
 
@@ -63,8 +63,6 @@ code.hljs {
 .facebook-comments .columns {
   float: none;
 }
-
-
 
 a.job-ad-cta {
   display: inline-block;
@@ -98,4 +96,9 @@ a.job-ad-cta {
 .body-copy .columns {
   padding-left: 0;
   padding-right: 0;
+}
+
+article.preview .label:last-of-type {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
