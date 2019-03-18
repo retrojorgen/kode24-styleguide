@@ -3,28 +3,26 @@ main.frontpage .row:first-child {
   overflow: hidden;
 }
 
-main.frontpage .row:nth-child(1n+3) {
+main.frontpage .row:nth-child(1n + 3) {
   padding-left: 10px;
   padding-right: 10px;
-  @media #{$medium-up}{
+  @media #{$medium-up} {
     padding-left: 0;
     padding-right: 0;
   }
   article {
     margin-top: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    @media #{$medium-up}{
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    @media #{$medium-up} {
       margin-top: 0;
     }
   }
-  
 }
-
 
 .frontpage .jobb {
   margin-top: 10px;
   margin-bottom: 10px;
-  
+
   .preview {
     background: transparent;
     h1 {
@@ -47,16 +45,27 @@ main.frontpage .row:nth-child(1n+3) {
   }
 }
 
-
 main.frontpage .row .preview {
   &.native-advertisement {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  @media #{$medium-up}{
+  @media #{$medium-up} {
     margin-bottom: 10px;
     &.native-advertisement {
       margin-bottom: 20px;
+    }
+  }
+  .article-preview-text {
+    .labels {
+      .label {
+        padding: 7px 6px;
+        color: #ffffff;
+        font-size: 14px;
+        @media #{$medium-up} {
+          font-size: 15px;
+        }
+      }
     }
   }
 }
@@ -64,8 +73,8 @@ main.frontpage .row .preview {
 article.preview.native-advertisement a {
   background: linear-gradient(45deg, #a51ac2, #ff8d00);
   padding: 0;
-  
-  @media #{$medium-up}{
+
+  @media #{$medium-up} {
     padding: 0;
   }
   overflow: hidden;
@@ -76,11 +85,10 @@ article.preview.native-advertisement a {
     left: -1.3rem;
     width: calc(100% + 2.6rem);
     bottom: 0;
-    
-    @media #{$medium-up}{
+
+    @media #{$medium-up} {
       left: -3.8rem;
       width: calc(100% + 7.6rem);
-      
     }
   }
 }
@@ -95,12 +103,12 @@ article.preview.native-advertisement a {
     article.preview.small-6 + article.preview.small-6 {
       padding-right: 0;
       padding-left: 5px;
-    }  
+    }
   }
-}  
+}
 
-@media #{$medium-up}{
-  .frontpage {  
+@media #{$medium-up} {
+  .frontpage {
     article.preview.large-6,
     article.preview.large-7,
     article.preview.large-5 {
@@ -134,28 +142,24 @@ article.preview.native-advertisement a {
 .article-entity {
   .front_rows.job-carousel {
     float: left;
-  }  
+  }
 }
 
 .row.job-carousel,
 .front_rows.job-carousel {
-   display: none;
- }
-
-
+  display: none;
+}
 
 .frontpage .auto-job-carousel {
   display: block;
 }
-
-
 
 .auto-job-carousel {
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
   display: none;
-  @media #{$medium-up}{
+  @media #{$medium-up} {
     background-color: transparent;
     width: 100%;
     display: block;
@@ -163,7 +167,7 @@ article.preview.native-advertisement a {
   .slick-slider {
     margin-left: calc(-0.9375rem - -6px);
     width: calc(100% + 0.9375rem + 5px);
-    @media #{$medium-up}{
+    @media #{$medium-up} {
       margin-left: 0;
       width: auto;
     }
@@ -182,7 +186,7 @@ article.preview.native-advertisement a {
       z-index: 40;
       display: block;
       pointer-events: none;
-      @media #{$medium-up}{
+      @media #{$medium-up} {
         width: 150px;
       }
     }
@@ -212,7 +216,7 @@ article.preview.native-advertisement a {
     margin-right: 10px;
     background-size: cover;
     background-position: top center;
-    @media #{$medium-up}{
+    @media #{$medium-up} {
       float: none;
       margin-right: 0;
       width: 100%;
@@ -227,17 +231,17 @@ article.preview.native-advertisement a {
     position: relative;
     box-shadow: none !important;
     margin-top: 0 !important;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    &:nth-child(1n+4) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &:nth-child(1n + 4) {
       display: none;
     }
 
-    @media #{$medium-up}{
+    @media #{$medium-up} {
       display: inline-block;
       width: 33%;
       padding: 20px;
       border-bottom: 0;
-      &:nth-child(1n+4) {
+      &:nth-child(1n + 4) {
         display: inline-block;
       }
     }
@@ -245,21 +249,19 @@ article.preview.native-advertisement a {
       position: relative;
     }
     h1.headline {
-      
       font-size: 14px;
       line-height: 21px;
       margin-top: 0;
-      @media #{$medium-up}{
+      @media #{$medium-up} {
         font-size: 16px;
         line-height: 1.4;
       }
     }
     p.standfirst {
-      
       font-size: 14px;
       margin-top: -9px;
       margin-bottom: 0;
-      @media #{$medium-up}{
+      @media #{$medium-up} {
         font-size: 16px;
         margin-top: 0;
       }
@@ -269,15 +271,13 @@ article.preview.native-advertisement a {
       .label {
         background: linear-gradient(45deg, #a51ac2, #ff8d00);
       }
-      @media #{$medium-up}{
+      @media #{$medium-up} {
         text-align: left;
       }
     }
   }
-  
 
   .more-jobs {
-    
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -321,7 +321,6 @@ article.preview.native-advertisement a {
     }
   }
 
-
   .slick-arrow {
     position: absolute;
     cursor: pointer;
@@ -331,7 +330,7 @@ article.preview.native-advertisement a {
     width: 50px;
     height: 50px;
     background: linear-gradient(90deg, #a51ac2, #643fb5);
-    box-shadow: 0 1px 7px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
     &::before {
       position: absolute;
       left: 0;
@@ -356,7 +355,6 @@ article.preview.native-advertisement a {
       }
     }
   }
-
 }
 
 .fb_iframe_widget_fluid {
@@ -366,7 +364,7 @@ article.preview.native-advertisement a {
 article.preview.small-6 .article-preview-text {
   width: calc(100% - 2rem);
   left: 0.75rem;
-  @media #{$medium-up}{
+  @media #{$medium-up} {
     left: 3.75rem;
     width: calc(100% - 7.5rem);
   }
@@ -376,12 +374,11 @@ article.preview.small-6 .article-preview-text {
   height: auto;
 }
 
-
 .carousel-ad-byline {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
+
   margin-bottom: 0;
   @media #{$medium-up} {
     margin-top: -14px;
@@ -416,7 +413,6 @@ article.preview.small-6 .article-preview-text {
   }
 }
 
-
 .carousel.article-preview-text {
   .carousel-ad-byline {
     padding: 0;
@@ -424,11 +420,10 @@ article.preview.small-6 .article-preview-text {
   }
   .headline,
   .standfirst {
-      padding-left: 90px;
+    padding-left: 90px;
   }
 
-  @media #{$medium-up}{
-  
+  @media #{$medium-up} {
     .carousel-ad-byline {
       margin-bottom: 8px;
     }
@@ -437,7 +432,7 @@ article.preview.small-6 .article-preview-text {
     .headline,
     .standfirst {
       padding-left: 90px;
-    }  
+    }
   }
   .headline {
     font-size: 17px;
