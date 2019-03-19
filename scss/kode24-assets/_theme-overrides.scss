@@ -11,6 +11,7 @@ h6 {
 }
 
 aside.panel {
+  word-break: break-word;
   h5 {
     color: lighten($body-font-color, 20%);
   }
