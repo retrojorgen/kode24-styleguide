@@ -219,11 +219,11 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #821599, #492792);
+  background: linear-gradient(0deg, #821599, #492792);
   border-radius: 0;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #821599, #492792);
+  background: linear-gradient(0deg, #821599, #492792);
 }
