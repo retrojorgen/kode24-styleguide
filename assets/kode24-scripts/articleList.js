@@ -221,7 +221,7 @@ function drawContentAd(contentAds) {
     var adsContainer = $(
       '<div class="aside-container ads"><h3>Anonsørinnhold</h3></div>'
     );
-    var contentAdElement = $(`<a class="premium-ad ad" href="//kode24.no${
+    var contentAdElement = $(`<a class="premium-ad content-ad ad" href="//kode24.no${
       contentAd.published_url
     }">
             <div class="ad-image"><img src="//dbstatic.no/${
