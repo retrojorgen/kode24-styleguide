@@ -1,6 +1,4 @@
-console.log("waiting for callback");
 $(function() {
-  console.log("adding content");
   var adsList = [];
   var premiumAdsList = [];
   var autoJobcarousel = $(".auto-job-carousel");
@@ -10,22 +8,26 @@ $(function() {
     premiumAdsList = premiumAds;
     getArticlesByTag(function(articles, tag) {
       getFrontArticles(function(frontArticles) {
-        drawAside(
-          adsList,
-          premiumAdsList,
-          articles,
-          tag,
-          frontArticles,
-          articleHeight
-        );
+        getContentAds(function(contentAds) {
+          drawAside(
+            adsList,
+            premiumAdsList,
+            articles,
+            tag,
+            frontArticles,
+            articleHeight,
+            contentAds
+          );
 
-        drawFooterContent(
-          adsList,
-          premiumAdsList,
-          articles,
-          tag,
-          frontArticles
-        );
+          drawFooterContent(
+            adsList,
+            premiumAdsList,
+            articles,
+            tag,
+            frontArticles,
+            contentAds
+          );
+        });
       });
     });
   });
@@ -45,7 +47,6 @@ function drawFooterContent(
   tag,
   frontArticles
 ) {
-  console.log("Drawing footer");
   var footerContent = $('<div class="footer-content row"></div>');
   var relatedArticlesElements = drawRelatedArticleElements(
     articles,
@@ -214,6 +215,35 @@ function drawRegularAd(ad) {
   return adElement;
 }
 
+function drawContentAd(contentAds) {
+  if (contentAds.length) {
+    var contentAd = contentAds[0]; // pick the first one for now
+    var adsContainer = $(
+      '<div class="aside-container ads"><h3>Anonsørinnhold</h3></div>'
+    );
+    var contentAdElement = $(`<a class="premium-ad ad" href="//kode24.no${
+      contentAd.published_url
+    }">
+            <div class="ad-image"><img src="//dbstatic.no/${
+              contentAd.image
+            }.jpg?width=400"></div>
+            <div class="ad-text">
+                <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
+                  contentAd.full_bylines[0].imageUrl
+                })"></div>
+                <h4>${contentAd.full_bylines[0].firstname}</h4>
+                <h5>${contentAd.title}</h5>
+                <h6>${contentAd.subtitle}</h6>
+            </div>
+            
+        </a>`);
+    adsContainer.append(contentAdElement);
+    return adsContainer;
+  } else {
+    return "";
+  }
+}
+
 function drawAdsContainer(adsList, premiumAdsList) {
   /** Draw ads-container */
   var adsContainer = $(
@@ -288,13 +318,15 @@ function drawAside(
   articles,
   tag,
   articlesFront,
-  articleHeight
+  articleHeight,
+  contentAdsList
 ) {
   var asideContent = $("<div></div>").addClass("aside-desktop");
 
+  var contentAdsContainer = drawContentAd(contentAdsList);
   var adsContainer = drawAdsContainer(adsList, premiumAdsList);
   var adsContainerHeight = 1884;
-  asideContent.append(adsContainer);
+  asideContent.append(contentAdsContainer, adsContainer);
 
   var relatedContainer = drawRelatedArticles(articles, tag);
   var relatedContainerHeight = 856;
@@ -312,7 +344,6 @@ function drawAside(
   $(".body-copy")
     .parent()
     .append(asideContent);
-  console.log("drawing aside", $(".body-copy"));
 }
 
 function getRegularAdsElements(adsList, premiumAdId) {
@@ -403,6 +434,18 @@ function getFrontArticles(callback) {
 
     callback(articles);
   });
+}
+
+function getContentAds(callback) {
+  getUrl(
+    "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:annonse&limit=50&orderBy=published&site_id=207",
+    function(data) {
+      var contentAds = data.result.filter(
+        ad => ad.tags.indexOf("content") > -1
+      );
+      callback(contentAds);
+    }
+  );
 }
 
 function getArticlesByTag(callback) {
