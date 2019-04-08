@@ -46,6 +46,7 @@ main.frontpage .row:nth-child(1n + 3) {
 }
 
 main.frontpage .row .preview {
+  margin-bottom: 20px;
   &.native-advertisement {
     .label-text {
       display: none;
