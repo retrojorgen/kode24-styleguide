@@ -60,8 +60,6 @@ main.frontpage .row .preview {
     }
   }
   &.large-6 {
-    margin-top: 20px;
-    margin-bottom: 20px;
     &.native-advertisement {
       @media #{$medium-up} {
         margin-top: 0;
