@@ -47,15 +47,29 @@ main.frontpage .row:nth-child(1n + 3) {
 
 main.frontpage .row .preview {
   &.native-advertisement {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  @media #{$medium-up} {
-    margin-bottom: 10px;
-    &.native-advertisement {
-      margin-bottom: 20px;
+    .label-text {
+      display: none;
     }
   }
+  &.large-12 {
+    &.native-advertisement {
+      @media #{$medium-up} {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &.large-6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &.native-advertisement {
+      @media #{$medium-up} {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .article-preview-text {
     .labels {
       .label {
