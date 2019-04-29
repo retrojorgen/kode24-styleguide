@@ -31,13 +31,15 @@
     -webkit-overflow-scrolling: touch;
     overflow: auto;
     z-index: 1001;
-    &.sticky {
-      #header-wrap {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 1001;
+    @media #{$large-up} {
+      &.sticky {
+        #header-wrap {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          z-index: 1001;
+        }
       }
     }
     @media #{$large-up} {
@@ -213,9 +215,11 @@
   background: linear-gradient(45deg, #821599, #492792);
   flex-direction: row;
   height: 70px;
-  &.sticky {
-    position: fixed;
-    z-index: 1000;
+  @media #{$large-up} {
+    &.sticky {
+      position: fixed;
+      z-index: 1000;
+    }
   }
 }
 
