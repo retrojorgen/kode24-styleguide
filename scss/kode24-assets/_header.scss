@@ -30,14 +30,14 @@
     flex-direction: row;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
-    z-index: 1000;
+    z-index: 1001;
     &.sticky {
       #header-wrap {
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
-        z-index: 1000;
+        z-index: 1001;
       }
     }
     @media #{$large-up} {
