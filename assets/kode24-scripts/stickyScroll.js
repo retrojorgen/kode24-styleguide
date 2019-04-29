@@ -4,14 +4,16 @@ if (window.location.pathname !== "/") {
   var headerCloack = document.getElementById("header-cloak");
   var alwaysSticky = false;
 
-  if (!document.querySelector("article header .full-bleed")) {
-    console.log("sticky");
-    headerNavigation.classList.add("sticky");
-    headerCloack.classList.add("sticky");
-    alwaysSticky = true;
-  } else {
-    console.log("non sticky header");
-  }
+  document.addEventListener("DOMContentLoaded", event => {
+    if (!document.querySelector("article header .full-bleed")) {
+      console.log("sticky");
+      headerNavigation.classList.add("sticky");
+      headerCloack.classList.add("sticky");
+      alwaysSticky = true;
+    } else {
+      console.log("non sticky header");
+    }
+  });
 
   window.onscroll = function() {
     if (window.pageYOffset > 0) {
