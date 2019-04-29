@@ -17,7 +17,7 @@ if (window.location.pathname !== "/") {
     if (window.pageYOffset > 0) {
       headerNavigation.classList.add("sticky");
       headerCloack.classList.add("sticky");
-    } else if (alwaysSticky) {
+    } else if (!alwaysSticky) {
       headerNavigation.classList.remove("sticky");
       headerCloack.classList.remove("sticky");
     }
