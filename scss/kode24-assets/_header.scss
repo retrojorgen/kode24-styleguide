@@ -24,13 +24,21 @@
     height: 200px;
   }
   &.article {
-    height: auto;
+    height: 63.99px;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
     z-index: 1000;
+    &.sticky {
+      #header-wrap {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
     @media #{$large-up} {
       overflow: hidden;
     }
@@ -204,6 +212,10 @@
   background: linear-gradient(45deg, #821599, #492792);
   flex-direction: row;
   height: 70px;
+  &.sticky {
+    position: fixed;
+    z-index: 1000;
+  }
 }
 
 ::-webkit-scrollbar {
