@@ -215,8 +215,15 @@
   background: linear-gradient(45deg, #821599, #492792);
   flex-direction: row;
   height: 70px;
+  transform: translateY(-70px);
+  transition: all 0.25s ease-out;
+  opacity: 0;
   @media #{$large-up} {
+    position: fixed;
     &.sticky {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.25s ease-out;
       position: fixed;
       z-index: 1000;
     }
