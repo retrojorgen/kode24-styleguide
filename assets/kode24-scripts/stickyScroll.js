@@ -9,6 +9,8 @@ if (window.location.pathname !== "/") {
     headerNavigation.classList.add("sticky");
     headerCloack.classList.add("sticky");
     alwaysSticky = true;
+  } else {
+    console.log("non sticky header");
   }
 
   window.onscroll = function() {
