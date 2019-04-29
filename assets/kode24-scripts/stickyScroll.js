@@ -6,7 +6,7 @@ if (window.location.pathname !== "/") {
 
   document.addEventListener("DOMContentLoaded", event => {
     if (!document.querySelector("article header .full-bleed")) {
-      console.log("sticky");
+      console.log("sticky no animation");
       headerNavigation.classList.add("sticky");
       headerCloack.classList.add("sticky no-animation");
       alwaysSticky = true;
