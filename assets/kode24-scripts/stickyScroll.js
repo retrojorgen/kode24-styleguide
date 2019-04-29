@@ -8,7 +8,7 @@ if (window.location.pathname !== "/") {
     if (!document.querySelector("article header .full-bleed")) {
       console.log("sticky no animation");
       headerNavigation.classList.add("sticky");
-      headerCloack.classList.add("sticky no-animation");
+      headerCloack.classList.add("sticky", "no-animation");
       alwaysSticky = true;
     } else {
       console.log("non sticky header");
