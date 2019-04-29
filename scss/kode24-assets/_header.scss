@@ -32,14 +32,12 @@
     overflow: auto;
     z-index: 1001;
     @media #{$large-up} {
-      &.sticky {
-        #header-wrap {
-          position: fixed;
-          left: 0;
-          top: 0;
-          width: 100%;
-          z-index: 1001;
-        }
+      #header-wrap {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1001;
       }
     }
     @media #{$large-up} {
