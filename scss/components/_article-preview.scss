@@ -1,7 +1,3 @@
-
-
-
-
 //
 // Article preview Variables
 //
@@ -12,296 +8,303 @@ $include-html-article-preview-nativeads-classes: $include-html-article-preview-c
 $article-box-preview-padding: $column-gutter * 2;
 $article-box-preview-padding-double: $article-box-preview-padding * 2;
 $article-box-preview-padding-mobile: $column-gutter / 1.5;
-$article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*2;
+$article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile *
+  2;
 
 //
 // Article preview Mixins
 //
 
 .columns {
+  position: unset;
+}
+
+@mixin article-preview-base() {
+  margin-bottom: 0;
+  overflow: hidden;
+  transition: 0.1s ease-in-out;
+  margin-top: 0;
+
+  &:hover {
+    z-index: 900;
+    transform: scale(1.01);
+    box-shadow: 0 4px 11px 2px #00000038;
+  }
+  a {
+    position: relative;
+  }
+  &.columns {
+    padding-right: 0;
+    padding-left: 0;
     position: unset;
-}
+  }
+  &.preview {
+    position: relative;
+  }
 
-@mixin article-preview-base(){
-    margin-bottom: 0;
-    overflow: hidden;
-    transition: 0.1s ease-in-out;
-    margin-top: 0;
-    
-    &:hover {
-        z-index: 1000000;
-        transform: scale(1.01);
-        box-shadow: 0 4px 11px 2px #00000038;
+  header {
+    margin-top: 1.5rem;
+    .full-bleed {
+      width: 100vw;
+      margin-top: -1.5rem;
+      margin-left: calc(50% - 50vw);
     }
-    a {
-        position: relative;
+    figure {
+      padding-left: 0;
+      padding-right: 0;
     }
-    &.columns {
-        padding-right: 0;
-        padding-left: 0;
-        position: unset;
-    }
-    &.preview {
-        position: relative;
-    }
+  }
 
-    header {
-        margin-top: 1.5rem;
-        .full-bleed {
-            width: 100vw;
-            margin-top: -1.5rem;
-            margin-left: calc(50% - 50vw);
+  & > a {
+    overflow: auto;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 0;
+    @media #{$large-up} {
+      &:hover {
+        .headline {
+          text-decoration: underline;
         }
-        figure {
-            padding-left: 0;
-            padding-right: 0;
-        }
+      }
+      &:active {
+        opacity: 0.8;
+      }
     }
-    
+    &.nolink {
+      cursor: default;
+      &:hover {
+        .headline {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 
-    &>a{
-        overflow: auto;
-        display: block;
-        color: inherit;
-        text-decoration: none;
-        padding-bottom: 0;
-        @media #{$large-up}{
-            &:hover{
-                .headline{
-                    text-decoration: underline;
-                }
-            }
-            &:active{
-                opacity: 0.8;
-            }
-        }
-        &.nolink{
-            cursor: default;
-            &:hover{
-                .headline{
-                    text-decoration: none;
-                }
-            }
-        }
-    }
+  figure {
+    margin: 0;
+    padding-bottom: 0;
 
-    figure{
-        margin: 0;
-        padding-bottom: 0;
-        
-        position: relative;
-        overflow: visible;
-        height: 0;
+    position: relative;
+    overflow: visible;
+    height: 0;
 
-        img {
-            position:absolute;
-            height: 100%;
-        }
-        &:before {
-            content: "";
-            z-index: 13;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
-            pointer-events: none;
-        }
+    img {
+      position: absolute;
+      height: 100%;
     }
+    &:before {
+      content: "";
+      z-index: 13;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+    }
+  }
 
-    img{
-        max-width: none;
-        width: 100%;
-        padding: 0;
-        opacity: 1;
-        &.border{
-            border: 1px solid $color-grey;
-        }
+  img {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    opacity: 1;
+    &.border {
+      border: 1px solid $color-grey;
     }
-    &.no-article-image {
-        .article-preview-text {
-            position: relative;
-        }
-    }
+  }
+  &.no-article-image {
     .article-preview-text {
-        display: block;
-        position: absolute;
-        width: calc(100% - #{$article-box-preview-padding-mobile*2});
-        z-index: 12;
-        left: $article-box-preview-padding-mobile;
-        bottom: 0;
-        padding: $article-box-preview-padding-mobile 0;
-        
-        &:before {
-            content: "";
-            position: absolute;
-            left: -$article-box-preview-padding-mobile;
-            width: calc(100% + #{$article-box-preview-padding-mobile*2});
-            height: 60%;
-            bottom: 0;
-            background: linear-gradient(0deg, rgba(0,0,0,0.76) 16%, transparent);
-            pointer-events: none;
-        }
-        .deck,
-        .headline,
-        .standfirst,
-        .labels {
-            position: relative;
-        }
-        @media #{$medium-up}{
-            left: $article-box-preview-padding;
-            width: calc(100% - #{$article-box-preview-padding*2});
-            padding: $article-box-preview-padding/2 0;
-            &:before {
-                left: -$article-box-preview-padding;
-                width: calc(100% + #{$article-box-preview-padding*2});
-            }
-        }
-
+      position: relative;
     }
+  }
+  .article-preview-text {
+    display: block;
+    position: absolute;
+    width: calc(100% - #{$article-box-preview-padding-mobile * 2});
+    z-index: 12;
+    left: $article-box-preview-padding-mobile;
+    bottom: 0;
+    padding: $article-box-preview-padding-mobile 0;
 
-    .deck{
-        color: inherit;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -$article-box-preview-padding-mobile;
+      width: calc(100% + #{$article-box-preview-padding-mobile * 2});
+      height: 60%;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.76) 16%, transparent);
+      pointer-events: none;
     }
-
-    .standfirst{
-        background-color: transparent;
-        font-size: rem-calc(14px);
-        
-        margin-bottom: 0.5rem;
-        line-height: 1.3;
-        color: inherit;
-        display: block;
-        &:after{
-            display: none;
-        }
-        #{$icon}{
-            line-height: 0;
-            position: relative;
-            top: 4px;
-            color: $primary-color;
-            //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
-            margin-right: -0.4em;
-        }
-        @media #{$medium-up}{
-            font-size: rem-calc(18px);
-            line-height: 1.4;
-        }
-    }
-
-    .comments{
-        display: inline-block;
-        font-size: 0.7rem;
-        font-weight: 400;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: $color-darkgrey;
-        &:before{
-            font-family: "Helveticons";
-            content: "\e848";
-            font-size: 0.8rem;
-            position: relative;
-            top: 2px;
-            margin-right: 0.2rem;
-        }
-    }
-
-    .published{
-        background-color: transparent;
-        color: $color-darkgrey;
-        margin-right: 0.5rem;
-        display: none;
-    }
-
-    &.hide-image {
-        figure {
-            display: none;
-        }
-    }
-}
-
-
-
-@mixin article-preview-style($bg: $body-background-color, $color: false, $padding: $article-box-preview-padding, $icon-color: inherit, $linear-gradient: false){
-    $contrasting-color: $color-black;
-    @if color-contrast($bg, rgb(255, 255, 255)) > 4.5 {
-        $contrasting-color: white;
-    } @else if $bg == $color-black {
-        $contrasting-color: white;
-    }
-
-    @if $color{
-        $contrasting-color: $color;
-    }
-
-    @if $linear-gradient {
-        &>a{
-            background: $linear-gradient;
-            padding: 0;
-        }    
-    } else {
-        &>a{
-            background: $bg;
-            padding: 0;
-        }
-    }
-    
-
-    .article-preview-text {
-        &:before {
-            background: linear-gradient(0deg, $bg, transparent);
-        }
-        
-    }
-
-    .kicker{
-        background-color: inherit;
-        color: inherit;
-        margin-top: -#{$padding};
-    }
-
-    @if lightness($bg) < 90%{
-        .published, .comments{
-            color: inherit;
-        }
-    }
-
-    .standfirst{
-        #{$icon}{
-            color: $icon-color;
-        }
-    }
-
-    .label{
-        background-color: $contrasting-color;
-        color: $bg;
-    }
-
     .deck,
-    .headline {
-        text-align: center;
+    .headline,
+    .standfirst,
+    .labels {
+      position: relative;
     }
+    @media #{$medium-up} {
+      left: $article-box-preview-padding;
+      width: calc(100% - #{$article-box-preview-padding * 2});
+      padding: $article-box-preview-padding/2 0;
+      &:before {
+        left: -$article-box-preview-padding;
+        width: calc(100% + #{$article-box-preview-padding * 2});
+      }
+    }
+  }
 
-    .related{
-        background-color: $bg;
-        padding: 0 $padding;
+  .deck {
+    color: inherit;
+  }
+
+  .standfirst {
+    background-color: transparent;
+    font-size: rem-calc(14px);
+
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    color: inherit;
+    display: block;
+    &:after {
+      display: none;
+    }
+    #{$icon} {
+      line-height: 0;
+      position: relative;
+      top: 4px;
+      color: $primary-color;
+      //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
+      margin-right: -0.4em;
+    }
+    @media #{$medium-up} {
+      font-size: rem-calc(18px);
+      line-height: 1.4;
+    }
+  }
+
+  .comments {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-darkgrey;
+    &:before {
+      font-family: "Helveticons";
+      content: "\e848";
+      font-size: 0.8rem;
+      position: relative;
+      top: 2px;
+      margin-right: 0.2rem;
+    }
+  }
+
+  .published {
+    background-color: transparent;
+    color: $color-darkgrey;
+    margin-right: 0.5rem;
+    display: none;
+  }
+
+  &.hide-image {
+    figure {
+      display: none;
+    }
+  }
+}
+
+@mixin article-preview-style(
+  $bg: $body-background-color,
+  $color: false,
+  $padding: $article-box-preview-padding,
+  $icon-color: inherit,
+  $linear-gradient: false
+) {
+  $contrasting-color: $color-black;
+  @if color-contrast($bg, rgb(255, 255, 255)) > 4.5 {
+    $contrasting-color: white;
+  } @else if $bg == $color-black {
+    $contrasting-color: white;
+  }
+
+  @if $color {
+    $contrasting-color: $color;
+  }
+
+  @if $linear-gradient {
+    & > a {
+      background: $linear-gradient;
+      padding: 0;
+    }
+  }
+  else {
+    & > a {
+      background: $bg;
+      padding: 0;
+    }
+  }
+
+  .article-preview-text {
+    &:before {
+      background: linear-gradient(0deg, $bg, transparent);
+    }
+  }
+
+  .kicker {
+    background-color: inherit;
+    color: inherit;
+    margin-top: -#{$padding};
+  }
+
+  @if lightness($bg) < 90% {
+    .published,
+    .comments {
+      color: inherit;
+    }
+  }
+
+  .standfirst {
+    #{$icon} {
+      color: $icon-color;
+    }
+  }
+
+  .label {
+    background-color: $contrasting-color;
+    color: $bg;
+  }
+
+  .deck,
+  .headline {
+    text-align: center;
+  }
+
+  .related {
+    background-color: $bg;
+    padding: 0 $padding;
+    color: inherit;
+    h1 {
+      @include section-title-style(
+        $bg: $bg,
+        $color: $contrasting-color,
+        $border-color: $contrasting-color
+      );
+    }
+    ul {
+      color: inherit;
+      a {
         color: inherit;
-        h1{
-            @include section-title-style($bg: $bg, $color: $contrasting-color, $border-color: $contrasting-color);
-        }
-        ul{
-            color: inherit;
-            a{
-                color: inherit;
-            }
-        }
+      }
     }
+  }
 
-    .actions{
-        background-color: $bg;
-        padding: 0 $padding;
-    }
+  .actions {
+    background-color: $bg;
+    padding: 0 $padding;
+  }
 }
 
 // Extrinsic content
@@ -323,16 +326,25 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.11
 
-@if $include-html-article-preview-classes{
-    $extrinsic-background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
-    article.preview{
-        &.extrinsic{
-            a {
-                background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
-            } 
-            @include article-preview-style($bg: $secondary-color, $color: $body-font-color, $icon-color: $primary-color, $linear-gradient: $extrinsic-background); 
-        }
+@if $include-html-article-preview-classes {
+  $extrinsic-background: linear-gradient(
+    45deg,
+    darken($color-pink, 20%),
+    #492792
+  );
+  article.preview {
+    &.extrinsic {
+      a {
+        background: linear-gradient(45deg, darken($color-pink, 20%), #492792);
+      }
+      @include article-preview-style(
+        $bg: $secondary-color,
+        $color: $body-font-color,
+        $icon-color: $primary-color,
+        $linear-gradient: $extrinsic-background
+      );
     }
+  }
 }
 
 // Article preview
@@ -358,10 +370,10 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.0
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        @include article-preview-base();
-    }
+@if $include-html-article-preview-classes {
+  article.preview {
+    @include article-preview-base();
+  }
 }
 
 // Headlines
@@ -380,17 +392,35 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.1
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        .headline{
-            &.primary, .primary{ color: $primary-color; }
-            &.yellow, .yellow{ color: $color-yellow; }
-            &.green, .green{ color: $color-green; }
-            &.blue, .blue{ color: $color-blue; }
-            &.black, .black{ color: $color-black; }
-            &.secondary, .secondary{ color: $secondary-color; }
-        }
+@if $include-html-article-preview-classes {
+  article.preview {
+    .headline {
+      &.primary,
+      .primary {
+        color: $primary-color;
+      }
+      &.yellow,
+      .yellow {
+        color: $color-yellow;
+      }
+      &.green,
+      .green {
+        color: $color-green;
+      }
+      &.blue,
+      .blue {
+        color: $color-blue;
+      }
+      &.black,
+      .black {
+        color: $color-black;
+      }
+      &.secondary,
+      .secondary {
+        color: $secondary-color;
+      }
     }
+  }
 }
 
 // Standfirst
@@ -438,26 +468,26 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.2.2
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        ul.standfirst{
-            margin-left: -3px;
-            list-style-position: outside;
-            list-style: none;
-            li{
-                position: relative;
-                padding-left: 1.2em;
-                &:before{
-                    content: '\e7b9';
-                    font-family: "Helveticons";
-                    color: $primary-color;
-                    position: absolute;
-                    left: 0;
-                    top: -1px;
-                }
-            }
+@if $include-html-article-preview-classes {
+  article.preview {
+    ul.standfirst {
+      margin-left: -3px;
+      list-style-position: outside;
+      list-style: none;
+      li {
+        position: relative;
+        padding-left: 1.2em;
+        &:before {
+          content: "\e7b9";
+          font-family: "Helveticons";
+          color: $primary-color;
+          position: absolute;
+          left: 0;
+          top: -1px;
         }
+      }
     }
+  }
 }
 
 // Editorial markings
@@ -482,15 +512,15 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.5.1
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        .label{
-            margin-right: 1px;
-            &:last-of-type{
-                margin-right: 0.5rem;
-            }
-        }
+@if $include-html-article-preview-classes {
+  article.preview {
+    .label {
+      margin-right: 1px;
+      &:last-of-type {
+        margin-right: 0.5rem;
+      }
     }
+  }
 }
 
 // Kicker
@@ -514,29 +544,29 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.5.2
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        .kicker{
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            padding: 0.5em 0;
-            font-size: 0.8rem;
-            font-weight: bold;
-            color: $body-bg;
-            background-color: $body-font-color;
-            @media #{$medium-up}{
-                font-size: 1rem;
-            }
-        }
-        &.opinion{
-            .kicker{
-                background-color: $color-black;
-                font-weight: lighter;
-                font-size: 0.8rem;
-             }
-        }
+@if $include-html-article-preview-classes {
+  article.preview {
+    .kicker {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 0.5em 0;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: $body-bg;
+      background-color: $body-font-color;
+      @media #{$medium-up} {
+        font-size: 1rem;
+      }
     }
+    &.opinion {
+      .kicker {
+        background-color: $color-black;
+        font-weight: lighter;
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
 // Deck
@@ -558,17 +588,17 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.5.3
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        .deck{
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 2rem 0 0;
-            margin-bottom: 0;
-            text-transform: uppercase;
-            text-align: left;
-        }
+@if $include-html-article-preview-classes {
+  article.preview {
+    .deck {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 2rem 0 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      text-align: left;
     }
+  }
 }
 // Bylinephoto
 //
@@ -590,32 +620,32 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.5.4
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        img.byline{
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            display: inline-block;
-            margin: -1.5rem $column-gutter / 2 0;
-            position: relative;
-            @media #{$medium-up}{
-                width: 4rem;
-                height: 4rem;
-                margin-top: -2rem;
-            }
-            &+.deck{
-                display: inline-block;
-                position: relative;
-                padding-top: 0;
-                margin-top: 0;
-                top: 0.2rem;
-            }
-            &.no-article-image {
-                margin-top:0;
-            }
-        }
+@if $include-html-article-preview-classes {
+  article.preview {
+    img.byline {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: inline-block;
+      margin: -1.5rem $column-gutter / 2 0;
+      position: relative;
+      @media #{$medium-up} {
+        width: 4rem;
+        height: 4rem;
+        margin-top: -2rem;
+      }
+      & + .deck {
+        display: inline-block;
+        position: relative;
+        padding-top: 0;
+        margin-top: 0;
+        top: 0.2rem;
+      }
+      &.no-article-image {
+        margin-top: 0;
+      }
     }
+  }
 }
 
 // Related
@@ -643,32 +673,32 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.6
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        .related{
-            h1{
-                font-size: 1rem;
-                margin-top: 0;
-                @include section-title-base();
-                @include section-title-style($border-color: $secondary-color);
-            }
-            ul{
-                font-weight: 300;
-                margin-bottom: 0;
-                padding-bottom: 0.8rem;
-                color: $primary-color;
-                a{
-                    color: $ui-color;
-                    &:active{
-                        color: $white;
-                    }
-                    &:visited{
-                        color: $white;
-                    }
-                }
-            }
+@if $include-html-article-preview-classes {
+  article.preview {
+    .related {
+      h1 {
+        font-size: 1rem;
+        margin-top: 0;
+        @include section-title-base();
+        @include section-title-style($border-color: $secondary-color);
+      }
+      ul {
+        font-weight: 300;
+        margin-bottom: 0;
+        padding-bottom: 0.8rem;
+        color: $primary-color;
+        a {
+          color: $ui-color;
+          &:active {
+            color: $white;
+          }
+          &:visited {
+            color: $white;
+          }
         }
+      }
     }
+  }
 }
 
 // Icons
@@ -696,24 +726,24 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.6.1
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        .related{
-            ul.no-bullets{
-                margin-left: 1.5rem;
-                list-style: none;
-                li{
-                    position: relative;
-                    #{$icon}{
-                        font-size: 1.2rem;
-                        top: 2px;
-                        left: -1.5rem;
-                        position: absolute;
-                    }
-                }
-            }
+@if $include-html-article-preview-classes {
+  article.preview {
+    .related {
+      ul.no-bullets {
+        margin-left: 1.5rem;
+        list-style: none;
+        li {
+          position: relative;
+          #{$icon} {
+            font-size: 1.2rem;
+            top: 2px;
+            left: -1.5rem;
+            position: absolute;
+          }
         }
+      }
     }
+  }
 }
 
 // Secondary actions
@@ -751,17 +781,17 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.7
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        .actions{
-            .button{
-                #{$icon}{
-                    //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
-                    margin-right: -0.5rem;
-                }
-            }
+@if $include-html-article-preview-classes {
+  article.preview {
+    .actions {
+      .button {
+        #{$icon} {
+          //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
+          margin-right: -0.5rem;
         }
+      }
     }
+  }
 }
 
 // Background colors
@@ -789,32 +819,37 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.8
 
-@if $include-html-article-preview-background-classes{
-
-    article.preview.primary{
-        @include article-preview-style($bg: $primary-color);
-    }
-    article.preview.sand{
-        @include article-preview-style($bg: $color-sand, $icon-color: $primary-color);
-    }
-    article.preview.yellow{
-        @include article-preview-style($bg: $color-yellow);
-    }
-    article.preview.green{
-        @include article-preview-style($bg: $color-green);
-    }
-    article.preview.blue{
-        @include article-preview-style($bg: $color-blue);
-    }
-    article.preview.secondary{
-        @include article-preview-style($bg: $secondary-color, $icon-color: $primary-color);
-    }
-    article.preview.black{
-        @include article-preview-style($bg: $color-black-transparent, $icon-color: $primary-color);
-    }
-
-
-
+@if $include-html-article-preview-background-classes {
+  article.preview.primary {
+    @include article-preview-style($bg: $primary-color);
+  }
+  article.preview.sand {
+    @include article-preview-style(
+      $bg: $color-sand,
+      $icon-color: $primary-color
+    );
+  }
+  article.preview.yellow {
+    @include article-preview-style($bg: $color-yellow);
+  }
+  article.preview.green {
+    @include article-preview-style($bg: $color-green);
+  }
+  article.preview.blue {
+    @include article-preview-style($bg: $color-blue);
+  }
+  article.preview.secondary {
+    @include article-preview-style(
+      $bg: $secondary-color,
+      $icon-color: $primary-color
+    );
+  }
+  article.preview.black {
+    @include article-preview-style(
+      $bg: $color-black-transparent,
+      $icon-color: $primary-color
+    );
+  }
 }
 
 // Text only
@@ -862,50 +897,48 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.10
 
-@if $include-html-article-preview-classes{
-    article.preview{
-        figure{
-            &.left {
-                margin-right: $column-gutter / 2;
-            }
-            @media #{$small-only}{
-                &.small-only-left {
-                    margin-right: $column-gutter / 2;
-                }
-            }
-            @media #{$medium-only}{
-                &.medium-only-left {
-                    margin-right: $column-gutter / 2;
-                }
-            }
-            @media #{$large-up}{
-                &.large-left {
-                    margin-right: $column-gutter / 2;
-                }
-            }
-            &.right {
-                margin-left: $column-gutter / 2;
-            }
-            @media #{$small-only}{
-                &.small-only-right {
-                    margin-left: $column-gutter / 2;
-                }
-            }
-            @media #{$medium-only}{
-                &.medium-only-right {
-                    margin-left: $column-gutter / 2;
-                }
-            }
-            @media #{$large-up}{
-                &.large-right {
-                    margin-left: $column-gutter / 2;
-                }
-            }
+@if $include-html-article-preview-classes {
+  article.preview {
+    figure {
+      &.left {
+        margin-right: $column-gutter / 2;
+      }
+      @media #{$small-only} {
+        &.small-only-left {
+          margin-right: $column-gutter / 2;
         }
+      }
+      @media #{$medium-only} {
+        &.medium-only-left {
+          margin-right: $column-gutter / 2;
+        }
+      }
+      @media #{$large-up} {
+        &.large-left {
+          margin-right: $column-gutter / 2;
+        }
+      }
+      &.right {
+        margin-left: $column-gutter / 2;
+      }
+      @media #{$small-only} {
+        &.small-only-right {
+          margin-left: $column-gutter / 2;
+        }
+      }
+      @media #{$medium-only} {
+        &.medium-only-right {
+          margin-left: $column-gutter / 2;
+        }
+      }
+      @media #{$large-up} {
+        &.large-right {
+          margin-left: $column-gutter / 2;
+        }
+      }
     }
+  }
 }
-
-
 
 // Native advertising
 //
@@ -925,43 +958,42 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.12
 
-@if $include-html-article-preview-nativeads-classes{
-    article.preview.native-advertisement{
-        .kicker {
-            background: linear-gradient(45deg, #a51ac2, #ff8d00);
-            font-size: .8rem;
-            line-height: 1.63rem;
-            padding: .6rem $column-gutter / 2;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: white !important;
-
-        }
-        .label{
-            background: linear-gradient(45deg, #a51ac2, #ff5200);
-            color: $white;
-        }
-        .label-text{
-            &:before {
-                font-weight: 300;
-                text-align: center;
-                text-decoration: none;
-                line-height: 1;
-                white-space: nowrap;
-                display: inline-block;
-                position: relative;
-                margin-bottom: auto;
-                margin-right: 0.25rem;
-                padding: 0.25rem 0.5rem 0.25rem;
-                font-size: 0.6875rem;
-                background: linear-gradient(45deg, #a51ac2, #ff5200);
-                color: $white;
-            }
-            color: scale-color($native-advertisement-color, $lightness: -10%);
-        }
+@if $include-html-article-preview-nativeads-classes {
+  article.preview.native-advertisement {
+    .kicker {
+      background: linear-gradient(45deg, #a51ac2, #ff8d00);
+      font-size: 0.8rem;
+      line-height: 1.63rem;
+      padding: 0.6rem $column-gutter / 2;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: white !important;
     }
+    .label {
+      background: linear-gradient(45deg, #a51ac2, #ff5200);
+      color: $white;
+    }
+    .label-text {
+      &:before {
+        font-weight: 300;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1;
+        white-space: nowrap;
+        display: inline-block;
+        position: relative;
+        margin-bottom: auto;
+        margin-right: 0.25rem;
+        padding: 0.25rem 0.5rem 0.25rem;
+        font-size: 0.6875rem;
+        background: linear-gradient(45deg, #a51ac2, #ff5200);
+        color: $white;
+      }
+      color: scale-color($native-advertisement-color, $lightness: -10%);
+    }
+  }
 }
 
 // Article preview blog
@@ -985,44 +1017,48 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile*
 //
 // Styleguide 20.15
 
-article.preview.blog{
-    &>a{
-        @media #{$medium-up}{
-            padding: $column-gutter $column-gutter/2;
-        }
-        figure {
-            display: none;
-        }
-        background-size: cover;
-        position: relative;
-        z-index: 1;
-        &:after {
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            display: block;
-            content: '';
-            background-color: rgba(86, 144, 145, 0.9);
-        }
-        h1, h2, p, span, time {
-            position: relative;
-            z-index: 3;
-        }
-        img.byline {
-            display: none;
-        }
+article.preview.blog {
+  & > a {
+    @media #{$medium-up} {
+      padding: $column-gutter $column-gutter/2;
     }
-    .deck{
-        padding-top: 0.2rem;
+    figure {
+      display: none;
     }
-    .headline{
-        font-family: 'Butler', serif;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    &:after {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+      content: "";
+      background-color: rgba(86, 144, 145, 0.9);
     }
-    //Depricated but might be used after all.
-/*     figure{
+    h1,
+    h2,
+    p,
+    span,
+    time {
+      position: relative;
+      z-index: 3;
+    }
+    img.byline {
+      display: none;
+    }
+  }
+  .deck {
+    padding-top: 0.2rem;
+  }
+  .headline {
+    font-family: "Butler", serif;
+  }
+  //Depricated but might be used after all.
+  /*     figure{
         display: none;
         @media #{$medium-up}{
             display: block;
@@ -1081,34 +1117,33 @@ article.preview.blog{
 //
 // Styleguide 20.16
 
-article.preview.horizontal{
-    a{
-        position: relative;
-        padding-left: 6rem + $column-gutter / 2;
-        figure {
-            position: absolute;
-            height: auto;
-            left: 0;
-            width: 6rem;
-            img {
-                position: static;
-                height: auto;
-            }
-        }
-
-        .headline {
-            padding-top: 0;
-            font-size: 1.2em !important;
-        }
-        .standfirst {
-            font-size: 1rem;
-            margin-bottom: 0;
-        }
-        .published {
-            display: inline-block;
-        }
-
+article.preview.horizontal {
+  a {
+    position: relative;
+    padding-left: 6rem + $column-gutter / 2;
+    figure {
+      position: absolute;
+      height: auto;
+      left: 0;
+      width: 6rem;
+      img {
+        position: static;
+        height: auto;
+      }
     }
+
+    .headline {
+      padding-top: 0;
+      font-size: 1.2em !important;
+    }
+    .standfirst {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    .published {
+      display: inline-block;
+    }
+  }
 }
 
 // Kitchen sink
