@@ -29,20 +29,16 @@
     align-items: center;
     flex-direction: row;
     -webkit-overflow-scrolling: touch;
-    overflow: auto;
+    overflow: visible;
     z-index: 1001;
-    @media #{$large-up} {
-      #header-wrap {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 1001;
-      }
+    #header-wrap {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1001;
     }
-    @media #{$large-up} {
-      overflow: hidden;
-    }
+
     #page-logo {
       line-height: 0;
       font-size: 0;
@@ -213,24 +209,21 @@
   background: linear-gradient(45deg, #821599, #492792);
   flex-direction: row;
   height: 70px;
-
-  @media #{$large-up} {
-    transform: translateY(-70px);
+  transform: translateY(-70px);
+  transition: all 0.25s ease-out;
+  opacity: 0;
+  position: fixed;
+  &.no-animation {
+    transition: all 0s linear;
+  }
+  &.sticky {
+    opacity: 1;
+    transform: translateY(0);
     transition: all 0.25s ease-out;
-    opacity: 0;
     position: fixed;
+    z-index: 1000;
     &.no-animation {
       transition: all 0s linear;
-    }
-    &.sticky {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.25s ease-out;
-      position: fixed;
-      z-index: 1000;
-      &.no-animation {
-        transition: all 0s linear;
-      }
     }
   }
 }
