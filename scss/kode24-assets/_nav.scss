@@ -13,13 +13,30 @@
       display: none;
     }
   }
+  &.second {
+    li {
+      a {
+        color: #c431e3;
+        padding: 13px 16px 13px 16px;
+        font-size: 16px;
+        text-transform: none;
+        background: -webkit-linear-gradient(45deg, #dd38ff, #ff4545);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        @media #{$large-up} {
+          padding: 13px 16px 0 16px;
+        }
+      }
+    }
+  }
   .row {
     display: block;
     justify-content: center;
     align-items: center;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    @media #{$medium-up} {
+    @media #{$large-up} {
       display: flex;
       overflow: hidden;
     }
