@@ -26,7 +26,9 @@ $(function() {
                 contentAds
               );
             } else {
-              drawPremiumUnderByline(premiumAdsList);
+              if (window.location.pathname.indexOf("/jobb/") < 0) {
+                drawPremiumUnderByline(premiumAdsList);
+              }
             }
 
             drawFooterContent(
