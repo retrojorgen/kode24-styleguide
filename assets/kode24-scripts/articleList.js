@@ -3,30 +3,41 @@ $(function() {
   var premiumAdsList = [];
   var autoJobcarousel = $(".auto-job-carousel");
   var articleHeight = $("main").height();
-  getAds(function(ads, premiumAds) {
+  var screenWidth = window.screen.width;
+  var mobileThresholdPixels = 640;
+  getAds(function(ads) {
     adsList = ads;
-    premiumAdsList = premiumAds;
     getArticlesByTag(function(articles, tag) {
-      getFrontArticles(function(frontArticles) {
-        getContentAds(function(contentAds) {
-          drawAside(
-            adsList,
-            premiumAdsList,
-            articles,
-            tag,
-            frontArticles,
-            articleHeight,
-            contentAds
-          );
+      getFrontArticles("premium/", false, function(premiumAds) {
+        let filteredAdsList = premiumAds.map(ad => ad.instance_of); // just get ids
+        premiumAdsList = ads.filter(
+          ad => filteredAdsList.indexOf(parseInt(ad.id)) > -1
+        );
+        getFrontArticles("", true, function(frontArticles) {
+          getContentAds(function(contentAds) {
+            if (screenWidth > mobileThresholdPixels) {
+              drawAside(
+                adsList,
+                premiumAdsList,
+                articles,
+                tag,
+                frontArticles,
+                articleHeight,
+                contentAds
+              );
+            } else {
+              drawPremiumUnderByline(premiumAdsList);
+            }
 
-          drawFooterContent(
-            adsList,
-            premiumAdsList,
-            articles,
-            tag,
-            frontArticles,
-            contentAds
-          );
+            drawFooterContent(
+              adsList,
+              premiumAdsList,
+              articles,
+              tag,
+              frontArticles,
+              contentAds
+            );
+          });
         });
       });
     });
@@ -166,14 +177,18 @@ function drawArticle(article) {
   return articleElement;
 }
 
-function drawPremiumAd(premiumAd) {
+function drawPremiumAd(premiumAd, compact) {
   var cities = getCitysFromTags(premiumAd.tags);
   var premiumAdElement = $(`
         <a class="premium-ad ad" href="//kode24.no${premiumAd.published_url}">
+            ${
+              compact
+                ? ""
+                : `<div class="ad-image"><img src="//dbstatic.no/${
+                    premiumAd.image
+                  }.jpg?width=400"></div>`
+            }
             
-            <div class="ad-image"><img src="//dbstatic.no/${
-              premiumAd.image
-            }.jpg?width=400"></div>
             <div class="ad-text">
                     <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
                       premiumAd.full_bylines[0].imageUrl
@@ -242,6 +257,19 @@ function drawContentAd(contentAds) {
   } else {
     return "";
   }
+}
+
+function drawPremiumUnderByline(premiumAdsList) {
+  var premiumAdElement = getPremiumAdsElement(premiumAdsList, true);
+  var adContainerWrapper = $(
+    '<div class="byline-listing"><h3>Ledig stilling</h3></div>'
+  );
+  var adContainer = $('<div class="premium"></div>').append(
+    premiumAdElement.premiumAdElement
+  );
+  adContainerWrapper.append(adContainer);
+  console.log(adContainerWrapper);
+  $(".byline.columns").after(adContainerWrapper);
 }
 
 function drawAdsContainer(adsList, premiumAdsList) {
@@ -376,7 +404,7 @@ function getRegularAdsElements(adsList, premiumAdId) {
   return regularAds;
 }
 
-function getPremiumAdsElement(premiumAdsList) {
+function getPremiumAdsElement(premiumAdsList, compact) {
   var premiumAdElement = undefined;
   shuffleArray(premiumAdsList);
 
@@ -386,9 +414,13 @@ function getPremiumAdsElement(premiumAdsList) {
     premiumAdElement = $(`<a class="premium-ad ad" href="//kode24.no${
       premiumAd.published_url
     }">
-            <div class="ad-image"><img src="//dbstatic.no/${
-              premiumAd.image
-            }.jpg?width=400"></div>
+    ${
+      compact
+        ? ""
+        : `<div class="ad-image"><img src="//dbstatic.no/${
+            premiumAd.image
+          }.jpg?width=400"></div>`
+    }
             <div class="ad-text">
                 <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
                   premiumAd.full_bylines[0].imageUrl
@@ -415,23 +447,21 @@ function getAds(callback) {
     "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+NOT+hidefromfp_time:[*+TO+NOW]+AND+visibility_status:P+AND+section:jobb&site_id=207&limit=2000",
     function(data) {
       var ads = data.result.filter(ad => ad.visibility_status !== "H");
-      var premiumAds = data.result.filter(ad => {
-        return (
-          ad.tags.indexOf("premium-jobb") > -1 ||
-          ad.tags.indexOf("fokus-jobb") > -1
-        );
-      });
-      callback(ads, premiumAds);
+      callback(ads);
     }
   );
 }
 
-function getFrontArticles(callback) {
-  getUrl("//www.kode24.no/?lab_viewport=json", function(data) {
-    var articles = data.result.filter(function(article) {
-      return article.isContentMarketing !== "1";
-    });
-
+function getFrontArticles(front, filterContentMarketing, callback) {
+  getUrl("//www.kode24.no/" + front + "?lab_viewport=json", function(data) {
+    var articles = [];
+    if (filterContentMarketing) {
+      articles = data.result.filter(function(article) {
+        return article.isContentMarketing !== "1";
+      });
+    } else {
+      articles = data.result;
+    }
     callback(articles);
   });
 }
