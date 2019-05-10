@@ -63,3 +63,38 @@
     color: white;
   }
 }
+
+.byline-listing {
+  .premium {
+    clear: both;
+    position: relative;
+    padding: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    .ad-company-logo {
+      top: 44px;
+    }
+    .ad-text,
+    .cities {
+      padding-left: 70px;
+    }
+    h6 {
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    h4 {
+      text-transform: uppercase;
+      font-size: 11px;
+      opacity: 0.7;
+    }
+    .cities {
+      span {
+        text-transform: uppercase;
+        font-size: 10px;
+        background-color: black;
+        padding: 4px;
+      }
+    }
+  }
+}
