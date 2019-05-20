@@ -15,22 +15,22 @@ $(function() {
         );
         getFrontArticles("", true, function(frontArticles) {
           getContentAds(function(contentAds) {
-            if (screenWidth > mobileThresholdPixels) {
-              drawAside(
-                adsList,
-                premiumAdsList,
-                articles,
-                tag,
-                frontArticles,
-                articleHeight,
-                contentAds
-              );
-            } else {
-              if (window.location.pathname.indexOf("/jobb/") < 0) {
-                drawPremiumUnderByline(premiumAdsList);
-              }
-            }
+            drawAside(
+              adsList,
+              premiumAdsList,
+              articles,
+              tag,
+              frontArticles,
+              articleHeight,
+              contentAds
+            );
 
+            if (
+              screenWidth <= mobileThresholdPixels &&
+              window.location.pathname.indexOf("/jobb/") < 0
+            ) {
+              drawPremiumUnderByline(premiumAdsList);
+            }
             drawFooterContent(
               adsList,
               premiumAdsList,
