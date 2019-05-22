@@ -457,6 +457,9 @@ article.preview.small-6 .article-preview-text {
 }
 
 @media (min-width: 1330px) {
+  .aside-container.small {
+    width: 280px;
+  }
   .frontpage.wide {
     width: 1330px;
     max-width: 1330px;
