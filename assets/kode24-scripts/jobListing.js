@@ -1,6 +1,7 @@
 $(function() {
   var adsList = [];
   var premiumAdsList = [];
+
   if (
     window.location.pathname.indexOf("jobb") <= -1 &&
     window.location.pathname.indexOf("sok") <= -1
