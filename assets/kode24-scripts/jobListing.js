@@ -16,6 +16,8 @@ $(function() {
         drawAside(adsList, premiumAdsList);
       });
     });
+  } else {
+    $(".frontpage").removeClass("wide");
   }
 });
 
