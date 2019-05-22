@@ -42,6 +42,12 @@ aside.panel {
 body.light {
   background-color: #f1f1f1;
   color: #333;
+  .frontpage {
+    #desktop-sidemenu-front {
+      color: #333;
+      text-shadow: none;
+    }
+  }
   .google-search .gs-webResult.gs-result a.gs-title:visited,
   .google-search .gs-webResult.gs-result a.gs-title:visited b,
   .google-search .gs-imageResult a.gs-title:visited,
