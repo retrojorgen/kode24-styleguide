@@ -451,3 +451,23 @@ article.preview.small-6 .article-preview-text {
     line-height: 1.4;
   }
 }
+
+#desktop-sidemenu-front a {
+  text-decoration: none;
+}
+
+@media (min-width: 1330px) {
+  .frontpage.wide {
+    width: 1330px;
+    max-width: 1330px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #front-articles-list {
+    width: 1010px;
+  }
+  #desktop-sidemenu-front {
+    width: 300px;
+    height: 400px;
+  }
+}
