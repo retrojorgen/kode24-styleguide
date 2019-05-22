@@ -275,7 +275,8 @@ body.light {
     }
 
     .article-preview-text {
-      h1.headline {
+      h1.headline,
+      h4 {
         text-shadow: none;
         color: #333;
       }
