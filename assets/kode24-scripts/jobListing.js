@@ -1,16 +1,21 @@
 $(function() {
   var adsList = [];
   var premiumAdsList = [];
-  getAds(function(ads) {
-    adsList = ads;
-    getFrontArticles("premium/", false, function(premiumAds) {
-      let filteredAdsList = premiumAds.map(ad => ad.instance_of); // just get ids
-      premiumAdsList = ads.filter(
-        ad => filteredAdsList.indexOf(parseInt(ad.id)) > -1
-      );
-      drawAside(adsList, premiumAdsList);
+  if (
+    window.location.pathname.indexOf("jobb") <= -1 &&
+    window.location.pathname.indexOf("sok") <= -1
+  ) {
+    getAds(function(ads) {
+      adsList = ads;
+      getFrontArticles("premium/", false, function(premiumAds) {
+        let filteredAdsList = premiumAds.map(ad => ad.instance_of); // just get ids
+        premiumAdsList = ads.filter(
+          ad => filteredAdsList.indexOf(parseInt(ad.id)) > -1
+        );
+        drawAside(adsList, premiumAdsList);
+      });
     });
-  });
+  }
 });
 
 function shuffleArray(array) {
