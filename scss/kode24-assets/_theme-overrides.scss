@@ -246,11 +246,10 @@ body.light {
     color: $white;
   }
   aside.panel {
-    h5 {
+    h5,
+    p,
+    ul {
       color: lighten($body-font-color, 20%);
-    }
-    p {
-      color: lighten($body-font-color, 10%);
     }
   }
 
