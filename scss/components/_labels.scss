@@ -43,25 +43,6 @@
 //
 // Styleguide 14.1
 
-.label{
-    &.primary{ @include label-style(); }
-    &.secondary.outline{ border-color: $secondary-color; }
-    &.sand{ @include label-style($bg: $color-sand, $color: $color-black); }
-    &.grey{ @include label-style($bg: $color-lightgrey, $color: $color-black); }
-    &.yellow{ @include label-style($bg: $color-yellow, $color: $color-black); }
-    &.green{ @include label-style($bg: $color-green, $color: $white); }
-    &.blue{ @include label-style($bg: $color-blue, $color: $white); }
-    &.black{ @include label-style($bg: $color-black); }
-    &.white{ @include label-style($bg: $white, $color: $color-black); &.outline{ color: $white; } }
-    &.ui{ @include label-style($bg: $ui-color); }
-    &.transparent{ background-color: transparent; }
-    &.outline{
-        background-color: transparent;
-        border-width: 1px;
-        border-style: solid;
-    }
-}
-
 // Icons
 //
 // Markup:
