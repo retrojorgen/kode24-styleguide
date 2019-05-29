@@ -284,9 +284,13 @@ function drawAdsContainer(adsList, premiumAdsList) {
     var premiumAdElement = premiumAdObject.premiumAdElement;
   }
 
+  var premiumAdId = 0;
+  if(premiumAdObject && premiumAdObject.premiumAdId)
+    premiumAdId = premiumAdObject.premiumAdId;
+
   var regularAdsElements = getRegularAdsElements(
     adsList,
-    premiumAdObject.premiumAdId || 0
+    premiumAdId
   );
   if (premiumAdsList.length && premiumAdElement) adsContainer.append(premiumAdElement);
   if (regularAdsElements) adsContainer.append(regularAdsElements);
