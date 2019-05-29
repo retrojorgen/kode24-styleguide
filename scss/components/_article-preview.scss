@@ -386,36 +386,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.1
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    .headline {
-      &.primary,
-      .primary {
-        color: $primary-color;
-      }
-      &.yellow,
-      .yellow {
-        color: $color-yellow;
-      }
-      &.green,
-      .green {
-        color: $color-green;
-      }
-      &.blue,
-      .blue {
-        color: $color-blue;
-      }
-      &.black,
-      .black {
-        color: $color-black;
-      }
-      &.secondary,
-      .secondary {
-        color: $secondary-color;
-      }
-    }
-  }
-}
 
 // Standfirst
 //
@@ -462,27 +432,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.2.2
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    ul.standfirst {
-      margin-left: -3px;
-      list-style-position: outside;
-      list-style: none;
-      li {
-        position: relative;
-        padding-left: 1.2em;
-        &:before {
-          content: "\e7b9";
-          font-family: "Helveticons";
-          color: $primary-color;
-          position: absolute;
-          left: 0;
-          top: -1px;
-        }
-      }
-    }
-  }
-}
 
 // Editorial markings
 //
@@ -506,16 +455,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.5.1
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    .label {
-      margin-right: 1px;
-      &:last-of-type {
-        margin-right: 0.5rem;
-      }
-    }
-  }
-}
 
 // Kicker
 //
@@ -538,31 +477,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.5.2
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    .kicker {
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      padding: 0.5em 0;
-      font-size: 0.8rem;
-      font-weight: bold;
-      color: $body-bg;
-      background-color: $body-font-color;
-      @media #{$medium-up} {
-        font-size: 1rem;
-      }
-    }
-    &.opinion {
-      .kicker {
-        background-color: $color-black;
-        font-weight: lighter;
-        font-size: 0.8rem;
-      }
-    }
-  }
-}
-
 // Deck
 //
 // An article can have a secondary title.
@@ -582,18 +496,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.5.3
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    .deck {
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 2rem 0 0;
-      margin-bottom: 0;
-      text-transform: uppercase;
-      text-align: left;
-    }
-  }
-}
 // Bylinephoto
 //
 // An article can have a bylinephoto depicting the author of the article.
@@ -614,33 +516,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.5.4
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    img.byline {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      display: inline-block;
-      margin: -1.5rem $column-gutter / 2 0;
-      position: relative;
-      @media #{$medium-up} {
-        width: 4rem;
-        height: 4rem;
-        margin-top: -2rem;
-      }
-      & + .deck {
-        display: inline-block;
-        position: relative;
-        padding-top: 0;
-        margin-top: 0;
-        top: 0.2rem;
-      }
-      &.no-article-image {
-        margin-top: 0;
-      }
-    }
-  }
-}
+
 
 // Related
 //
@@ -667,33 +543,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.6
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    .related {
-      h1 {
-        font-size: 1rem;
-        margin-top: 0;
-        @include section-title-base();
-        @include section-title-style($border-color: $secondary-color);
-      }
-      ul {
-        font-weight: 300;
-        margin-bottom: 0;
-        padding-bottom: 0.8rem;
-        color: $primary-color;
-        a {
-          color: $ui-color;
-          &:active {
-            color: $white;
-          }
-          &:visited {
-            color: $white;
-          }
-        }
-      }
-    }
-  }
-}
+
 
 // Icons
 //
@@ -720,25 +570,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.6.1
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    .related {
-      ul.no-bullets {
-        margin-left: 1.5rem;
-        list-style: none;
-        li {
-          position: relative;
-          #{$icon} {
-            font-size: 1.2rem;
-            top: 2px;
-            left: -1.5rem;
-            position: absolute;
-          }
-        }
-      }
-    }
-  }
-}
+
 
 // Secondary actions
 //
@@ -775,18 +607,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.7
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    .actions {
-      .button {
-        #{$icon} {
-          //NOTE: This fixes a issue with Labrador that needs a &nbsp; inside the span for the icon so that it can be deleted.
-          margin-right: -0.5rem;
-        }
-      }
-    }
-  }
-}
+
 
 // Background colors
 //
@@ -813,38 +634,6 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.8
 
-@if $include-html-article-preview-background-classes {
-  article.preview.primary {
-    @include article-preview-style($bg: $primary-color);
-  }
-  article.preview.sand {
-    @include article-preview-style(
-      $bg: $color-sand,
-      $icon-color: $primary-color
-    );
-  }
-  article.preview.yellow {
-    @include article-preview-style($bg: $color-yellow);
-  }
-  article.preview.green {
-    @include article-preview-style($bg: $color-green);
-  }
-  article.preview.blue {
-    @include article-preview-style($bg: $color-blue);
-  }
-  article.preview.secondary {
-    @include article-preview-style(
-      $bg: $secondary-color,
-      $icon-color: $primary-color
-    );
-  }
-  article.preview.black {
-    @include article-preview-style(
-      $bg: $color-black-transparent,
-      $icon-color: $primary-color
-    );
-  }
-}
 
 // Text only
 //
@@ -891,48 +680,7 @@ $article-box-preview-padding-mobile-double: $article-box-preview-padding-mobile 
 //
 // Styleguide 20.10
 
-@if $include-html-article-preview-classes {
-  article.preview {
-    figure {
-      &.left {
-        margin-right: $column-gutter / 2;
-      }
-      @media #{$small-only} {
-        &.small-only-left {
-          margin-right: $column-gutter / 2;
-        }
-      }
-      @media #{$medium-only} {
-        &.medium-only-left {
-          margin-right: $column-gutter / 2;
-        }
-      }
-      @media #{$large-up} {
-        &.large-left {
-          margin-right: $column-gutter / 2;
-        }
-      }
-      &.right {
-        margin-left: $column-gutter / 2;
-      }
-      @media #{$small-only} {
-        &.small-only-right {
-          margin-left: $column-gutter / 2;
-        }
-      }
-      @media #{$medium-only} {
-        &.medium-only-right {
-          margin-left: $column-gutter / 2;
-        }
-      }
-      @media #{$large-up} {
-        &.large-right {
-          margin-left: $column-gutter / 2;
-        }
-      }
-    }
-  }
-}
+
 
 // Native advertising
 //
