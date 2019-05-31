@@ -512,13 +512,13 @@ $kode24-black: black;
   }
   .headline-title-wrapper {
     .blue {
-      color: $kode24-dark-purple;
+      color: lighten($kode24-dark-purple, 10%);
     }
     .yellow {
       color: $kode24-yellow;
     }
     .pink {
-      color: $kode24-magenta;
+      color: lighten($kode24-magenta, 10%);
     }
     .purple {
       color: $kode24-purple;
