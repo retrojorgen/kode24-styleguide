@@ -45,7 +45,7 @@ main.frontpage .row:nth-child(1n + 3) {
   }
 }
 
-main.frontpage .row .preview {
+.frontpage .preview {
   margin-bottom: 10px;
   &.native-advertisement {
     .label-text {
@@ -69,18 +69,17 @@ main.frontpage .row .preview {
     }
   }
 
-  .article-preview-text {
-    .labels {
-      .label {
-        padding: 7px 6px;
-        color: #ffffff;
-        font-size: 14px;
-        @media #{$medium-up} {
-          font-size: 15px;
-        }
+  .labels {
+    .label {
+      padding: 7px 6px;
+      color: #ffffff;
+      font-size: 14px;
+      @media #{$medium-up} {
+        font-size: 15px;
       }
     }
   }
+    
 }
 
 article.preview.native-advertisement a {
