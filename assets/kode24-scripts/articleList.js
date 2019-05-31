@@ -7,12 +7,19 @@ $(function () {
   var mobileThresholdPixels = 640;
   getAds(function (ads) {
     adsList = ads;
+    adCounterToTopNav(ads.length);
     getArticlesByTag(function (articles, tag) {
       getFrontArticles("premium/", false, function (premiumAds) {
         let filteredAdsList = premiumAds.map(ad => ad.instance_of); // just get ids
         premiumAdsList = ads.filter(
           ad => filteredAdsList.indexOf(parseInt(ad.id)) > -1
         );
+        if (
+          screenWidth <= mobileThresholdPixels &&
+          window.location.pathname.indexOf("/jobb/") < 0
+        ) {
+          drawPremiumUnderByline(premiumAdsList);
+        }
         getFrontArticles("", true, function (frontArticles) {
           getContentAds(function (contentAds) {
             drawAside(
@@ -25,12 +32,7 @@ $(function () {
               contentAds
             );
 
-            if (
-              screenWidth <= mobileThresholdPixels &&
-              window.location.pathname.indexOf("/jobb/") < 0
-            ) {
-              drawPremiumUnderByline(premiumAdsList);
-            }
+
             drawFooterContent(
               adsList,
               premiumAdsList,
@@ -285,7 +287,7 @@ function drawAdsContainer(adsList, premiumAdsList) {
   }
 
   var premiumAdId = 0;
-  if(premiumAdObject && premiumAdObject.premiumAdId)
+  if (premiumAdObject && premiumAdObject.premiumAdId)
     premiumAdId = premiumAdObject.premiumAdId;
 
   var regularAdsElements = getRegularAdsElements(
