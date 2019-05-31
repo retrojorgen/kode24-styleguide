@@ -535,6 +535,8 @@ $kode24-black: black;
   &.yellow {
     .article-preview-text {
       .headline {
+        text-decoration-color: $kode24-black;
+        color: $kode24-black;
         .headline-title-wrapper {
           background-color: $kode24-yellow;
           text-shadow: none;
@@ -547,6 +549,8 @@ $kode24-black: black;
   &.white {
     .article-preview-text {
       .headline {
+        text-decoration-color: $kode24-black;
+        color: $kode24-black;
         .headline-title-wrapper {
           background-color: $kode24-white;
           text-shadow: none;
