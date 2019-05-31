@@ -487,6 +487,30 @@ $kode24-black: black;
 .preview {
   text-indent: 0;
 
+  .labels {
+    .label {
+      &.purple {
+        background-color: $kode24-purple;
+      }
+      &.yellow {
+        background-color: $kode24-yellow;
+        color: #000;
+      }
+      &.white {
+        background-color: $kode24-white;
+        color: #000;
+      }
+      &.blue {
+        background-color: $kode24-dark-purple;
+      }
+      &.pink {
+        background-color: $kode24-magenta;
+      }
+      &.black {
+        background-color: $kode24-black;
+      }
+    }
+  }
   .headline-title-wrapper {
     .blue {
       color: $kode24-dark-purple;
