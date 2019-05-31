@@ -486,6 +486,28 @@ $kode24-black: black;
 // Color overrides
 .preview {
   text-indent: 0;
+
+  .headline-title-wrapper {
+    .blue {
+      color: $kode24-dark-purple;
+    }
+    .yellow {
+      color: $kode24-yellow;
+    }
+    .pink {
+      color: $kode24-magenta;
+    }
+    .purple {
+      color: $kode24-purple;
+    }
+    .black {
+      color: $kode24-black;
+    }
+    .white {
+      color: $kode24-white;
+    }
+  }
+
   &.yellow {
     .article-preview-text {
       .headline {
@@ -516,29 +538,41 @@ $kode24-black: black;
         display: none;
       }
     }
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      bottom: 0;
-      pointer-events: none;
+    a {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        pointer-events: none;
+      }
     }
+    
   }
   &.purple {
-    &:after {
-      background: linear-gradient(0deg, $kode24-purple, transparent);
+    a {
+      &:after {
+        background: linear-gradient(0deg, $kode24-purple, transparent);
+      }
     }
+    
   }
   &.pink {
-    &:after {
-      background: linear-gradient(0deg, $kode24-magenta, transparent);
+    a {
+      &:after {
+        background: linear-gradient(0deg, $kode24-magenta, transparent);
+      }
     }
+    
   }
   &.blue {
-    &:after {
-      background: linear-gradient(0deg, $kode24-dark-purple, transparent);
+    a {
+      &:after {
+        background: linear-gradient(0deg, $kode24-dark-purple, transparent);
+      }
     }
   }
 }
