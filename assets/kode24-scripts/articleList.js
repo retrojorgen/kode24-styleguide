@@ -1,15 +1,16 @@
-$(function () {
+$(function() {
   var adsList = [];
   var premiumAdsList = [];
   var autoJobcarousel = $(".auto-job-carousel");
   var articleHeight = $("main").height();
   var screenWidth = window.screen.width;
   var mobileThresholdPixels = 640;
-  getAds(function (ads) {
+  getAds(function(ads) {
     adsList = ads;
+    console.log("attempting to ad counter");
     adCounterToTopNav(ads.length);
-    getArticlesByTag(function (articles, tag) {
-      getFrontArticles("premium/", false, function (premiumAds) {
+    getArticlesByTag(function(articles, tag) {
+      getFrontArticles("premium/", false, function(premiumAds) {
         let filteredAdsList = premiumAds.map(ad => ad.instance_of); // just get ids
         premiumAdsList = ads.filter(
           ad => filteredAdsList.indexOf(parseInt(ad.id)) > -1
@@ -20,8 +21,8 @@ $(function () {
         ) {
           drawPremiumUnderByline(premiumAdsList);
         }
-        getFrontArticles("", true, function (frontArticles) {
-          getContentAds(function (contentAds) {
+        getFrontArticles("", true, function(frontArticles) {
+          getContentAds(function(contentAds) {
             drawAside(
               adsList,
               premiumAdsList,
@@ -31,7 +32,6 @@ $(function () {
               articleHeight,
               contentAds
             );
-
 
             drawFooterContent(
               adsList,
@@ -161,14 +161,14 @@ function drawArticle(article) {
 
   articleElement = $(`
             <a class="article article-link" href="//kode24.no${
-    article.published_url
-    }">
+              article.published_url
+            }">
         <div class="article-image">
         ${
-    article.images
-      ? `<img src="${article.images[0].url_size}">`
-      : `<img src="//dbstatic.no/${article.image}.jpg?width=600">`
-    }
+          article.images
+            ? `<img src="${article.images[0].url_size}">`
+            : `<img src="//dbstatic.no/${article.image}.jpg?width=600">`
+        }
                     
                 </div>
         <div class="text-content">
@@ -186,17 +186,17 @@ function drawPremiumAd(premiumAd, compact) {
   var premiumAdElement = $(`
         <a class="premium-ad ad" href="//kode24.no${premiumAd.published_url}">
             ${
-    compact
-      ? ""
-      : `<div class="ad-image"><img src="//dbstatic.no/${
-      premiumAd.image
-      }.jpg?width=400"></div>`
-    }
+              compact
+                ? ""
+                : `<div class="ad-image"><img src="//dbstatic.no/${
+                    premiumAd.image
+                  }.jpg?width=400"></div>`
+            }
             
             <div class="ad-text">
                     <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
-    premiumAd.full_bylines[0].imageUrl
-    })"></div>
+                      premiumAd.full_bylines[0].imageUrl
+                    })"></div>
                     <h4>${premiumAd.full_bylines[0].firstname}</h4>
                     <h5>${premiumAd.title}</h5>
                     <h6>${premiumAd.subtitle}</h6>
@@ -205,7 +205,7 @@ function drawPremiumAd(premiumAd, compact) {
         </a>`);
 
   var citiesElement = $('<p class="cities"></p>');
-  cities.forEach(function (city) {
+  cities.forEach(function(city) {
     citiesElement.append($("<span>" + city + "</span>"));
   });
   premiumAdElement.append(citiesElement);
@@ -217,8 +217,8 @@ function drawRegularAd(ad) {
   var adElement = $(`
         <a class="ad" href="//kode24.no${ad.published_url}">
             <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
-    ad.full_bylines[0].imageUrl
-    })">
+              ad.full_bylines[0].imageUrl
+            })">
             </div>
             <h4>
                 ${ad.full_bylines[0].firstname}&nbsp;
@@ -226,7 +226,7 @@ function drawRegularAd(ad) {
             <h5>${ad.title}</h5>
         </a>`);
   var citiesElement = $('<p class="cities"></p>');
-  cities.forEach(function (city) {
+  cities.forEach(function(city) {
     citiesElement.append($("<span>" + city + "</span>"));
   });
 
@@ -242,14 +242,14 @@ function drawContentAd(contentAds) {
     );
     var contentAdElement = $(`<a class="premium-ad content-ad ad" href="//kode24.no${
       contentAd.published_url
-      }">
+    }">
             <div class="ad-image"><img src="//dbstatic.no/${
-      contentAd.image
-      }.jpg?width=400"></div>
+              contentAd.image
+            }.jpg?width=400"></div>
             <div class="ad-text">
                 <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
-      contentAd.full_bylines[0].imageUrl
-      })"></div>
+                  contentAd.full_bylines[0].imageUrl
+                })"></div>
                 <h4>${contentAd.full_bylines[0].firstname}</h4>
                 <h5>${contentAd.title}</h5>
                 <h6>${contentAd.subtitle}</h6>
@@ -290,16 +290,14 @@ function drawAdsContainer(adsList, premiumAdsList) {
   if (premiumAdObject && premiumAdObject.premiumAdId)
     premiumAdId = premiumAdObject.premiumAdId;
 
-  var regularAdsElements = getRegularAdsElements(
-    adsList,
-    premiumAdId
-  );
-  if (premiumAdsList.length && premiumAdElement) adsContainer.append(premiumAdElement);
+  var regularAdsElements = getRegularAdsElements(adsList, premiumAdId);
+  if (premiumAdsList.length && premiumAdElement)
+    adsContainer.append(premiumAdElement);
   if (regularAdsElements) adsContainer.append(regularAdsElements);
   adsContainer.append(
     '<div class="adslist-see-more"><a href="//kode24.no/jobb/"><span>Se alle stillinger (' +
-    adsList.length +
-    ")</span></a></div>"
+      adsList.length +
+      ")</span></a></div>"
   );
   return adsContainer;
 }
@@ -310,13 +308,13 @@ function drawRelatedArticles(articles, tag) {
   var relatedContainer = $(
     '<div class="aside-container related"><h3>Siste fra: ' + tag + "</h3></div>"
   );
-  articles.forEach(function (article, index) {
+  articles.forEach(function(article, index) {
     var articleElement = $(`
         <article class="article top ${index === 0 ? "top" : ""}">
         <a class="article-link" href="//kode24.no${article.published_url}">
          <div class="article-image"><img src="//dbstatic.no/${
-      article.image
-      }.jpg?width=400"></div>
+           article.image
+         }.jpg?width=400"></div>
         <div class="text-content">
             <h4>${article.title}</h4>
         </div>    
@@ -333,13 +331,13 @@ function drawFrontArticles(articles) {
   var relatedContainer = $(
     '<div class="aside-container related front"><h3>Siste nytt</h3></div>'
   );
-  articles.forEach(function (article, index) {
+  articles.forEach(function(article, index) {
     var articleElement = $(`
         <article class="article">
         <a class="article-link" href="${article.url}">
          <div class="article-image"><img src="//dbstatic.no/${
-      article.imageUrl
-      }"></div>
+           article.imageUrl
+         }"></div>
         <div class="text-content">
             <h4>${$("<div>" + article.title + "</div>").text()}</h4>
             <h5>${$("<div>" + article.description + "</div>").text()}</h5>
@@ -389,22 +387,22 @@ function getRegularAdsElements(adsList, premiumAdId) {
   var regularAds = $('<div class="regular-ad"></div>');
   shuffleArray(adsList);
   adsList = adsList.slice(0, 8);
-  adsList.forEach(function (ad) {
+  adsList.forEach(function(ad) {
     if (ad.id !== premiumAdId && ad.visibility_status === "P") {
       var cities = getCitysFromTags(ad.tags);
 
       var adElement = $(`
             <a class="ad" href="//kode24.no${ad.published_url}">
             <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
-        ad.full_bylines[0].imageUrl
-        })"></div>
+              ad.full_bylines[0].imageUrl
+            })"></div>
             <h4>
                 ${ad.full_bylines[0].firstname}&nbsp;
             </h4>
             <h5>${ad.title}</h5>
             </a>`);
       var citiesElement = $('<p class="cities"></p>');
-      cities.forEach(function (city) {
+      cities.forEach(function(city) {
         citiesElement.append($("<span>" + city + "</span>"));
       });
       adElement.append(citiesElement);
@@ -424,18 +422,18 @@ function getPremiumAdsElement(premiumAdsList, compact) {
     var cities = getCitysFromTags(premiumAd.tags);
     premiumAdElement = $(`<a class="premium-ad ad" href="//kode24.no${
       premiumAd.published_url
-      }">
+    }">
     ${
       compact
         ? ""
         : `<div class="ad-image"><img src="//dbstatic.no/${
-        premiumAd.image
-        }.jpg?width=400"></div>`
-      }
+            premiumAd.image
+          }.jpg?width=400"></div>`
+    }
             <div class="ad-text">
                 <div class="ad-company-logo" style="background-image: url(//dbstatic.no/${
-      premiumAd.full_bylines[0].imageUrl
-      })"></div>
+                  premiumAd.full_bylines[0].imageUrl
+                })"></div>
                 <h4>${premiumAd.full_bylines[0].firstname}</h4>
                 <h5>${premiumAd.title}</h5>
                 <h6>${premiumAd.subtitle}</h6>
@@ -444,7 +442,7 @@ function getPremiumAdsElement(premiumAdsList, compact) {
         </a>`);
 
     var citiesElement = $('<p class="cities"></p>');
-    cities.forEach(function (city) {
+    cities.forEach(function(city) {
       citiesElement.append($("<span>" + city + "</span>"));
     });
     premiumAdElement.append(citiesElement);
@@ -456,7 +454,7 @@ function getPremiumAdsElement(premiumAdsList, compact) {
 function getAds(callback) {
   getUrl(
     "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+NOT+hidefromfp_time:[*+TO+NOW]+AND+visibility_status:P+AND+section:jobb&site_id=207&limit=2000",
-    function (data) {
+    function(data) {
       var ads = data.result.filter(ad => ad.visibility_status !== "H");
       callback(ads);
     }
@@ -464,10 +462,10 @@ function getAds(callback) {
 }
 
 function getFrontArticles(front, filterContentMarketing, callback) {
-  getUrl("//www.kode24.no/" + front + "?lab_viewport=json", function (data) {
+  getUrl("//www.kode24.no/" + front + "?lab_viewport=json", function(data) {
     var articles = [];
     if (filterContentMarketing) {
-      articles = data.result.filter(function (article) {
+      articles = data.result.filter(function(article) {
         return article.isContentMarketing !== "1";
       });
     } else {
@@ -480,7 +478,7 @@ function getFrontArticles(front, filterContentMarketing, callback) {
 function getContentAds(callback) {
   getUrl(
     "//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:annonse&limit=50&orderBy=published&site_id=207",
-    function (data) {
+    function(data) {
       var contentAds = data.result.filter(
         ad => ad.tags.indexOf("content") > -1
       );
@@ -491,13 +489,13 @@ function getContentAds(callback) {
 
 function getArticlesByTag(callback) {
   var articleId = getArticleId();
-  getUrl("//api.kode24.no/article/?query=id:" + articleId, function (data) {
+  getUrl("//api.kode24.no/article/?query=id:" + articleId, function(data) {
     var tag = data.result[0].section_tag;
     getUrl(
       '//api.kode24.no/article/?query=published:[2017-01-01T00:00:00Z+TO+NOW]+AND+visibility_status:P+AND+section:"' +
-      tag +
-      '"&limit=50&orderBy=published&site_id=207',
-      function (data) {
+        tag +
+        '"&limit=50&orderBy=published&site_id=207',
+      function(data) {
         callback(data.result, tag);
       }
     );
@@ -939,9 +937,9 @@ function getCitysFromTags(tags) {
     "Inderøy",
     "Indre Fosen"
   ];
-  tags.forEach(function (tag) {
+  tags.forEach(function(tag) {
     tag = tag.replace(/ /g, ""); // trim whitespace
-    cities.forEach(function (city, index) {
+    cities.forEach(function(city, index) {
       if (tag == city.toLowerCase()) foundCities.push(city);
     });
   });
@@ -960,7 +958,7 @@ function getUrl(url, callback) {
     headers: {
       "Access-Control-Allow-Origin": "*"
     },
-    success: function (data) {
+    success: function(data) {
       callback(data);
     }
   });
