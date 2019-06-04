@@ -17,7 +17,8 @@ $(function() {
         );
         if (
           screenWidth <= mobileThresholdPixels &&
-          window.location.pathname.indexOf("/jobb/") < 0
+          window.location.pathname.indexOf("/jobb/") < 0 &&
+          premiumAdsList.length
         ) {
           drawPremiumUnderByline(premiumAdsList);
         }
