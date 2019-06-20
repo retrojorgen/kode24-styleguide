@@ -2,6 +2,7 @@ $(() => {
   function randomNumber(max) {
     return Math.floor(Math.random() * max + 0);
   }
+  /**
 
   let main = $("main");
   let desktopAds = ["https://www.dagbladet.no/files/2019/06/09/980x300.png"];
@@ -25,4 +26,5 @@ $(() => {
   `);
 
   main.before(ad);
+   */
 });
