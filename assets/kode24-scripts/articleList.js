@@ -7,6 +7,7 @@ $(function () {
   var mobileThresholdPixels = 640;
   getAds(function (ads) {
     adsList = ads;
+    console.log("attempting to ad counter");
     adCounterToTopNav(ads.length);
     getArticlesByTag(function (articles, tag) {
       getFrontArticles("premium/", false, function (premiumAds) {
@@ -16,7 +17,8 @@ $(function () {
         );
         if (
           screenWidth <= mobileThresholdPixels &&
-          window.location.pathname.indexOf("/jobb/") < 0
+          window.location.pathname.indexOf("/jobb/") < 0 &&
+          premiumAdsList.length
         ) {
           drawPremiumUnderByline(premiumAdsList);
         }
@@ -31,7 +33,6 @@ $(function () {
               articleHeight,
               contentAds
             );
-
 
             drawFooterContent(
               adsList,
@@ -290,11 +291,9 @@ function drawAdsContainer(adsList, premiumAdsList) {
   if (premiumAdObject && premiumAdObject.premiumAdId)
     premiumAdId = premiumAdObject.premiumAdId;
 
-  var regularAdsElements = getRegularAdsElements(
-    adsList,
-    premiumAdId
-  );
-  if (premiumAdsList.length && premiumAdElement) adsContainer.append(premiumAdElement);
+  var regularAdsElements = getRegularAdsElements(adsList, premiumAdId);
+  if (premiumAdsList.length && premiumAdElement)
+    adsContainer.append(premiumAdElement);
   if (regularAdsElements) adsContainer.append(regularAdsElements);
   adsContainer.append(
     '<div class="adslist-see-more"><a href="//kode24.no/jobb/"><span>Se alle stillinger (' +

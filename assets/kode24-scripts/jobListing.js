@@ -8,6 +8,7 @@ $(function () {
   ) {
     getAds(function (ads) {
       adsList = ads;
+      adCounterToTopNav(ads.length);
       getFrontArticles("premium/", false, function (premiumAds) {
         let filteredAdsList = premiumAds.map(ad => ad.instance_of); // just get ids
         premiumAdsList = ads.filter(
