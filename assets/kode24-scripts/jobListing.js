@@ -29,6 +29,10 @@ function shuffleArray(array) {
   }
 }
 
+function halfSizeByLineImage(imageUrl) {
+  return imageUrl.replace("")
+}
+
 function drawContentAd(contentAds) {
   if (contentAds.length) {
     var contentAd = contentAds[0]; // pick the first one for now
@@ -42,9 +46,8 @@ function drawContentAd(contentAds) {
       contentAd.image
       }.jpg?width=400"></div>
                 <div class="ad-text">
-                    <div class="ad-company-logo" style="background-image: url(https://dbstatic.no/${
-      contentAd.full_bylines[0].imageUrl
-      })"></div>
+                    <div class="ad-company-logo"><img src="https://dbstatic.no${
+      contentAd.full_bylines[0].imageUrl}"></div>
                     <h4>${contentAd.full_bylines[0].firstname}</h4>
                     <h5>${contentAd.title}</h5>
                     <h6>${contentAd.subtitle}</h6>
@@ -140,9 +143,8 @@ function getRegularAdsElements(adsList, premiumIds) {
 
       var adElement = $(`
                 <a class="ad" href="//kode24.no${ad.published_url}">
-                <div class="ad-company-logo" style="background-image: url(https://dbstatic.no/${
-        ad.full_bylines[0].imageUrl
-        })"></div>
+                <div class="ad-company-logo"><img src="https://dbstatic.no${
+        ad.full_bylines[0].imageUrl}"></div>
                 <h4>
                     ${ad.full_bylines[0].firstname}&nbsp;
                 </h4>
@@ -180,9 +182,8 @@ function getPremiumAdsElement(premiumAdsList, compact) {
           }.jpg?width=400"></div>`
         }
                   <div class="ad-text">
-                      <div class="ad-company-logo" style="background-image: url(https://dbstatic.no/${
-        premiumAd.full_bylines[0].imageUrl
-        })"></div>
+                  <div class="ad-company-logo"><img src="https://dbstatic.no${
+        premiumAd.full_bylines[0].imageUrl}"></div>
                       <h4>${premiumAd.full_bylines[0].firstname}</h4>
                       <h5>${premiumAd.title}</h5>
                       <h6>${premiumAd.subtitle}</h6>
