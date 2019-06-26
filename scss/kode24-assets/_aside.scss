@@ -73,6 +73,7 @@
     &.premium-ad {
       .ad-company-logo {
         left: 0;
+        
       }
     }
 
@@ -142,6 +143,9 @@
   background-size: 100% auto;
   background-repeat: no-repeat;
   border-radius: 50%;
+  img {
+    max-width: 50px;
+  }
 }
 
 .adslist-see-more {
