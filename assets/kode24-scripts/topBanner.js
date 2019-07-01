@@ -23,6 +23,8 @@ $(() => {
       </a>
     </div>    
   `);
+  if (!document.querySelector("header .full-bleed")) {
+    main.before(ad);
+  }
 
-  main.before(ad);
 });
