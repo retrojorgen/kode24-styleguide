@@ -9,6 +9,9 @@ $(() => {
   let desktopAd = desktopAds[randomNumber(desktopAds.length - 1)];
   let mobileAd = mobileAds[randomNumber(desktopAds.length - 1)];
 
+  // Må endres hver gang
+  let campaignName = "bannerannonse kode24";
+
   let ad = $(`
     <div class="row top-profile" style="margin-top: 20px;">
       <a itemprop="url" class="top-banner" href="https://bit.ly/2J69vvc" target="_blank">
@@ -27,5 +30,10 @@ $(() => {
     main.before(ad);
     console.log("added banner");
   }
+
+  ad.find("a").on("click", () => {
+    console.log("Log click on banner");
+    trackOutboundLink(campaignName, "Toppbanner", "klikk");
+  })
 
 });

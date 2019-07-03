@@ -5,13 +5,13 @@
 * som aktivitetsetikett. Hvis transportmetoden angis som «beacon», kan treffet sendes
 * med «navigator.sendBeacon» i nettlesere som støtter dette.
 */
-var trackOutboundLink = function (url) {
-  ga('send', 'event', 'ekstern_lenke', 'click', url, {
-    'transport': 'beacon',
-    'hitCallback': function () {
-      //document.location = url;
-    }
-  })
+var trackOutboundLink = function (url, eventCategory, eventAction) {
+  ga('send', 'event', {
+    eventCategory: eventCategory,
+    eventAction: eventAction,
+    eventLabel: url,
+    transport: 'beacon'
+  });
 }
 
 $(function () {
@@ -20,7 +20,7 @@ $(function () {
     console.log("tracked");
     let targetUrl = event.currentTarget.href;
     if (targetUrl.indexOf("https://www.kode24.no/") < 0) {
-      trackOutboundLink(targetUrl);
+      trackOutboundLink(targetUrl, "Ekstern_lenke", "klikk");
       console.log("Went to", targetUrl);
     }
   })
