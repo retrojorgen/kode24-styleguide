@@ -25,6 +25,7 @@ $(() => {
   `);
   if (!document.querySelector("header .full-bleed")) {
     main.before(ad);
+    console.log("added banner");
   }
 
 });
