@@ -15,8 +15,9 @@ var trackOutboundLink = function (url) {
 }
 
 $(function () {
+  console.log("tracking outboud");
   $("a").click(function (event) {
-    console.log("tracking outboud");
+    console.log("tracked");
     let targetUrl = event.currentTarget.href;
     if (targetUrl.indexOf("https://www.kode24.no/") < 0) {
       trackOutboundLink(targetUrl);
