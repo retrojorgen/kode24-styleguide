@@ -11,7 +11,7 @@ $(() => {
 
   let ad = $(`
     <div class="row top-profile" style="margin-top: 20px;">
-      <a itemprop="url" href="https://www.kode24.no/annonse/priser-pa-annonser-og-content-pa-kode24/70244826" target="_blank">
+      <a itemprop="url" href="https://bit.ly/2J69vvc" target="_blank">
           <div class="kicker">ANNONSE</div> 
           <figure class="desktop">
               <img itemprop="image" alt="annonse" src="${desktopAd}">
