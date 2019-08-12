@@ -18,7 +18,7 @@ $(() => {
 
   let ad = $(`
     <div class="row top-profile" style="margin-top: 20px;">
-      <a itemprop="url" class="top-banner" href="https://www.dagbladet.no/files/2019/08/12/kode24-980x300-autostore-sommerkampanje-19-hamnoy.jpg" target="_blank">
+      <a itemprop="url" class="top-banner" href="https://hamnoy.no/bedrifter/autostore/" target="_blank">
           <div class="kicker">ANNONSE</div> 
           <figure class="desktop">
               <img itemprop="image" alt="annonse" src="${desktopAd}">
