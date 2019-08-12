@@ -1,11 +1,15 @@
-/**$(() => {
+$(() => {
   function randomNumber(max) {
     return Math.floor(Math.random() * max + 0);
   }
 
   let main = $("main");
-  let desktopAds = ["https://www.dagbladet.no/files/2019/06/26/toppbanner-kodere.jpg"];
-  let mobileAds = ["https://www.dagbladet.no/files/2019/06/26/toppbanner-kodere.jpg"];
+  let desktopAds = [
+    "https://www.dagbladet.no/files/2019/08/12/kode24-980x300-autostore-sommerkampanje-19-hamnoy.jpg"
+  ];
+  let mobileAds = [
+    "https://www.dagbladet.no/files/2019/08/12/kode24-980x300-autostore-sommerkampanje-19-hamnoy.jpg"
+  ];
   let desktopAd = desktopAds[randomNumber(desktopAds.length - 1)];
   let mobileAd = mobileAds[randomNumber(desktopAds.length - 1)];
 
@@ -14,7 +18,7 @@
 
   let ad = $(`
     <div class="row top-profile" style="margin-top: 20px;">
-      <a itemprop="url" class="top-banner" href="https://bit.ly/2J69vvc" target="_blank">
+      <a itemprop="url" class="top-banner" href="https://www.dagbladet.no/files/2019/08/12/kode24-980x300-autostore-sommerkampanje-19-hamnoy.jpg" target="_blank">
           <div class="kicker">ANNONSE</div> 
           <figure class="desktop">
               <img itemprop="image" alt="annonse" src="${desktopAd}">
@@ -33,8 +37,6 @@
 
   ad.find("a").on("click", () => {
     console.log("Log click on banner");
-    trackOutboundLink(campaignName, "Toppbanner", "klikk");
-  })
-
+    trackOutboundLink(campaignName, "autostore", "klikk");
+  });
 });
- */
