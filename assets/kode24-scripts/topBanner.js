@@ -24,14 +24,13 @@ $(() => {
     );
 
     let ads = config;
-    let adNumber = randomNumber(ads.length - 1);
+    let adNumber = randomNumber(ads.length);
     let main = $("main");
     let ad = ads[adNumber];
     let desktopAd = ad.desktopBannerUrl;
     let mobileAd = ad.mobileBannerUrl;
     let url = ad.url;
     let eventName = ad.eventName;
-    console.log(ads, adNumber, ad, desktopAd, mobileAd, url, eventName);
 
     // Må endres hver gang
     let campaignName = "bannerannonse kode24";
