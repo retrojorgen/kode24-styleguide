@@ -3,22 +3,41 @@ $(() => {
     return Math.floor(Math.random() * max + 0);
   }
 
-  let main = $("main");
-  let desktopAds = [
-    "https://www.dagbladet.no/files/2019/08/12/kode24-980x300-autostore-sommerkampanje-19-hamnoy.jpg"
-  ];
-  let mobileAds = [
-    "https://www.dagbladet.no/files/2019/08/12/kode24-980x300-autostore-sommerkampanje-19-hamnoy.jpg"
-  ];
-  let desktopAd = desktopAds[randomNumber(desktopAds.length - 1)];
-  let mobileAd = mobileAds[randomNumber(desktopAds.length - 1)];
+  console.log("new campaign");
 
-  // Må endres hver gang
-  let campaignName = "bannerannonse kode24";
+  function getUrl(url, callback) {
+    $.ajax({
+      type: "GET",
+      url: url,
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      },
+      success: function(data) {
+        callback(data);
+      }
+    });
+  }
 
-  let ad = $(`
+  getUrl("//api.kode24.no/front/?query=id:70559216", function(data) {
+    let config = JSON.parse(
+      data.result[0].content["lab-dz-1"][0].children[0].data.markup
+    );
+
+    let ads = config;
+
+    let main = $("main");
+    let ad = ads[randomNumber(ads.length - 1)];
+    let desktopAd = ad.desktopBannerUrl;
+    let mobileAd = ad.mobileBannerUrl;
+    let url = ad.url;
+    let eventName = ad.eventName;
+
+    // Må endres hver gang
+    let campaignName = "bannerannonse kode24";
+
+    let adElement = $(`
     <div class="row top-profile" style="margin-top: 20px;">
-      <a itemprop="url" class="top-banner" href="https://hamnoy.no/bedrifter/autostore/" target="_blank">
+      <a itemprop="url" class="top-banner" href="${url}" target="_blank">
           <div class="kicker">ANNONSE</div> 
           <figure class="desktop">
               <img itemprop="image" alt="annonse" src="${desktopAd}">
@@ -30,13 +49,14 @@ $(() => {
       </a>
     </div>    
   `);
-  if (!document.querySelector("header .full-bleed")) {
-    main.before(ad);
-    console.log("added banner");
-  }
+    if (!document.querySelector("header .full-bleed")) {
+      main.before(adElement);
+      console.log("added banner");
+    }
 
-  ad.find("a").on("click", () => {
-    console.log("Log click on banner");
-    trackOutboundLink(campaignName, "autostore", "klikk");
+    adElement.find("a").on("click", () => {
+      console.log("Log click on banner");
+      trackOutboundLink(campaignName, eventName, "klikk");
+    });
   });
 });
