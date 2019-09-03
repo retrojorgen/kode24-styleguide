@@ -6,6 +6,54 @@
 //
 // Styleguide 28
 
+section.cross-site-legend {
+	max-width: 63.125rem;
+
+	margin: $column-gutter / 2 0;
+	padding: 0 $column-gutter / 2;
+	@media screen and (min-width: 768px) {
+		margin: $column-gutter / 2 auto $column-gutter;
+	}
+
+	span {
+		color: $kode24-white;
+		display: block;
+		width: 100%;
+		padding: 5px 0;
+		margin-bottom: 10px;
+	}
+	.site-logos {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		img {
+			border: 1px solid rgba(0,0,0,0.1);
+			margin-right: 10px;
+			margin-bottom: 10px;
+			width: 48px;
+			@media screen and (min-width: 641px) {
+				width: 40px;
+				transition: .2s opacity;
+				&:hover {
+					opacity: .7;
+				}
+			}
+		}
+	}
+}
+// Acounting for the light theme
+body.light {
+    section.cross-site-legend {
+        span {
+            border-bottom: 1px solid #ececec;
+            color: $color-black;
+        }
+        .site-logo {
+            border-bottom: 1px solid #ececec;
+        }
+    }
+}
+
 .main-footer {
     color: $white;
     padding-top: $column-gutter;
