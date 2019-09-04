@@ -37,7 +37,7 @@ $(() => {
 
     let adElement = $(`
     <div class="row top-profile" style="margin-top: 20px;">
-      <a itemprop="url" class="top-banner" href="${url}" target="_blank">
+      <a rel="noopener" itemprop="url" class="top-banner" href="${url}" target="_blank">
           <div class="kicker">ANNONSE</div> 
           <figure class="desktop">
               <img itemprop="image" alt="annonse" src="${desktopAd}">
