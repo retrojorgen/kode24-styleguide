@@ -163,7 +163,7 @@ function drawPremium(banner, element, parent, jobDocuments) {
                     <div class="kicker">${kicker}</div> 
                     <figure id="${imageId}" style="width: ${containerWidth}px; padding-bottom: ${wratio *
     100}%;">
-                        <img class="" itemprop="image" alt="" src="//dbstatic.no/${imageId}.jpg?imageId=${imageId}&x=${posx}&y=${posy}&cropw=${cropw}&croph=${croph}&width=${imageWidth}&height=${Math.round(
+                        <img class="" itemprop="image" alt="logo" src="//dbstatic.no/${imageId}.jpg?imageId=${imageId}&x=${posx}&y=${posy}&cropw=${cropw}&croph=${croph}&width=${imageWidth}&height=${Math.round(
     imageWidth * wratio
   )}&compression=80">
                     </figure><div class="article-preview-text">`;
@@ -172,7 +172,7 @@ function drawPremium(banner, element, parent, jobDocuments) {
     bannerElement += `
                                 <div class="company-information">
                                     <figure class="image-contain">
-                                        <img src="//dbstatic.no${companyImageUrl}">
+                                        <img alt="logo" src="//dbstatic.no${companyImageUrl}">
                                     </figure>
                                     <span>${companyName}</span>
                                  </div>
